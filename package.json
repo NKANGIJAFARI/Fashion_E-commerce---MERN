@@ -1,8 +1,8 @@
 {
-	"name": "react-ecommerce",
+	"name": "fashion-ecommerce",
 	"version": "1.0.0",
 	"type": "module",
-	"description": "Mern Shopping Cart App",
+	"description": "Fashion shopping web application",
 	"main": "server.js",
 	"scripts": {
 		"start": "node backend/server",

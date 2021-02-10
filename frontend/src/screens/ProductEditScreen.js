@@ -40,7 +40,7 @@ const ProductEditScreen = ({ match, history }) => {
 			dispatch({ type: PRODUCT_UPDATE_RESET });
 			history.push('/admin/productslist');
 		} else {
-			if (!product.name || product._id !== productId) {
+			if (!product || !product.name || product._id !== productId) {
 				dispatch(listProductDetails(productId));
 			} else {
 				setName(product.name);

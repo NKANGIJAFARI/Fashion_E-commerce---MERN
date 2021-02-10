@@ -19,12 +19,14 @@ import UserEditScreen from './screens/UserEditScreen';
 import ProductListSreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 
+// import './styles.css';
+import './Styles/main.scss';
 function App() {
 	return (
 		<Router>
 			<Header />
-			<main className='py-3'>
-				<Container>
+			<main>
+				<div className='main__wrapper'>
 					<Route path='/login' component={LoginScreen} />
 					<Route path='/register' component={RegisterScreen} />
 					<Route path='/admin/userslist' component={UserListScreen} />
@@ -60,7 +62,7 @@ function App() {
 					/>
 					<Route path='/page/:pageNumber' component={HomeScreen} exact />
 					<Route path='/' component={HomeScreen} exact />
-				</Container>
+				</div>
 			</main>
 
 			<Footer />

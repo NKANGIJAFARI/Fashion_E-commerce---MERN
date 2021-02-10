@@ -48,7 +48,10 @@
 	},
 	"description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
 	"main": "index.js",
-	"devDependencies": {},
+	"devDependencies": {
+		"node-sass": "^4.14.1",
+		"sass-loader": "^11.0.1"
+	},
 	"author": "",
 	"license": "ISC"
 }

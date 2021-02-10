@@ -1,0 +1,40 @@
+.searchForm {
+	flex: 1 0 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	&__input,
+	&__input:focus {
+		width: 50%;
+		border-radius: 5px;
+		padding: 10px;
+		font-size: 16px;
+		font-family: inherit;
+		border: none;
+		outline: none;
+	}
+
+	&__button,
+	&__button:active,
+	&__button:focus {
+		margin-left: -9px;
+		background-color: transparent;
+		border: 1px solid green;
+		border-radius: 0px 10px 10px 0px;
+		outline: none;
+		color: white;
+		padding: 2px;
+		font-size: 16px;
+
+		&:hover {
+			background-color: green;
+		}
+	}
+}
+
+body {
+	background-color: grey;
+}
