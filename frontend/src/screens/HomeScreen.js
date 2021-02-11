@@ -11,6 +11,7 @@ import { listProducts } from '../actions/productActions';
 import ProductCarousel from '../components/ProductCarousel';
 import FirstDisplay from '../components/FirstDisplay';
 
+import Categories from '../components/Home components/Categories';
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
 	const pageNumber = match.params.pageNumber || 1;
@@ -58,6 +59,7 @@ const HomeScreen = ({ match }) => {
 						page={page}
 						keyword={keyword ? keyword : ''}
 					/>
+					<Categories />
 				</>
 			)}
 		</section>
