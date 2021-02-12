@@ -4,8 +4,13 @@ import { Image } from 'react-router-bootstrap';
 //Import images
 import menStyles from '../../Images/cat-man.jpg';
 import girlStyles from '../../Images/cat-girl.jpg';
-import womenStyles from '../../Images/cat-woman.jpg';
+import womenStyles from '../../Images/cat-womans.jpg';
 import boyStyles from '../../Images/cat-boy.jpg';
+import babyStyles from '../../Images/cat-baby.jpg';
+import perfumes from '../../Images/cat-perfumes.jpg';
+import bags from '../../Images/cat-bags.jpg';
+import watches from '../../Images/cat-watches.jpg';
+import shoe from '../../Images/cat-shoe.jpg';
 
 const Categories = () => {
 	return (
@@ -26,15 +31,23 @@ const Categories = () => {
 					<img src={boyStyles} alt='' />
 				</div>
 				<div className='categories__item categories__item-4'>
-					<img src={girlStyles} alt='' />
+					<img src={girlStyles} alt='girl styles category' />
 				</div>
-				<div className='categories__item categories__item-5'>Watches</div>
-				<div className='categories__item categories__item-6'>Perfume</div>
+				<div className='categories__item categories__item-5'>
+					<img src={watches} alt='' />
+				</div>
+				<div className='categories__item categories__item-6'>
+					<img src={shoe} alt='' />
+				</div>
 				<div className='categories__item categories__item-7'>
-					Babies collections
+					<img src={babyStyles} alt='' />
 				</div>
-				<div className='categories__item categories__item-8'>Perfumes</div>
-				<div className='categories__item categories__item-9'>Bags</div>
+				<div className='categories__item categories__item-8'>
+					<img src={perfumes} alt='' />
+				</div>
+				<div className='categories__item categories__item-9'>
+					<img src={bags} alt='' />
+				</div>
 			</div>
 		</div>
 	);

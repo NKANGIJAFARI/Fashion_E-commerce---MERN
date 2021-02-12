@@ -1,6 +1,13 @@
-main {
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.main__wrapper {
 	padding: 0;
 	margin: 0;
+	scroll-snap-type: y mandatory;
 }
 
 .rating span {
