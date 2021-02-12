@@ -1,0 +1,49 @@
+// **************** Home ****************
+.fullHeader {
+	padding: 0px 0;
+	background: url(../../Images/main-bg.jpg) no-repeat center/cover;
+}
+
+.fullHeader__inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.fullHeader__content {
+	margin-top: 326px;
+}
+
+.fullHeader__suptitle {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 27px;
+	text-transform: uppercase;
+}
+
+.fullHeader__title {
+	font-weight: bold;
+	font-size: 80px;
+	line-height: 100px;
+	text-transform: uppercase;
+}
+
+.fullHeader__text {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 27px;
+}
+
+.fullHeader__links {
+	margin-top: 27px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.fullHeader__links .link:first-child {
+	margin-right: 35px;
+}

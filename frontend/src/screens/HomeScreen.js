@@ -33,6 +33,7 @@ const HomeScreen = ({ match }) => {
 			{!keyword ? (
 				<>
 					<FirstDisplay />
+					<Categories />
 					<ProductCarousel />
 				</>
 			) : (
@@ -59,7 +60,6 @@ const HomeScreen = ({ match }) => {
 						page={page}
 						keyword={keyword ? keyword : ''}
 					/>
-					<Categories />
 				</>
 			)}
 		</section>

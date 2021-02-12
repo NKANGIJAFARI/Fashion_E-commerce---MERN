@@ -1,6 +1,5 @@
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
-@import 'abstracts/variables';
 
 @import 'base/animations';
 @import 'base/base';
@@ -9,5 +8,10 @@
 
 @import './pages/Home';
 @import './components/searchbox';
+@import './components/button';
+@import './components/carousel';
+@import './components/categories';
+@import './components/landingScreen';
+
 @import './components/allStyles';
 @import './components/categories';
