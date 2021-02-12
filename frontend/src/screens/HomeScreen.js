@@ -12,6 +12,7 @@ import ProductCarousel from '../components/ProductCarousel';
 import FirstDisplay from '../components/FirstDisplay';
 
 import Categories from '../components/Home components/Categories';
+import ServicePromise from '../components/Home components/ServicePromise';
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
 	const pageNumber = match.params.pageNumber || 1;
@@ -33,6 +34,7 @@ const HomeScreen = ({ match }) => {
 			{!keyword ? (
 				<>
 					<FirstDisplay />
+					<ServicePromise />
 					<Categories />
 					<ProductCarousel />
 				</>

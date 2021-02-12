@@ -1,7 +1,14 @@
-.section__categories {
-	height: 100vh;
-	scroll-snap-align: start;
-	box-sizing: border-box;
-	background-color: rgb(204, 158, 250);
-	padding: 50px 10px 20px 10px;
+.section {
+	&__categories {
+		height: 100vh;
+		scroll-snap-align: start;
+		box-sizing: border-box;
+		background-color: whitesmoke;
+		padding: 50px 10px 20px 10px;
+	}
+
+	&__servicePromise {
+		background-color: whitesmoke;
+		width: 100%;
+	}
 }

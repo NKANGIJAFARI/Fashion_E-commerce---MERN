@@ -44,12 +44,13 @@
 		align-items: center;
 		border-radius: 6px;
 		transition: all 0.2s;
+		background-color: white;
 
 		&-name {
 			color: var(--color-black);
 			position: absolute;
 			left: 0px;
-			bottom: 40px;
+			bottom: 20px;
 			font-size: 1.6rem;
 			padding: 3px 6px 3px 10px;
 			background-color: #fff;
