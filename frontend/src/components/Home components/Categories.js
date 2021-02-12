@@ -1,14 +1,33 @@
 import React from 'react';
+import { Image } from 'react-router-bootstrap';
+
+//Import images
+import menStyles from '../../Images/cat-man.jpg';
+import girlStyles from '../../Images/cat-girl.jpg';
+import womenStyles from '../../Images/cat-woman.jpg';
+import boyStyles from '../../Images/cat-boy.jpg';
 
 const Categories = () => {
 	return (
-		<div className='categories'>
-			<h2 className='categories__desc'>Shop by categories</h2>
+		<div className='section section__categories categories'>
+			<div className='categories__desc'>
+				<div className='categories__desc-line'></div>
+				<h2 className='categories__desc-h2'>Shop by categories</h2>
+				<div className='categories__desc-line'></div>
+			</div>
 			<div className='categories__inner'>
-				<div className='categories__item categories__item-1 '>Men's wear</div>
-				<div className='categories__item categories__item-2'>women's wear</div>
-				<div className='categories__item categories__item-3'>Boy's wear</div>
-				<div className='categories__item categories__item-4'>Girls wear</div>
+				<div className='categories__item categories__item-1 '>
+					<img src={menStyles} alt='' />
+				</div>
+				<div className='categories__item categories__item-2'>
+					<img src={womenStyles} alt='' />
+				</div>
+				<div className='categories__item categories__item-3'>
+					<img src={boyStyles} alt='' />
+				</div>
+				<div className='categories__item categories__item-4'>
+					<img src={girlStyles} alt='' />
+				</div>
 				<div className='categories__item categories__item-5'>Watches</div>
 				<div className='categories__item categories__item-6'>Perfume</div>
 				<div className='categories__item categories__item-7'>
