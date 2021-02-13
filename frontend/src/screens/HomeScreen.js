@@ -8,11 +8,12 @@ import Meta from '../components/Meta';
 import Product from '../components/Product';
 import Paginate from '../components/Paginate';
 import { listProducts } from '../actions/productActions';
-import ProductCarousel from '../components/ProductCarousel';
+import ProductCarousel from '../components/Home components/ProductCarousel';
 import FirstDisplay from '../components/FirstDisplay';
 
 import Categories from '../components/Home components/Categories';
 import ServicePromise from '../components/Home components/ServicePromise';
+
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
 	const pageNumber = match.params.pageNumber || 1;
