@@ -8,6 +8,10 @@ const HobbiesItem = ({ imgSrc, desc }) => {
 				src={imgSrc}
 				alt={desc}
 			/>
+			<button
+				class={`btn-inline hobbies__item--btn hobbies__item--btn-${desc.toLowerCase()}`}>
+				Discover now <span>&rarr;</span>
+			</button>
 			{/* <div className={`hobbies__desc hobbies__desc-${desc.toLowerCase()}`}>
 				<h2
 					className={`hobbies__item--h2 hobbies__item--h2-${desc.toLowerCase()}`}>

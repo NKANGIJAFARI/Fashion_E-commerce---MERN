@@ -9,10 +9,7 @@ const HobbiesFashion = () => {
 					imgSrc='/images/hobbies-travel2.png'
 					desc='Travel Apparels'
 				/>
-				<HobbiesItem
-					imgSrc='/images/hobbies-try2.png'
-					desc='Fitness Apparels'
-				/>
+				<HobbiesItem imgSrc='/images/hobbies-try.png' desc='Fitness Apparels' />
 			</div>
 		</section>
 	);

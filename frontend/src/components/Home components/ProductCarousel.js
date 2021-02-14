@@ -1,60 +1,48 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 
 const ProductCarousel = () => {
-	const [index, setIndex] = useState(0);
-
-	const handleSelect = (selectedIndex, e) => {
-		setIndex(selectedIndex);
-	};
-
 	return (
-		<div className='carousel'>
-			<Carousel activeIndex={index} onSelect={handleSelect}>
-				<Carousel.Item className='carousel__item'>
-					<img
-						className='d-block w-100'
-						src='/images/tachen-bg.jpg'
-						alt='First slide'
-					/>
-					<div className='carousel__caption'>
-						<h3 className='carousel__caption-h3'>First slide label</h3>
-						<p className='carousel__caption-p'>
-							Nulla vitae elit libero, a pharetra augue mollis interdum.
-						</p>
-					</div>
-				</Carousel.Item>
-				<Carousel.Item className='carousel__item'>
-					<img
-						className='d-block w-100'
-						src='/images/tachen-bg.jpg'
-						alt='Second slide'
-					/>
+		<Carousel interval={4000}>
+			<Carousel.Item>
+				<img
+					className='d-block w-100'
+					src='/images/men-all.jpg'
+					alt='First slide'
+				/>
+				<Carousel.Caption>
+					<h3>First slide label</h3>
+					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+				</Carousel.Caption>
+			</Carousel.Item>
+			<Carousel.Item>
+				<img
+					className='d-block w-100'
+					src='/images/tachen-bg.jpg'
+					alt='Third slide'
+				/>
 
-					<div className='carousel__caption'>
-						<h3 className='carousel__caption-h3'>Second slide label</h3>
-						<p className='carousel__caption-p'>
-							Nulla vitae elit libero, a pharetra augue mollis interdum.
-						</p>
-					</div>
-				</Carousel.Item>
-				<Carousel.Item className='carousel__item'>
-					<img
-						className='d-block w-100'
-						src='/images/tachen-bg.jpg'
-						alt='Third slide'
-					/>
+				<Carousel.Caption>
+					<h3>Second slide label</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</Carousel.Caption>
+			</Carousel.Item>
+			<Carousel.Item>
+				<img
+					className='d-block w-100'
+					src='/images/fashionsale.jpg'
+					alt='Third slide'
+				/>
 
-					<div className='carousel__caption'>
-						<h3 className='carousel__caption-h3'>Third slide label</h3>
-						<p className='carousel__caption-p'>
-							Nulla vitae elit libero, a pharetra augue mollis interdum.
-						</p>
-					</div>
-				</Carousel.Item>
-			</Carousel>
-		</div>
+				<Carousel.Caption>
+					<h3>Third slide label</h3>
+					<p>
+						Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+					</p>
+				</Carousel.Caption>
+			</Carousel.Item>
+		</Carousel>
 	);
 };
 
