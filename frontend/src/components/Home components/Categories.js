@@ -13,15 +13,12 @@ import watches from '../../Images/cat-watches.jpg';
 import shoe from '../../Images/cat-shoe.jpg';
 
 import CategoryItem from './CategoryItem';
+import SectionHeading from './SectionHeading';
 
 const Categories = () => {
 	return (
 		<div className='section section__categories categories'>
-			<div className='categories__desc'>
-				<div className='categories__desc-line'></div>
-				<h2 className='categories__desc-h2'>Shop by categories</h2>
-				<div className='categories__desc-line'></div>
-			</div>
+			<SectionHeading desc='Shop by categories' />
 			<div className='categories__inner'>
 				<CategoryItem catName="Men's" imgSrc={menStyles} itemNo='1' />
 				<CategoryItem catName="Women's" imgSrc={womenStyles} itemNo='2' />

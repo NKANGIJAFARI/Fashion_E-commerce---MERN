@@ -1,0 +1,23 @@
+.sectionHeading {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3rem;
+
+	&__h2 {
+		color: var(--color-black);
+		font-size: 2rem;
+		margin-bottom: 0px;
+	}
+
+	&__line {
+		color: var(--color-black);
+		border-top: 3px solid var(--color-black);
+		width: 5rem;
+		height: 4px;
+		z-index: 2;
+		background-color: var(--color-black);
+		margin: 0 10px;
+	}
+}
