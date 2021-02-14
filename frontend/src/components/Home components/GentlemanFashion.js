@@ -1,15 +1,19 @@
 import React from 'react';
+import ControlledTabs from './Tabs';
+
+import SectionHeading from './SectionHeading';
 
 const GentlemanFashion = () => {
 	return (
 		<section className='section section__gentle'>
+			<SectionHeading desc='Trending Fashions' />
 			<div className='gentle'>
-				<img className='gentle__image' src='/images/gentle suit.png' alt='' />
-				<div className='gentle__items--wrapper'>
-					<div className='gentle__item gentle__item--1'>Pants</div>
-					<div className='gentle__item gentle__item--2'>Suits</div>
-					<div className='gentle__item gentle__item--3'>Shoes</div>
-					<div className='gentle__item gentle__item--4'>ties</div>
+				<div className='gentle__image--wrapper'>
+					<img src='/images/gentlesuit.png' alt='Gentleman jfashions' />
+				</div>
+
+				<div>
+					<ControlledTabs />
 				</div>
 			</div>
 		</section>
