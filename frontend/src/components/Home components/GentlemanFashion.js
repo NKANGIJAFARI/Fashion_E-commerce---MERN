@@ -5,17 +5,9 @@ import SectionHeading from './SectionHeading';
 
 const GentlemanFashion = () => {
 	return (
-		<section className='section section__gentle'>
+		<section className='section section__trending'>
 			<SectionHeading desc='Trending Fashions' />
-			<div className='gentle'>
-				<div className='gentle__image--wrapper'>
-					<img src='/images/gentlesuit.png' alt='Gentleman jfashions' />
-				</div>
-
-				<div>
-					<ControlledTabs />
-				</div>
-			</div>
+			<ControlledTabs />
 		</section>
 	);
 };
