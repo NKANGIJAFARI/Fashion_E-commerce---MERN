@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 import Carousel from './TrendingCarousel';
 
-function ControlledTabs() {
+const ControlledTabs = () => {
+	let history = useHistory();
+
 	const [key, setKey] = useState('gents');
-	const [imgSrc, setImgSrc] = useState('/images/gentlesuit.png');
 
 	var items = [
 		{
@@ -50,6 +52,10 @@ function ControlledTabs() {
 		},
 	];
 
+	const searchProductCategory = (categoryName) => {
+		history.push(`/search/${categoryName}`);
+	};
+
 	return (
 		<div className='gentle'>
 			<div className='gentle__image--wrapper'>
@@ -68,7 +74,11 @@ function ControlledTabs() {
 					alt={`${key} wear`}
 				/>
 
-				<button class={`btn-inline `}>
+				<button
+					class={`btn-inline`}
+					href='/search/${key}'
+					type='button'
+					onClick={() => searchProductCategory(key)}>
 					Discover now <span>&rarr;</span>
 				</button>
 			</div>
@@ -78,43 +88,13 @@ function ControlledTabs() {
 					activeKey={key}
 					onSelect={(k) => setKey(k)}>
 					<Tab eventKey='gents' title='Gents Wear'>
-						{/* <TabItem
-							desc1='Panties'
-							imgSrc1='/images/manpant.png'
-							desc2='Panties'
-							imgSrc2='/images/manjacket.png'
-							desc3='Panties'
-							imgSrc3='/images/fet-man-trouser.png'
-							desc4='Panties'
-							imgSrc4='/images/fet-man-shirt.png'
-						/> */}
 						<Carousel items={items} active={0} />
 					</Tab>
 
 					<Tab eventKey='ladies' title='Ladies Wear'>
-						{/* <TabItem
-							desc1='Panties'
-							imgSrc1='/images/fet-lady-knicker.png'
-							desc2='Jackets'
-							imgSrc2='/images/jacket.png'
-							desc3='Trousers'
-							imgSrc3='/'
-							desc4='Panties'
-							imgSrc4='/'
-						/> */}
 						<Carousel items={items} active={0} />
 					</Tab>
 					<Tab eventKey='kids' title='Kids Wear'>
-						{/* <TabItem
-							desc1='Panties'
-							imgSrc1='/images/fet-kid1.png'
-							desc2='Panties'
-							imgSrc2='/'
-							desc3='Panties'
-							imgSrc3='/'
-							desc4='Panties'
-							imgSrc4='/'
-						/> */}
 						<Carousel items={items} active={0} />
 					</Tab>
 					<Tab eventKey='sports' title='Sports Wear'>
@@ -134,6 +114,6 @@ function ControlledTabs() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default ControlledTabs;
