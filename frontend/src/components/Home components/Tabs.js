@@ -6,20 +6,6 @@ function ControlledTabs() {
 	const [key, setKey] = useState('gents');
 	const [imgSrc, setImgSrc] = useState('/images/gentlesuit.png');
 
-	// if (key === 'gents') {
-	// 	setImgSrc('/images/gentlesuit.png');
-	// }
-	// else if (key === 'ladies') {
-	// 	setImgSrc('/images/wst-3.jpg');
-	// }
-	//else if (key === 'kids') {
-	// 	setImgSrc('/images/boyshirt.png');
-	// } else if (key === 'sports') {
-	// 	setImgSrc('/images/familyfit.png');
-	// } else {
-	// 	setImgSrc('/images/gentlesuit.png');
-	// }
-
 	console.log(key);
 
 	return (

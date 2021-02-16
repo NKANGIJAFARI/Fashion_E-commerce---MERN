@@ -7,7 +7,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex: 0.4;
+		flex: 0.3;
 
 		& img {
 			width: 60%;
@@ -25,10 +25,6 @@
 	}
 
 	&__tabs--wrapper {
-		// display: flex;
-		// flex-direction: column;
-		// justify-content: center;
-		// align-items: center;
 		flex: 0.7;
 	}
 
@@ -38,6 +34,10 @@
 		border: red solid 2px;
 		justify-content: space-evenly;
 		overflow: hidden;
+	}
+
+	.tab-content {
+		position: relative;
 	}
 	&__item {
 		width: 170px;

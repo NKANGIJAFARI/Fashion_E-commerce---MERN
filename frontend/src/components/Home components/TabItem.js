@@ -1,4 +1,5 @@
 import React from 'react';
+import Carousel from './TrendingCarousel';
 
 const TabItem = ({
 	imgSrc1,
@@ -10,6 +11,50 @@ const TabItem = ({
 	desc3,
 	desc4,
 }) => {
+	// var items = [
+	// 	<TabItem
+	// 		desc1='Panties'
+	// 		imgSrc1='/images/manpant.png'
+	// 		desc2='Panties'
+	// 		imgSrc2='/images/manjacket.png'
+	// 		desc3='Panties'
+	// 		imgSrc3='/images/fet-man-trouser.png'
+	// 		desc4='Panties'
+	// 		imgSrc4='/images/fet-man-shirt.png'
+	// 	/>,
+	// 	<TabItem
+	// 		desc1='Panties'
+	// 		imgSrc1='/images/fet-lady-knicker.png'
+	// 		desc2='Jackets'
+	// 		imgSrc2='/images/jacket.png'
+	// 		desc3='Trousers'
+	// 		imgSrc3='/'
+	// 		desc4='Panties'
+	// 		imgSrc4='/'
+	// 	/>,
+	// 	<TabItem
+	// 		desc1='Panties'
+	// 		imgSrc1='/images/fet-kid1.png'
+	// 		desc2='Panties'
+	// 		imgSrc2='/'
+	// 		desc3='Panties'
+	// 		imgSrc3='/'
+	// 		desc4='Panties'
+	// 		imgSrc4='/'
+	// 	/>,
+
+	// 	<TabItem
+	// 		desc1='Panties'
+	// 		imgSrc1='/'
+	// 		desc2='Panties'
+	// 		imgSrc2='/'
+	// 		desc3='Panties'
+	// 		imgSrc3='/'
+	// 		desc4='Panties'
+	// 		imgSrc4='/'
+	// 	/>,
+	// ];
+
 	return (
 		<div className='gentle__items--wrapper'>
 			<div className='gentle__item gentle__item--1'>

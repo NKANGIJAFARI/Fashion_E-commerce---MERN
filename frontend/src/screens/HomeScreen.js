@@ -15,6 +15,7 @@ import Categories from '../components/Home components/Categories';
 import ServicePromise from '../components/Home components/ServicePromise';
 import HobbiesFashion from '../components/Home components/HobbiesFashion';
 import GentlemanFashion from '../components/Home components/GentlemanFashion';
+import Carousel from '../components/Home components/TrendingCarousel';
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
@@ -31,8 +32,43 @@ const HomeScreen = ({ match }) => {
 		dispatch(listProducts(keyword, pageNumber));
 	}, [dispatch, keyword, pageNumber]);
 
+	var items = [
+		{
+			image: '/images/manpant.png',
+			desc: 'Panties',
+			id: 1,
+		},
+		{
+			image: '/images/manpant.png',
+			desc: 'Panties',
+		},
+		{
+			image: '/images/manpant.png',
+			desc: 'Panties',
+		},
+		{
+			image: '/images/manpant.png',
+			desc: 'Panties',
+		},
+		{
+			image: '/images/manpant.png',
+			desc: 'Panties',
+		},
+		{
+			image: '/images/manpant.png',
+			desc: 'Panties',
+		},
+		{
+			image: '/images/manpant.png',
+			desc: 'Panties',
+		},
+		{
+			image: '/images/manpant.png',
+			desc: 'Panties',
+		},
+	];
 	return (
-		<section className='home'>
+		<section className='home' style={{ padding: '10px' }}>
 			<Meta />
 			{!keyword ? (
 				<>
@@ -67,9 +103,9 @@ const HomeScreen = ({ match }) => {
 					/>
 				</>
 			)}
-
 			<HobbiesFashion />
 			<GentlemanFashion />
+			<Carousel items={items} active={0} />
 		</section>
 	);
 };
