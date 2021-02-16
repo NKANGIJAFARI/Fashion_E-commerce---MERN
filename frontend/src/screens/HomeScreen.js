@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Meta from '../components/Meta';
@@ -14,8 +14,7 @@ import FirstDisplay from '../components/FirstDisplay';
 import Categories from '../components/Home components/Categories';
 import ServicePromise from '../components/Home components/ServicePromise';
 import HobbiesFashion from '../components/Home components/HobbiesFashion';
-import GentlemanFashion from '../components/Home components/GentlemanFashion';
-import Carousel from '../components/Home components/TrendingCarousel';
+import TrendingFashions from '../components/Home components/TrendingFashion';
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
@@ -104,8 +103,7 @@ const HomeScreen = ({ match }) => {
 				</>
 			)}
 			<HobbiesFashion />
-			<GentlemanFashion />
-			<Carousel items={items} active={0} />
+			<TrendingFashions />
 		</section>
 	);
 };

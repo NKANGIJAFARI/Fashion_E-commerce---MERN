@@ -1,9 +1,9 @@
 :root {
-	--level2-height: 150px;
+	--level2-height: 170px;
 	--level2-width: 110px;
-	--level1-height: 180px;
+	--level1-height: 200px;
 	--level1-width: 130px;
-	--level0-height: 240px;
+	--level0-height: 270px;
 	--level0-width: 160px;
 
 	--level-2-left: 650px;
@@ -22,7 +22,7 @@
 #carousel {
 	// position: absolute;
 	// height: 200px;
-	// width: 810px;
+	width: 810px;
 	margin: auto;
 	left: 0;
 	right: 0;

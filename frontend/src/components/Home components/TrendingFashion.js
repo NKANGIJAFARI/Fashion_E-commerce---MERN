@@ -3,13 +3,13 @@ import ControlledTabs from './Tabs';
 
 import SectionHeading from './SectionHeading';
 
-const GentlemanFashion = () => {
+const TrendingFashions = () => {
 	return (
 		<section className='section section__trending'>
-			<SectionHeading desc='Trending Fashions' />
+			<SectionHeading desc='Trending Categories' />
 			<ControlledTabs />
 		</section>
 	);
 };
 
-export default GentlemanFashion;
+export default TrendingFashions;

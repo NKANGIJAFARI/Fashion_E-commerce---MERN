@@ -2,16 +2,22 @@
 	padding: 10px;
 	width: 100%;
 	display: flex;
+	align-items: flex-start;
 
 	&__image--wrapper {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex: 0.3;
+		flex: 0.2;
 
 		& img {
-			width: 60%;
+			width: 90%;
 			height: auto;
+		}
+
+		& button {
+			font-size: 17px;
 		}
 	}
 
@@ -25,7 +31,9 @@
 	}
 
 	&__tabs--wrapper {
-		flex: 0.7;
+		flex: 0.8;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.nav-tabs {
@@ -34,10 +42,13 @@
 		border: red solid 2px;
 		justify-content: space-evenly;
 		overflow: hidden;
+		letter-spacing: 0.2rem;
+		font-weight: 400;
 	}
 
 	.tab-content {
 		position: relative;
+		align-self: center;
 	}
 	&__item {
 		width: 170px;

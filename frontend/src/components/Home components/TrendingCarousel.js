@@ -1,6 +1,7 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import TabItem from './TabItem';
+
+import { LinkContainer } from 'react-router-bootstrap';
 
 class Carousel extends React.Component {
 	constructor(props) {
@@ -31,6 +32,7 @@ class Carousel extends React.Component {
 					id={this.state.items[index].id}
 					level={level}
 					itemDetails={this.state.items[index]}
+					active={this.state.active}
 				/>
 			);
 		}
@@ -54,20 +56,19 @@ class Carousel extends React.Component {
 			active: (newActive + 1) % this.state.items.length,
 			direction: 'right',
 		});
-		console.log('active', this.state.active);
 	}
 
 	render() {
 		return (
 			<div id='carousel' className='noselect'>
 				<div className='arrow arrow-left' onClick={this.leftClick}>
-					<i className='fi-arrow-left'></i>
+					<i class='far fa-arrow-alt-circle-left'></i>
 				</div>
 				<CSSTransitionGroup transitionName={this.state.direction}>
 					{this.generateItems()}
 				</CSSTransitionGroup>
 				<div className='arrow arrow-right' onClick={this.rightClick}>
-					<i className='fi-arrow-right'></i>
+					<i class='far fa-arrow-alt-circle-right'></i>
 				</div>
 			</div>
 		);
@@ -80,35 +81,52 @@ class Item extends React.Component {
 		this.state = {
 			level: this.props.level,
 			itemDetails: this.props.itemDetails,
+			active: this.props.active,
 		};
 	}
 
 	render() {
 		const className = 'item level' + this.props.level;
 		return (
-			// <div className={`item--name ${className}`}>
-			// 	<img
-			// 		src={this.state.itemDetails.image}
-			// 		alt=''
-			// 		style={{ width: '100px' }}
-			// 	/>
-			// </div>
-			// <TabItem
-			// 	imgSrc1={this.state.itemDetails.image}
-			// 	desc1={this.state.itemDetails.desc}
-			// />
-
-			<div className={`item--name ${className}`}>
-				<h4 className={this.state.itemDetails.desc}>
-					{this.state.itemDetails.desc}
-				</h4>
-				<img
-					style={{ width: '100px' }}
-					src={this.state.itemDetails.image}
-					alt={this.state.itemDetails.desc}
-				/>
-				{/* <button>Add to Cart</button> */}
-			</div>
+			<LinkContainer
+				to={`/products/${this.props.itemDetails.id}`}
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+					padding: '5px',
+					justifyContent: 'center',
+				}}>
+				<div
+					className={`item--name ${className}`}
+					style={{
+						display: 'flex',
+						flexDirection: 'column',
+						justifyContent: 'center',
+					}}>
+					<h4
+						className={this.state.itemDetails.desc}
+						style={{ color: 'white', fontSize: '1.2rem' }}>
+						{this.state.itemDetails.desc}
+					</h4>
+					<img
+						style={{ flex: '1', height: '100px' }}
+						src={this.state.itemDetails.image}
+						alt={this.state.itemDetails.desc}
+					/>
+					<button
+						style={{
+							padding: '7px 15px',
+							alignSelf: 'center',
+							fontSize: '10px',
+							lineHeight: 0,
+							borderRadius: '7px',
+							width: 'fit-content',
+							marginTop: '4px',
+						}}>
+						<i class='fas fa-eye'></i> DETAILS
+					</button>
+				</div>
+			</LinkContainer>
 		);
 	}
 }
