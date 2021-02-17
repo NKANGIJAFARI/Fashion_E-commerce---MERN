@@ -1,21 +1,21 @@
 import React from 'react';
+import SectionHeading from './SectionHeading';
 
 const MostViewed = () => {
 	return (
 		<section className='feature' id='featured'>
-			<h1 className='heading'>
-				<span> featured product </span>
-			</h1>
+			<SectionHeading desc='Most viewed product' />
+
 			<div className='row'>
 				<div className='image-container'>
 					<div className='big-image'>
-						<img src='images/watch1.jpg' alt='' />
+						<img src='/images/watch1.png' alt='' />
 					</div>
 					<div className='small-image'>
-						<img className='image-active' src='images/watch1.jpg' alt='' />
-						<img src='images/watch2.jpg' alt='' />
-						<img src='images/watch3.jpg' alt='' />
-						<img src='images/watch4.jpg' alt='' />
+						<img className='image-active' src='images/watch1.png' alt='' />
+						<img src='/images/watch2.png' alt='mostViewed' />
+						<img src='/images/watch3.png' alt='mostViewed' />
+						<img src='/images/watch4.png' alt='mostViewed' />
 					</div>
 				</div>
 				<div className='content'>
