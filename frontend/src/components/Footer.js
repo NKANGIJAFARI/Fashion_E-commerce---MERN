@@ -42,29 +42,29 @@ const Footer = () => {
 								<div className='footer__socials'>
 									<Link href='/' className='footer__socials-item'>
 										<picture>
-											<source srcSet='/images/facebook.svg' type='image/webp' />
+											{/* <source
+												srcSet='/images/social-facebook.png'
+												type='image/webp'
+											/> */}
 											<img src='/images/facebook.svg' alt='facebook' />
 										</picture>
 									</Link>
 									<a href='#' className='footer__socials-item'>
 										<picture>
-											<source
-												srcSet='/images/instagram.svg'
-												type='image/webp'
-											/>
-											<img src='/images/instagram.svg' alt='instagram' />
+											{/* <source srcSet='/images/facebook.svg' type='image/webp' /> */}
+											<img src='/images/social-insta.png' alt='instagram' />
 										</picture>
 									</a>
 									<a href='#' className='footer__socials-item'>
 										<picture>
-											<source srcSet='/images/twitter.svg' type='image/webp' />
-											<img src='/images/twitter.svg' alt='twitter' />
+											{/* <source srcSet='/images/twitter.svg' type='image/webp' /> */}
+											<img src='/images/social-twitter.png' alt='twitter' />
 										</picture>
 									</a>
 									<a href='#' className='footer__socials-item'>
 										<picture>
-											<source srcSet='/images/linkedin.svg' type='image/webp' />
-											<img src='/images/linkedin.svg' alt='linkedin' />
+											{/* <source srcSet='/images/linkedin.svg' type='image/webp' /> */}
+											<img src='/images/social-linkedin.png' alt='linkedin' />
 										</picture>
 									</a>
 								</div>

@@ -1,0 +1,27 @@
+.girlBanner {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	&__content {
+		margin-left: 8rem;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	& h2 {
+		font-size: 3rem;
+	}
+
+	& p {
+		font-size: 1.8rem;
+	}
+
+	& button {
+		border-radius: 1px;
+		align-self: flex-start;
+	}
+}
