@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Route, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
@@ -22,16 +22,24 @@ const Header = () => {
 
 	useEffect(() => {});
 
-	document.querySelector(document).ready(function () {
-		document.querySelector('.toggle').click(function () {
-			document.querySelector('.toggle').classList.toggle('active');
-			document.querySelector('.navigation').classList.toggle('active');
-		});
-	});
+	// document.querySelector(document).ready(function () {
+	// 	document.querySelector('.toggle').click(function () {
+	// 		document.querySelector('.toggle').classList.toggle('active');
+	// 		document.querySelector('.navigation').classList.toggle('active');
+	// 	});
+	// });
+
+	const [isActive, setActive] = useState(false);
+
+	const toggleActive = () => {
+		setActive(!isActive);
+
+		console.log(isActive);
+	};
 
 	return (
 		<header>
-			<Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+			{/* <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
 				<Container fluid>
 					<LinkContainer to='/'>
 						<Navbar.Brand href='/'>ProShop</Navbar.Brand>
@@ -78,20 +86,17 @@ const Header = () => {
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
-			</Navbar>
-			<nav
-				onLoad={() => {
-					console.log('Nav loaded');
-				}}>
-				{/* <!--menu-bar-----------------------------------------> */}
-				<div className='navigation' ref='navigation'>
-					{/* <!--logo------------> */}
+			</Navbar> */}
+			<nav className='navbar'>
+				<div className={`navigation ${isActive ? 'active' : ''}`}>
 					<Link to='/' className='logo'>
 						<img src='images/logo.png' />
 					</Link>
-					{/* <!--menu-icon-------------> */}
-					<div className='toggle'></div>
-					{/* <!--menu-----------------> */}
+
+					<div
+						className={`toggle ${isActive ? 'active' : ''}`}
+						onClick={toggleActive}></div>
+
 					<ul className='menu'>
 						<li>
 							<Link to='/'>Home</Link>
@@ -101,8 +106,8 @@ const Header = () => {
 						</li>
 						<li>
 							<Link to='/'>Men</Link>
-							{/* <!--lable----> */}
-							<span className='sale-lable'>Sale</span>
+
+							{/* <span className='sale-lable'>Sale</span> */}
 						</li>
 						<li>
 							<Link to='/'>Women</Link>
@@ -111,14 +116,14 @@ const Header = () => {
 							<Link to='/'>Kids</Link>
 						</li>
 					</ul>
-					{/* <!--right-menu-----------> */}
+
 					<div className='right-menu'>
-						<a href='javascript:void(0);' className='search'>
+						<Link href='javascript:void(0);' className='search'>
 							<i className='fas fa-search'></i>
-						</a>
-						<a href='javascript:void(0);' className='user'>
+						</Link>
+						<Link href='javascript:void(0);' className='user'>
 							<i className='far fa-user'></i>
-						</a>
+						</Link>
 						<Link to='/'>
 							<i className='fas fa-shopping-cart'>
 								<span className='num-cart-product'>0</span>

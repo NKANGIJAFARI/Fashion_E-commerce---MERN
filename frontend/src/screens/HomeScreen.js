@@ -36,7 +36,7 @@ const HomeScreen = ({ match }) => {
 	}, [dispatch, keyword, pageNumber]);
 
 	return (
-		<section className='home' style={{ padding: '10px' }}>
+		<section className='home'>
 			<Meta />
 			{!keyword ? (
 				<>

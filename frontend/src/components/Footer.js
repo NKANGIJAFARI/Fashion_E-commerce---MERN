@@ -49,24 +49,24 @@ const Footer = () => {
 											<img src='/images/facebook.svg' alt='facebook' />
 										</picture>
 									</Link>
-									<a href='#' className='footer__socials-item'>
+									<Link to='/' className='footer__socials-item'>
 										<picture>
 											{/* <source srcSet='/images/facebook.svg' type='image/webp' /> */}
 											<img src='/images/social-insta.png' alt='instagram' />
 										</picture>
-									</a>
-									<a href='#' className='footer__socials-item'>
+									</Link>
+									<Link to='/' className='footer__socials-item'>
 										<picture>
 											{/* <source srcSet='/images/twitter.svg' type='image/webp' /> */}
 											<img src='/images/social-twitter.png' alt='twitter' />
 										</picture>
-									</a>
-									<a href='#' className='footer__socials-item'>
+									</Link>
+									<Link to='/' className='footer__socials-item'>
 										<picture>
 											{/* <source srcSet='/images/linkedin.svg' type='image/webp' /> */}
 											<img src='/images/social-linkedin.png' alt='linkedin' />
 										</picture>
-									</a>
+									</Link>
 								</div>
 							</div>
 							<div className='footer__col'>
@@ -82,48 +82,48 @@ const Footer = () => {
 								<div className='footer__nav'>
 									<div className='footer__nav-col'>
 										<h3 className='footer__nav-title'>shop</h3>
-										<a href='#' className='footer__nav-link'>
+										<Link to='/' className='footer__nav-link'>
 											Shop
-										</a>
-										<a href='#' className='footer__nav-link'>
+										</Link>
+										<Link to='/' className='footer__nav-link'>
 											Collection
-										</a>
-										<a href='#' className='footer__nav-link'>
+										</Link>
+										<Link to='/' className='footer__nav-link'>
 											Outlet
-										</a>
-										<a href='#' className='footer__nav-link'>
+										</Link>
+										<Link to='/' className='footer__nav-link'>
 											Lookbook
-										</a>
+										</Link>
 									</div>
 									<div className='footer__nav-col'>
 										<h3 className='footer__nav-title'>help</h3>
-										<a href='#' className='footer__nav-link'>
+										<Link to='/' className='footer__nav-link'>
 											FAQ
-										</a>
-										<a href='#' className='footer__nav-link'>
+										</Link>
+										<Link to='/' className='footer__nav-link'>
 											Privacy Policy
-										</a>
-										<a href='#' className='footer__nav-link'>
+										</Link>
+										<Link to='/' className='footer__nav-link'>
 											Terms and Conditions
-										</a>
-										<a href='#' className='footer__nav-link'>
+										</Link>
+										<Link to='/' className='footer__nav-link'>
 											Return and Exchanges
-										</a>
+										</Link>
 									</div>
 									<div className='footer__nav-col'>
 										<h3 className='footer__nav-title'>About Us</h3>
-										<a href='#' className='footer__nav-link'>
+										<Link to='/' className='footer__nav-link'>
 											Journal
-										</a>
-										<a href='#' className='footer__nav-link'>
+										</Link>
+										<Link to='/' className='footer__nav-link'>
 											Our Story
-										</a>
-										<a href='#' className='footer__nav-link'>
+										</Link>
+										<Link to='/' className='footer__nav-link'>
 											Contact
-										</a>
-										<a href='#' className='footer__nav-link'>
+										</Link>
+										<Link to='/' className='footer__nav-link'>
 											Store Location
-										</a>
+										</Link>
 									</div>
 								</div>
 							</div>

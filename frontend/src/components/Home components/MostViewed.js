@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SectionHeading from './SectionHeading';
+import { Link } from 'react-router-dom';
 
 const MostViewed = () => {
 	const [pictureSrc, setPicture] = useState('images/watch1.png');
@@ -71,9 +72,9 @@ const ProductDetails = () => {
 				<strong className='price'>
 					₹1000 <span>₹1500</span>{' '}
 				</strong>
-				<a href='#'>
+				<Link to='/'>
 					<button className='btn'>buy now</button>
-				</a>
+				</Link>
 			</div>
 		</>
 	);
