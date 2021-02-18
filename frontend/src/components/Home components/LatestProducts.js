@@ -38,14 +38,10 @@ const LatestProducts = ({ match }) => {
 					<>
 						{products &&
 							products.map((product) => <ProductCard product={product} />)}
-						<Paginate
-							pages={pages}
-							page={page}
-							keyword={keyword ? keyword : ''}
-						/>
 					</>
 				)}
 			</div>
+			<Paginate pages={pages} page={page} keyword={keyword ? keyword : ''} />
 		</section>
 	);
 };

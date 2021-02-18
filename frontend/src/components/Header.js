@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Route, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -19,6 +19,15 @@ const Header = () => {
 	const logoutHandler = () => {
 		dispatch(logout());
 	};
+
+	useEffect(() => {});
+
+	document.querySelector(document).ready(function () {
+		document.querySelector('.toggle').click(function () {
+			document.querySelector('.toggle').classList.toggle('active');
+			document.querySelector('.navigation').classList.toggle('active');
+		});
+	});
 
 	return (
 		<header>
@@ -70,6 +79,54 @@ const Header = () => {
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
+			<nav
+				onLoad={() => {
+					console.log('Nav loaded');
+				}}>
+				{/* <!--menu-bar-----------------------------------------> */}
+				<div className='navigation' ref='navigation'>
+					{/* <!--logo------------> */}
+					<Link to='/' className='logo'>
+						<img src='images/logo.png' />
+					</Link>
+					{/* <!--menu-icon-------------> */}
+					<div className='toggle'></div>
+					{/* <!--menu-----------------> */}
+					<ul className='menu'>
+						<li>
+							<Link to='/'>Home</Link>
+						</li>
+						<li className='shop'>
+							<Link to='/'>Shop</Link>
+						</li>
+						<li>
+							<Link to='/'>Men</Link>
+							{/* <!--lable----> */}
+							<span className='sale-lable'>Sale</span>
+						</li>
+						<li>
+							<Link to='/'>Women</Link>
+						</li>
+						<li>
+							<Link to='/'>Kids</Link>
+						</li>
+					</ul>
+					{/* <!--right-menu-----------> */}
+					<div className='right-menu'>
+						<a href='javascript:void(0);' className='search'>
+							<i className='fas fa-search'></i>
+						</a>
+						<a href='javascript:void(0);' className='user'>
+							<i className='far fa-user'></i>
+						</a>
+						<Link to='/'>
+							<i className='fas fa-shopping-cart'>
+								<span className='num-cart-product'>0</span>
+							</i>
+						</Link>
+					</div>
+				</div>
+			</nav>
 		</header>
 	);
 };
