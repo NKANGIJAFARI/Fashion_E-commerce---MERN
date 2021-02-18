@@ -18,6 +18,7 @@ import TrendingFashions from '../components/Home components/TrendingFashion';
 import GirlBanner from '../components/Home components/GirlBanner';
 import MostViewed from '../components/Home components/MostViewed';
 import ShoesSideBanner from '../components/Home components/ShoesSideBanner';
+import LatestProducts from '../components/Home components/LatestProducts';
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
@@ -34,41 +35,6 @@ const HomeScreen = ({ match }) => {
 		dispatch(listProducts(keyword, pageNumber));
 	}, [dispatch, keyword, pageNumber]);
 
-	var items = [
-		{
-			image: '/images/manpant.png',
-			desc: 'Panties',
-			id: 1,
-		},
-		{
-			image: '/images/manpant.png',
-			desc: 'Panties',
-		},
-		{
-			image: '/images/manpant.png',
-			desc: 'Panties',
-		},
-		{
-			image: '/images/manpant.png',
-			desc: 'Panties',
-		},
-		{
-			image: '/images/manpant.png',
-			desc: 'Panties',
-		},
-		{
-			image: '/images/manpant.png',
-			desc: 'Panties',
-		},
-		{
-			image: '/images/manpant.png',
-			desc: 'Panties',
-		},
-		{
-			image: '/images/manpant.png',
-			desc: 'Panties',
-		},
-	];
 	return (
 		<section className='home' style={{ padding: '10px' }}>
 			<Meta />
@@ -77,6 +43,7 @@ const HomeScreen = ({ match }) => {
 					<FirstDisplay />
 					<ServicePromise />
 					<TrendingFashions />
+					<LatestProducts match={match} />
 					<HobbiesFashion />
 					<GirlBanner />
 					<MostViewed />
@@ -90,26 +57,6 @@ const HomeScreen = ({ match }) => {
 				</Link>
 			)}
 			<h1>Latest Products</h1>
-			{loading ? (
-				<Loader />
-			) : error ? (
-				<Message variant='danger'>{error}</Message>
-			) : (
-				<>
-					<Row>
-						{products.map((product) => (
-							<Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-								<Product product={product} />
-							</Col>
-						))}
-					</Row>
-					<Paginate
-						pages={pages}
-						page={page}
-						keyword={keyword ? keyword : ''}
-					/>
-				</>
-			)}
 		</section>
 	);
 };
