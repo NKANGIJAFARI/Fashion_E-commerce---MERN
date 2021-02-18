@@ -1,0 +1,118 @@
+.arrival-heading strong {
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	color: #1b1919;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-top: 40px;
+	padding: 5px 30px;
+	border: 1px solid #e0e0e0;
+}
+.arrival-heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.arrival-heading strong {
+	color: #ffffff;
+	background-color: #202020;
+	font-weight: 500;
+}
+.arrival-heading p {
+	color: #808080;
+	margin: 10px;
+	font-size: 0.9rem;
+}
+.latestProducts {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 2rem 5rem;
+	margin-top: 20px;
+}
+.productCard {
+	width: 23%;
+	min-width: 170px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+
+	margin-left: 2px;
+	margin-right: 2px;
+	// &__inner {
+	// 	display: flex;
+	// 	flex: 0.3;
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// 	border: 1px solid #f7f7f7;
+	// 	border-radius: 10px;
+	// 	margin: 20px;
+	// }
+
+	&__imgWrapper {
+		width: 200px;
+		height: 210px;
+		margin: 20px;
+		cursor: pointer;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: center;
+		}
+
+		& .add-cart {
+			position: absolute;
+			right: -20px;
+			top: 10px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #ffffff;
+			background-color: #0b9d8a;
+			box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+			display: none;
+			animation: fade 0.3s;
+
+			:hover {
+				background-color: #f76b6a;
+				transition: all ease 0.6s;
+			}
+		}
+	}
+
+	&__details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 10px 20px;
+		border-top: 1px solid #f3f3f3;
+
+		&--name {
+			color: #727272;
+		}
+		&--price {
+			color: #333333;
+			font-size: 1.2rem;
+			font-weight: 400;
+		}
+	}
+
+	&:hover {
+		box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+	}
+
+	&:hover .add-cart {
+		display: flex;
+	}
+}

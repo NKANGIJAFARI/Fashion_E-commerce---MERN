@@ -1,25 +1,29 @@
-import React, { useEffect } from 'react';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react';
+
 import { Link } from 'react-router-dom';
 import Rating from '../Rating';
 
 const ProductCard = ({ product }) => {
 	return (
 		<div className='productCard'>
-			<div className='productCard__inner'>
-				<Link to={`/products/${product.id}`}>
-					<img src={product.image} alt='' productCard__inner--image />
+			<div class='productCard__imgWrapper'>
+				<Link href='/' class='add-cart'>
+					<i class='fas fa-shopping-cart'></i>
 				</Link>
+				<img src={product.image} alt='' productCard__inner--image />
+			</div>
+
+			<div class='productCard__details'>
 				<Link to={`/products/${product.id}`}>
-					<h4 className='productCard__inner--desc'>{product.name} </h4>
+					<h4 className='productCard__details--name'>{product.name} </h4>
 				</Link>
-				<div className='productCard__inner--ratingWrapper'>
+				<div className='productCard__details--ratingWrapper'>
 					<Rating
 						value={product.rating}
 						text={`${product.numReviews} reviews`}
 					/>
 				</div>
-				<p className='productCard__inner--price'>$ {product.price}</p>
+				<span className='productCard__details--price'>$ {product.price}</span>
 			</div>
 		</div>
 	);
