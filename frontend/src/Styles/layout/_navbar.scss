@@ -14,13 +14,30 @@ ul {
 a {
 	text-decoration: none;
 }
+
+.header {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	background-color: yellow;
+	font-size: 20px;
+}
+.adverts {
+	line-height: 3rem;
+	height: 3rem;
+	background-color: var(--pink);
+	text-align: center;
+	color: var(--white);
+	font-weight: 500;
+	font-size: 1.5rem;
+}
 .navbar {
 	// width: 100%;
 	// box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
 	// z-index: 100;
 
 	box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
-	z-index: 100;
+	z-index: 1000;
 	width: 100%;
 	height: fit-content;
 	font-size: 1.6rem;
@@ -28,6 +45,11 @@ a {
 	padding: 8px 2px 3px 2px;
 	display: block;
 	line-height: 0;
+	background-color: rgb(250, 253, 252);
+
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
 
 	& .fas,
 	& .far {

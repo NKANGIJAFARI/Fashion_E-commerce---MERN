@@ -48,8 +48,8 @@ const HomeScreen = ({ match }) => {
 					<GirlBanner />
 					<MostViewed />
 					<ShoesSideBanner />
-					<Categories />
-					<ProductCarousel />
+					{/* <Categories />
+					<ProductCarousel /> */}
 				</>
 			) : (
 				<Link to='/' className='btn btn-light'>

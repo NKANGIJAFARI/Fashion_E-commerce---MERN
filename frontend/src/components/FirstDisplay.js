@@ -11,13 +11,13 @@ const FirstDisplay = () => {
 					<p className='fullHeader__text'>
 						An exclusive selection of this season's trends.
 					</p>
-					<div className='fullHeader__links'>
-						<Link to='/' className='link'>
-							DISCOVER
-						</Link>
-						<Link to='/' className='link'>
-							SHOP NOW
-						</Link>
+					<div className='fullHeader__buttons'>
+						<button type='button' to='/' className='btn__primary'>
+							<i class='fas fa-search-plus'></i> DISCOVER
+						</button>
+						<button type='button' to='/' className='btn__primary'>
+							<i class='fas fa-shopping-cart'></i> SHOP NOW
+						</button>
 					</div>
 				</div>
 			</div>

@@ -2,6 +2,10 @@
 .fullHeader {
 	padding: 0px;
 	background: url(../../Images/main-bg.jpg) no-repeat center/cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 .fullHeader__inner {
@@ -14,7 +18,7 @@
 }
 
 .fullHeader__content {
-	margin-top: 326px;
+	margin-right: 20px;
 }
 
 .fullHeader__suptitle {
@@ -26,8 +30,8 @@
 
 .fullHeader__title {
 	font-weight: bold;
-	font-size: 80px;
-	line-height: 100px;
+	font-size: 60px;
+	line-height: 70px;
 	text-transform: uppercase;
 }
 
@@ -37,13 +41,13 @@
 	line-height: 27px;
 }
 
-.fullHeader__links {
+.fullHeader__buttons {
 	margin-top: 27px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 }
 
-.fullHeader__links .link:first-child {
+.fullHeader__buttons .btn__primary:first-child {
 	margin-right: 35px;
 }

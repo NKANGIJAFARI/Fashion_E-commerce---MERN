@@ -34,11 +34,11 @@ const Header = () => {
 	const toggleActive = () => {
 		setActive(!isActive);
 
-		console.log(isActive);
+		//What isActive is will change on the click
 	};
 
 	return (
-		<header>
+		<>
 			{/* <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
 				<Container fluid>
 					<LinkContainer to='/'>
@@ -87,6 +87,9 @@ const Header = () => {
 					</Navbar.Collapse>
 				</Container>
 			</Navbar> */}
+			<div class='adverts'>
+				<span>30% off your first purchase</span>
+			</div>
 			<nav className='navbar'>
 				<div className={`navigation ${isActive ? 'active' : ''}`}>
 					<Link to='/' className='logo'>
@@ -132,7 +135,7 @@ const Header = () => {
 					</div>
 				</div>
 			</nav>
-		</header>
+		</>
 	);
 };
 
