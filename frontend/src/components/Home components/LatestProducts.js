@@ -7,9 +7,11 @@ import { Row, Col } from 'react-bootstrap';
 import Paginate from '../Paginate';
 import Message from '../Message';
 import Loader from '../Loader';
+
 import ProductCard from './ProductCard';
 
 import { listProducts } from '../../actions/productActions';
+import SectionHeading from './SectionHeading';
 
 const LatestProducts = ({ match }) => {
 	const { keyword, pageNumber } = useParams();
@@ -29,6 +31,7 @@ const LatestProducts = ({ match }) => {
 
 	return (
 		<section className='section section__latestProducts'>
+			<SectionHeading desc='Latest Products' />
 			<div className='latestProducts'>
 				{loading ? (
 					<Loader />
