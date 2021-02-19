@@ -7,9 +7,6 @@ const ProductCard = ({ product }) => {
 	return (
 		<div className='productCard'>
 			<div class='productCard__imgWrapper'>
-				<Link href='/' class='add-cart'>
-					<i class='fas fa-shopping-cart'></i>
-				</Link>
 				<img src={product.image} alt='' productCard__inner--image />
 			</div>
 
@@ -25,6 +22,24 @@ const ProductCard = ({ product }) => {
 				</div>
 				<span className='productCard__details--price'>$ {product.price}</span>
 			</div>
+
+			<ul className='productCard__options'>
+				<li>
+					<Link to='/' className='productCard__options--link'>
+						<i class='far fa-eye'></i>
+					</Link>
+				</li>
+				<li>
+					<Link to='/' className='productCard__options--link'>
+						<i class='far fa-heart'></i>
+					</Link>
+				</li>
+				<li>
+					<Link to='/' className='productCard__options--link'>
+						<i class='fas fa-sync'></i>
+					</Link>
+				</li>
+			</ul>
 		</div>
 	);
 };

@@ -35,6 +35,7 @@
 .productCard {
 	width: 23%;
 	min-width: 170px;
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -66,28 +67,6 @@
 			object-fit: contain;
 			object-position: center;
 		}
-
-		& .add-cart {
-			position: absolute;
-			right: -20px;
-			top: 10px;
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: #ffffff;
-			background-color: #0b9d8a;
-			box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-			display: none;
-			animation: fade 0.3s;
-
-			:hover {
-				background-color: #f76b6a;
-				transition: all ease 0.6s;
-			}
-		}
 	}
 
 	&__details {
@@ -108,6 +87,96 @@
 		}
 	}
 
+	&__options {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 50%;
+		left: 50%;
+		width: 17rem;
+		height: 5rem;
+		background-color: rgba(255, 255, 255, 0.5);
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(-50%, -50%) scale(0.7);
+		transition: all 0.5s ease-in-out;
+
+		.product:hover ul i {
+			color: var(--white);
+		}
+
+		& li:not(:last-child) {
+			margin-right: 1.6rem;
+		}
+
+		&--link {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--pink);
+			width: 3.5rem;
+			height: 3.5rem;
+			cursor: pointer;
+			transition: 0.5s;
+			font-size: 2rem;
+		}
+
+		&--link:hover {
+			background-color: var(--black);
+		}
+
+		&--link::before {
+			content: '';
+			position: absolute;
+			top: -0.6rem;
+			left: -0.6rem;
+			height: 0;
+			width: 0;
+			border-top: 3px solid var(--pink);
+			border-left: 3px solid var(--pink);
+			transition: 0.5s;
+			opacity: 0;
+			z-index: 1;
+		}
+
+		&--link::after {
+			content: '';
+			position: absolute;
+			bottom: -0.6rem;
+			right: -0.6rem;
+			width: 0;
+			height: 0;
+			border-bottom: 3px solid var(--pink);
+			border-right: 3px solid var(--pink);
+			z-index: 1;
+			opacity: 0;
+			transition: 0.5s;
+		}
+
+		&--link:hover::before {
+			width: 126%;
+			height: 126%;
+			border-top: 3px solid var(--black);
+			border-left: 3px solid var(--black);
+			opacity: 1;
+		}
+
+		&--link:hover::after {
+			width: 126%;
+			height: 126%;
+			border-bottom: 3px solid var(--black);
+			border-right: 3px solid var(--black);
+			opacity: 1;
+		}
+	}
+
+	&:hover .productCard__options {
+		opacity: 1;
+		visibility: visible;
+		transform: translate(-50%, -50%) scale(1);
+	}
 	&:hover {
 		box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
 	}

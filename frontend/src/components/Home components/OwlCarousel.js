@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -11,8 +13,8 @@ const Carousel = () => {
 			autoplayTimeout={5000}
 			autoplayHoverPause
 			loop
-			items={4}
-			margin={10}
+			items={5}
+			margin={2}
 			responsive={{
 				0: {
 					items: 1,
@@ -23,39 +25,38 @@ const Carousel = () => {
 				1000: {
 					items: 5,
 				},
+				1200: {
+					items: 5,
+				},
 			}}
 			nav>
-			<div class='item' style={{ width: '150px', height: '150PX' }}>
-				<img src='/images/main-bg.jpg' alt='' />
-			</div>
-			<div class='item' style={{ width: '150px', height: '150PX' }}>
-				<img src='/images/tre4.jpg' alt='' />
-			</div>
-			<div class='item' style={{ width: '150px', height: '150PX' }}>
-				<img src='/images/tre4.jpg' alt='' />
-			</div>
-			<div class='item' style={{ width: '150px', height: '150PX' }}>
-				<img src='/images/tre4.jpg' alt='' />
-			</div>
-			<div class='item' style={{ width: '150px', height: '150PX' }}>
-				<img src='/images/tre4.jpg' alt='' />
-			</div>
-			<div class='item' style={{ width: '150px', height: '150PX' }}>
-				<img src='/images/tre4.jpg' alt='' />
-			</div>
-			<div class='item' style={{ width: '150px', height: '150PX' }}>
-				<img src='/images/tre4.jpg' alt='' />
-			</div>
-			<div class='item'>
-				<img src='/images/tre4.jpg' alt='' />
-			</div>
-			<div class='item'>
-				<img src='/images/tre4.jpg' alt='' />
-			</div>
-			<div class='item'>
-				<img src='/images/tre4.jpg' alt='' />
-			</div>
+			<OwlCarouselItem imageSrc='/images/tre.jpg' />
 		</OwlCarousel>
+	);
+};
+
+const OwlCarouselItem = ({ imageSrc }) => {
+	return (
+		<div class='item'>
+			<img src={imageSrc} alt='' />
+			<ul>
+				<li>
+					<Link to='/'>
+						<i class='far fa-eye'></i>
+					</Link>
+				</li>
+				<li>
+					<Link to='/'>
+						<i class='far fa-heart'></i>
+					</Link>
+				</li>
+				<li>
+					<Link to='/'>
+						<i class='fas fa-sync'></i>
+					</Link>
+				</li>
+			</ul>
+		</div>
 	);
 };
 

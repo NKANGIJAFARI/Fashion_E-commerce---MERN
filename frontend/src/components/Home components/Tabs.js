@@ -83,10 +83,7 @@ const ControlledTabs = () => {
 				</button>
 			</div>
 			<div className='gentle__tabs--wrapper'>
-				<Tabs
-					id='controlled-tab-example'
-					activeKey={key}
-					onSelect={(k) => setKey(k)}>
+				<Tabs id='controlled-tab' activeKey={key} onSelect={(k) => setKey(k)}>
 					<Tab eventKey='gents' title='Gents Wear'>
 						<Carousel items={items} active={0} />
 					</Tab>
@@ -98,16 +95,6 @@ const ControlledTabs = () => {
 						<Carousel items={items} active={0} />
 					</Tab>
 					<Tab eventKey='sports' title='Sports Wear'>
-						{/* <TabItem
-							desc1='Panties'
-							imgSrc1='/'
-							desc2='Panties'
-							imgSrc2='/'
-							desc3='Panties'
-							imgSrc3='/'
-							desc4='Panties'
-							imgSrc4='/'
-						/> */}
 						<Carousel items={items} active={0} />
 					</Tab>
 				</Tabs>
