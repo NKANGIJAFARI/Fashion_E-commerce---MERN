@@ -19,6 +19,7 @@ import GirlBanner from '../components/Home components/GirlBanner';
 import MostViewed from '../components/Home components/MostViewed';
 import ShoesSideBanner from '../components/Home components/ShoesSideBanner';
 import LatestProducts from '../components/Home components/LatestProducts';
+import Carousel from '../components/Home components/OwlCarousel';
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
@@ -41,6 +42,7 @@ const HomeScreen = ({ match }) => {
 			{!keyword ? (
 				<>
 					<FirstDisplay />
+					<Carousel />
 					<ServicePromise />
 					<TrendingFashions />
 					<LatestProducts match={match} />
