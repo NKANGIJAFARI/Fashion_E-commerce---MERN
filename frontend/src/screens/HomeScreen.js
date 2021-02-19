@@ -11,7 +11,7 @@ import { listProducts } from '../actions/productActions';
 import ProductCarousel from '../components/Home components/ProductCarousel';
 import FirstDisplay from '../components/FirstDisplay';
 
-import Categories from '../components/Home components/Categories';
+// import Categories from '../components/Home components/Categories';
 import ServicePromise from '../components/Home components/ServicePromise';
 import HobbiesFashion from '../components/Home components/HobbiesFashion';
 import TrendingFashions from '../components/Home components/TrendingFashion';
@@ -19,7 +19,7 @@ import GirlBanner from '../components/Home components/GirlBanner';
 import MostViewed from '../components/Home components/MostViewed';
 import ShoesSideBanner from '../components/Home components/ShoesSideBanner';
 import LatestProducts from '../components/Home components/LatestProducts';
-import Carousel from '../components/Home components/OwlCarousel';
+import FeaturedProducts from '../components/Home components/FeaturedProducts';
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
@@ -42,14 +42,14 @@ const HomeScreen = ({ match }) => {
 			{!keyword ? (
 				<>
 					<FirstDisplay />
-					<Carousel />
-					<ServicePromise />
+					<FeaturedProducts />
 					<TrendingFashions />
-					<LatestProducts match={match} />
+					<LatestProducts />
 					<HobbiesFashion />
 					<GirlBanner />
 					<MostViewed />
 					<ShoesSideBanner />
+					<ServicePromise />
 					{/* <Categories />
 					<ProductCarousel /> */}
 				</>
@@ -58,7 +58,6 @@ const HomeScreen = ({ match }) => {
 					Go Back
 				</Link>
 			)}
-			<h1>Latest Products</h1>
 		</section>
 	);
 };

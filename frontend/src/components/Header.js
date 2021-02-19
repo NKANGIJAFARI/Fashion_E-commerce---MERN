@@ -128,6 +128,11 @@ const Header = () => {
 							<i className='far fa-user'></i>
 						</Link>
 						<Link to='/'>
+							<i className='far fa-heart'>
+								<span className='num-cart-product'>0</span>
+							</i>
+						</Link>
+						<Link to='/'>
 							<i className='fas fa-shopping-cart'>
 								<span className='num-cart-product'>0</span>
 							</i>
