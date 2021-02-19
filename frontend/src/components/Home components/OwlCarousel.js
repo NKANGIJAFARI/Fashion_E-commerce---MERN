@@ -240,19 +240,19 @@ const Carousel = () => {
 			autoplayTimeout={5000}
 			autoplayHoverPause
 			loop
-			items={5}
+			items={1}
 			margin={2}
 			responsive={{
 				0: {
 					items: 1,
 				},
 				600: {
-					items: 3,
+					items: 2,
 				},
 				1000: {
-					items: 5,
+					items: 4,
 				},
-				1200: {
+				1250: {
 					items: 5,
 				},
 			}}
@@ -262,34 +262,7 @@ const Carousel = () => {
 					<ProductCard product={product} />
 				</div>
 			))}
-
-			<OwlCarouselItem imageSrc='/images/tre3.jpg' />
 		</OwlCarousel>
-	);
-};
-
-const OwlCarouselItem = ({ imageSrc }) => {
-	return (
-		<div class='item'>
-			<img src={imageSrc} alt='' />
-			<ul>
-				<li>
-					<Link to='/'>
-						<i class='far fa-eye'></i>
-					</Link>
-				</li>
-				<li>
-					<Link to='/'>
-						<i class='far fa-heart'></i>
-					</Link>
-				</li>
-				<li>
-					<Link to='/'>
-						<i class='fas fa-sync'></i>
-					</Link>
-				</li>
-			</ul>
-		</div>
 	);
 };
 

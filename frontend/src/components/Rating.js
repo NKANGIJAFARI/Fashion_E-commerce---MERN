@@ -6,7 +6,7 @@ const Rating = ({ value, text, color }) => {
 		<div>
 			<span>
 				<i
-					style={{ color }}
+					style={{ color, fontSize: '18px' }}
 					className={
 						value >= 1
 							? 'fas fa-star'
@@ -17,7 +17,7 @@ const Rating = ({ value, text, color }) => {
 			</span>
 			<span>
 				<i
-					style={{ color }}
+					style={{ color, fontSize: '18px' }}
 					className={
 						value >= 2
 							? 'fas fa-star'
@@ -26,9 +26,9 @@ const Rating = ({ value, text, color }) => {
 							: 'far fa-star'
 					}></i>
 			</span>
-			<span>
+			<span style={{}}>
 				<i
-					style={{ color }}
+					style={{ color, fontSize: '18px' }}
 					className={
 						value >= 3
 							? 'fas fa-star'
@@ -36,10 +36,10 @@ const Rating = ({ value, text, color }) => {
 							? 'fas fa-star-half-alt'
 							: 'far fa-star'
 					}></i>
-			</span>{' '}
+			</span>
 			<span>
 				<i
-					style={{ color }}
+					style={{ color, fontSize: '18px' }}
 					className={
 						value >= 4
 							? 'fas fa-star'
@@ -47,10 +47,10 @@ const Rating = ({ value, text, color }) => {
 							? 'fas fa-star-half-alt'
 							: 'far fa-star'
 					}></i>
-			</span>{' '}
+			</span>
 			<span>
 				<i
-					style={{ color }}
+					style={{ color, fontSize: '18px' }}
 					className={
 						value >= 5
 							? 'fas fa-star'
@@ -59,7 +59,7 @@ const Rating = ({ value, text, color }) => {
 							: 'far fa-star'
 					}></i>
 			</span>
-			<span>{text && text}</span>
+			<span style={{ fontSize: '11px' }}>{text && text}</span>
 		</div>
 	);
 };

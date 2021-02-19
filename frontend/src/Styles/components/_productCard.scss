@@ -33,7 +33,7 @@
 	margin-top: 20px;
 }
 .productCard {
-	width: 23%;
+	// width: 23%;
 	min-width: 170px;
 	position: relative;
 	display: flex;
@@ -82,8 +82,26 @@
 		}
 		&--price {
 			color: #333333;
-			font-size: 1.2rem;
+			font-size: 1.8rem;
 			font-weight: 400;
+		}
+
+		&--ratingWrapper {
+			padding: 0;
+			color: black;
+			margin: 0;
+			line-height: 0;
+
+			& span {
+				padding: 0;
+				margin: 0;
+				//height: fit-content;
+				width: 0;
+
+				& i {
+					color: green im !important;
+				}
+			}
 		}
 	}
 
