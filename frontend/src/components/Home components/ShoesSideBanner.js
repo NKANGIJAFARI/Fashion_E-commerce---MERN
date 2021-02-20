@@ -5,7 +5,7 @@ const ShoesSideBanner = () => {
 		<section className='section section__shoesBanner'>
 			<div className='shoeBanner'>
 				<ShoesSideBannerItem
-					imageSrc='/images/shoe2.png'
+					imageSrc='/images/shoeBanner-man.png'
 					desc="Men's Shoes"
 					type='men'
 				/>
@@ -22,11 +22,18 @@ const ShoesSideBanner = () => {
 const ShoesSideBannerItem = ({ imageSrc, desc, type }) => {
 	return (
 		<div className={`shoeBanner__item shoeBanner__item--${type}`}>
-			<img src={imageSrc} alt={desc} />
-			<p className='shoeBanner__item--desc'>Upto 25% Off On First Purchase</p>
-			<button class='btn-inline shoeBanner__item--btn'>
-				Discover now <span>&rarr;</span>
-			</button>
+			<div
+				className={`shoeBanner__item--imgWrapper shoeBanner__item--imgWrapper-${type}`}>
+				<img src={imageSrc} alt={desc} />
+			</div>
+			<div
+				className={`shoeBanner__item--details shoeBanner__item--details-${type}`}>
+				<h2>{type.toUpperCase()} Shoes</h2>
+				<p className='shoeBanner__item--desc'>Upto 25% Off On First Purchase</p>
+				<button class='btn__primary shoeBanner__item--btn'>
+					<i className='fas fa-shopping-cart'></i> Shop now
+				</button>
+			</div>
 		</div>
 	);
 };
