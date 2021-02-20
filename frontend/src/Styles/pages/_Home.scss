@@ -40,5 +40,25 @@
 	&__featuredProducts {
 		padding: 5rem 2rem;
 		width: 100%;
+
+		.nav {
+			font-size: 1.6rem;
+			justify-content: center;
+			margin-bottom: 2rem;
+		}
+
+		.nav-link {
+			border: 1px solid white;
+			margin: 0px 1rem;
+			padding: 0.8rem 2rem;
+			width: 100px;
+			text-align: center;
+
+			&.active {
+				color: #55595c;
+				background-color: #fff;
+				border-color: #9999 #9999 #fff;
+			}
+		}
 	}
 }

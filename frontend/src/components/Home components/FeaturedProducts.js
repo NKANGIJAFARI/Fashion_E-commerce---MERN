@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import OwlProductCarousel from './OwlProductCarousel';
+import { Tabs, Tab } from 'react-bootstrap';
 import SectionHeading from './SectionHeading';
 
 ///===========================================================================
@@ -227,12 +228,46 @@ const products = [
 ];
 
 //----------------------------------------------------------------------------------
+const womenProducts = products.filter(
+	(product) => product.category === 'women'
+);
+
+const menProducts = products.filter((product) => product.category === 'men');
+const kidsProducts = products.filter((product) => product.category === 'kids');
 
 const FeaturedProducts = () => {
+	const [key, setKey] = useState('women');
+
 	return (
 		<section className='section section__featuredProducts'>
 			<SectionHeading desc='Featured Products' />
-			<OwlProductCarousel products={products} />
+			<Tabs
+				id='controlled-tab-example'
+				activeKey={key}
+				onSelect={(k) => setKey(k)}>
+				<Tab eventKey='men' title='Men'>
+					{menProducts && menProducts.length !== 0 ? (
+						<OwlProductCarousel products={menProducts} />
+					) : (
+						<h2>Sorry, there are no featured for men today</h2>
+					)}
+				</Tab>
+				<Tab eventKey='women' title='Women'>
+					{womenProducts && womenProducts.length !== 0 ? (
+						<OwlProductCarousel products={womenProducts} />
+					) : (
+						<h2>Sorry, there are no featured for women today</h2>
+					)}
+				</Tab>
+
+				<Tab eventKey='kids' title='Kids'>
+					{kidsProducts && kidsProducts.length !== 0 ? (
+						<OwlProductCarousel products={kidsProducts} />
+					) : (
+						<h2>Sorry, there are no featured for kids today</h2>
+					)}
+				</Tab>
+			</Tabs>
 		</section>
 	);
 };
