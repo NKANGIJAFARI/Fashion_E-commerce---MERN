@@ -33,21 +33,19 @@ a {
 }
 .navbar {
 	// width: 100%;
-	// box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+	//
 	// z-index: 100;
-
 	box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
 	z-index: 1000;
 	width: 100%;
+	height: -moz-fit-content;
 	height: fit-content;
 	font-size: 1.6rem;
 	margin: 0px;
-	padding: 8px 2px 3px 2px;
+	padding: 12px 10px;
 	display: block;
 	line-height: 0;
-	background-color: rgb(250, 253, 252);
-
-	position: -webkit-sticky;
+	background-color: #fafdfc;
 	position: sticky;
 	top: 0px;
 
@@ -91,17 +89,18 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0px 45px;
+	padding: 0px 30px;
 }
 .logo img {
 	height: 30px;
 }
 .menu {
 	display: flex;
+	margin: 0px;
 }
 .menu li {
 	position: relative;
-	margin: 20px;
+	margin: 0px 12px;
 	display: flex;
 	text-transform: uppercase;
 	font-weight: 500;

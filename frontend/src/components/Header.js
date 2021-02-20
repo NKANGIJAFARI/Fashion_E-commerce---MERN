@@ -93,7 +93,8 @@ const Header = () => {
 			<nav className='navbar'>
 				<div className={`navigation ${isActive ? 'active' : ''}`}>
 					<Link to='/' className='logo'>
-						<img src='images/logo.png' />
+						{/* <img src='images/logo.png' /> */}
+						<h3>J.Fashions</h3>
 					</Link>
 
 					<div
@@ -119,11 +120,9 @@ const Header = () => {
 							<Link to='/'>Kids</Link>
 						</li>
 					</ul>
+					<Route render={({ history }) => <SearchBox history={history} />} />
 
 					<div className='right-menu'>
-						<Link href='javascript:void(0);' className='search'>
-							<i className='fas fa-search'></i>
-						</Link>
 						<Link href='javascript:void(0);' className='user'>
 							<i className='far fa-user'></i>
 						</Link>
