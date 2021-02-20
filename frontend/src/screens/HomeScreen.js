@@ -17,7 +17,8 @@ import HobbiesFashion from '../components/Home components/HobbiesFashion';
 import TrendingFashions from '../components/Home components/TrendingFashion';
 import GirlBanner from '../components/Home components/GirlBanner';
 import MostViewed from '../components/Home components/MostViewed';
-import ShoesSideBanner from '../components/Home components/ShoesSideBanner';
+
+import ShoesDisplay from '../components/Home components/ShoesDisplay';
 import LatestProducts from '../components/Home components/LatestProducts';
 import FeaturedProducts from '../components/Home components/FeaturedProducts';
 
@@ -47,8 +48,8 @@ const HomeScreen = ({ match }) => {
 					<LatestProducts />
 					<HobbiesFashion />
 					<GirlBanner />
+					<ShoesDisplay />
 					<MostViewed />
-					<ShoesSideBanner />
 					<ServicePromise />
 					{/* <Categories />
 					<ProductCarousel /> */}

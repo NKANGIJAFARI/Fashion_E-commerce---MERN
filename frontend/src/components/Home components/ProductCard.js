@@ -11,16 +11,18 @@ const ProductCard = ({ product }) => {
 			</div>
 
 			<div class='productCard__details'>
+				<span className='productCard__details--price'>$ {product.price}</span>
+
 				<Link to={`/products/${product._id}`}>
 					<h4 className='productCard__details--name'>{product.name} </h4>
 				</Link>
+
 				<div className='productCard__details--ratingWrapper'>
 					<Rating
 						value={product.rating}
-						text={`${product.numReviews} reviews`}
+						text={` ${product.rating}/${product.numReviews}rev`}
 					/>
 				</div>
-				<span className='productCard__details--price'>$ {product.price}</span>
 			</div>
 
 			<ul className='productCard__options'>
