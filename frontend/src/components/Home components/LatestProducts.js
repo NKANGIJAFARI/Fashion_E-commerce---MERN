@@ -13,7 +13,9 @@ import ProductCard from './ProductCard';
 import { listProducts } from '../../actions/productActions';
 import SectionHeading from './SectionHeading';
 
-const LatestProducts = ({ match }) => {
+const LatestProducts = () => {
+	//We get the params on the url, the keyword searched if in search
+	//product mode and the pagenumber if product pages are changed
 	const { keyword, pageNumber } = useParams();
 	const pageNum = pageNumber || 1;
 
@@ -26,7 +28,6 @@ const LatestProducts = ({ match }) => {
 
 	useEffect(() => {
 		dispatch(listProducts(keyword, pageNum));
-		console.log({ products });
 	}, [dispatch, keyword, pageNum]);
 
 	return (

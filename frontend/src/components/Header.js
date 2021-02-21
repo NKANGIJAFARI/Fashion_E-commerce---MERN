@@ -14,6 +14,9 @@ const Header = () => {
 	const userLogin = useSelector((state) => state.userLogin);
 	const { userInfo } = userLogin;
 
+	const cart = useSelector((state) => state.cart);
+	const { cartItems } = cart;
+
 	//Handle what happpens when the user logouts
 
 	const logoutHandler = () => {
@@ -21,13 +24,6 @@ const Header = () => {
 	};
 
 	useEffect(() => {});
-
-	// document.querySelector(document).ready(function () {
-	// 	document.querySelector('.toggle').click(function () {
-	// 		document.querySelector('.toggle').classList.toggle('active');
-	// 		document.querySelector('.navigation').classList.toggle('active');
-	// 	});
-	// });
 
 	const [isActive, setActive] = useState(false);
 
@@ -130,7 +126,7 @@ const Header = () => {
 
 						<Link to='/cart'>
 							<i className='fas fa-shopping-cart'>
-								<span className='num-cart-product'>0</span>
+								<span className='num-cart-product'>{cartItems.length}</span>
 							</i>
 						</Link>
 
