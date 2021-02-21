@@ -87,6 +87,7 @@ const Header = () => {
 					</Navbar.Collapse>
 				</Container>
 			</Navbar> */}
+
 			<div class='adverts'>
 				<span>30% off your first purchase</span>
 			</div>
@@ -110,8 +111,6 @@ const Header = () => {
 						</li>
 						<li>
 							<Link to='/'>Men</Link>
-
-							{/* <span className='sale-lable'>Sale</span> */}
 						</li>
 						<li>
 							<Link to='/'>Women</Link>
@@ -123,19 +122,67 @@ const Header = () => {
 					<Route render={({ history }) => <SearchBox history={history} />} />
 
 					<div className='right-menu'>
-						<Link href='javascript:void(0);' className='user'>
-							<i className='far fa-user'></i>
-						</Link>
 						<Link to='/'>
 							<i className='far fa-heart'>
 								<span className='num-cart-product'>0</span>
 							</i>
 						</Link>
-						<Link to='/'>
+
+						<Link to='/cart'>
 							<i className='fas fa-shopping-cart'>
 								<span className='num-cart-product'>0</span>
 							</i>
 						</Link>
+
+						{userInfo ? (
+							<div id='username'>
+								<div className='dropdown'>
+									<Link disabled class='dropbtn'>
+										<i className='far fa-user'></i>
+										<div className='dropbtn__name'>
+											{/* <span>Hello, </span> */}
+											<span>{userInfo.name.substr(0, 6)}</span>
+										</div>
+									</Link>
+									<div class='dropdown-content'>
+										<Link to='/profile' class='dropdown-content-link'>
+											My Profile
+										</Link>
+										<Link to='/login' class='dropdown-content-link'>
+											Logout
+										</Link>
+										<Link to='/' class='dropdown-content-link'>
+											Link 3
+										</Link>
+									</div>
+								</div>
+							</div>
+						) : (
+							<div className='dropdown'>
+								<Link disabled class='dropbtn'>
+									<i className='far fa-user'></i>
+									<div className='dropbtn__name'>
+										{/* <span>Hello, </span> */}
+										<span>User</span>
+									</div>
+								</Link>
+								<div class='dropdown-content'>
+									<Link to='/profile' class='dropdown-content-link'>
+										My Profile
+									</Link>
+									<Link to='/login' class='dropdown-content-link'>
+										Logout
+									</Link>
+									<Link to='/' class='dropdown-content-link'>
+										Link 3
+									</Link>
+								</div>
+							</div>
+						)}
+
+						{/* <Link to='/profile' className='user'>
+							<i className='far fa-user'></i>
+						</Link> */}
 					</div>
 				</div>
 			</nav>
