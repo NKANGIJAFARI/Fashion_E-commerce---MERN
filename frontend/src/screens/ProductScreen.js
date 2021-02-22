@@ -21,6 +21,7 @@ import {
 } from '../actions/productActions';
 
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants';
+import ProductDetails from '../components/ProductPageComponents/ProductDetails';
 
 const ProductScreen = ({ match, history }) => {
 	// Use a component state to handle the number of product in the stock
@@ -89,7 +90,7 @@ const ProductScreen = ({ match, history }) => {
 					<Meta title={product.name} />
 					<Row>
 						<Col md={6}>
-							<Image src={product.image} alt={product.name} fluid />
+							<ProductDetails />
 						</Col>
 						<Col md={3}>
 							<ListGroup variant='flush'>
@@ -133,6 +134,27 @@ const ProductScreen = ({ match, history }) => {
 											<ListGroup.Item>
 												<Row>
 													<Col>Quantity: </Col>
+													<Col>
+														<Form.Control
+															as='select'
+															value={quantity}
+															onChange={(e) => setQuantity(e.target.value)}>
+															{
+																//Get the number of pro
+																[...Array(product.countInStock).keys()].map(
+																	(x) => (
+																		<option key={x + 1} value={x + 1}>
+																			{' '}
+																			{x + 1}{' '}
+																		</option>
+																	)
+																)
+															}
+														</Form.Control>
+													</Col>
+												</Row>
+												<Row>
+													<Col>Sizes: </Col>
 													<Col>
 														<Form.Control
 															as='select'
