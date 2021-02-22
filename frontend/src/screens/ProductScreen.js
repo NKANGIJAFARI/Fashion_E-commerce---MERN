@@ -22,8 +22,68 @@ import {
 
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants';
 import ProductDetails from '../components/ProductPageComponents/ProductDetails';
+import ProductCard from '../components/Home components/ProductCard';
+import SectionHeading from '../components/Home components/SectionHeading';
 
 const ProductScreen = ({ match, history }) => {
+	///===========================================================================
+	//Use this products data at the moment but after designing the frontend,
+	//Develop an api to take this data from the api according to what products
+	//Admin wants to show on the page as featured
+	const relatedProducts = [
+		{
+			name: 'Women suit',
+			image: '/images/cloth1.png',
+			description:
+				'Lorem quod asperiores officia quidem quiRem consequuntur reiciendis aut',
+			brand: 'Vesia',
+			category: 'women',
+			price: 89.99,
+			countInStock: 10,
+			rating: 4.5,
+			numReviews: 12,
+		},
+		{
+			name: 'Floral dress',
+			image: '/images/cloth2.png',
+			description:
+				'Lorem quod asperiores officia quidem quiRem consequuntur reiciendis aut',
+			brand: 'Florsh',
+			category: 'women',
+			price: 89.99,
+			countInStock: 7,
+			rating: 4.0,
+			numReviews: 8,
+		},
+
+		{
+			name: 'Women sitian',
+			image: '/images/cloth3.png',
+			description:
+				'Lorem quod asperiores officia quidem quiRem consequuntur reiciendis aut',
+			brand: 'Derio',
+			category: 'women',
+			price: 120.99,
+			countInStock: 4,
+			rating: 3,
+			numReviews: 12,
+		},
+		{
+			name: 'Women suit',
+			image: '/images/cloth1.png',
+			description:
+				'Lorem quod asperiores officia quidem quiRem consequuntur reiciendis aut',
+			brand: 'Vesia',
+			category: 'women',
+			price: 89.99,
+			countInStock: 10,
+			rating: 4.5,
+			numReviews: 12,
+		},
+	];
+
+	//----------------------------------------------------------------------------------
+
 	// Use a component state to handle the number of product in the stock
 	const [quantity, setQuantity] = useState(1);
 
@@ -88,7 +148,7 @@ const ProductScreen = ({ match, history }) => {
 			) : (
 				<>
 					<Meta title={product.name} />
-					<Row>
+					<Row className='productDetails__row'>
 						<Col md={6}>
 							<ProductDetails />
 						</Col>
@@ -190,8 +250,8 @@ const ProductScreen = ({ match, history }) => {
 							</Card>
 						</Col>
 					</Row>
-					<Row>
-						<Col md={5}>
+					<Row style={{ padding: '50px' }}>
+						<Col md={8}>
 							<h2>REVIEWS</h2>
 
 							{product.reviews.length === 0 && <Message>No Reviews</Message>}
@@ -231,7 +291,7 @@ const ProductScreen = ({ match, history }) => {
 												<Form.Label>Comment</Form.Label>
 												<Form.Control
 													as='textarea'
-													row='3'
+													row='5'
 													value={comment}
 													onChange={(e) =>
 														setComment(e.target.value)
@@ -248,6 +308,20 @@ const ProductScreen = ({ match, history }) => {
 									)}
 								</ListGroup.Item>
 							</ListGroup>
+						</Col>
+					</Row>
+					<Row style={{ flexDirection: 'column' }}>
+						<SectionHeading desc='Related to this product' />
+						<Col
+							md={12}
+							style={{
+								display: 'flex',
+								justifyContent: 'space-around',
+								flexWrap: 'wrap',
+							}}>
+							{relatedProducts.map((product) => (
+								<ProductCard product={product} />
+							))}
 						</Col>
 					</Row>
 				</>

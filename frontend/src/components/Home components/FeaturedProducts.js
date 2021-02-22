@@ -228,6 +228,7 @@ const products = [
 ];
 
 //----------------------------------------------------------------------------------
+
 const womenProducts = products.filter(
 	(product) => product.category === 'women'
 );

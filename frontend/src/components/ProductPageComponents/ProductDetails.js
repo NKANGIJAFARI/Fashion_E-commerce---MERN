@@ -4,7 +4,6 @@ const ProductDetails = () => {
 	const [pictureSrc, setPicture] = useState('/images/gal1.png');
 	return (
 		<div className='small-container single-product'>
-			<img src={pictureSrc} alt='' width='100%' id='ProductImg' />
 			<div className='small-img-row'>
 				<div className='small-img-col'>
 					<img
@@ -50,6 +49,9 @@ const ProductDetails = () => {
 						}}
 					/>
 				</div>
+			</div>
+			<div className='single-product__imgwrapper'>
+				<img src={pictureSrc} alt='' width='100%' id='ProductImg' />
 			</div>
 		</div>
 	);

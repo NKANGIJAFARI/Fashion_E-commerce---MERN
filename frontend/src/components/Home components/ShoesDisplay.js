@@ -82,6 +82,7 @@ const products = [
 ];
 
 //----------------------------------------------------------------------------------
+
 const womenShoes = products.filter(
 	(product) => product.suitableFor === 'women'
 );
