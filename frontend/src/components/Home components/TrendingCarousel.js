@@ -1,5 +1,6 @@
 import React from 'react';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+
+import { TransitionGroup } from 'react-transition-group';
 
 import { LinkContainer } from 'react-router-bootstrap';
 
@@ -64,9 +65,9 @@ class Carousel extends React.Component {
 				<div className='arrow arrow-left' onClick={this.leftClick}>
 					<i class='far fa-arrow-alt-circle-left'></i>
 				</div>
-				<CSSTransitionGroup transitionName={this.state.direction}>
+				<TransitionGroup transitionName={this.state.direction}>
 					{this.generateItems()}
-				</CSSTransitionGroup>
+				</TransitionGroup>
 				<div className='arrow arrow-right' onClick={this.rightClick}>
 					<i class='far fa-arrow-alt-circle-right'></i>
 				</div>

@@ -53,7 +53,7 @@ const HomeScreen = ({ match }) => {
 					<HobbiesFashion />
 					<MostViewed />
 					<ServicePromise />
-					<ShoeProductCard />
+
 					{/* <Categories />
 					<ProductCarousel /> */}
 				</>
