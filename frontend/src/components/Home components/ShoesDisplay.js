@@ -3,6 +3,7 @@ import OwlProductCarousel from './OwlProductCarousel';
 import { Tabs, Tab } from 'react-bootstrap';
 import SectionHeading from './SectionHeading';
 import ShoesSideBanner from './ShoesSideBanner';
+import ShoeProductCard from './ShoeProductCard';
 
 ///===========================================================================
 //Use this products data at the moment but after designing the frontend,
@@ -94,8 +95,9 @@ const ShoesDisplay = () => {
 
 	return (
 		<section className='section section__featuredProducts'>
-			<SectionHeading desc='Your shoes showroom' />
 			<ShoesSideBanner />
+			<SectionHeading desc='Your shoes showroom' />
+			<ShoeProductCard />
 			<Tabs
 				id='controlled-tab-example'
 				activeKey={key}

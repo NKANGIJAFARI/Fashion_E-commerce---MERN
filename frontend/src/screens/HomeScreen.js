@@ -21,6 +21,7 @@ import MostViewed from '../components/Home components/MostViewed';
 import ShoesDisplay from '../components/Home components/ShoesDisplay';
 import LatestProducts from '../components/Home components/LatestProducts';
 import FeaturedProducts from '../components/Home components/FeaturedProducts';
+import ShoeProductCard from '../components/Home components/ShoeProductCard';
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
@@ -46,11 +47,13 @@ const HomeScreen = ({ match }) => {
 					<FeaturedProducts />
 					<TrendingFashions />
 					<LatestProducts />
-					<HobbiesFashion />
+
 					<GirlBanner />
 					<ShoesDisplay />
+					<HobbiesFashion />
 					<MostViewed />
 					<ServicePromise />
+					<ShoeProductCard />
 					{/* <Categories />
 					<ProductCarousel /> */}
 				</>

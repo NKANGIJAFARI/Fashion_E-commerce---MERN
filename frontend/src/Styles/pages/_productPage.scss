@@ -296,6 +296,59 @@ input:focus {
 	padding: 10px;
 }
 
+.form {
+	&__group {
+		display: flex;
+	}
+	&__radio-group {
+		display: inline-block;
+
+		@include respond(tab-port) {
+			width: 100%;
+		}
+	}
+
+	&__radio-input {
+		display: none;
+	}
+
+	&__radio-label {
+		font-size: 1.6rem;
+		cursor: pointer;
+		position: relative;
+		padding-left: 4.5rem;
+	}
+
+	&__radio-button {
+		height: 3rem;
+		width: 3rem;
+		border: 5px solid red;
+		border-radius: 50%;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: -0.4rem;
+
+		&::after {
+			content: '';
+			display: block;
+			height: 1.3rem;
+			width: 1.3rem;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: green;
+			opacity: 0;
+			transition: opacity 0.2s;
+		}
+	}
+
+	&__radio-input:checked ~ &__radio-label &__radio-button::after {
+		opacity: 1;
+	}
+}
 // .cart-page {
 // 	margin: 80px auto;
 // }
