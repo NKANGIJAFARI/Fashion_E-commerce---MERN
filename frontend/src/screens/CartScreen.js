@@ -86,12 +86,13 @@ const CartScreen = (props) => {
 										</Form.Control>
 									</Col>
 									<Col md={2}>
-										<Button
+										<button
+											className='btn btn--cartProductDelete'
 											type='button'
 											variant='light'
 											onClick={() => removeFromCartHandler(item.product)}>
 											<i className='fas fa-trash'></i>
-										</Button>
+										</button>
 									</Col>
 								</Row>
 							</ListGroup.Item>

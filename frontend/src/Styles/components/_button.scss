@@ -50,3 +50,12 @@
 	background-color: #444;
 	color: white;
 }
+
+.btn {
+	margin: 0px;
+
+	&--cartProductDelete {
+		padding: 5px 20px;
+		font-size: 1.8rem;
+	}
+}

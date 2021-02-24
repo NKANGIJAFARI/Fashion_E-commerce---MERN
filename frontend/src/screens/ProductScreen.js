@@ -24,6 +24,7 @@ const ProductScreen = ({ match, history }) => {
 	//Admin wants to show on the page as featured
 	const relatedProducts = [
 		{
+			_id: 1,
 			name: 'Women suit',
 			image: '/images/cloth1.png',
 			description:
@@ -36,6 +37,7 @@ const ProductScreen = ({ match, history }) => {
 			numReviews: 12,
 		},
 		{
+			_id: 2,
 			name: 'Floral dress',
 			image: '/images/cloth2.png',
 			description:
@@ -49,6 +51,7 @@ const ProductScreen = ({ match, history }) => {
 		},
 
 		{
+			_id: 3,
 			name: 'Women sitian',
 			image: '/images/cloth3.png',
 			description:
@@ -61,6 +64,7 @@ const ProductScreen = ({ match, history }) => {
 			numReviews: 12,
 		},
 		{
+			_id: 4,
 			name: 'Women suit',
 			image: '/images/cloth1.png',
 			description:
@@ -85,6 +89,12 @@ const ProductScreen = ({ match, history }) => {
 	// -------------------------------------
 
 	const dispatch = useDispatch();
+
+	//========================================================================================
+	//From State ... redux
+
+	const cart = useSelector((state) => state.cart);
+	const { cartItems } = cart;
 
 	const userLogin = useSelector((state) => state.userLogin);
 	const { userInfo } = userLogin;
@@ -116,7 +126,23 @@ const ProductScreen = ({ match, history }) => {
 	//=================================================================================
 	//Function to add to cart
 	const addToCartHandler = () => {
-		history.push(`/cart/${match.params.id}?quantity=${quantity}`);
+		const existItem = cartItems.find(
+			(item) => item.product === match.params.id
+		);
+
+		if (existItem) {
+			if (
+				window.confirm(
+					`Exists ${existItem.quantity}times in your cart, Add anyway `
+				)
+			) {
+				const qty = Number(quantity) + Number(existItem.quantity);
+				history.push(`/cart/${match.params.id}?quantity=${qty}`);
+			}
+		} else {
+			history.push(`/cart/${match.params.id}?quantity=${quantity}`);
+		}
+		//history.push(`/cart/${match.params.id}?quantity=${quantity}`);
 	};
 	//----------------------------------------------------------------------------
 
@@ -342,7 +368,9 @@ const ProductScreen = ({ match, history }) => {
 								flexWrap: 'wrap',
 							}}>
 							{relatedProducts.map((product) => (
-								<ProductCard product={product} />
+								<div key={product._id}>
+									<ProductCard product={product} />
+								</div>
 							))}
 						</Col>
 					</Row>
