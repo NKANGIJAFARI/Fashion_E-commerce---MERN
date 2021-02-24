@@ -38,7 +38,6 @@ class Carousel extends React.Component {
 			);
 		}
 
-		console.log(items);
 		return items;
 	}
 
@@ -63,13 +62,13 @@ class Carousel extends React.Component {
 		return (
 			<div id='carousel' className='noselect'>
 				<div className='arrow arrow-left' onClick={this.leftClick}>
-					<i class='far fa-arrow-alt-circle-left'></i>
+					<i className='far fa-arrow-alt-circle-left'></i>
 				</div>
-				<TransitionGroup transitionName={this.state.direction}>
+				<TransitionGroup transitionname={this.state.direction}>
 					{this.generateItems()}
 				</TransitionGroup>
 				<div className='arrow arrow-right' onClick={this.rightClick}>
-					<i class='far fa-arrow-alt-circle-right'></i>
+					<i className='far fa-arrow-alt-circle-right'></i>
 				</div>
 			</div>
 		);
@@ -124,7 +123,7 @@ class Item extends React.Component {
 							width: 'fit-content',
 							marginTop: '4px',
 						}}>
-						<i class='fas fa-eye'></i> DETAILS
+						<i className='fas fa-eye'></i> DETAILS
 					</button>
 				</div>
 			</LinkContainer>

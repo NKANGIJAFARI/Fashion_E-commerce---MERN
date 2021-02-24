@@ -15,13 +15,13 @@ const EmptyDisplay = () => {
 				}}>
 				<h3>Your Cart is empty</h3>
 				<i
-					class='fas fa-shopping-cart'
+					className='fas fa-shopping-cart'
 					style={{
 						color: 'grey',
 						margin: '3rem 0rem',
 					}}></i>
 				<button type='button' to='/' className='btn__primary'>
-					<i class='fas fa-shopping-cart'></i> SHOP NOW
+					<i className='fas fa-shopping-cart'></i> SHOP NOW
 				</button>
 			</div>
 		</div>

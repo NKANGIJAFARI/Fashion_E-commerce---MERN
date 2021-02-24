@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { Row, Col } from 'react-bootstrap';
-
 import Paginate from '../Paginate';
 import Message from '../Message';
 import Loader from '../Loader';
@@ -41,7 +39,9 @@ const LatestProducts = () => {
 				) : (
 					<>
 						{products &&
-							products.map((product) => <ProductCard product={product} />)}
+							products.map((product) => (
+								<ProductCard key={product._id} product={product} />
+							))}
 					</>
 				)}
 			</div>

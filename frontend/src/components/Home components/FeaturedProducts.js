@@ -9,6 +9,7 @@ import SectionHeading from './SectionHeading';
 //Admin wants to show on the page as featured
 const products = [
 	{
+		_id: 1,
 		name: 'Women suit',
 		image: '/images/cloth1.png',
 		description:
@@ -21,6 +22,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 2,
 		name: 'Floral dress',
 		image: '/images/cloth2.png',
 		description:
@@ -34,6 +36,7 @@ const products = [
 	},
 
 	{
+		_id: 3,
 		name: 'Women sitian',
 		image: '/images/cloth3.png',
 		description:
@@ -46,6 +49,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 4,
 		name: 'Women formal',
 		image: '/images/cloth4.png',
 		description:
@@ -58,6 +62,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 5,
 		name: 'Crioton shirts',
 		image: '/images/shirt1.png',
 		description:
@@ -70,6 +75,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 6,
 		name: 'V-sided shirts',
 		image: '/images/shirt2.png',
 		description:
@@ -82,6 +88,7 @@ const products = [
 		numReviews: 17,
 	},
 	{
+		_id: 7,
 		name: 'Men Sweater Pants',
 		image: '/images/fet-man-trouser.png',
 		description:
@@ -94,6 +101,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 8,
 		name: 'Derken Denim Shirts',
 		image: '/images/fet-man-shirt.png',
 		description:
@@ -106,6 +114,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 9,
 		name: 'Polo slicky shirts',
 		image: '/images/fet-man-shirt.png',
 		description:
@@ -118,6 +127,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 10,
 		name: "Full Men's Formal",
 		image: '/images/gentlejeans.png',
 		description:
@@ -130,6 +140,7 @@ const products = [
 		numReviews: 10,
 	},
 	{
+		_id: 11,
 		name: "Men's Office Wear",
 		image: '/images/gentlejeans.png',
 		description:
@@ -142,6 +153,7 @@ const products = [
 		numReviews: 5,
 	},
 	{
+		_id: 12,
 		name: 'Women Suit',
 		image: '/images/human-ladysuit.png',
 		description:
@@ -154,6 +166,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 13,
 		name: 'Women Leather color jackets',
 		image: '/images/jacket.png',
 		description:
@@ -166,6 +179,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 14,
 		name: 'Men cotton jackets',
 		image: '/images/jacket4.png',
 		description:
@@ -178,6 +192,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 15,
 		name: 'Men cotton jackets',
 		image: '/images/jacket4.png',
 		description:
@@ -190,6 +205,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 16,
 		name: 'Men Suit',
 		image: '/images/mansuit.png',
 		description:
@@ -202,6 +218,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 17,
 		name: 'Men Suit',
 		image: '/images/mansuit.png',
 		description:
@@ -214,6 +231,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 18,
 		name: 'Gradient shirts',
 		image: '/images/shirt3.png',
 		description:

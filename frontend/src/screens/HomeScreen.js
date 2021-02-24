@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import Meta from '../components/Meta';
 
@@ -8,7 +8,6 @@ import { listProducts } from '../actions/productActions';
 
 import FirstDisplay from '../components/FirstDisplay';
 
-// import Categories from '../components/Home components/Categories';
 import ServicePromise from '../components/Home components/ServicePromise';
 import HobbiesFashion from '../components/Home components/HobbiesFashion';
 import TrendingFashions from '../components/Home components/TrendingFashion';
@@ -27,8 +26,8 @@ const HomeScreen = ({ match }) => {
 
 	//We use a useSelector to select which part of the global state we need to use
 
-	const productList = useSelector((state) => state.productList);
-	const { loading, error, products, page, pages } = productList;
+	// const productList = useSelector((state) => state.productList);
+	// const { loading, error, products, page, pages } = productList;
 
 	useEffect(() => {
 		dispatch(listProducts(keyword, pageNumber));

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -32,7 +31,7 @@ const OwlProductCarousel = ({ products }) => {
 			}}
 			nav>
 			{products.map((product) => (
-				<div class='item'>
+				<div className='item' key={product._id}>
 					<ProductCard product={product} />
 				</div>
 			))}

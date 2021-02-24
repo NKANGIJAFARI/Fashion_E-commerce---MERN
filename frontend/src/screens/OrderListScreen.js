@@ -14,8 +14,6 @@ const OrderListScreen = ({ history }) => {
 	const ordersList = useSelector((state) => state.ordersList);
 	const { orders, loading, error } = ordersList;
 
-	console.log(orders);
-
 	const userLogin = useSelector((state) => state.userLogin);
 	const { userInfo } = userLogin;
 

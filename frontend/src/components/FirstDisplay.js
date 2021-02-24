@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const FirstDisplay = () => {
 	return (
@@ -13,10 +12,10 @@ const FirstDisplay = () => {
 					</p>
 					<div className='fullHeader__buttons'>
 						<button type='button' to='/' className='btn__primary'>
-							<i class='fas fa-search-plus'></i> DISCOVER
+							<i className='fas fa-search-plus'></i> DISCOVER
 						</button>
 						<button type='button' to='/' className='btn__primary'>
-							<i class='fas fa-shopping-cart'></i> SHOP NOW
+							<i className='fas fa-shopping-cart'></i> SHOP NOW
 						</button>
 					</div>
 				</div>

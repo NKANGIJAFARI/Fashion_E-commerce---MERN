@@ -75,8 +75,8 @@ const ControlledTabs = () => {
 				/>
 
 				<button
-					class={`btn-inline`}
-					href='/search/${key}'
+					className={`btn-inline`}
+					//to='/search/${key}'
 					type='button'
 					onClick={() => searchProductCategory(key)}>
 					Discover now <span>&rarr;</span>

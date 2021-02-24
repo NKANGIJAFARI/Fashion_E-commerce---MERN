@@ -248,15 +248,18 @@
 }
 .dropbtn {
 	list-style-type: none;
-	margin: 0;
+	margin-left: 1.2rem;
+	cursor: pointer;
 	padding: 0;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.6rem;
+	overflow: visible;
 
 	display: flex;
 	flex-direction: row;
-	overflow: visible;
 	align-items: center;
 	justify-content: space-between;
-	font-size: 1.6rem;
 
 	&__name {
 		display: flex;
@@ -273,12 +276,8 @@
 	float: left;
 }
 
-.dropdown-content-link,
-.dropbtn {
-	//display: inline-block;
-	//color: white;
+.dropdown-content-link {
 	text-align: center;
-	//padding: 14px 16px;
 	text-decoration: none;
 }
 

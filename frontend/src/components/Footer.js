@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -27,7 +27,7 @@ const Footer = () => {
 								</p>
 								<div className='footer__location'>
 									<picture>
-										<i class='fas fa-map-marked-alt'></i>
+										<i className='fas fa-map-marked-alt'></i>
 									</picture>
 									<p>Dubai, UAE</p>
 								</div>
@@ -37,10 +37,10 @@ const Footer = () => {
 									</a>
 								</p>
 								<p className='footer__phone'>
-									<Link href='+9715236199890'>+971523619890</Link>
+									<a href='+9715236199890'>+971523619890</a>
 								</p>
 								<div className='footer__socials'>
-									<Link href='/' className='footer__socials-item'>
+									<Link to='/' className='footer__socials-item'>
 										<picture>
 											{/* <source
 												srcSet='/images/social-facebook.png'

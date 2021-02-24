@@ -6,7 +6,7 @@ const GirlBanner = () => {
 			<div className='girlBanner__content'>
 				<h2>The Gramson fashion</h2>
 				<p>Gramson design is the trend of the Freza brand</p>
-				<button class='btn-inline'>
+				<button className='btn-inline'>
 					Discover now <span>&rarr;</span>
 				</button>
 			</div>

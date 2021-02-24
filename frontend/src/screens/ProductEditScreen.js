@@ -69,14 +69,13 @@ const ProductEditScreen = ({ match, history }) => {
 				},
 			};
 
-			console.log('Readt to upload');
 			const { data } = await axios.post('/api/upload', formData, config);
 
-			if (data) {
-				console.log(data);
-			} else {
-				console.log('Got an error');
-			}
+			// if (data) {
+			// 	console.log(data);
+			// } else {
+			// 	console.log('Got an error');
+			// }
 			setImage(data);
 
 			setUploading(false);

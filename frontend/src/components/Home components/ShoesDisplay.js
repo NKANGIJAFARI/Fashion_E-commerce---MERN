@@ -11,6 +11,7 @@ import ShoeProductCard from './ShoeProductCard';
 //Admin wants to show on the page as featured
 const products = [
 	{
+		_id: 1,
 		name: 'Women suit',
 		image: '/images/shoe1.png',
 		description:
@@ -25,6 +26,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 2,
 		name: 'Women suit',
 		image: '/images/shoe2.png',
 		description:
@@ -39,6 +41,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 3,
 		name: 'Women suit',
 		image: '/images/shoe3.png',
 		description:
@@ -53,6 +56,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 4,
 		name: 'Women suit',
 		image: '/images/shoe4.png',
 		description:
@@ -67,6 +71,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
+		_id: 5,
 		name: 'Women suit',
 		image: '/images/shoe5.png',
 		description:

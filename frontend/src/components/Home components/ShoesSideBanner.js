@@ -30,7 +30,7 @@ const ShoesSideBannerItem = ({ imageSrc, desc, type }) => {
 				className={`shoeBanner__item--details shoeBanner__item--details-${type}`}>
 				<h2>{type.toUpperCase()} Shoes</h2>
 				<p className='shoeBanner__item--desc'>Upto 25% Off On First Purchase</p>
-				<button class='btn__primary shoeBanner__item--btn'>
+				<button className='btn__primary shoeBanner__item--btn'>
 					<i className='fas fa-shopping-cart'></i> Shop now
 				</button>
 			</div>

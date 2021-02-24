@@ -5,7 +5,7 @@ const CategoryItem = ({ itemNo, imgSrc, catName }) => {
 		<div className={`categories__item categories__item-${itemNo}`}>
 			{catName && <div className='categories__item-name'>{catName}</div>}
 			<img src={imgSrc} alt={catName} />
-			<button class='btn-inline'>
+			<button className='btn-inline'>
 				Discover now <span>&rarr;</span>
 			</button>
 		</div>

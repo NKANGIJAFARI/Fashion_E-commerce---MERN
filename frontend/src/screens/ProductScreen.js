@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-	Row,
-	Col,
-	Image,
-	ListGroup,
-	Card,
-	Button,
-	Form,
-} from 'react-bootstrap';
+import { Row, Col, ListGroup, Card, Button, Form } from 'react-bootstrap';
 import Rating from '../components/Rating';
 import Loader from '../components/Loader';
 import Message from '../components/Message';

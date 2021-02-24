@@ -1,8 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { logout } from '../actions/userActions';
 
 import SearchBox from './SearchBox';
@@ -84,7 +82,7 @@ const Header = () => {
 				</Container>
 			</Navbar> */}
 
-			<div class='adverts'>
+			<div className='adverts'>
 				<span>30% off your first purchase</span>
 			</div>
 			<nav className='navbar'>
@@ -133,43 +131,46 @@ const Header = () => {
 						{userInfo ? (
 							<div id='username'>
 								<div className='dropdown'>
-									<Link disabled class='dropbtn'>
+									<div disabled className='dropbtn'>
 										<i className='far fa-user'></i>
 										<div className='dropbtn__name'>
 											{/* <span>Hello, </span> */}
 											<span>{userInfo.name.substr(0, 6)}</span>
 										</div>
-									</Link>
-									<div class='dropdown-content'>
-										<Link to='/profile' class='dropdown-content-link'>
+									</div>
+									<div className='dropdown-content'>
+										<Link to='/profile' className='dropdown-content-link'>
 											My Profile
 										</Link>
 										{/* Nav will show differently due to admins and non admin */}
 
 										{userInfo && userInfo.isAdmin && (
 											<>
-												<Link to='/' class='dropdown-content-link'>
+												<Link to='/' className='dropdown-content-link'>
 													Admin Dashboard
 												</Link>
 
 												<Link
 													to='/admin/userslist'
-													class='dropdown-content-link'>
+													className='dropdown-content-link'>
 													All Users
 												</Link>
 												<Link
 													to='/admin/productslist'
-													class='dropdown-content-link'>
+													className='dropdown-content-link'>
 													All Products
 												</Link>
 												<Link
 													to='/admin/orderslist'
-													class='dropdown-content-link'>
+													className='dropdown-content-link'>
 													All Orders
 												</Link>
 											</>
 										)}
-										<Link class='dropdown-content-link' onClick={logoutHandler}>
+										<Link
+											to='/login'
+											className='dropdown-content-link'
+											onClick={logoutHandler}>
 											Logout
 										</Link>
 									</div>
@@ -177,18 +178,18 @@ const Header = () => {
 							</div>
 						) : (
 							<div className='dropdown'>
-								<Link disabled class='dropbtn'>
+								<Link disabled className='dropbtn'>
 									<i className='far fa-user'></i>
 									<div className='dropbtn__name'>
 										{/* <span>Hello, </span> */}
 										<span>Guest</span>
 									</div>
 								</Link>
-								<div class='dropdown-content'>
-									<Link to='/login' class='dropdown-content-link'>
+								<div className='dropdown-content'>
+									<Link to='/login' className='dropdown-content-link'>
 										Sign In
 									</Link>
-									<Link to='/register' class='dropdown-content-link'>
+									<Link to='/register' className='dropdown-content-link'>
 										Create Account
 									</Link>
 								</div>
