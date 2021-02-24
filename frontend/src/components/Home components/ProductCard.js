@@ -8,24 +8,35 @@ import Rating from '../Rating';
 import { addToCart } from '../../actions/cartActions';
 
 const ProductCard = ({ product }) => {
-	const [productId, setId] = useState(null);
+	const [productId, setProductId] = useState(null);
+	//const [quantity, setQuantity] = useState(1);
 	// let history = useHistory();
 	const dispatch = useDispatch();
+
+	//Get whatever is in th cart.
+	const cart = useSelector((state) => state.cart);
+	const { cartItems } = cart;
 
 	//=================================================================================
 	//Function to add to cart
 	/* I will use useEffect hook to check whether the id of product id 
 	has changed and whenever it does i dispatch addToCart action */
 
-	useEffect(() => {
-		if (productId !== null) {
-			dispatch(addToCart(productId, 1));
-		}
-	}, [productId, dispatch]);
+	// useEffect(() => {
+	// 	if (productId !== null) {
+	// 		dispatch(addToCart(productId, 1));
+	// 	}
+	// }, [dispatch, productId]);
 
 	//Change product id on a click on cart
-	const addToCartHandler = (productId) => {
-		setId(productId);
+	const addToCartHandler = (id) => {
+		let quantity = 1;
+		const existItem = cartItems.find((x) => x.product === id);
+
+		if (existItem && existItem !== 0) {
+			quantity = existItem.quantity + 1;
+		}
+		dispatch(addToCart(id, quantity));
 	};
 	//----------------------------------------------------------------------------
 

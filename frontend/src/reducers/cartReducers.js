@@ -10,6 +10,28 @@ export const cartReducer = (
 	action
 ) => {
 	switch (action.type) {
+		//Deleted but if errors can be a reference
+		// case CART_ADD_ITEM:
+		// 	const item = action.payload;
+
+		// 	const existItem = state.cartItems.find((x) => x.product === item.product);
+
+		// 	if (existItem) {
+		// 		existItem.quantity = existItem.quantity + item.quantity;
+		// 		console.log({ existItem });
+
+		// 		return {
+		// 			...state,
+		// 			cartItems: state.cartItems.map((x) =>
+		// 				x.product === existItem.product ? item : x
+		// 			),
+		// 		};
+		// 	} else {
+		// 		return {
+		// 			...state,
+		// 			cartItems: [...state.cartItems, item],
+		// 		};
+		// 	}
 		case CART_ADD_ITEM:
 			const item = action.payload;
 
