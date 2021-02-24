@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { CART_RESET } from '../constants/cartConstants';
 import {
 	ORDERS_DELIVER_RESET,
 	ORDERS_LIST_CLIENT_RESET,
@@ -80,7 +81,9 @@ export const logout = () => (dispatch) => {
 	dispatch({ type: PRODUCT_LIST_RESET });
 	dispatch({ type: ORDER_PAY_RESET });
 	dispatch({ type: ORDERS_DELIVER_RESET });
+	dispatch({ type: CART_RESET });
 	localStorage.removeItem('userInfo');
+	localStorage.removeItem('cartItems');
 };
 //--------------------------------------------------------------------------------------
 
