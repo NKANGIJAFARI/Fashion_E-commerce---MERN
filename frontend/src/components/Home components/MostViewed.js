@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 
 const MostViewed = () => {
 	const [pictureSrc, setPicture] = useState('images/watch1.png');
+	const [active, setActive] = useState('1');
+
 	return (
-		<section className='feature' id='featured'>
+		<section className='section section__mostViewed feature' id='featured'>
 			<SectionHeading desc='Most viewed product' />
 
 			<div className='row'>
@@ -15,31 +17,43 @@ const MostViewed = () => {
 					</div>
 					<div className='small-image'>
 						<img
-							className='image-active'
+							id='1'
+							className={active === '1' ? 'image-active' : ''}
 							src='images/watch1.png'
 							alt='mostViewed'
-							onClick={() => {
+							onClick={(e) => {
+								setActive(e.target.id);
 								setPicture('/images/watch1.png');
 							}}
 						/>
 						<img
+							id='2'
+							className={active === '2' ? 'image-active' : ''}
 							src='/images/watch2.png'
 							alt='mostViewed'
-							onClick={() => {
+							onClick={(e) => {
+								setActive(e.target.id);
 								setPicture('/images/watch2.png');
 							}}
 						/>
 						<img
+							id='3'
+							className={active === '3' ? 'image-active' : ''}
 							src='/images/watch3.png'
 							alt='mostViewed'
-							onClick={() => {
+							onClick={(e) => {
+								setActive(e.target.id);
+								setActive(e.target.id);
 								setPicture('/images/watch3.png');
 							}}
 						/>
 						<img
+							id='4'
+							className={active === '4' ? 'image-active' : ''}
 							src='/images/watch4.png'
 							alt='mostViewed'
-							onClick={() => {
+							onClick={(e) => {
+								setActive(e.target.id);
 								setPicture('/images/watch4.png');
 							}}
 						/>
@@ -70,7 +84,7 @@ const ProductDetails = () => {
 					at!
 				</p>
 				<strong className='price'>
-					₹1000 <span>₹1500</span>{' '}
+					$299 <span>$450</span>{' '}
 				</strong>
 				<Link to='/'>
 					<button className='btn'>buy now</button>

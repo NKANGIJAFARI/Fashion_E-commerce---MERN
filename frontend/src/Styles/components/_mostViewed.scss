@@ -1,7 +1,5 @@
 .feature {
 	//min-height: 100vh;
-	background: linear-gradient(150deg, #fff 30%, #bbddec 130.1%);
-	padding: 0.1rem;
 }
 
 .feature .row {
@@ -52,12 +50,11 @@
 }
 
 .feature .row .content h3 {
-	font-size: 4rem;
+	font-size: 3rem;
 	color: var(--blue);
 }
 
 .feature .row .content .stars i {
-	font-size: 2rem;
 	color: orange;
 	padding: 1rem 0;
 }
@@ -77,6 +74,7 @@
 .feature .row .content .price {
 	color: #ff3300;
 	font-size: 2rem;
+	position: relative;
 }
 
 .feature .row .content .price span {
