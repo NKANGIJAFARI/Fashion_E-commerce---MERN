@@ -1,41 +1,53 @@
-import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Rating from '../Rating';
 
 import { addToCart } from '../../actions/cartActions';
 
 const ProductCard = ({ product }) => {
-	const [productId, setProductId] = useState(null);
-	//const [quantity, setQuantity] = useState(1);
 	// let history = useHistory();
 	const dispatch = useDispatch();
+	let history = useHistory();
 
 	//Get whatever is in th cart.
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
 
-	//=================================================================================
-	//Function to add to cart
-	/* I will use useEffect hook to check whether the id of product id 
-	has changed and whenever it does i dispatch addToCart action */
-
-	// useEffect(() => {
-	// 	if (productId !== null) {
-	// 		dispatch(addToCart(productId, 1));
-	// 	}
-	// }, [dispatch, productId]);
-
 	//Change product id on a click on cart
-	const addToCartHandler = (id) => {
+	const addToCartHandler = (id, countInStock) => {
 		let quantity = 1;
 		const existItem = cartItems.find((x) => x.product === id);
 
-		if (existItem && existItem !== 0) {
-			quantity = existItem.quantity + 1;
+		if (existItem) {
+			if (existItem.quantity === countInStock) {
+				if (
+					window.confirm(
+						`Only ${countInStock} left in stock are in your cart, proceed to checkout `
+					)
+				) {
+					history.push('/cart');
+				}
+				return;
+			}
 		}
+
+		/* Check if the added item already exists in the cart, and if it does,
+		Let the user decide if they need to add it anyways, and then dispatch 
+		*/
+		if (existItem && existItem !== 0) {
+			if (
+				window.confirm(
+					`Exists ${existItem.quantity}times in your cart, Add anyway `
+				)
+			) {
+				quantity = existItem.quantity + 1;
+			} else {
+				quantity = 1;
+			}
+		}
+
 		dispatch(addToCart(id, quantity));
 	};
 	//----------------------------------------------------------------------------
@@ -71,14 +83,15 @@ const ProductCard = ({ product }) => {
 				</li>
 
 				<li>
-					<button
-						className='productCard__options--link'
-						onClick={() => {
-							addToCartHandler(product._id);
-						}}
-						disabled={product.countInStock === 0}>
-						<i className='fas fa-cart-plus'></i>
-					</button>
+					{product && product.countInStock !== 0 && (
+						<button
+							className='productCard__options--link'
+							onClick={() => {
+								addToCartHandler(product._id, product.countInStock);
+							}}>
+							<i className='fas fa-cart-plus'></i>
+						</button>
+					)}
 				</li>
 
 				<li>

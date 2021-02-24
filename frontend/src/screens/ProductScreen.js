@@ -45,7 +45,7 @@ const ProductScreen = ({ match, history }) => {
 			brand: 'Florsh',
 			category: 'women',
 			price: 89.99,
-			countInStock: 7,
+			countInStock: 0,
 			rating: 4.0,
 			numReviews: 8,
 		},
