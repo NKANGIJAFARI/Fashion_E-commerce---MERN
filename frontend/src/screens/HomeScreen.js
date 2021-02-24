@@ -1,14 +1,11 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Row, Col } from 'react-bootstrap';
-import Loader from '../components/Loader';
-import Message from '../components/Message';
+
 import Meta from '../components/Meta';
-import Product from '../components/Product';
-import Paginate from '../components/Paginate';
+
 import { listProducts } from '../actions/productActions';
-import ProductCarousel from '../components/Home components/ProductCarousel';
+
 import FirstDisplay from '../components/FirstDisplay';
 
 // import Categories from '../components/Home components/Categories';
@@ -21,7 +18,6 @@ import MostViewed from '../components/Home components/MostViewed';
 import ShoesDisplay from '../components/Home components/ShoesDisplay';
 import LatestProducts from '../components/Home components/LatestProducts';
 import FeaturedProducts from '../components/Home components/FeaturedProducts';
-import ShoeProductCard from '../components/Home components/ShoeProductCard';
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;

@@ -6,7 +6,7 @@ const ShoeCard = ({ boxNum, price, imgSrc, usage, brand }) => {
 		<div className={boxNum}>
 			{/*price*/}
 			<Link to='/' className='price'>
-				{price}
+				${price}
 			</Link>
 			{/*detail*/}
 			<div className='product-img'>
@@ -37,7 +37,7 @@ const ShoeProductCard = () => {
 	return (
 		<div
 			style={{
-				padding: '10px 10px 60px 10px',
+				padding: '10px 10px 8rem 10px',
 				display: 'flex',
 				justifyContent: 'center',
 			}}>
@@ -46,59 +46,22 @@ const ShoeProductCard = () => {
 				boxNum='box-1'
 				price='110'
 				usage='Support shoes'
+				brand='Nike Air'
 			/>
-			<div className='box-2'>
-				{/*price*/}
-				<Link to='#/' className='price'>
-					$110
-				</Link>
-				{/*detail*/}
-				<div className='product-img'>
-					<img src='/images/2.png' />
-				</div>
-				<div className='detail'>
-					<div className='type'>
-						{/*icon*/}
-						<img className='icon' src='images/nike-logo.png' />
-						{/*type*/}
-						<p className='type-heading'>SUPPORT SHOES</p>
-					</div>
-					{/*detail*/}
-					<div className='type-detail'>
-						<p>Nike Shoes</p>
-						<p>Shoes</p>
-					</div>
-				</div>
-				<div className='cart-btn'>
-					<Link to='/'>+</Link>
-				</div>
-			</div>
-			<div className='box-3'>
-				{/*price*/}
-				<Link to='#/' className='price'>
-					$110
-				</Link>
-				{/*detail*/}
-				<div className='product-img'>
-					<img src='/images/3.png' />
-				</div>
-				<div className='detail'>
-					<div className='type'>
-						{/*icon*/}
-						<img className='icon' src='images/nike-logo.png' />
-						{/*type*/}
-						<p className='type-heading'>SUPPORT SHOES</p>
-					</div>
-					{/*detail*/}
-					<div className='type-detail'>
-						<p>Nike Shoes</p>
-						<p>Shoes</p>
-					</div>
-				</div>
-				<div className='cart-btn'>
-					<Link to='/'>+</Link>
-				</div>
-			</div>
+			<ShoeCard
+				imgSrc='/images/2.png'
+				boxNum='box-2'
+				price='299'
+				usage='Support shoes'
+				brand='Nike Air'
+			/>
+			<ShoeCard
+				imgSrc='/images/3.png'
+				boxNum='box-3'
+				price='199'
+				usage='Support shoes'
+				brand='Nike Air'
+			/>
 		</div>
 	);
 };
