@@ -144,11 +144,33 @@ const Header = () => {
 										<Link to='/profile' class='dropdown-content-link'>
 											My Profile
 										</Link>
-										<Link to='/login' class='dropdown-content-link'>
+										{/* Nav will show differently due to admins and non admin */}
+
+										{userInfo && userInfo.isAdmin && (
+											<>
+												<Link to='/' class='dropdown-content-link'>
+													Admin Dashboard
+												</Link>
+
+												<Link
+													to='/admin/userslist'
+													class='dropdown-content-link'>
+													All Users
+												</Link>
+												<Link
+													to='/admin/productslist'
+													class='dropdown-content-link'>
+													All Products
+												</Link>
+												<Link
+													to='/admin/orderslist'
+													class='dropdown-content-link'>
+													All Orders
+												</Link>
+											</>
+										)}
+										<Link class='dropdown-content-link' onClick={logoutHandler}>
 											Logout
-										</Link>
-										<Link to='/' class='dropdown-content-link'>
-											Link 3
 										</Link>
 									</div>
 								</div>
@@ -159,18 +181,15 @@ const Header = () => {
 									<i className='far fa-user'></i>
 									<div className='dropbtn__name'>
 										{/* <span>Hello, </span> */}
-										<span>User</span>
+										<span>Guest</span>
 									</div>
 								</Link>
 								<div class='dropdown-content'>
-									<Link to='/profile' class='dropdown-content-link'>
-										My Profile
-									</Link>
 									<Link to='/login' class='dropdown-content-link'>
-										Logout
+										Sign In
 									</Link>
-									<Link to='/' class='dropdown-content-link'>
-										Link 3
+									<Link to='/register' class='dropdown-content-link'>
+										Create Account
 									</Link>
 								</div>
 							</div>
