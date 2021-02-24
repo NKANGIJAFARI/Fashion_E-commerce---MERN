@@ -27,7 +27,9 @@ const ProductCard = ({ product }) => {
 
 			<ul className='productCard__options'>
 				<li>
-					<Link to='/' className='productCard__options--link'>
+					<Link
+						to={`/products/${product._id}`}
+						className='productCard__options--link'>
 						<i class='far fa-eye'></i>
 					</Link>
 				</li>
@@ -37,6 +39,7 @@ const ProductCard = ({ product }) => {
 						<i class='fas fa-cart-plus'></i>
 					</Link>
 				</li>
+
 				<li>
 					<Link to='/' className='productCard__options--link'>
 						<i class='far fa-heart'></i>
