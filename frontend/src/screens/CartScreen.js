@@ -10,8 +10,10 @@ import {
 	Card,
 	Image,
 } from 'react-bootstrap';
-import Message from '../components/Message';
+
 import { addToCart, removeFromCart } from '../actions/cartActions';
+
+import EmptyDisplay from '../components/EmptyDisplay';
 
 const CartScreen = (props) => {
 	const { match, location, history } = props;
@@ -44,22 +46,22 @@ const CartScreen = (props) => {
 	};
 
 	return (
-		<Row>
+		<Row style={{ padding: '2rem 2rem' }}>
 			<Col md={8}>
 				<h1>Shopping Cart</h1>
 				{cartItems.length === 0 ? (
-					<Message>Your Cart is empty</Message>
+					<EmptyDisplay />
 				) : (
 					<ListGroup variant='flush'>
 						{cartItems.map((item) => (
 							//product is the id
 							<ListGroup.Item key={item.product}>
 								<Row>
-									<Col md={2}>
+									<Col md={1}>
 										<Image src={item.image} alt={item.name} fluid rounded />
 									</Col>
 
-									<Col md={4}>
+									<Col md={5}>
 										<Link to={`/products/${item.product}`}>{item.name}</Link>
 									</Col>
 									<Col md={2}>${item.price}</Col>
