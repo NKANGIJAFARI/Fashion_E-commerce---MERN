@@ -125,19 +125,34 @@ const ProductScreen = ({ match, history }) => {
 
 	//=================================================================================
 	//Function to add to cart
-	const addToCartHandler = () => {
+	const addToCartHandler = (countInStock) => {
 		const existItem = cartItems.find(
 			(item) => item.product === match.params.id
 		);
 
 		if (existItem) {
-			if (
-				window.confirm(
-					`Exists ${existItem.quantity}times in your cart, Add anyway `
-				)
-			) {
-				const qty = Number(quantity) + Number(existItem.quantity);
-				history.push(`/cart/${match.params.id}?quantity=${qty}`);
+			const qty = Number(quantity) + Number(existItem.quantity);
+
+			if (qty > countInStock) {
+				if (
+					window.confirm(
+						`You have ${
+							existItem.quantity
+						} in your cart, stock left with ${countInStock}, cant get ${qty}. Add ${
+							countInStock - existItem.quantity
+						} ? `
+					)
+				) {
+					history.push(`/cart/${match.params.id}?quantity=${countInStock}`);
+				}
+			} else {
+				if (
+					window.confirm(
+						`Exists ${existItem.quantity} times in your cart, Make it ${qty} `
+					)
+				) {
+					history.push(`/cart/${match.params.id}?quantity=${qty}`);
+				}
 			}
 		} else {
 			history.push(`/cart/${match.params.id}?quantity=${quantity}`);
@@ -287,11 +302,15 @@ const ProductScreen = ({ match, history }) => {
 									}
 									<ListGroup.Item>
 										<Button
-											onClick={addToCartHandler}
+											onClick={() => {
+												addToCartHandler(product.countInStock);
+											}}
 											className='btn-block'
 											type='button'
 											disabled={product.countInStock === 0}>
-											Add to Cart
+											{product.countInStock === 0
+												? 'Out ofStock'
+												: 'Add to Cart'}
 										</Button>
 									</ListGroup.Item>
 								</ListGroup>
@@ -307,7 +326,10 @@ const ProductScreen = ({ match, history }) => {
 								{product.reviews.map((review) => (
 									<ListGroup.Item key={review._id}>
 										<strong>{review.name}</strong>
-										<Rating value={review.rating} />
+										<Rating
+											value={review.rating}
+											text={` ${review.rating}/${review.numReviews}rev`}
+										/>
 										<p>{review.createdAt.substring(0, 10)}</p>
 										<p>{review.comment}</p>
 									</ListGroup.Item>
