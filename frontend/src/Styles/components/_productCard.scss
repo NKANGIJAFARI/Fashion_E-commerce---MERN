@@ -139,10 +139,12 @@
 			cursor: pointer;
 			transition: 0.5s;
 			font-size: 2rem;
+			border: none;
+			outline: none;
 		}
 
 		&--link:hover {
-			transform: scale(1.1);
+			transform: scale(1.05);
 			background-color: var(--color-black);
 		}
 

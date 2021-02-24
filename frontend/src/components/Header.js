@@ -178,13 +178,13 @@ const Header = () => {
 							</div>
 						) : (
 							<div className='dropdown'>
-								<Link disabled className='dropbtn'>
+								<div disabled className='dropbtn'>
 									<i className='far fa-user'></i>
 									<div className='dropbtn__name'>
 										{/* <span>Hello, </span> */}
 										<span>Guest</span>
 									</div>
-								</Link>
+								</div>
 								<div className='dropdown-content'>
 									<Link to='/login' className='dropdown-content-link'>
 										Sign In

@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 import Rating from '../Rating';
 
+import { addToCart } from '../../actions/cartActions';
+
 const ProductCard = ({ product }) => {
+	const [productId, setId] = useState(null);
+	// let history = useHistory();
+	const dispatch = useDispatch();
+
 	//=================================================================================
 	//Function to add to cart
-	const addToCartHandler = (productId) => {
-		// history.push(`/cart/${match.params.id}?quantity=${quantity}`);
-		// <Button
-		// 	onClick={addToCartHandler}
-		// 	className='btn-block'
-		// 	type='button'
-		// 	disabled={product.countInStock === 0}>
-		// 	Add to Cart
-		// </Button>;
+	/* I will use useEffect hook to check whether the id of product id 
+	has changed and whenever it does i dispatch addToCart action */
 
-		console.log(productId);
+	useEffect(() => {
+		if (productId !== null) {
+			dispatch(addToCart(productId, 1));
+		}
+	}, [productId, dispatch]);
+
+	//Change product id on a click on cart
+	const addToCartHandler = (productId) => {
+		setId(productId);
 	};
 	//----------------------------------------------------------------------------
 
@@ -51,15 +60,14 @@ const ProductCard = ({ product }) => {
 				</li>
 
 				<li>
-					<Link
-						to='/'
+					<button
 						className='productCard__options--link'
 						onClick={() => {
 							addToCartHandler(product._id);
 						}}
 						disabled={product.countInStock === 0}>
 						<i className='fas fa-cart-plus'></i>
-					</Link>
+					</button>
 				</li>
 
 				<li>
