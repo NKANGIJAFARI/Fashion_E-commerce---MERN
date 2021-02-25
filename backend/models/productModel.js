@@ -74,6 +74,12 @@ const productSchema = mongoose.Schema(
 			type: Date,
 			default: Date.now(),
 		},
+		featured: {
+			type: Boolean,
+			required: true,
+			default: false,
+		},
+		tags: [],
 	},
 	{
 		timestamp: true,

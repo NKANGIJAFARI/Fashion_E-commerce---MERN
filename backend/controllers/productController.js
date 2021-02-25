@@ -41,6 +41,34 @@ const getProductById = asyncHandler(async (req, res) => {
 	}
 });
 
+// @desc    Get Featured Products
+//@Route    Get /api/products/featured
+//@access   Public
+/* Here lets get 10products for each category that has featured true,
+Get each category alone and then combine it so the frontend receive a 
+combined array which we will filter in the frontend to supply
+tham to different coponents due to their filtration" */
+
+const getFeaturedProducts = asyncHandler(async (req, res) => {
+	//Featured for women
+	const womenProducts = await Product.find({
+		$and: [{ featured: true }, { category: 'women' }],
+	}).limit(2);
+
+	//Featured for men
+	const menProducts = await Product.find({
+		$and: [{ featured: true }, { category: 'men' }],
+	}).limit(2);
+
+	//Featured for kids
+	const kidsProducts = await Product.find({
+		$and: [{ featured: true }, { category: 'kids' }],
+	}).limit(2);
+
+	const allProducts = [...menProducts, ...womenProducts, kidsProducts];
+	res.json(allProducts);
+});
+
 // @desc    Delete a product
 //@Route    DELETE /api/products/:id
 //@access   Private and only for admin
@@ -247,6 +275,7 @@ const onlyPurchasedCanReview = asyncHandler(async (req, res) => {
 export {
 	getProducts,
 	getProductById,
+	getFeaturedProducts,
 	deleteProduct,
 	createProduct,
 	updateProduct,

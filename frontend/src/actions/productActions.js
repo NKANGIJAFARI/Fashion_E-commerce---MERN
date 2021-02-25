@@ -13,6 +13,9 @@ import {
 	PRODUCT_DETAILS_FAIL,
 	PRODUCT_DETAILS_REQUEST,
 	PRODUCT_DETAILS_SUCCESS,
+	PRODUCT_FEATURED_FAIL,
+	PRODUCT_FEATURED_REQUEST,
+	PRODUCT_FEATURED_SUCCESS,
 	PRODUCT_LIST_FAIL,
 	PRODUCT_LIST_REQUEST,
 	PRODUCT_LIST_SUCCESS,
@@ -28,6 +31,8 @@ import {
 //We are to use the redux thunk, it allows us to have a
 // function inside a function to easily handle aync
 
+//===========================================================================
+//List Products
 export const listProducts = (keyword = '', pageNumber = '') => async (
 	dispatch
 ) => {
@@ -52,7 +57,10 @@ export const listProducts = (keyword = '', pageNumber = '') => async (
 		});
 	}
 };
+//-------------------------------------------------------------------------------
 
+//===========================================================================
+//List a top product
 export const listTopRatedProducts = () => async (dispatch) => {
 	try {
 		dispatch({ type: PRODUCT_TOP_REQUEST });
@@ -74,7 +82,34 @@ export const listTopRatedProducts = () => async (dispatch) => {
 		});
 	}
 };
+//-------------------------------------------------------------------------------
 
+//===========================================================================
+//List featured products
+export const listFeaturedProducts = () => async (dispatch) => {
+	try {
+		dispatch({ type: PRODUCT_FEATURED_REQUEST });
+
+		const { data } = await axios.get(`/api/products/featured`);
+
+		dispatch({
+			type: PRODUCT_FEATURED_SUCCESS,
+			payload: data,
+		});
+	} catch (error) {
+		dispatch({
+			type: PRODUCT_FEATURED_FAIL,
+			payload:
+				error.response && error.response.data.message
+					? error.response.data.message
+					: error.message,
+		});
+	}
+};
+//---------------------------------------------------------------------------
+
+//===========================================================================
+//Delete a product Details
 export const listProductDetails = (id) => async (dispatch) => {
 	try {
 		dispatch({ type: PRODUCT_DETAILS_REQUEST });
@@ -95,6 +130,7 @@ export const listProductDetails = (id) => async (dispatch) => {
 		});
 	}
 };
+//-------------------------------------------------------------------------------
 
 //===========================================================================
 //Delete a product functionality
