@@ -1,4 +1,5 @@
 import asyncHandler from 'express-async-handler';
+import { MongooseDocument } from 'mongoose';
 import products from '../data/products.js';
 import Order from '../models/orderModel.js';
 
@@ -90,6 +91,35 @@ const getLatestProducts = asyncHandler(async (req, res) => {
 
 	const allProducts = [...menProducts, ...womenProducts];
 	res.json(allProducts);
+});
+
+// @desc    Get Latest Products
+//@Route    Get /api/products/latest
+//@access   Public
+const getShoesProducts = asyncHandler(async (req, res) => {
+	/*I got 5 shoes and gave them a category "men women" because am lazy
+	to add shoe pictures fro ladies and men at the MongooseDocument, but as you edit 
+	this, if this comment exists refer to down comments to get shoes accprding to 
+	proper categories */
+
+	const shoeProducts = await Product.find({
+		$and: [{ category: 'men women' }, { tags: 'shoe' }],
+	}).limit(5);
+
+	res.json(shoeProducts);
+
+	// would have been
+	//Featured for women
+	/*const womenShoes = await Product.find({
+		$and: [{ tags: 'shoe' }, { category: 'women' }],
+	}).limit(5);*/
+
+	//Featured for men
+	/*const menShoes = await Product.find({
+		$and: [{ tags: 'shoe' }, { category: 'men' }],
+	}).limit(5);
+
+	const allShoesProducts = [...womenShoes, ...menShoes]; */
 });
 
 // @desc    Delete a product
@@ -305,4 +335,5 @@ export {
 	createProductReview,
 	getTopProducts,
 	getLatestProducts,
+	getShoesProducts,
 };

@@ -261,7 +261,7 @@ const products = [
 		description:
 			'Lorem quod asperiores officia quidem quiRem consequuntur reiciendis aut',
 		brand: 'Vesia',
-		category: 'both',
+		category: 'men women',
 		price: 89.99,
 		countInStock: 10,
 		rating: 4.5,
@@ -275,8 +275,7 @@ const products = [
 		description:
 			'Lorem quod asperiores officia quidem quiRem consequuntur reiciendis aut',
 		brand: 'Nike',
-		category: 'both',
-		tags: [],
+		category: 'men women',
 		price: 99.99,
 		countInStock: 10,
 		rating: 4,
@@ -290,7 +289,7 @@ const products = [
 		description:
 			'Lorem quod asperiores officia quidem quiRem consequuntur reiciendis aut',
 		brand: 'Nike',
-		category: 'both',
+		category: 'men women',
 		price: 89.99,
 		countInStock: 10,
 		rating: 4.5,
@@ -303,7 +302,7 @@ const products = [
 		description:
 			'Lorem quod asperiores officia quidem quiRem consequuntur reiciendis aut',
 		brand: 'Vesia',
-		category: 'both',
+		category: 'men women',
 		price: 130.0,
 		countInStock: 10,
 		rating: 4.5,
@@ -316,7 +315,7 @@ const products = [
 		description:
 			'Lorem quod asperiores officia quidem quiRem consequuntur reiciendis aut',
 		brand: 'Addidas',
-		category: 'both',
+		category: 'men women',
 		price: 59.99,
 		countInStock: 10,
 		rating: 4.5,
