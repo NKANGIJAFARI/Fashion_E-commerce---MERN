@@ -294,6 +294,10 @@ input:focus {
 	flex-basis: 20%;
 	cursor: pointer;
 	padding: 10px;
+
+	.image-active {
+		border: 2px var(--pink) solid;
+	}
 }
 
 .form {

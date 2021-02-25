@@ -43,7 +43,6 @@ const MostViewed = () => {
 							alt='mostViewed'
 							onClick={(e) => {
 								setActive(e.target.id);
-								setActive(e.target.id);
 								setPicture('/images/watch3.png');
 							}}
 						/>
