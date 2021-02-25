@@ -13,6 +13,9 @@ import {
 	PRODUCT_DETAILS_FAIL,
 	PRODUCT_DETAILS_REQUEST,
 	PRODUCT_DETAILS_SUCCESS,
+	PRODUCT_FEATURED_FAIL,
+	PRODUCT_FEATURED_REQUEST,
+	PRODUCT_FEATURED_SUCCESS,
 	PRODUCT_LIST_FAIL,
 	PRODUCT_LIST_REQUEST,
 	PRODUCT_LIST_RESET,
@@ -151,11 +154,11 @@ export const productTopRatedReducer = (state = { products: [] }, action) => {
 //Product TOP RATED REDUCER
 export const productFeaturedReducer = (state = { products: [] }, action) => {
 	switch (action.type) {
-		case PRODUCT_TOP_REQUEST:
+		case PRODUCT_FEATURED_REQUEST:
 			return { loading: true };
-		case PRODUCT_TOP_SUCCESS:
+		case PRODUCT_FEATURED_SUCCESS:
 			return { loading: false, products: action.payload };
-		case PRODUCT_TOP_FAIL:
+		case PRODUCT_FEATURED_FAIL:
 			return { loading: false, error: action.payload };
 		default:
 			return state;
