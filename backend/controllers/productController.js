@@ -53,17 +53,17 @@ const getFeaturedProducts = asyncHandler(async (req, res) => {
 	//Featured for women
 	const womenProducts = await Product.find({
 		$and: [{ featured: true }, { category: 'women' }],
-	}).limit(2);
+	}).limit(5);
 
 	//Featured for men
 	const menProducts = await Product.find({
 		$and: [{ featured: true }, { category: 'men' }],
-	}).limit(2);
+	}).limit(5);
 
 	//Featured for kids
 	const kidsProducts = await Product.find({
 		$and: [{ featured: true }, { category: 'kids' }],
-	}).limit(2);
+	}).limit(5);
 
 	const allProducts = [...menProducts, ...womenProducts, kidsProducts];
 	res.json(allProducts);
