@@ -16,6 +16,9 @@ import {
 	PRODUCT_FEATURED_FAIL,
 	PRODUCT_FEATURED_REQUEST,
 	PRODUCT_FEATURED_SUCCESS,
+	PRODUCT_LATEST_FAIL,
+	PRODUCT_LATEST_REQUEST,
+	PRODUCT_LATEST_SUCCESS,
 	PRODUCT_LIST_FAIL,
 	PRODUCT_LIST_REQUEST,
 	PRODUCT_LIST_RESET,
@@ -151,7 +154,7 @@ export const productTopRatedReducer = (state = { products: [] }, action) => {
 //-------------------------------------------------------------------------------------
 
 //======================================================================================
-//Product TOP RATED REDUCER
+//Product Featured REDUCER
 export const productFeaturedReducer = (state = { products: [] }, action) => {
 	switch (action.type) {
 		case PRODUCT_FEATURED_REQUEST:
@@ -159,6 +162,22 @@ export const productFeaturedReducer = (state = { products: [] }, action) => {
 		case PRODUCT_FEATURED_SUCCESS:
 			return { loading: false, products: action.payload };
 		case PRODUCT_FEATURED_FAIL:
+			return { loading: false, error: action.payload };
+		default:
+			return state;
+	}
+};
+//-------------------------------------------------------------------------------------
+
+//======================================================================================
+//Product Latest products
+export const productLatestReducer = (state = { products: [] }, action) => {
+	switch (action.type) {
+		case PRODUCT_LATEST_REQUEST:
+			return { loading: true };
+		case PRODUCT_LATEST_SUCCESS:
+			return { loading: false, products: action.payload };
+		case PRODUCT_LATEST_FAIL:
 			return { loading: false, error: action.payload };
 		default:
 			return state;
