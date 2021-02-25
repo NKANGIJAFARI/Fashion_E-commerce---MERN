@@ -22,6 +22,9 @@ import {
 	PRODUCT_LIST_FAIL,
 	PRODUCT_LIST_REQUEST,
 	PRODUCT_LIST_SUCCESS,
+	PRODUCT_SHOES_FAIL,
+	PRODUCT_SHOES_REQUEST,
+	PRODUCT_SHOES_SUCCESS,
 	PRODUCT_TOP_FAIL,
 	PRODUCT_TOP_REQUEST,
 	PRODUCT_TOP_SUCCESS,
@@ -126,6 +129,30 @@ export const listLatestProducts = () => async (dispatch) => {
 	} catch (error) {
 		dispatch({
 			type: PRODUCT_LATEST_FAIL,
+			payload:
+				error.response && error.response.data.message
+					? error.response.data.message
+					: error.message,
+		});
+	}
+};
+//---------------------------------------------------------------------------
+
+//===========================================================================
+//List Latest products
+export const listShoesProducts = () => async (dispatch) => {
+	try {
+		dispatch({ type: PRODUCT_SHOES_REQUEST });
+
+		const { data } = await axios.get(`/api/products/shoes`);
+
+		dispatch({
+			type: PRODUCT_SHOES_SUCCESS,
+			payload: data,
+		});
+	} catch (error) {
+		dispatch({
+			type: PRODUCT_SHOES_FAIL,
 			payload:
 				error.response && error.response.data.message
 					? error.response.data.message

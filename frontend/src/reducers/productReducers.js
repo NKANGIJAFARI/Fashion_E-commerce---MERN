@@ -189,7 +189,7 @@ export const productLatestReducer = (state = { products: [] }, action) => {
 //-------------------------------------------------------------------------------------
 
 //======================================================================================
-//Product Latest products
+//Get shoes products
 export const productShoesReducer = (state = { products: [] }, action) => {
 	switch (action.type) {
 		case PRODUCT_SHOES_REQUEST:
