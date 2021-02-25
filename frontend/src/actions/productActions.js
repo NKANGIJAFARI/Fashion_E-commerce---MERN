@@ -139,7 +139,7 @@ export const listLatestProducts = () => async (dispatch) => {
 //---------------------------------------------------------------------------
 
 //===========================================================================
-//List Latest products
+//List Shoes products
 export const listShoesProducts = () => async (dispatch) => {
 	try {
 		dispatch({ type: PRODUCT_SHOES_REQUEST });
@@ -275,7 +275,6 @@ export const createProduct = () => async (dispatch, getState) => {
 
 //===========================================================================
 //Update a new product functionality
-
 export const updateProduct = (product) => async (dispatch, getState) => {
 	try {
 		console.log(product);
@@ -326,7 +325,6 @@ export const updateProduct = (product) => async (dispatch, getState) => {
 
 //===========================================================================
 //Create a product review functionality
-
 export const createProductReview = (productId, reviewDetails) => async (
 	dispatch,
 	getState

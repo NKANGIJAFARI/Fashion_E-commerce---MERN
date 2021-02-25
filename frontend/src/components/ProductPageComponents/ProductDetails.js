@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-const ProductDetails = () => {
-	const [pictureSrc, setPicture] = useState('/images/gal1.png');
+const ProductDetails = ({ imgSrc }) => {
+	const [pictureSrc, setPicture] = useState(imgSrc);
 	return (
 		<div className='small-container single-product'>
 			<div className='small-img-row'>
 				<div className='small-img-col'>
 					<img
-						src='/images/gal1.png'
+						src={imgSrc}
 						alt=''
 						width='100%'
 						className='small-img'

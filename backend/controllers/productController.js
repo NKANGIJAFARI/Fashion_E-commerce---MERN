@@ -1,5 +1,5 @@
 import asyncHandler from 'express-async-handler';
-import { MongooseDocument } from 'mongoose';
+// import { MongooseDocument } from 'mongoose';
 import products from '../data/products.js';
 import Order from '../models/orderModel.js';
 
