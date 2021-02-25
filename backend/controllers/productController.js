@@ -69,6 +69,29 @@ const getFeaturedProducts = asyncHandler(async (req, res) => {
 	res.json(allProducts);
 });
 
+// @desc    Get Latest Products
+//@Route    Get /api/products/latest
+//@access   Public
+const getLatestProducts = asyncHandler(async (req, res) => {
+	//Featured for women
+	const womenProducts = await Product.find({
+		$and: [{ featured: true }, { category: 'women' }],
+	}).limit(4);
+
+	//Featured for men
+	const menProducts = await Product.find({
+		$and: [{ featured: true }, { category: 'men' }],
+	}).limit(4);
+
+	// //Featured for kids
+	// const kidsProducts = await Product.find({
+	// 	$and: [{ featured: true }, { category: 'kids' }],
+	// }).limit(5);
+
+	const allProducts = [...menProducts, ...womenProducts];
+	res.json(allProducts);
+});
+
 // @desc    Delete a product
 //@Route    DELETE /api/products/:id
 //@access   Private and only for admin
@@ -281,4 +304,5 @@ export {
 	updateProduct,
 	createProductReview,
 	getTopProducts,
+	getLatestProducts,
 };

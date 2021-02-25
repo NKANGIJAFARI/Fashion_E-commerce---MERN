@@ -11,12 +11,14 @@ import {
 	createProductReview,
 	getTopProducts,
 	getFeaturedProducts,
+	getLatestProducts,
 } from '../controllers/productController.js';
 
 router.route('/').get(getProducts).post(protect, isAdmin, createProduct);
 
 router.route('/top').get(getTopProducts);
 router.route('/featured').get(getFeaturedProducts);
+router.route('/latest').get(getLatestProducts);
 
 router.route('/:id/reviews').post(protect, createProductReview);
 
