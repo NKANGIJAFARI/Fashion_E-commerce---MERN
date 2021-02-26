@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 
 import HomeScreen from './screens/HomeScreen';
+import ShopScreen from './screens/ShopScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
@@ -55,11 +56,12 @@ function App() {
 					<Route path='/order/:id' component={OrderScreen} />
 					<Route path='/search/:keyword' component={HomeScreen} exact />
 					<Route
-						path='/search/:keyword/page/:pageNumber'
-						component={HomeScreen}
+						path='/shop/search/:keyword/page/:pageNumber'
+						component={ShopScreen}
 						exact
 					/>
-					<Route path='/page/:pageNumber' component={HomeScreen} exact />
+					<Route path='/shop/page/:pageNumber' component={HomeScreen} exact />
+					<Route path='/shop' component={ShopScreen} />
 					<Route path='/' component={HomeScreen} exact />
 				</div>
 			</main>

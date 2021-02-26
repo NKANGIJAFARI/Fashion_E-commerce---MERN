@@ -2,16 +2,16 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import Paginate from '../Paginate';
-import Message from '../Message';
-import Loader from '../Loader';
+import Paginate from '../components/Paginate';
+import Message from '../components/Message';
+import Loader from '../components/Loader';
 
-import ProductCard from './ProductCard';
+import ProductCard from '../components/Home components/ProductCard';
 
-import { listProducts } from '../../actions/productActions';
-import SectionHeading from './SectionHeading';
+import { listProducts } from '../actions/productActions';
+import SectionHeading from '../components/Home components/SectionHeading';
 
-const LatestProducts = () => {
+const ShopScreen = () => {
 	//We get the params on the url, the keyword searched if in search
 	//product mode and the pagenumber if product pages are changed
 	const { keyword, pageNumber } = useParams();
@@ -29,9 +29,13 @@ const LatestProducts = () => {
 	}, [dispatch, keyword, pageNum]);
 
 	return (
-		<section className='section section__latestProducts'>
-			<SectionHeading desc='Latest Products' />
-			<div className='latestProducts'>
+		<section
+			className='section section__allProducts
+	'>
+			<SectionHeading desc='Products' />
+			<div
+				className='AllProducts
+		'>
 				{loading ? (
 					<Loader />
 				) : error ? (
@@ -50,4 +54,4 @@ const LatestProducts = () => {
 	);
 };
 
-export default LatestProducts;
+export default ShopScreen;
