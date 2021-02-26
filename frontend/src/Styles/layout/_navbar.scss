@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-// ul {
-// 	list-style: none;
-// }
-// a {
-// 	text-decoration: none;
-// }
-
 .header {
 	position: -webkit-sticky;
 	position: sticky;
@@ -24,9 +17,6 @@
 	font-size: 1.5rem;
 }
 .navbar {
-	// width: 100%;
-	//
-	// z-index: 100;
 	box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
 	z-index: 1000;
 	width: 100%;
@@ -90,7 +80,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0px 30px;
+	padding: 0px 10px;
 }
 .logo img {
 	height: 30px;
@@ -319,3 +309,28 @@
 .dropdown:hover .dropdown-content {
 	display: block;
 }
+
+// @media (max-width: 600px) {
+// 	.nav-btn {
+// 		display: inline-block;
+// 		position: absolute;
+// 		left: 0px;
+// 		top: 0px;
+// 	}
+// 	.nav-btn > label {
+// 		display: inline-block;
+// 		width: 50px;
+// 		height: 50px;
+// 		padding: 13px;
+// 	}
+// 	.nav-btn > label:hover,
+// 	#nav-check:checked ~ .nav-btn > label {
+// 		background-color: rgba(0, 0, 0, 0.3);
+// 	}
+// 	.nav-btn > label > span {
+// 		display: block;
+// 		width: 25px;
+// 		height: 10px;
+// 		border-top: 2px solid #eee;
+// 	}
+// }

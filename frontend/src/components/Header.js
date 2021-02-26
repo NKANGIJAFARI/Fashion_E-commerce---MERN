@@ -95,7 +95,119 @@ const Header = () => {
 
 					<div
 						className={`toggle ${isActive ? 'active' : ''}`}
-						onClick={toggleActive}></div>
+						onClick={toggleActive}>
+						<i class='fas fa-bars'></i>
+					</div>
+
+					<div class='nav-btn'>
+						<label for='nav-check'>
+							<span></span>
+							<span></span>
+							<span></span>
+						</label>
+					</div>
+
+					<div className='nav-hide' style={{ display: 'none' }}>
+						<ul className='menu'>
+							<li>
+								<Link to='/'>Home</Link>
+							</li>
+							<li className='shop' disabled className='shop__dropdown'>
+								<Link to='/'>Shop</Link>
+								<ShopDropdown />
+							</li>
+							<li className='dropdown'>
+								<Link to='/'>Men</Link>
+								{/* <ShopDropdown /> */}
+							</li>
+							<li className='dropdown'>
+								<Link to='/'>Women</Link>
+								{/* <ShopDropdown /> */}
+							</li>
+							<li>
+								<Link to='/'>Kids</Link>
+							</li>
+						</ul>
+						<div className='right-menu'>
+							<Link to='/'>
+								<i className='far fa-heart'>
+									<span className='num-cart-product'>0</span>
+								</i>
+							</Link>
+
+							{userInfo ? (
+								<div id='username'>
+									<div className='dropdown'>
+										<div disabled className='dropbtn'>
+											<i className='far fa-user'></i>
+											<div className='dropbtn__name'>
+												{/* <span>Hello, </span> */}
+												<span>{userInfo.name.substr(0, 6)}</span>
+											</div>
+										</div>
+										<div className='dropdown-content'>
+											<Link to='/profile' className='dropdown-content-link'>
+												My Profile
+											</Link>
+											{/* Nav will show differently due to admins and non admin */}
+
+											{userInfo && userInfo.isAdmin && (
+												<>
+													<Link to='/' className='dropdown-content-link'>
+														Admin Dashboard
+													</Link>
+
+													<Link
+														to='/admin/userslist'
+														className='dropdown-content-link'>
+														All Users
+													</Link>
+													<Link
+														to='/admin/productslist'
+														className='dropdown-content-link'>
+														All Products
+													</Link>
+													<Link
+														to='/admin/orderslist'
+														className='dropdown-content-link'>
+														All Orders
+													</Link>
+												</>
+											)}
+											<Link
+												to='/login'
+												className='dropdown-content-link'
+												onClick={logoutHandler}>
+												Logout
+											</Link>
+										</div>
+									</div>
+								</div>
+							) : (
+								<div className='dropdown'>
+									<div disabled className='dropbtn'>
+										<i className='far fa-user'></i>
+										<div className='dropbtn__name'>
+											{/* <span>Hello, </span> */}
+											<span>Guest</span>
+										</div>
+									</div>
+									<div className='dropdown-content'>
+										<Link to='/login' className='dropdown-content-link'>
+											Sign In
+										</Link>
+										<Link to='/register' className='dropdown-content-link'>
+											Create Account
+										</Link>
+									</div>
+								</div>
+							)}
+
+							{/* <Link to='/profile' className='user'>
+							<i className='far fa-user'></i>
+						</Link> */}
+						</div>
+					</div>
 
 					<ul className='menu'>
 						<li>
@@ -118,7 +230,6 @@ const Header = () => {
 						</li>
 					</ul>
 					<Route render={({ history }) => <SearchBox history={history} />} />
-
 					<div className='right-menu'>
 						<Link to='/'>
 							<i className='far fa-heart'>
