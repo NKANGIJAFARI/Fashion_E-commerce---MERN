@@ -90,7 +90,7 @@ const Header = () => {
 				<div className={`navigation ${isActive ? 'active' : ''}`}>
 					<Link to='/' className='logo'>
 						{/* <img src='images/logo.png' /> */}
-						<h3>J.Fashions</h3>
+						<h3>ZEN-Styles</h3>
 					</Link>
 
 					<div

@@ -133,7 +133,7 @@ const Footer = () => {
 				<div className='footer__copy'>
 					<div className='container'>
 						<p className='footer__copy-text'>
-							Copyright © 2020 . J-Fashions. All rights reserved
+							Copyright © 2020 . ZEN-Styles. All rights reserved
 						</p>
 					</div>
 				</div>
