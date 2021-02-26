@@ -17,6 +17,7 @@ import MostViewed from '../components/Home components/MostViewed';
 import ShoesDisplay from '../components/Home components/ShoesDisplay';
 import LatestProducts from '../components/Home components/LatestProducts';
 import FeaturedProducts from '../components/Home components/FeaturedProducts';
+import ShopDropdown from '../components/ShopDropdown';
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
@@ -38,6 +39,7 @@ const HomeScreen = ({ match }) => {
 			<Meta />
 			{!keyword ? (
 				<>
+					<ShopDropdown />
 					<FirstDisplay />
 					<FeaturedProducts />
 					<TrendingFashions />

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../actions/userActions';
 
 import SearchBox from './SearchBox';
+import ShopDropdown from './ShopDropdown';
 
 const Header = () => {
 	const dispatch = useDispatch();
@@ -100,14 +101,16 @@ const Header = () => {
 						<li>
 							<Link to='/'>Home</Link>
 						</li>
-						<li className='shop'>
+						<li className='shop' disabled className='dropdown'>
 							<Link to='/'>Shop</Link>
 						</li>
-						<li>
+						<li className='dropdown'>
 							<Link to='/'>Men</Link>
+							{/* <ShopDropdown /> */}
 						</li>
-						<li>
+						<li className='dropdown'>
 							<Link to='/'>Women</Link>
+							{/* <ShopDropdown /> */}
 						</li>
 						<li>
 							<Link to='/'>Kids</Link>
