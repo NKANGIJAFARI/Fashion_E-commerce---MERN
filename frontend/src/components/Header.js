@@ -101,8 +101,9 @@ const Header = () => {
 						<li>
 							<Link to='/'>Home</Link>
 						</li>
-						<li className='shop' disabled className='dropdown'>
+						<li className='shop' disabled className='shop__dropdown'>
 							<Link to='/'>Shop</Link>
+							<ShopDropdown />
 						</li>
 						<li className='dropdown'>
 							<Link to='/'>Men</Link>
