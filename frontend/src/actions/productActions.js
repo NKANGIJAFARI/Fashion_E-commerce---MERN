@@ -42,6 +42,7 @@ import {
 export const listProducts = (keyword = '', pageNumber = '') => async (
 	dispatch
 ) => {
+	console.log(keyword);
 	try {
 		dispatch({ type: PRODUCT_LIST_REQUEST });
 

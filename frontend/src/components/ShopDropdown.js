@@ -10,16 +10,16 @@ const ShopDropdown = () => {
 					<h2>New Trends</h2>
 					<ul className='sdropdown__linksWrapper sdropdown__linksWrapper--1'>
 						<li className='sdropdown__link'>
-							<Link>Shop Now</Link>
+							<Link to='/shop'>Shop Now</Link>
 						</li>
 						<li className='sdropdown__link'>
-							<Link>Shop Now</Link>
+							<Link to='/shop'>Shop Now</Link>
 						</li>
 						<li className='sdropdown__link'>
-							<Link>Shop Now</Link>
+							<Link to='/shop'>Shop Now</Link>
 						</li>
 						<li className='sdropdown__link'>
-							<Link>Shop Now</Link>
+							<Link to='/shop'>Shop Now</Link>
 						</li>
 					</ul>
 				</div>
@@ -27,16 +27,16 @@ const ShopDropdown = () => {
 					<h2>Shop categories</h2>
 					<ul className='sdropdown__linksWrapper sdropdown__linksWrapper--2'>
 						<li className='sdropdown__link'>
-							<Link>Shop Now</Link>
+							<Link to='/shop'>Shop Now</Link>
 						</li>
 						<li className='sdropdown__link'>
-							<Link>Shop Now</Link>
+							<Link to='/shop'>Shop Now</Link>
 						</li>
 						<li className='sdropdown__link'>
-							<Link>Shop Now</Link>
+							<Link to='/shop'>Shop Now</Link>
 						</li>
 						<li className='sdropdown__link'>
-							<Link>Shop Now</Link>
+							<Link to='/shop'>Shop Now</Link>
 						</li>
 					</ul>
 				</div>

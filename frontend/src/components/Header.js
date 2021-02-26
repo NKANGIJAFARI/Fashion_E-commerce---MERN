@@ -96,11 +96,11 @@ const Header = () => {
 					<div
 						className={`toggle ${isActive ? 'active' : ''}`}
 						onClick={toggleActive}>
-						<i class='fas fa-bars'></i>
+						<i className='fas fa-bars'></i>
 					</div>
 
-					<div class='nav-btn'>
-						<label for='nav-check'>
+					<div className='nav-btn'>
+						<label htmlFor='nav-check'>
 							<span></span>
 							<span></span>
 							<span></span>
@@ -112,8 +112,8 @@ const Header = () => {
 							<li>
 								<Link to='/'>Home</Link>
 							</li>
-							<li className='shop' disabled className='shop__dropdown'>
-								<Link to='/'>Shop</Link>
+							<li className='shop__dropdown'>
+								<Link to='/shop'>Shop</Link>
 								<ShopDropdown />
 							</li>
 							<li className='dropdown'>
@@ -213,8 +213,8 @@ const Header = () => {
 						<li>
 							<Link to='/'>Home</Link>
 						</li>
-						<li className='shop' disabled className='shop__dropdown'>
-							<Link to='/'>Shop</Link>
+						<li className='shop__dropdown'>
+							<Link to='/shop'>Shop</Link>
 							<ShopDropdown />
 						</li>
 						<li className='dropdown'>

@@ -29,13 +29,15 @@ const ShopScreen = () => {
 	}, [dispatch, keyword, pageNum]);
 
 	return (
-		<section
-			className='section section__allProducts
-	'>
+		<section className='section section__allProducts'>
 			<SectionHeading desc='Products' />
 			<div
-				className='AllProducts
-		'>
+				className='AllProducts'
+				style={{
+					display: 'flex',
+					flexWrap: 'wrap',
+					justifyContent: 'space-around',
+				}}>
 				{loading ? (
 					<Loader />
 				) : error ? (
