@@ -1,0 +1,47 @@
+.cart {
+	&__left {
+	}
+
+	&__right {
+		&--card {
+			position: sticky;
+			top: 20%;
+		}
+	}
+	&__items {
+		display: flex;
+		flex-direction: row;
+		margin: 0;
+		padding: 0.2rem;
+
+		&--imgWrapper {
+			width: 100%;
+			height: 8rem;
+
+			&-img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&--details {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: flex-start;
+
+			&-name {
+				max-width: 50%;
+				min-width: 30%;
+			}
+
+			&-price {
+			}
+
+			&-form {
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
