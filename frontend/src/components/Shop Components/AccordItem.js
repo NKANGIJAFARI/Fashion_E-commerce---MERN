@@ -1,5 +1,6 @@
 import React from 'react';
 import { Accordion, Card } from 'react-bootstrap';
+import PriceFilter from './PriceFilter';
 
 const AccordItem = () => {
 	return (
@@ -18,7 +19,9 @@ const AccordItem = () => {
 						Click me!
 					</Accordion.Toggle>
 					<Accordion.Collapse eventKey='1'>
-						<Card.Body>Hello! I'm another body</Card.Body>
+						<Card.Body>
+							<PriceFilter />
+						</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 			</Accordion>
