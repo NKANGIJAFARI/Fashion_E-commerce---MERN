@@ -2,7 +2,7 @@ import React from 'react';
 import { Accordion, Card } from 'react-bootstrap';
 import PriceFilter from './PriceFilter';
 import BrandFilter from './BrandFilter';
-import ColorFilter from './BrandFilter';
+import ColorFilter from './ColorFilter';
 import SizeFilter from './SizeFilter';
 
 const AccordItem = () => {

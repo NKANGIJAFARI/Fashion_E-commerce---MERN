@@ -2,26 +2,70 @@ import React from 'react';
 
 const ColorFilter = () => {
 	return (
-		<form>
-			<div className='checkboxes'>
-				<input
-					type='checkbox'
-					id='addidas'
-					name='addidas'
-					defaultValue='shoes'
+		<>
+			<div className='checkboxes checkboxes__colorFilter'>
+				<CheckBox
+					name='red'
+					id='red'
+					defaultValue='red'
+					label='Red'
+					bgColor='red'
 				/>
-				<label htmlFor='addidas'> Addidas</label>
-				<br />
-				<input type='checkbox' id='nike' name='nike' defaultValue='Shoes' />
-				<label htmlFor='nike'> I have a car</label>
-				<br />
-				<input type='checkbox' id='puma' name='puma' defaultValue='puma' />
-				<label htmlFor='puma'> I have a boat</label>
+				<CheckBox
+					name='green'
+					id='green'
+					defaultValue='green'
+					label='Green'
+					bgColor='green'
+				/>
+				<CheckBox
+					name='maroon'
+					id='maroon'
+					defaultValue='maroon'
+					label='Maroon'
+					bgColor='maroon'
+				/>
+				<CheckBox
+					name='black'
+					id='black'
+					defaultValue='black'
+					label='Black'
+					bgColor='black'
+				/>
+				<CheckBox
+					name='blue'
+					id='blue'
+					defaultValue='blue'
+					label='Blue'
+					bgColor='blue'
+				/>
+				<CheckBox
+					name='grey'
+					id='grey'
+					defaultValue='grey'
+					label='Grey'
+					bgColor='grey'
+				/>
 			</div>
-			<br />
+		</>
+	);
+};
 
-			<input type='submit' defaultValue='Submit' />
-		</form>
+const CheckBox = ({ name, label, defaultValue, id, bgColor }) => {
+	return (
+		<>
+			<input
+				type='checkbox'
+				id={id}
+				name={name}
+				defaultValue={defaultValue}
+				onChange={(e) => {
+					console.log(e.target.value);
+				}}
+			/>
+			<label htmlFor={id} style={{ backgroundColor: bgColor }}></label>
+			<br />
+		</>
 	);
 };
 
