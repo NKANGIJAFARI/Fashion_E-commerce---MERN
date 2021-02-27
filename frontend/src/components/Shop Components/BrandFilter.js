@@ -3,7 +3,7 @@ import React from 'react';
 const BrandFilter = () => {
 	return (
 		<>
-			<div className='checkboxes'>
+			<div className='filter__brand'>
 				<CheckBox
 					name='addidas'
 					defaultValue='addidas'

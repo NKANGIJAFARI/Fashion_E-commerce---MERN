@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ShopDropdown = () => {
-	const userInfo = 'Nkangi jafari';
 	return (
 		<div className='sdropdown'>
 			<div className='sdropdown__content'>

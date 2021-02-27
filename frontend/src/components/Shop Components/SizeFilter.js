@@ -1,34 +1,104 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const SizeFilter = () => {
+	const [small, setSmall] = useState(false);
+	const [large, setLarge] = useState(false);
+	const [medium, setMedium] = useState(false);
+	const [xLarge, setXLarge] = useState(false);
+
+	useEffect(() => {
+		console.log(xLarge);
+	});
+
 	return (
 		<>
 			<div className='filter__size'>
-				<CheckBox name='s' id='s' defaultValue='S' label='S' />
-				<CheckBox name='m' id='m' defaultValue='M' label='M' />
-				<CheckBox name='l' id='l' defaultValue='L' label='L' />
-				<CheckBox name='xl' id='xl' defaultValue='XL' label='XL' />
+				<input
+					type='checkbox'
+					id='s'
+					name='s'
+					defaultValue='small'
+					onChange={(e) => setSmall(!small)}
+				/>
+				<label
+					htmlFor='s'
+					className={small ? 'filter__size--label-active' : ''}>
+					{' '}
+					S
+				</label>
+				<br />
+				<>
+					<input
+						type='checkbox'
+						name='M'
+						id='m'
+						defaultValue='medium'
+						onChange={(e) => setMedium(!medium)}
+					/>
+
+					<label
+						htmlFor='m'
+						className={medium ? 'filter__size--label-active' : ''}>
+						M
+					</label>
+					<br />
+				</>
+
+				<>
+					<input
+						type='checkbox'
+						name='l'
+						id='l'
+						defaultValue='large'
+						onChange={(e) => setLarge(!large)}
+					/>
+					<label
+						htmlFor='l'
+						className={large ? 'filter__size--label-active' : ''}>
+						L
+					</label>
+					<br />
+				</>
+
+				<>
+					<input
+						type='checkbox'
+						name='xl'
+						id='xl'
+						defaultValue='xLarge'
+						onChange={(e) => {
+							console.log(e.target);
+							setXLarge(!xLarge);
+						}}
+					/>
+					<label
+						htmlFor='xl'
+						className={xLarge ? 'filter__size--label-active' : ''}>
+						XL
+					</label>
+					<br />
+				</>
 			</div>
 		</>
 	);
 };
 
-const CheckBox = ({ name, label, defaultValue, id }) => {
-	return (
-		<>
-			<input
-				type='checkbox'
-				id={id}
-				name={name}
-				defaultValue={defaultValue}
-				onChange={(e) => {
-					console.log(e.target.value);
-				}}
-			/>
-			<label htmlFor={id}> {label}</label>
-			<br />
-		</>
-	);
-};
+// const CheckBox = ({ name, label, defaultValue, id }) => {
+// 	const [label, setLabel] = useState(false);
+// 	return (
+// 		<>
+// 			<input
+// 				type='checkbox'
+//
+// 				name={name}
+// 				defaultValue={defaultValue}
+// 				className={}
+// 				onChange={(e) => setfilter__size--label-Active(true)}
+// 			/>
+// 			<label htmlFor={id}> {label}</label>
+// 			<br />
+// 		</>
+// 	);
+// };
 
 export default SizeFilter;

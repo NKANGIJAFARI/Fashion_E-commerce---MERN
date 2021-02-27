@@ -24,8 +24,14 @@
 		}
 	}
 
+	&__size {
+		&--label-active {
+			border: 4px red solid;
+		}
+	}
 	&__color {
 		justify-content: space-between;
+
 		& label {
 			width: 2.5rem;
 			height: 2.5rem;
@@ -36,7 +42,7 @@
 
 	&__price {
 		&--input {
-			margin-right: 20px;
+			margin-right: 1rem;
 		}
 
 		& form {
@@ -54,6 +60,12 @@
 				padding: 0 0.5rem;
 				margin-top: 4px;
 			}
+		}
+	}
+
+	&__brand {
+		& input {
+			margin-right: 1rem;
 		}
 	}
 }
