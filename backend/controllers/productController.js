@@ -77,12 +77,12 @@ const getLatestProducts = asyncHandler(async (req, res) => {
 	//Featured for women
 	const womenProducts = await Product.find({
 		$and: [{ featured: true }, { category: 'women' }],
-	}).limit(4);
+	}).limit(5);
 
 	//Featured for men
 	const menProducts = await Product.find({
 		$and: [{ featured: true }, { category: 'men' }],
-	}).limit(4);
+	}).limit(5);
 
 	// //Featured for kids
 	// const kidsProducts = await Product.find({

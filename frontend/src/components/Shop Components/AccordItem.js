@@ -3,18 +3,22 @@ import { Accordion, Card } from 'react-bootstrap';
 import PriceFilter from './PriceFilter';
 import BrandFilter from './BrandFilter';
 import ColorFilter from './BrandFilter';
+import SizeFilter from './SizeFilter';
 
 const AccordItem = () => {
 	return (
 		<div>
 			<Accordion defaultActiveKey='0'>
-				<CardItem headerText='Brand' eventKey='0'>
+				<CardItem headerText='Sizes' eventKey='0'>
+					<SizeFilter />
+				</CardItem>
+				<CardItem headerText='Brand' eventKey='1'>
 					<BrandFilter />
 				</CardItem>
-				<CardItem headerText='Color' eventKey='1'>
+				<CardItem headerText='Color' eventKey='2'>
 					<ColorFilter />
 				</CardItem>
-				<CardItem headerText='Price' eventKey='2'>
+				<CardItem headerText='Price' eventKey='3'>
 					<PriceFilter />
 				</CardItem>
 			</Accordion>

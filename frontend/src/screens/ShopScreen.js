@@ -32,8 +32,8 @@ const ShopScreen = () => {
 	return (
 		<section className='section section__allProducts'>
 			<SectionHeading desc='Products' />
-			<div>
-				<div className='sidebar'>
+			<div style={{ display: 'flex' }}>
+				<div className='sidebar' style={{ flex: '0 0 20%' }}>
 					<FilterSideBar />
 				</div>
 				<div className='allProducts__content'>
