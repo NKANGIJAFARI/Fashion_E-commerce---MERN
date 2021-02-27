@@ -2,26 +2,36 @@ import React from 'react';
 
 const BrandFilter = () => {
 	return (
-		<form>
+		<>
 			<div className='checkboxes'>
-				<input
-					type='checkbox'
-					id='addidas'
+				<CheckBox
 					name='addidas'
-					defaultValue='shoes'
+					defaultValue='addidas'
+					id='addidas'
+					label='Addidas'
 				/>
-				<label htmlFor='addidas'> Addidas</label>
-				<br />
-				<input type='checkbox' id='nike' name='nike' defaultValue='Shoes' />
-				<label htmlFor='nike'> I have a car</label>
-				<br />
-				<input type='checkbox' id='puma' name='puma' defaultValue='puma' />
-				<label htmlFor='puma'> I have a boat</label>
+				<CheckBox name='nike' defaultValue='nike' id='nike' label='Nike' />
+				<CheckBox name='puma' defaultValue='puma' id='puma' label='Puma' />
 			</div>
-			<br />
+		</>
+	);
+};
 
-			<input type='submit' defaultValue='Submit' />
-		</form>
+const CheckBox = ({ name, defaultValue, id, label }) => {
+	return (
+		<>
+			<input
+				type='checkbox'
+				id={id}
+				name={name}
+				defaultValue={defaultValue}
+				onChange={(e) => {
+					console.log(e.target.value);
+				}}
+			/>
+			<label htmlFor={id}> {label}</label>
+			<br />
+		</>
 	);
 };
 

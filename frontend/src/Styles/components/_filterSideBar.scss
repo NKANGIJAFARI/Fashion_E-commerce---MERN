@@ -1,0 +1,21 @@
+.checkboxes__sizeFilter {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+
+	& input {
+		display: none;
+	}
+	& label {
+		background-color: blue;
+		display: inline-block;
+		margin-bottom: 0.5rem;
+		width: 5rem;
+		height: 4rem;
+		color: white;
+		padding: 0.5rem;
+		display: flex;
+		margin-right: 0.6rem;
+		justify-content: center;
+	}
+}
