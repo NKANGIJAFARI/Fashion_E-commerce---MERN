@@ -54,6 +54,12 @@ function App() {
 					<Route path='/payment' component={PaymentScreen} />
 					<Route path='/placeorder' component={PlaceOrderScreen} />
 					<Route path='/order/:id' component={OrderScreen} />
+					{/* <Route path='/shop/sort/:size' component={ShopScreen} exact />
+					<Route
+						path='/shop/sort/:size/page/:pageNumber'
+						component={ShopScreen}
+						exact
+					/> */}
 					<Route path='/shop/search/:keyword' component={ShopScreen} exact />
 					<Route
 						path='/shop/search/:keyword/page/:pageNumber'

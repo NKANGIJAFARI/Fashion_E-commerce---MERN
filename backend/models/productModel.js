@@ -79,6 +79,7 @@ const productSchema = mongoose.Schema(
 			required: true,
 			default: false,
 		},
+		sizes: [],
 		tags: [],
 	},
 	{

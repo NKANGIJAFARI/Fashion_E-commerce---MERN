@@ -1,14 +1,29 @@
 import React, { useState, useEffect } from 'react';
-
+import { useHistory } from 'react-router-dom';
 const SizeFilter = () => {
 	const [small, setSmall] = useState(false);
 	const [large, setLarge] = useState(false);
 	const [medium, setMedium] = useState(false);
 	const [xLarge, setXLarge] = useState(false);
 
+	let history = useHistory();
+
+	// useEffect(() => {
+	// 	if (small) {
+	// 		history.push(`/shop/sort/versia`);
+	// 	}
+	// });
+
 	useEffect(() => {
-		console.log(xLarge);
-	});
+		const params = new URLSearchParams();
+		if (small) {
+			params.append('size', small);
+		} else {
+			params.delete('size');
+		}
+
+		history.push({ search: params.toString() });
+	}, [small, history, large]);
 
 	return (
 		<>

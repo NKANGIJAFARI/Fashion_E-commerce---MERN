@@ -20,11 +20,11 @@ const getProducts = asyncHandler(async (req, res) => {
 		  }
 		: {};
 
-	const count = await Product.countDocuments({ ...keyword });
+	// const count = await Product.countDocuments({ ...size });
+	const count = await Product.find({ ...keyword }).countDocuments();
 	const products = await Product.find({ ...keyword })
 		.limit(pageSize)
 		.skip(pageSize * (page - 1));
-
 	res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
 
@@ -337,3 +337,27 @@ export {
 	getLatestProducts,
 	getShoesProducts,
 };
+
+//Recover
+// // @desc    Get Latest Products
+// //@Route    Get /api/products/latest
+// //@access   Public
+// const getLatestProducts = asyncHandler(async (req, res) => {
+// 	//Featured for women
+// 	const womenProducts = await Product.find({
+// 		$and: [{ featured: true }, { category: 'women' }],
+// 	}).limit(5);
+
+// 	//Featured for men
+// 	const menProducts = await Product.find({
+// 		$and: [{ featured: true }, { category: 'men' }],
+// 	}).limit(5);
+
+// 	// //Featured for kids
+// 	// const kidsProducts = await Product.find({
+// 	// 	$and: [{ featured: true }, { category: 'kids' }],
+// 	// }).limit(5);
+
+// 	const allProducts = [...menProducts, ...womenProducts];
+// 	res.json(allProducts);
+// });

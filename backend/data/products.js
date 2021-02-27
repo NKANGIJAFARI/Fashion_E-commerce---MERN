@@ -11,6 +11,7 @@ const products = [
 		rating: 4.5,
 		numReviews: 12,
 		featured: true,
+		sizes: ['s', 'm', 'l'],
 		tags: ['suit', 'women formal', 'office wear'],
 	},
 	{
@@ -25,6 +26,7 @@ const products = [
 		rating: 4.0,
 		numReviews: 8,
 		featured: true,
+		sizes: ['s', 'm', 'xl'],
 		tags: ['suit', 'women', 'flowers', 'beach wear'],
 	},
 
@@ -40,6 +42,7 @@ const products = [
 		rating: 3,
 		numReviews: 12,
 		featured: false,
+		sizes: ['s', 'm', 'l', 'xl'],
 		tags: ['dress', 'women', 'tall', 'combination', 'beach wear'],
 	},
 	{
@@ -54,6 +57,7 @@ const products = [
 		rating: 5,
 		numReviews: 12,
 		featured: true,
+		sizes: ['m', 'l', 'xl'],
 		tags: ['suit', 'women formal', 'office wear', 'tall', 'combination'],
 	},
 	{
@@ -68,6 +72,7 @@ const products = [
 		rating: 4,
 		numReviews: 12,
 		featured: true,
+		sizes: ['s', 'l'],
 		tags: ['tshirts', 'men', 'man', 'v shirts', 'casual wear'],
 	},
 	{
@@ -82,6 +87,7 @@ const products = [
 		rating: 4.5,
 		numReviews: 17,
 		featured: true,
+		sizes: ['m', 'l', 'xl'],
 		tags: ['tshirts', 'men', 'man', 'v shirts', 'casual wear'],
 	},
 	{
@@ -96,6 +102,8 @@ const products = [
 		rating: 4,
 		numReviews: 10,
 		featured: false,
+		sizes: ['s', 'm', 'l', 'xl'],
+		balls: true,
 		tags: ['suits', 'men', 'man', 'formal wear', 'office wear'],
 	},
 	{
@@ -110,6 +118,7 @@ const products = [
 		rating: 4,
 		numReviews: 12,
 		featured: true,
+		sizes: ['s', 'm', 'l', 'xl'],
 		tags: ['jackets', 'men', 'man', 'formal wear', 'casual wear'],
 	},
 	{
@@ -124,6 +133,7 @@ const products = [
 		rating: 5,
 		numReviews: 12,
 		featured: true,
+		sizes: ['s', 'm', 'l', 'xl'],
 		tags: ['trouser', 'men', 'man', 'sweater pants', 'casual wear'],
 	},
 	{
@@ -138,6 +148,7 @@ const products = [
 		rating: 4.5,
 		numReviews: 17,
 		featured: true,
+		sizes: ['s', 'm', 'l', 'xl'],
 		tags: ['tshirts', 'men', 'man', 'formal wear', 'casual wear'],
 	},
 	{
@@ -152,6 +163,7 @@ const products = [
 		rating: 5,
 		numReviews: 12,
 		featured: true,
+		sizes: ['m', 'l'],
 		tags: ['tshirts', 'men', 'man', 'v shirts', 'casual wear'],
 	},
 	{
@@ -166,6 +178,7 @@ const products = [
 		rating: 4.5,
 		numReviews: 12,
 		featured: true,
+		sizes: ['m', 'l', 'xl'],
 		tags: ['tshirts', 'men', 'man', 'polo tshirts', 'casual wear'],
 	},
 
@@ -181,6 +194,7 @@ const products = [
 		rating: 5,
 		numReviews: 5,
 		featured: true,
+		sizes: ['m', 'l', 'xl'],
 		tags: ['suits', 'men', 'man', 'formal wear', 'office wear'],
 	},
 	{
@@ -195,6 +209,7 @@ const products = [
 		rating: 5,
 		numReviews: 12,
 		featured: true,
+		sizes: ['s', 'm', 'l', 'xl'],
 		tags: ['suits', 'women', 'woman', ' ladies formal wear', 'office wear'],
 	},
 	{
@@ -209,6 +224,7 @@ const products = [
 		rating: 3.5,
 		numReviews: 12,
 		featured: true,
+		sizes: ['s', 'm', 'l', 'xl'],
 		tags: ['jackets', 'women', 'woman', 'cold wear', 'casual wear'],
 	},
 
@@ -224,6 +240,7 @@ const products = [
 		rating: 4,
 		numReviews: 12,
 		featured: true,
+		sizes: ['m', 'l', 'xl'],
 		tags: ['jackets', 'men', 'man', 'formal wear', 'casual wear'],
 	},
 	{
@@ -238,6 +255,7 @@ const products = [
 		rating: 4,
 		numReviews: 12,
 		featured: true,
+		sizes: ['s', 'm', 'l'],
 		tags: ['suit', 'men', 'man', 'formal wear', 'casual wear'],
 	},
 	{
@@ -284,7 +302,7 @@ const products = [
 		tags: ['shoe', 'shoes', 'men', 'man', 'casual wear', 'weekend shoes'],
 	},
 	{
-		name: 'Nike G21',
+		name: 'Nike G25',
 		image: '/images/shoe3.png',
 		description:
 			'Lorem quod asperiores officia quidem quiRem consequuntur reiciendis aut',
