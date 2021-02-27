@@ -1,31 +1,37 @@
 import React from 'react';
 import { Accordion, Card } from 'react-bootstrap';
 import PriceFilter from './PriceFilter';
+import BrandFilter from './BrandFilter';
+import ColorFilter from './BrandFilter';
 
 const AccordItem = () => {
 	return (
 		<div>
 			<Accordion defaultActiveKey='0'>
-				<Card>
-					<Accordion.Toggle as={Card.Header} eventKey='0'>
-						Click me!
-					</Accordion.Toggle>
-					<Accordion.Collapse eventKey='0'>
-						<Card.Body>Hello! I'm the body</Card.Body>
-					</Accordion.Collapse>
-				</Card>
-				<Card>
-					<Accordion.Toggle as={Card.Header} eventKey='1'>
-						Click me!
-					</Accordion.Toggle>
-					<Accordion.Collapse eventKey='1'>
-						<Card.Body>
-							<PriceFilter />
-						</Card.Body>
-					</Accordion.Collapse>
-				</Card>
+				<CardItem headerText='Brand' eventKey='0'>
+					<BrandFilter />
+				</CardItem>
+				<CardItem headerText='Color' eventKey='1'>
+					<ColorFilter />
+				</CardItem>
+				<CardItem headerText='Price' eventKey='2'>
+					<PriceFilter />
+				</CardItem>
 			</Accordion>
 		</div>
+	);
+};
+
+const CardItem = ({ children, headerText, eventKey }) => {
+	return (
+		<Card>
+			<Accordion.Toggle as={Card.Header} eventKey={eventKey}>
+				{headerText}
+			</Accordion.Toggle>
+			<Accordion.Collapse eventKey={eventKey}>
+				<Card.Body>{children}</Card.Body>
+			</Accordion.Collapse>
+		</Card>
 	);
 };
 
