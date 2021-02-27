@@ -10,6 +10,7 @@ import ProductCard from '../components/Home components/ProductCard';
 
 import { listProducts } from '../actions/productActions';
 import SectionHeading from '../components/Home components/SectionHeading';
+import FilterSideBar from '../components/Shop Components/FilterSideBar';
 
 const ShopScreen = () => {
 	//We get the params on the url, the keyword searched if in search
@@ -31,27 +32,38 @@ const ShopScreen = () => {
 	return (
 		<section className='section section__allProducts'>
 			<SectionHeading desc='Products' />
-			<div
-				className='AllProducts'
-				style={{
-					display: 'flex',
-					flexWrap: 'wrap',
-					justifyContent: 'space-around',
-				}}>
-				{loading ? (
-					<Loader />
-				) : error ? (
-					<Message variant='danger'>{error}</Message>
-				) : (
-					<>
-						{products &&
-							products.map((product) => (
-								<ProductCard key={product._id} product={product} />
-							))}
-					</>
-				)}
+			<div>
+				<div className='sidebar'>
+					<FilterSideBar />
+				</div>
+				<div className='allProducts__content'>
+					<div
+						className='AllProducts'
+						style={{
+							display: 'flex',
+							flexWrap: 'wrap',
+							justifyContent: 'space-around',
+						}}>
+						{loading ? (
+							<Loader />
+						) : error ? (
+							<Message variant='danger'>{error}</Message>
+						) : (
+							<>
+								{products &&
+									products.map((product) => (
+										<ProductCard key={product._id} product={product} />
+									))}
+							</>
+						)}
+					</div>
+					<Paginate
+						pages={pages}
+						page={page}
+						keyword={keyword ? keyword : ''}
+					/>
+				</div>
 			</div>
-			<Paginate pages={pages} page={page} keyword={keyword ? keyword : ''} />
 		</section>
 	);
 };
