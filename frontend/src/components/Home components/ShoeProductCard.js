@@ -17,17 +17,19 @@ const ShoeProductCard = () => {
 				alt='Nike Air'
 				imgSrc='/images/1.png'
 			/>
-			<ShoeCard
-				imgSrc='/images/2.png'
-				boxNum='box-2'
-				price='299'
-				usage='Support shoes'
-				brand='Nike Air'
-			/>
+
 			<ShoeCard
 				imgSrc='/images/3.png'
 				boxNum='box-3'
 				price='199'
+				usage='Support shoes'
+				brand='Nike Air'
+			/>
+
+			<ShoeCard
+				imgSrc='/images/2.png'
+				boxNum='box-2'
+				price='299'
 				usage='Support shoes'
 				brand='Nike Air'
 			/>

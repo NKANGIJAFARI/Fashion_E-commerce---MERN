@@ -3,7 +3,7 @@ import React from 'react';
 const SizeFilter = () => {
 	return (
 		<>
-			<div className='checkboxes checkboxes__sizeFilter'>
+			<div className='filter__size'>
 				<CheckBox name='s' id='s' defaultValue='S' label='S' />
 				<CheckBox name='m' id='m' defaultValue='M' label='M' />
 				<CheckBox name='l' id='l' defaultValue='L' label='L' />

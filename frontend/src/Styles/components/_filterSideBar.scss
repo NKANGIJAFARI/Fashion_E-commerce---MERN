@@ -1,6 +1,6 @@
-.checkboxes {
-	&__sizeFilter,
-	&__colorFilter {
+.filter {
+	&__size,
+	&__color {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
@@ -20,15 +20,40 @@
 			margin-right: 0.6rem;
 			justify-content: center;
 			font-size: 1.6rem;
+			cursor: pointer;
 		}
 	}
 
-	&__colorFilter {
+	&__color {
 		justify-content: space-between;
 		& label {
 			width: 2.5rem;
 			height: 2.5rem;
 			border-radius: 50%;
+			cursor: pointer;
+		}
+	}
+
+	&__price {
+		&--input {
+			margin-right: 20px;
+		}
+
+		& form {
+			width: 100%;
+			margin-top: 5px;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			& input {
+				width: 45%;
+			}
+
+			& button {
+				padding: 0 0.5rem;
+				margin-top: 4px;
+			}
 		}
 	}
 }
