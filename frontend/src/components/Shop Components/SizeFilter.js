@@ -16,14 +16,28 @@ const SizeFilter = () => {
 
 	useEffect(() => {
 		const params = new URLSearchParams();
-		if (small) {
-			params.append('size', small);
-		} else {
-			params.delete('size');
-		}
+		let sizesArray = [];
+
+		const deleteFromArray = (value) => {
+			for (var i = 0; i < sizesArray.length; i++) {
+				if (sizesArray[i] === value) {
+					sizesArray.splice(i, 1);
+					i--;
+				}
+			}
+		};
+
+		let sizeString = '';
+
+		sizeString = small ? `${sizeString + '-S'}` : sizeString;
+		sizeString = medium ? `${sizeString + '-M'}` : sizeString;
+		sizeString = large ? `${sizeString + '-L'}` : sizeString;
+		sizeString = xLarge ? `${sizeString + '-X'}` : sizeString;
+
+		params.append('SIZES', sizeString);
 
 		history.push({ search: params.toString() });
-	}, [small, history, large]);
+	}, [small, history, large, medium, xLarge]);
 
 	return (
 		<>
@@ -38,7 +52,6 @@ const SizeFilter = () => {
 				<label
 					htmlFor='s'
 					className={small ? 'filter__size--label-active' : ''}>
-					{' '}
 					S
 				</label>
 				<br />
@@ -82,7 +95,6 @@ const SizeFilter = () => {
 						id='xl'
 						defaultValue='xLarge'
 						onChange={(e) => {
-							console.log(e.target);
 							setXLarge(!xLarge);
 						}}
 					/>

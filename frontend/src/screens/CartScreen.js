@@ -96,8 +96,7 @@ const CartScreen = (props) => {
 														//Get the number of pro
 														[...Array(item.countInStock).keys()].map((x) => (
 															<option key={x + 1} value={x + 1}>
-																{' '}
-																{x + 1}{' '}
+																{x + 1}
 															</option>
 														))
 													}
