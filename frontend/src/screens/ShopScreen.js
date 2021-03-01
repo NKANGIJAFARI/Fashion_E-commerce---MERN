@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 
 import Paginate from '../components/Paginate';
 import Message from '../components/Message';
@@ -12,22 +12,31 @@ import { listProducts } from '../actions/productActions';
 import SectionHeading from '../components/Home components/SectionHeading';
 import FilterSideBar from '../components/Shop Components/FilterSideBar';
 
-const ShopScreen = ({ params, history }) => {
+const ShopScreen = () => {
 	//We get the params on the url, the keyword searched if in search
 	//product mode and the pagenumber if product pages are changed
 	const { keyword, pageNumber } = useParams();
 	const pageNum = pageNumber || 1;
 
-	const dispatch = useDispatch();
+	//Get the queryStrings to access sizes
+	function useQuery() {
+		return new URLSearchParams(useLocation().search);
+	}
+
+	let query = useQuery();
+	const sizes = query.get('sizes');
 
 	//We use a useSelector to select which part of the global state we need to use
 
 	const productList = useSelector((state) => state.productList);
 	const { loading, error, products, page, pages } = productList;
 
+	const dispatch = useDispatch();
+
 	useEffect(() => {
-		dispatch(listProducts(keyword, pageNum));
-	}, [dispatch, keyword, pageNum]);
+		dispatch(listProducts(keyword, pageNum, sizes));
+		console.log(sizes);
+	}, [dispatch, keyword, pageNum, sizes]);
 
 	return (
 		<section className='section section__allProducts'>

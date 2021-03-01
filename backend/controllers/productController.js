@@ -11,21 +11,41 @@ import Product from '../models/productModel.js';
 const getProducts = asyncHandler(async (req, res) => {
 	const pageSize = 12;
 	const page = Number(req.query.pageNumber) || 1;
-	const keyword = req.query.keyword
-		? {
-				name: {
-					$regex: req.query.keyword,
-					$options: 'i',
-				},
-		  }
+	let sizes = req.query.sizes;
+	const sizeArray = req.query.sizes ? sizes.split('-') : [];
+
+	const arr =
+		sizeArray.length !== 0 ? sizeArray.filter((size) => size !== '') : [];
+
+	//MongoDB query Condition
+	//size query
+
+	const sizesCondition = arr.length !== 0 ? { sizes: { $all: [...arr] } } : {};
+
+	//Search keyword query
+	const keywordCondition = req.query.keyword
+		? { name: { $regex: req.query.keyword, $options: 'i' } }
 		: {};
 
-	// const count = await Product.countDocuments({ ...size });
-	const count = await Product.find({ ...keyword }).countDocuments();
-	const products = await Product.find({ ...keyword })
+	const count = await Product.find({
+		$and: [{ ...keywordCondition }, { ...sizesCondition }],
+	}).countDocuments();
+
+	const products = await Product.find({
+		$and: [{ ...keywordCondition }, { ...sizesCondition }],
+	})
 		.limit(pageSize)
 		.skip(pageSize * (page - 1));
+
+	// small letter
 	res.json({ products, page, pages: Math.ceil(count / pageSize) });
+
+	// const count = await Product.countDocuments({ ...size });
+	// const count = await Product.find({ ...keyword }).countDocuments();
+	// const products = await Product.find({ ...keyword })
+	// 	.limit(pageSize)
+	// 	.skip(pageSize * (page - 1));
+	// res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
 
 // @desc    Fetch single products

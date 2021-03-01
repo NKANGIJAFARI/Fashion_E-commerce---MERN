@@ -26,7 +26,7 @@ const products = [
 		rating: 4.0,
 		numReviews: 8,
 		featured: true,
-		sizes: ['s', 'm', 'xl'],
+		sizes: ['s', 'm', 'x'],
 		tags: ['suit', 'women', 'flowers', 'beach wear'],
 	},
 
@@ -42,7 +42,7 @@ const products = [
 		rating: 3,
 		numReviews: 12,
 		featured: false,
-		sizes: ['s', 'm', 'l', 'xl'],
+		sizes: ['s', 'm', 'l', 'x'],
 		tags: ['dress', 'women', 'tall', 'combination', 'beach wear'],
 	},
 	{
@@ -57,7 +57,7 @@ const products = [
 		rating: 5,
 		numReviews: 12,
 		featured: true,
-		sizes: ['m', 'l', 'xl'],
+		sizes: ['m', 'l', 'x'],
 		tags: ['suit', 'women formal', 'office wear', 'tall', 'combination'],
 	},
 	{
@@ -87,7 +87,7 @@ const products = [
 		rating: 4.5,
 		numReviews: 17,
 		featured: true,
-		sizes: ['m', 'l', 'xl'],
+		sizes: ['m', 'l', 'x'],
 		tags: ['tshirts', 'men', 'man', 'v shirts', 'casual wear'],
 	},
 	{
@@ -102,7 +102,7 @@ const products = [
 		rating: 4,
 		numReviews: 10,
 		featured: false,
-		sizes: ['s', 'm', 'l', 'xl'],
+		sizes: ['s', 'm', 'l', 'x'],
 		balls: true,
 		tags: ['suits', 'men', 'man', 'formal wear', 'office wear'],
 	},
@@ -118,7 +118,7 @@ const products = [
 		rating: 4,
 		numReviews: 12,
 		featured: true,
-		sizes: ['s', 'm', 'l', 'xl'],
+		sizes: ['s', 'm', 'l', 'x'],
 		tags: ['jackets', 'men', 'man', 'formal wear', 'casual wear'],
 	},
 	{
@@ -133,7 +133,7 @@ const products = [
 		rating: 5,
 		numReviews: 12,
 		featured: true,
-		sizes: ['s', 'm', 'l', 'xl'],
+		sizes: ['s', 'm', 'l', 'x'],
 		tags: ['trouser', 'men', 'man', 'sweater pants', 'casual wear'],
 	},
 	{
@@ -148,7 +148,7 @@ const products = [
 		rating: 4.5,
 		numReviews: 17,
 		featured: true,
-		sizes: ['s', 'm', 'l', 'xl'],
+		sizes: ['s', 'm', 'l', 'x'],
 		tags: ['tshirts', 'men', 'man', 'formal wear', 'casual wear'],
 	},
 	{
@@ -178,7 +178,7 @@ const products = [
 		rating: 4.5,
 		numReviews: 12,
 		featured: true,
-		sizes: ['m', 'l', 'xl'],
+		sizes: ['m', 'l', 'x'],
 		tags: ['tshirts', 'men', 'man', 'polo tshirts', 'casual wear'],
 	},
 
@@ -194,7 +194,7 @@ const products = [
 		rating: 5,
 		numReviews: 5,
 		featured: true,
-		sizes: ['m', 'l', 'xl'],
+		sizes: ['m', 'l', 'x'],
 		tags: ['suits', 'men', 'man', 'formal wear', 'office wear'],
 	},
 	{
@@ -209,7 +209,7 @@ const products = [
 		rating: 5,
 		numReviews: 12,
 		featured: true,
-		sizes: ['s', 'm', 'l', 'xl'],
+		sizes: ['s', 'm', 'l', 'x'],
 		tags: ['suits', 'women', 'woman', ' ladies formal wear', 'office wear'],
 	},
 	{
@@ -224,7 +224,7 @@ const products = [
 		rating: 3.5,
 		numReviews: 12,
 		featured: true,
-		sizes: ['s', 'm', 'l', 'xl'],
+		sizes: ['s', 'm', 'l', 'x'],
 		tags: ['jackets', 'women', 'woman', 'cold wear', 'casual wear'],
 	},
 
@@ -240,7 +240,7 @@ const products = [
 		rating: 4,
 		numReviews: 12,
 		featured: true,
-		sizes: ['m', 'l', 'xl'],
+		sizes: ['m', 'l', 'x'],
 		tags: ['jackets', 'men', 'man', 'formal wear', 'casual wear'],
 	},
 	{

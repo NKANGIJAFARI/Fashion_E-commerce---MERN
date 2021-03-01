@@ -39,15 +39,17 @@ import {
 
 //===========================================================================
 //List Products
-export const listProducts = (keyword = '', pageNumber = '') => async (
-	dispatch
-) => {
+export const listProducts = (
+	keyword = '',
+	pageNumber = '',
+	sizes = ''
+) => async (dispatch) => {
 	console.log(keyword);
 	try {
 		dispatch({ type: PRODUCT_LIST_REQUEST });
 
 		const res = await axios.get(
-			`/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+			`/api/products?keyword=${keyword}&pageNumber=${pageNumber}&sizes=${sizes}`
 		);
 
 		dispatch({

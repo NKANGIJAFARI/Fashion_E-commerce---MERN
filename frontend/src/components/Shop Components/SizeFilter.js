@@ -19,10 +19,10 @@ const SizeFilter = () => {
 
 		let sizeString = '';
 
-		sizeString = small ? `${sizeString + '-S'}` : sizeString;
-		sizeString = medium ? `${sizeString + '-M'}` : sizeString;
-		sizeString = large ? `${sizeString + '-L'}` : sizeString;
-		sizeString = xLarge ? `${sizeString + '-X'}` : sizeString;
+		sizeString = small ? `${sizeString + '-s'}` : sizeString;
+		sizeString = medium ? `${sizeString + '-m'}` : sizeString;
+		sizeString = large ? `${sizeString + '-l'}` : sizeString;
+		sizeString = xLarge ? `${sizeString + '-x'}` : sizeString;
 
 		params.append('sizes', sizeString);
 
