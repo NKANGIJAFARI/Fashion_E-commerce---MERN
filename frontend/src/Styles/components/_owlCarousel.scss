@@ -1,10 +1,10 @@
 .owl-carousel {
-	padding: 0px 10px;
+	padding: 0px 1rem;
 }
 
 .owl-carousel .owl-stage-outer {
 	overflow: hidden;
-	height: 320px;
+	height: 32rem;
 }
 
 .owl-prev,
@@ -14,14 +14,14 @@
 	border: none;
 	padding: 0 !important;
 	font: inherit;
-	font-size: 150px;
+	font-size: 150rem;
 	position: absolute;
 	top: 0;
 	outline: none;
 	opacity: 0.3;
 
 	& span {
-		font-size: 150px;
+		font-size: 15rem;
 
 		&:focus {
 			outline: none;

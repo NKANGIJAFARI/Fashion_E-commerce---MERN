@@ -16,16 +16,6 @@ const SizeFilter = () => {
 
 	useEffect(() => {
 		const params = new URLSearchParams();
-		let sizesArray = [];
-
-		const deleteFromArray = (value) => {
-			for (var i = 0; i < sizesArray.length; i++) {
-				if (sizesArray[i] === value) {
-					sizesArray.splice(i, 1);
-					i--;
-				}
-			}
-		};
 
 		let sizeString = '';
 
@@ -34,7 +24,7 @@ const SizeFilter = () => {
 		sizeString = large ? `${sizeString + '-L'}` : sizeString;
 		sizeString = xLarge ? `${sizeString + '-X'}` : sizeString;
 
-		params.append('SIZES', sizeString);
+		params.append('sizes', sizeString);
 
 		history.push({ search: params.toString() });
 	}, [small, history, large, medium, xLarge]);

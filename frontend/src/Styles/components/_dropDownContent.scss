@@ -41,7 +41,7 @@
 	}
 
 	&__link {
-		margin: 8px 0px;
+		margin: 0.8rem 0px;
 		font-size: 1.6rem;
 		transition: all 0.6s;
 		z-index: 2;
@@ -55,14 +55,14 @@
 
 		&:hover {
 			list-style-type: disc;
-			margin-left: 6px;
+			margin-left: 0.6rem;
 			transform: scaleY(1.1);
 		}
 
 		&::before {
 			content: '';
-			width: 6px;
-			height: 6px;
+			width: 0.6rem;
+			height: 0.6rem;
 			border-radius: 50%;
 			background-color: violet;
 		}

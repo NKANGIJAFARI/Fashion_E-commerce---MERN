@@ -12,7 +12,7 @@ import { listProducts } from '../actions/productActions';
 import SectionHeading from '../components/Home components/SectionHeading';
 import FilterSideBar from '../components/Shop Components/FilterSideBar';
 
-const ShopScreen = () => {
+const ShopScreen = ({ params, history }) => {
 	//We get the params on the url, the keyword searched if in search
 	//product mode and the pagenumber if product pages are changed
 	const { keyword, pageNumber } = useParams();

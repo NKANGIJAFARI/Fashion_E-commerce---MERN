@@ -45,7 +45,7 @@
 .btn__primary {
 	font-size: 1.6rem;
 	padding: 0.6rem 2.4rem;
-	border-radius: 10px;
+	border-radius: 1rem;
 	outline: none;
 	background-color: #444;
 	color: white;
@@ -55,7 +55,7 @@
 	margin: 0px;
 
 	&--cartProductDelete {
-		padding: 5px 20px;
+		padding: 0.5rem 2rem;
 		font-size: 1.8rem;
 	}
 }

@@ -3,6 +3,9 @@ import React from 'react';
 const FirstDisplay = () => {
 	return (
 		<div className='fullHeader'>
+			<div className='fullHeader__imgWrapper'>
+				<img src='/images/fitness.png' alt='' />
+			</div>
 			<div className='fullHeader__inner'>
 				<div className='fullHeader__content'>
 					<h3 className='fullHeader__suptitle'>new trend</h3>

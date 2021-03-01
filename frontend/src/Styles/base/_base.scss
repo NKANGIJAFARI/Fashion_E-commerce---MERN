@@ -53,9 +53,22 @@ html {
 body {
 	box-sizing: border-box;
 	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.6;
+	min-height: 100vh;
+}
+
+#root {
+	display: flex;
+	justify-content: center;
 }
 
 ::selection {
 	background-color: var(--color-primary);
 	color: var(--color-white);
+}
+
+.App__container {
+	width: 100%;
+	max-width: 1450px;
 }

@@ -1,7 +1,7 @@
 /**************** Foooter ****************/
 
 .footer__content {
-	padding: 115px 0 105px;
+	padding: 11rem 0 10rem;
 	background: #f2f8fc;
 }
 
@@ -18,15 +18,15 @@
 }
 
 .footer__logo {
-	margin-bottom: 17px;
+	margin-bottom: 1.7rem;
 }
 
 .footer__text {
-	margin-bottom: 41px;
-	width: 406px;
+	margin-bottom: 4rem;
+	width: 40.6rem;
 	font-weight: normal;
-	font-size: 15px;
-	line-height: 22px;
+	font-size: 1.6rem;
+	// line-height: 22px;
 }
 
 .footer__location {
@@ -40,18 +40,18 @@
 }
 
 .footer__location img {
-	margin-right: 20px;
+	margin-right: 2rem;
 }
 
 .footer__email {
-	margin-bottom: 8px;
+	margin-bottom: 1rem;
 }
 
 .footer__email a {
 	position: relative;
 	font-weight: normal;
-	font-size: 15px;
-	line-height: 22px;
+	font-size: 1.6rem;
+	// line-height: 22px;
 	color: #22262a;
 	text-decoration: none;
 }
@@ -73,13 +73,13 @@
 .footer__phone a {
 	font-weight: normal;
 	font-size: 15px;
-	line-height: 22px;
+	// line-height: 22px;
 	color: #22262a;
 	text-decoration: none;
 }
 
 .footer__socials-item {
-	margin-right: 16px;
+	margin-right: 1.5rem;
 	text-decoration: none;
 }
 
@@ -90,18 +90,18 @@
 }
 
 .footer__socials-item img {
-	height: 20px;
-	width: 20px;
+	height: 2rem;
+	width: 2rem;
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
 .footer__title {
-	margin-bottom: 24px;
+	margin-bottom: 2.4rem;
 	font-weight: bold;
-	font-size: 20px;
-	line-height: 37px;
+	font-size: 2rem;
+	// line-height: 37px;
 }
 
 .footer__form {
@@ -111,7 +111,7 @@
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
-	width: 532px;
+	width: 53rem;
 	background: #fff;
 	-webkit-box-shadow: 0px 0px 5px #00000012;
 	box-shadow: 0px 0px 5px #00000012;
@@ -125,7 +125,7 @@
 
 .footer__input {
 	padding: 11px 24px;
-	width: 450px;
+	width: 45rem;
 	font-weight: normal;
 	font-size: 15px;
 	line-height: 22px;

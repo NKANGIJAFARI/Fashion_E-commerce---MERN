@@ -20,13 +20,13 @@
 .product-container {
 	display: flex;
 	justify-content: center;
-	margin: 0px 0px 20px 0px;
+	margin: 0px 0px 2rem 0px;
 	flex-wrap: wrap;
 }
 .price {
 	font-family: arial;
 	position: absolute;
-	font-size: 20px;
+	font-size: 2rem;
 	color: #ffffff;
 	font-style: oblique;
 	font-weight: 400;
@@ -42,12 +42,12 @@
 	font-family: calibri;
 	font-weight: bold;
 	color: #191919;
-	padding: 0px 0px 15px 0px;
+	padding: 0px 0px 1.5rem 0px;
 }
 .detail {
 	position: absolute;
 	left: 30px;
-	bottom: 20px;
+	bottom: 2rem;
 }
 .type-detail p {
 	font-family: arial;
@@ -55,10 +55,10 @@
 	color: #3a3a3a;
 	letter-spacing: 1px;
 	line-height: 5px;
-	font-size: 18px;
+	font-size: 1.8rem;
 }
 .product-img img {
-	width: 230px;
+	width: 23rem;
 	transform: rotate(52deg);
 }
 .product-img {
@@ -72,8 +72,8 @@
 	position: absolute;
 	right: 0px;
 	bottom: 0px;
-	width: 50px;
-	height: 40px;
+	width: 5rem;
+	height: 4rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -83,7 +83,7 @@
 }
 .cart-btn a {
 	color: #414040;
-	font-size: 24px;
+	font-size: 2.4rem;
 	font-family: calibri;
 	font-weight: bold;
 }

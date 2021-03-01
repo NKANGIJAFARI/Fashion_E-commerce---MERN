@@ -1,11 +1,23 @@
 // **************** Home ****************
 .fullHeader {
 	padding: 0px;
-	background: url(../../Images/main-bg.jpg) no-repeat center/cover;
+	background: url(../../Images/main-bgblank.jpg) no-repeat center/cover;
 	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+
+	&__imgWrapper {
+		display: flex;
+		justify-content: center;
+
+		img {
+			vertical-align: middle;
+			border-style: none;
+			width: 70%;
+			height: 100%;
+		}
+	}
 }
 
 .fullHeader__inner {
@@ -18,36 +30,36 @@
 }
 
 .fullHeader__content {
-	margin-right: 20px;
+	margin-right: 0.2rem;
 }
 
 .fullHeader__suptitle {
 	font-weight: 500;
-	font-size: 18px;
-	line-height: 27px;
+	font-size: 1.8rem;
+	line-height: 2.7rem;
 	text-transform: uppercase;
 }
 
 .fullHeader__title {
 	font-weight: bold;
-	font-size: 60px;
-	line-height: 70px;
+	font-size: 6rem;
+	line-height: 7rem;
 	text-transform: uppercase;
 }
 
 .fullHeader__text {
 	font-weight: 500;
-	font-size: 18px;
-	line-height: 27px;
+	font-size: 1.8rem;
+	line-height: 2.7rem;
 }
 
 .fullHeader__buttons {
-	margin-top: 27px;
+	margin-top: 2.7rem;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 }
 
 .fullHeader__buttons .btn__primary:first-child {
-	margin-right: 35px;
+	margin-right: 3.5rem;
 }

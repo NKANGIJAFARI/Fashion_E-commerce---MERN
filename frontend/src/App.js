@@ -24,8 +24,8 @@ import './Styles/main.scss';
 function App() {
 	return (
 		<Router>
-			<Header />
-			<main>
+			<main className='App__container'>
+				<Header />
 				<div className='main__wrapper'>
 					<Route path='/login' component={LoginScreen} />
 					<Route path='/register' component={RegisterScreen} />
@@ -70,9 +70,8 @@ function App() {
 					<Route path='/shop' component={ShopScreen} exact />
 					<Route path='/' component={HomeScreen} exact />
 				</div>
+				<Footer />
 			</main>
-
-			<Footer />
 		</Router>
 	);
 }

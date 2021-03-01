@@ -17,7 +17,7 @@
 		}
 
 		& button {
-			font-size: 17px;
+			font-size: 1.6rem;
 		}
 	}
 
@@ -51,7 +51,7 @@
 		align-self: center;
 	}
 	&__item {
-		width: 170px;
+		width: 17rem;
 
 		display: flex;
 		flex-direction: column;
@@ -60,7 +60,7 @@
 		overflow: hidden;
 
 		& img {
-			min-width: 80px;
+			min-width: 8rem;
 			height: 20rem;
 		}
 

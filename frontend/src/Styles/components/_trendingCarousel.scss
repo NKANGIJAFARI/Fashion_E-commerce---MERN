@@ -108,6 +108,7 @@
 
 .left-enter.left-enter-active {
 	opacity: 1;
+	z-index: 100;
 	left: var(--level2-left);
 	height: var(--level2-height);
 	width: var(--level2-width);
