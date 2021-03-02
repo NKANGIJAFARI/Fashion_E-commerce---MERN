@@ -1,14 +1,18 @@
 import React from 'react';
 import { Pagination } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import { useLocation } from 'react-router-dom';
 
-const Paginate = ({
-	pages,
-	page,
-	isAdmin = false,
-	keyword = '',
-	sizes = '',
-}) => {
+const Paginate = ({ pages, page, isAdmin = false, keyword = '' }) => {
+	//Get the queryStrings to access sizes
+	function useQuery() {
+		return new URLSearchParams(useLocation().search);
+	}
+
+	let query = useQuery();
+	const sizes = query.get('sizes') ? query.get('sizes') : '';
+	console.log(sizes, 'sizessss');
+
 	return (
 		pages > 1 && (
 			<Pagination>
@@ -19,10 +23,10 @@ const Paginate = ({
 							!isAdmin
 								? keyword && !sizes
 									? `/shop/search/${keyword}/page/${x + 1}`
-									: !keyword && sizes
-									? `/shop/page/${x + 1}/?sizes=${sizes}`
+									: sizes && !keyword
+									? `/shop/page/${x + 1}?sizes=${sizes}`
 									: keyword && sizes
-									? `/shop/search/${keyword}/page/${x + 1}/?sizes=${sizes}`
+									? `/shop/search/${keyword}/page/${x + 1}?sizes=${sizes}`
 									: `/shop/page/${x + 1}`
 								: `/admin/productslist/${x + 1}`
 						}>

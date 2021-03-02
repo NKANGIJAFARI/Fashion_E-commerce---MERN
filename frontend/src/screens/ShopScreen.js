@@ -70,7 +70,6 @@ const ShopScreen = () => {
 						pages={pages}
 						page={page}
 						keyword={keyword ? keyword : ''}
-						sizes={sizes ? sizes : ''}
 					/>
 				</div>
 			</div>

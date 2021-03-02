@@ -60,25 +60,22 @@ function App() {
 						exact
 					/> */}
 					<Route path='/shop/search/:keyword' component={ShopScreen} exact />
-					<Route
-						path='/shop/search/:keyword/page/:pageNumber?sizes'
+					{/* <Route
+						path='/shop/search/:keyword/page/:pageNumber/?sizes'
 						component={ShopScreen}
 						exact
-					/>
+					/> */}
+					<Route path='/shop/page/:pageNumber/:sizes' component={ShopScreen} />
+
 					<Route
 						path='/shop/search/:keyword/page/:pageNumber'
 						component={ShopScreen}
 						exact
 					/>
-					<Route path='/shop' component={ShopScreen} exact />
+					<Route path='/shop/?sizes' component={ShopScreen} exact />
 					<Route path='/shop/page/:pageNumber' component={ShopScreen} exact />
-					<Route
-						path='/shop/page/:pageNumber?sizes'
-						component={ShopScreen}
-						exact
-					/>
-					{/* <Route path='/shop/?sizes' component={ShopScreen} exact /> */}
 
+					<Route path='/shop' component={ShopScreen} exact />
 					<Route path='/' component={HomeScreen} exact />
 				</div>
 				<Footer />

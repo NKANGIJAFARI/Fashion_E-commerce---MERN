@@ -9,16 +9,27 @@ const SizeFilter = () => {
 	let history = useHistory();
 	let location = useLocation();
 
-	console.log(location);
 	// useEffect(() => {
 	// 	if (small) {
 	// 		history.push(`/shop/sort/versia`);
 	// 	}
 	// });
+	// const params = new URLSearchParams(useLocation().search);
 
 	useEffect(() => {
-		const params = new URLSearchParams();
+		const params = new URLSearchParams(location.search);
+		// const paramsUrl = new URLSearchParams();
+		//const sizesArray = params.get('sizes') ? params.get('sizes') : '';
 
+		const sizesArray = params.toString().slice(7).split('-');
+		console.log(params.get('sizes'), 'sixxxxs');
+		const smallExists =
+			sizesArray.length !== 0 ? sizesArray.find((x) => x === 's') : false;
+
+		if (smallExists) {
+			console.log('object');
+			setSmall(true);
+		}
 		let sizeString = '';
 
 		sizeString = small ? `${sizeString + '-s'}` : sizeString;
@@ -29,7 +40,6 @@ const SizeFilter = () => {
 		if (sizeString !== '') {
 			params.append('sizes', sizeString);
 		}
-
 		history.push({ search: params.toString() });
 	}, [small, history, large, medium, xLarge]);
 
