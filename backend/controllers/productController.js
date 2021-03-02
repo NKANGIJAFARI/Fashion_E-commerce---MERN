@@ -11,9 +11,8 @@ import Product from '../models/productModel.js';
 const getProducts = asyncHandler(async (req, res) => {
 	const pageSize = 12;
 	const page = Number(req.query.pageNumber) || 1;
-	let sizes = req.query.sizes;
-	const sizeArray = req.query.sizes ? sizes.split('-') : [];
-
+	let sizesQueryString = req.query.sizes;
+	const sizeArray = req.query.sizes ? sizesQueryString.split('-') : [];
 	const arr =
 		sizeArray.length !== 0 ? sizeArray.filter((size) => size !== '') : [];
 
@@ -39,13 +38,6 @@ const getProducts = asyncHandler(async (req, res) => {
 
 	// small letter
 	res.json({ products, page, pages: Math.ceil(count / pageSize) });
-
-	// const count = await Product.countDocuments({ ...size });
-	// const count = await Product.find({ ...keyword }).countDocuments();
-	// const products = await Product.find({ ...keyword })
-	// 	.limit(pageSize)
-	// 	.skip(pageSize * (page - 1));
-	// res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
 
 // @desc    Fetch single products

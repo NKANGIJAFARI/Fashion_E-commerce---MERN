@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 const SizeFilter = () => {
 	const [small, setSmall] = useState(false);
 	const [large, setLarge] = useState(false);
@@ -7,7 +7,9 @@ const SizeFilter = () => {
 	const [xLarge, setXLarge] = useState(false);
 
 	let history = useHistory();
+	let location = useLocation();
 
+	console.log(location);
 	// useEffect(() => {
 	// 	if (small) {
 	// 		history.push(`/shop/sort/versia`);
@@ -24,11 +26,16 @@ const SizeFilter = () => {
 		sizeString = large ? `${sizeString + '-l'}` : sizeString;
 		sizeString = xLarge ? `${sizeString + '-x'}` : sizeString;
 
-		params.append('sizes', sizeString);
+		if (sizeString !== '') {
+			params.append('sizes', sizeString);
+		}
 
 		history.push({ search: params.toString() });
 	}, [small, history, large, medium, xLarge]);
 
+	//  const search = useLocation().search;
+	//const name = new URLSearchParams(search).get('name');
+	// const id = new URLSearchParams(search).get('id');
 	return (
 		<>
 			<div className='filter__size'>

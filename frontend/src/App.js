@@ -42,7 +42,6 @@ function App() {
 						component={ProductListSreen}
 						exact
 					/>
-
 					<Route
 						path='/admin/products/:id/edit'
 						component={ProductEditScreen}
@@ -62,12 +61,24 @@ function App() {
 					/> */}
 					<Route path='/shop/search/:keyword' component={ShopScreen} exact />
 					<Route
+						path='/shop/search/:keyword/page/:pageNumber?sizes'
+						component={ShopScreen}
+						exact
+					/>
+					<Route
 						path='/shop/search/:keyword/page/:pageNumber'
 						component={ShopScreen}
 						exact
 					/>
-					<Route path='/shop/page/:pageNumber' component={ShopScreen} exact />
 					<Route path='/shop' component={ShopScreen} exact />
+					<Route path='/shop/page/:pageNumber' component={ShopScreen} exact />
+					<Route
+						path='/shop/page/:pageNumber?sizes'
+						component={ShopScreen}
+						exact
+					/>
+					{/* <Route path='/shop/?sizes' component={ShopScreen} exact /> */}
+
 					<Route path='/' component={HomeScreen} exact />
 				</div>
 				<Footer />

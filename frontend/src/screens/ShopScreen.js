@@ -24,7 +24,7 @@ const ShopScreen = () => {
 	}
 
 	let query = useQuery();
-	const sizes = query.get('sizes');
+	const sizes = query.get('sizes') ? query.get('sizes') : '';
 
 	//We use a useSelector to select which part of the global state we need to use
 
@@ -35,7 +35,7 @@ const ShopScreen = () => {
 
 	useEffect(() => {
 		dispatch(listProducts(keyword, pageNum, sizes));
-		console.log(sizes);
+		console.log(sizes, 'sizes');
 	}, [dispatch, keyword, pageNum, sizes]);
 
 	return (
@@ -70,6 +70,7 @@ const ShopScreen = () => {
 						pages={pages}
 						page={page}
 						keyword={keyword ? keyword : ''}
+						sizes={sizes ? sizes : ''}
 					/>
 				</div>
 			</div>
