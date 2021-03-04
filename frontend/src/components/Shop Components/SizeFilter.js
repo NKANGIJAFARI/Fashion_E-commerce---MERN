@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation, withRouter } from 'react-router-dom';
 const SizeFilter = () => {
 	const [small, setSmall] = useState(false);
 	const [large, setLarge] = useState(false);
@@ -17,19 +17,18 @@ const SizeFilter = () => {
 	// const params = new URLSearchParams(useLocation().search);
 
 	useEffect(() => {
-		const params = new URLSearchParams(location.search);
-		// const paramsUrl = new URLSearchParams();
+		const params = new URLSearchParams();
+		const paramsUrl = new URLSearchParams(location.search);
 		//const sizesArray = params.get('sizes') ? params.get('sizes') : '';
 
-		const sizesArray = params.toString().slice(7).split('-');
-		console.log(params.get('sizes'), 'sixxxxs');
+		const sizesArray = paramsUrl.toString().slice(7).split('-');
+
 		const smallExists =
 			sizesArray.length !== 0 ? sizesArray.find((x) => x === 's') : false;
 
-		if (smallExists) {
-			console.log('object');
-			setSmall(true);
-		}
+		// if (smallExists) {
+		// 	setSmall(true);
+		// }
 		let sizeString = '';
 
 		sizeString = small ? `${sizeString + '-s'}` : sizeString;
@@ -39,9 +38,10 @@ const SizeFilter = () => {
 
 		if (sizeString !== '') {
 			params.append('sizes', sizeString);
+			console.log({ search: params.toString() });
 		}
 		history.push({ search: params.toString() });
-	}, [small, history, large, medium, xLarge]);
+	}, [location.search, small, history, large, medium, xLarge]);
 
 	//  const search = useLocation().search;
 	//const name = new URLSearchParams(search).get('name');
@@ -135,4 +135,4 @@ const SizeFilter = () => {
 // 	);
 // };
 
-export default SizeFilter;
+export default withRouter(SizeFilter);
