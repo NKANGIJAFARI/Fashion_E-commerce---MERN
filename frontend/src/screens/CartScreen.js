@@ -13,7 +13,7 @@ import {
 
 import { addToCart, removeFromCart } from '../actions/cartActions';
 
-import EmptyDisplay from '../components/EmptyDisplay';
+import EmptyCartDisplay from '../components/EmptyCartDisplay';
 import SectionHeading from '../components/Home components/SectionHeading';
 
 const CartScreen = (props) => {
@@ -52,7 +52,7 @@ const CartScreen = (props) => {
 			<Row style={{ padding: '2rem 2rem' }} className='cart'>
 				<Col md={9} sm={12} className='cart__left'>
 					{cartItems.length === 0 ? (
-						<EmptyDisplay />
+						<EmptyCartDisplay />
 					) : (
 						<ListGroup variant='flush'>
 							{cartItems.map((item) => (
@@ -89,7 +89,7 @@ const CartScreen = (props) => {
 													value={Number(item.quantity)}
 													onChange={(e) =>
 														dispatch(
-															addToCart(item.product, Number(e.target.value))
+															addToCart(item.product, Number(e.target.value)),
 														)
 													}>
 													{

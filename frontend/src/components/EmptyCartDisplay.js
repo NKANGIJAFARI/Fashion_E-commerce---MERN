@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EmptyDisplay = () => {
+const EmptyCartDisplay = () => {
 	return (
 		<div>
 			<div
@@ -28,4 +28,4 @@ const EmptyDisplay = () => {
 	);
 };
 
-export default EmptyDisplay;
+export default EmptyCartDisplay;
