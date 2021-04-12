@@ -22,7 +22,43 @@ all the time.*/
 		height: 100%;
 
 		& img {
+			height: auto;
 			width: 70%;
+		}
+	}
+
+	& .owl-nav {
+		position: absolute;
+		right: 30rem;
+		bottom: 20rem;
+
+		& .owl-prev,
+		& .owl-next {
+			padding: 0 !important;
+			font: inherit;
+			position: absolute;
+			top: 0;
+			outline: none;
+			opacity: 0.3;
+
+			height: -webkit-fill-available;
+			background: brown;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		& .owl-prev {
+			right: 40px;
+		}
+
+		& .owl-next {
+			left: 40px;
+		}
+
+		& .owl-prev span,
+		& .owl-next span {
+			font-size: 5rem;
 		}
 	}
 }

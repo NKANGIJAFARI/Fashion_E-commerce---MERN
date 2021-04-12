@@ -69,7 +69,7 @@ const HeaderCarousel = () => {
 			id='headerCarousel'
 			className='owl-theme headerCarousel'
 			autoplay
-			autoplayTimeout={5000}
+			autoplayTimeout={4000}
 			autoplayHoverPause
 			loop
 			items={1}

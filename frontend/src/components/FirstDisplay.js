@@ -20,11 +20,10 @@ const FirstDisplay = ({
 					<p className='fullHeader__text'>{desc}</p>
 					<div className='fullHeader__buttons'>
 						<button type='button' to='/' className='btn__primary'>
-							<i className='fas fa-search-plus'></i>
-							{button1}
+							<i className='fas fa-search-plus'></i> {` ${button1}`}
 						</button>
 						<button type='button' to='/' className='btn__primary'>
-							<i className='fas fa-shopping-cart'></i> {button2}
+							<i className='fas fa-shopping-cart'></i> {` ${button1}`}
 						</button>
 					</div>
 				</div>
