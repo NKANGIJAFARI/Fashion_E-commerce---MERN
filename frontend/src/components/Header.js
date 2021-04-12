@@ -34,55 +34,6 @@ const Header = () => {
 
 	return (
 		<>
-			{/* <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
-				<Container fluid>
-					<LinkContainer to='/'>
-						<Navbar.Brand href='/'>ProShop</Navbar.Brand>
-					</LinkContainer>
-
-					<Navbar.Toggle aria-controls='basic-navbar-nav' />
-					<Navbar.Collapse id='basic-navbar-nav'>
-						<Route render={({ history }) => <SearchBox history={history} />} />
-						<Nav className='ml-auto'>
-							<LinkContainer to='/cart'>
-								<Nav.Link>
-									<i className='fas fa-shopping-cart'></i> Cart
-								</Nav.Link>
-							</LinkContainer>
-							{userInfo ? (
-								<NavDropdown title={userInfo.name} id='username'>
-									<LinkContainer to='/profile'>
-										<NavDropdown.Item>Profile</NavDropdown.Item>
-									</LinkContainer>
-									<NavDropdown.Item onClick={logoutHandler}>
-										LogOut
-									</NavDropdown.Item>
-								</NavDropdown>
-							) : (
-								<LinkContainer to='/login'>
-									<Nav.Link>
-										<i className='fas fa-user'></i>Sign In
-									</Nav.Link>
-								</LinkContainer>
-							)}
-							{userInfo && userInfo.isAdmin && (
-								<NavDropdown title='Admin' id='adminmenu'>
-									<LinkContainer to='/admin/userslist'>
-										<NavDropdown.Item>Users</NavDropdown.Item>
-									</LinkContainer>
-									<LinkContainer to='/admin/productslist'>
-										<NavDropdown.Item>Products</NavDropdown.Item>
-									</LinkContainer>
-									<LinkContainer to='/admin/orderslist'>
-										<NavDropdown.Item>All Orders</NavDropdown.Item>
-									</LinkContainer>
-								</NavDropdown>
-							)}
-						</Nav>
-					</Navbar.Collapse>
-				</Container>
-			</Navbar> */}
-
 			<div className='adverts'>
 				<span>30% off your first purchase</span>
 			</div>

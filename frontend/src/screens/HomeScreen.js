@@ -6,7 +6,7 @@ import Meta from '../components/Meta';
 
 import { listProducts } from '../actions/productActions';
 
-import FirstDisplay from '../components/FirstDisplay';
+// import FirstDisplay from '../components/FirstDisplay';
 
 import ServicePromise from '../components/Home components/ServicePromise';
 import HobbiesFashion from '../components/Home components/HobbiesFashion';
@@ -18,6 +18,7 @@ import ShoesDisplay from '../components/Home components/ShoesDisplay';
 import LatestProducts from '../components/Home components/LatestProducts';
 import FeaturedProducts from '../components/Home components/FeaturedProducts';
 import ShopDropdown from '../components/ShopDropdown';
+import HeaderCarousel from '../components/Header/HeaderCarousel';
 
 const HomeScreen = ({ match }) => {
 	const keyword = match.params.keyword;
@@ -39,8 +40,9 @@ const HomeScreen = ({ match }) => {
 			<Meta />
 			{!keyword ? (
 				<>
+					<HeaderCarousel />
 					<ShopDropdown />
-					<FirstDisplay />
+					{/* <FirstDisplay /> */}
 					<FeaturedProducts />
 					<TrendingFashions />
 					<LatestProducts />

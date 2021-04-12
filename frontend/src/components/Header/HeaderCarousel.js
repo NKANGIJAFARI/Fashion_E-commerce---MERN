@@ -2,6 +2,7 @@ import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import FirstDisplay from '../FirstDisplay';
 
 const HeaderCarousel = () => {
 	return (
@@ -30,9 +31,15 @@ const HeaderCarousel = () => {
 				},
 			}}
 			nav>
-			{products.map((product) => (
-				<div className='item' key={product._id}></div>
-			))}
+			<div class='item'>
+				<FirstDisplay />
+			</div>
+			<div class='item'>
+				<FirstDisplay />
+			</div>
+			<div class='item'>
+				<FirstDisplay />
+			</div>
 		</OwlCarousel>
 	);
 };
