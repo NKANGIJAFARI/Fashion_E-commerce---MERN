@@ -7,6 +7,19 @@
 	align-items: center;
 	justify-content: flex-end;
 
+	&__inner {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+
+		align-self: end;
+		margin-top: 7rem;
+		margin-right: 7rem;
+	}
+
 	&__imgWrapper {
 		display: flex;
 		justify-content: center;
@@ -18,15 +31,6 @@
 			height: 100%;
 		}
 	}
-}
-
-.fullHeader__inner {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: end;
-	-ms-flex-pack: end;
-	justify-content: flex-end;
 }
 
 .fullHeader__content {
