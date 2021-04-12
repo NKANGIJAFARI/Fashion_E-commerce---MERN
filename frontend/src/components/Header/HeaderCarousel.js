@@ -7,7 +7,7 @@ import FirstDisplay from '../FirstDisplay';
 const HeaderCarousel = () => {
 	return (
 		<OwlCarousel
-			className='owl-theme'
+			className='owl-theme headerCarousel'
 			autoplay
 			autoplayTimeout={5000}
 			autoplayHoverPause
@@ -31,13 +31,13 @@ const HeaderCarousel = () => {
 				},
 			}}
 			nav>
-			<div class='item'>
+			<div className='item headerCarousel__item'>
 				<FirstDisplay />
 			</div>
-			<div class='item'>
+			<div className='item headerCarousel__item'>
 				<FirstDisplay />
 			</div>
-			<div class='item'>
+			<div className='item headerCarousel__item'>
 				<FirstDisplay />
 			</div>
 		</OwlCarousel>
