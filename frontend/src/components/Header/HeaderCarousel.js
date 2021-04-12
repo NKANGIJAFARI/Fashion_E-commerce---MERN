@@ -43,10 +43,10 @@ const HeaderCarousel = () => {
 				},
 			}}
 			nav>
-			{items.map((item) => (
-				<div className='item headerCarousel__item'>
+			{items.map((item, index) => (
+				<div className='item headerCarousel__item' key={index}>
 					<FirstDisplay
-						imag={item.image}
+						image={item.image}
 						heading1={item.heading1}
 						heading2={item.heading2}
 						desc={item.desc}

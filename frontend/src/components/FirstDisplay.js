@@ -11,21 +11,20 @@ const FirstDisplay = ({
 	return (
 		<div className='fullHeader'>
 			<div className='fullHeader__imgWrapper'>
-				<img src='/images/fitness.png' alt='' />
+				<img src={image} alt={`pic for ${heading1}`} />
 			</div>
 			<div className='fullHeader__inner'>
 				<div className='fullHeader__content'>
-					<h3 className='fullHeader__suptitle'>new trend</h3>
-					<h1 className='fullHeader__title'>collusion</h1>
-					<p className='fullHeader__text'>
-						An exclusive selection of this season's trends.
-					</p>
+					<h3 className='fullHeader__suptitle'>{heading1}</h3>
+					<h1 className='fullHeader__title'>{heading2}</h1>
+					<p className='fullHeader__text'>{desc}</p>
 					<div className='fullHeader__buttons'>
 						<button type='button' to='/' className='btn__primary'>
-							<i className='fas fa-search-plus'></i> DISCOVER
+							<i className='fas fa-search-plus'></i>
+							{button1}
 						</button>
 						<button type='button' to='/' className='btn__primary'>
-							<i className='fas fa-shopping-cart'></i> SHOP NOW
+							<i className='fas fa-shopping-cart'></i> {button2}
 						</button>
 					</div>
 				</div>
