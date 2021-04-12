@@ -1,0 +1,28 @@
+/* Beacuse i have another carousel on the page and both
+of them take different styling, i am to use an id selectot
+to selector the carousel and will be nesting the iiners 
+with an & and the class name of the element to avoid adding !important
+all the time.*/
+
+#headerCarousel.headerCarousel {
+	z-index: 1;
+	width: 100%;
+	height: 100vh;
+	padding: 0px;
+	overflow: hidden;
+
+	& .owl-stage-outer {
+		height: 100% !important;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	& .item {
+		width: 100%;
+		height: 100%;
+
+		& img {
+			width: 70%;
+		}
+	}
+}

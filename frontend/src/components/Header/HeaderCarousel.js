@@ -7,6 +7,7 @@ import FirstDisplay from '../FirstDisplay';
 const HeaderCarousel = () => {
 	return (
 		<OwlCarousel
+			id='headerCarousel'
 			className='owl-theme headerCarousel'
 			autoplay
 			autoplayTimeout={5000}
