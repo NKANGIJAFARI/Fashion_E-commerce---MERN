@@ -4,7 +4,16 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import FirstDisplay from '../FirstDisplay';
 
-const items = [{ heading1: 'tHIS IS' }];
+const items = [
+	{
+		image: '/images/fitness.png',
+		heading1: 'new trend',
+		heading2: 'collusion',
+		desc: "An exclusive selection of this season's trends.",
+		button1: 'DISCOVER',
+		button2: 'SHOP NOW',
+	},
+];
 
 const HeaderCarousel = () => {
 	return (
