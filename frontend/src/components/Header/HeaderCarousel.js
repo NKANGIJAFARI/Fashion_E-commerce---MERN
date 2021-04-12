@@ -4,6 +4,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import FirstDisplay from '../FirstDisplay';
 
+const items = [{ heading1: '' }];
+
 const HeaderCarousel = () => {
 	return (
 		<OwlCarousel
@@ -32,6 +34,7 @@ const HeaderCarousel = () => {
 				},
 			}}
 			nav>
+			{items.map()}
 			<div className='item headerCarousel__item'>
 				<FirstDisplay />
 			</div>

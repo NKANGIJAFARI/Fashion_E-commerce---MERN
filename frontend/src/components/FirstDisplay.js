@@ -1,6 +1,13 @@
 import React from 'react';
 
-const FirstDisplay = () => {
+const FirstDisplay = ({
+	image,
+	heading1,
+	heading2,
+	desc,
+	button1,
+	button2,
+}) => {
 	return (
 		<div className='fullHeader'>
 			<div className='fullHeader__imgWrapper'>
