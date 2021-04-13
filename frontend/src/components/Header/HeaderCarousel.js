@@ -6,7 +6,7 @@ import FirstDisplay from '../FirstDisplay';
 
 const items = [
 	{
-		image: '/images/carousel/caro1.png',
+		image: '/images/carousel/testt.png',
 		heading1: 'new trend',
 		heading2: 'collusion',
 		desc: "An exclusive selection of this season's trends.",
@@ -69,7 +69,7 @@ const HeaderCarousel = () => {
 			id='headerCarousel'
 			className='owl-theme headerCarousel'
 			autoplay
-			autoplayTimeout={4000}
+			autoplayTimeout={100000}
 			autoplayHoverPause
 			loop
 			items={1}
