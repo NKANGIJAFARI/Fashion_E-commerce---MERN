@@ -25,6 +25,7 @@
 		width: 50%;
 		height: 100vh;
 		display: flex;
+		position: relative;
 	}
 
 	&__imgWrapper {
@@ -56,6 +57,15 @@
 			z-index: 1;
 			height: auto;
 		}
+	}
+
+	&__rotatingText {
+		position: absolute;
+		top: 50%;
+		right: -7%;
+		font-size: 2rem;
+		transform: translate(0%, -50%) rotate(90deg);
+		color: black;
 	}
 }
 

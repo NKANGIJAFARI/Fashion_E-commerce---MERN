@@ -29,6 +29,9 @@ const FirstDisplay = ({
 				<div className='fullHeader__imgWrapper'>
 					<img src={image} alt={`pic for ${heading1}`} />
 				</div>
+				<div className='fullHeader__rotatingText'>
+					<p>ZELFON COWBOY STYLE</p>
+				</div>
 			</div>
 		</div>
 	);
