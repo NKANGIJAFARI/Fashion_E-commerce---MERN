@@ -10,9 +10,6 @@ const FirstDisplay = ({
 }) => {
 	return (
 		<div className='fullHeader'>
-			<div className='fullHeader__imgWrapper'>
-				<img src={image} alt={`pic for ${heading1}`} />
-			</div>
 			<div className='fullHeader__inner'>
 				<div className='fullHeader__content'>
 					<h3 className='fullHeader__suptitle'>{heading1}</h3>
@@ -26,6 +23,11 @@ const FirstDisplay = ({
 							<i className='fas fa-shopping-cart'></i> {` ${button1}`}
 						</button>
 					</div>
+				</div>
+			</div>
+			<div className='fullHeader__left'>
+				<div className='fullHeader__imgWrapper'>
+					<img src={image} alt={`pic for ${heading1}`} />
 				</div>
 			</div>
 		</div>

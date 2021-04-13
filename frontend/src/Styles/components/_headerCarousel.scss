@@ -22,8 +22,12 @@ all the time.*/
 		height: 100%;
 
 		& img {
+			vertical-align: middle;
+			border-style: none;
+			width: auto;
+			max-width: 90%;
+			z-index: 1;
 			height: auto;
-			width: 70%;
 		}
 	}
 
