@@ -13,22 +13,22 @@ const items = [
 		button1: 'DISCOVER',
 		button2: 'SHOP NOW',
 	},
-	// {
-	// 	image: '/images/carousel/test.png',
-	// 	heading1: 'new trend',
-	// 	heading2: 'collusion',
-	// 	desc: "An exclusive selection of this season's trends.",
-	// 	button1: 'DISCOVER',
-	// 	button2: 'SHOP NOW',
-	// },
-	// {
-	// 	image: '/images/carousel/caro3.png',
-	// 	heading1: 'new trend',
-	// 	heading2: 'collusion',
-	// 	desc: "An exclusive selection of this season's trends.",
-	// 	button1: 'DISCOVER',
-	// 	button2: 'SHOP NOW',
-	// },
+	{
+		image: '/images/carousel/test.png',
+		heading1: 'new trend',
+		heading2: 'collusion',
+		desc: "An exclusive selection of this season's trends.",
+		button1: 'DISCOVER',
+		button2: 'SHOP NOW',
+	},
+	{
+		image: '/images/carousel/caro3.png',
+		heading1: 'new trend',
+		heading2: 'collusion',
+		desc: "An exclusive selection of this season's trends.",
+		button1: 'DISCOVER',
+		button2: 'SHOP NOW',
+	},
 	// {
 	// 	image: '/images/carousel/caro4.png',
 	// 	heading1: 'new trend',
@@ -74,6 +74,8 @@ const HeaderCarousel = () => {
 			loop
 			items={1}
 			margin={2}
+			nav={true}
+			navText={['next', 'prev']}
 			responsive={{
 				0: {
 					items: 1,

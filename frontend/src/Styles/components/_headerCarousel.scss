@@ -64,5 +64,12 @@ all the time.*/
 		& .owl-next span {
 			font-size: 5rem;
 		}
+
+		.owl-nav.disabled + .owl-dots {
+			margin-top: 10px;
+			position: absolute;
+			bottom: 5%;
+			left: 3%;
+		}
 	}
 }
