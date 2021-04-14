@@ -31,10 +31,25 @@ all the time.*/
 		}
 	}
 
+	& .owl-dots {
+		position: absolute;
+		bottom: 4rem;
+		left: 3rem;
+	}
+
+	& .owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+		position: absolute;
+		bottom: 5%;
+		left: 3%;
+		color: green;
+	}
+
 	& .owl-nav {
 		position: absolute;
-		right: 30rem;
-		bottom: 20rem;
+		right: 10%;
+		bottom: 50%;
+		transform: translate(-50%, -50%);
 
 		& .owl-prev,
 		& .owl-next {
@@ -43,13 +58,13 @@ all the time.*/
 			position: absolute;
 			top: 0;
 			outline: none;
-			opacity: 0.3;
-
+			opacity: 1.3;
 			height: -webkit-fill-available;
 			background: brown;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			color: black;
 		}
 
 		& .owl-prev {
@@ -58,18 +73,6 @@ all the time.*/
 
 		& .owl-next {
 			left: 40px;
-		}
-
-		& .owl-prev span,
-		& .owl-next span {
-			font-size: 5rem;
-		}
-
-		.owl-nav.disabled + .owl-dots {
-			margin-top: 10px;
-			position: absolute;
-			bottom: 5%;
-			left: 3%;
 		}
 	}
 }

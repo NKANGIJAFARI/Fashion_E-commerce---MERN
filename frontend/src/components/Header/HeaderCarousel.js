@@ -11,7 +11,9 @@ const items = [
 		heading2: 'collusion',
 		desc: "An exclusive selection of this season's trends.",
 		button1: 'DISCOVER',
-		button2: 'SHOP NOW',
+		button2: 'Buy NOW',
+		background:
+			'linear-gradient(39deg, rgba(202,213,219,1) 17%, rgba(217,197,188,1) 98%, rgba(120,92,62,1) 100%)',
 	},
 	{
 		image: '/images/carousel/test.png',
@@ -20,6 +22,8 @@ const items = [
 		desc: "An exclusive selection of this season's trends.",
 		button1: 'DISCOVER',
 		button2: 'SHOP NOW',
+		background:
+			'linear-gradient(39deg, rgba(202,213,219,1) 17%, rgba(217,197,188,1) 98%, rgba(120,92,62,1) 100%)',
 	},
 	{
 		image: '/images/carousel/caro3.png',
@@ -28,6 +32,8 @@ const items = [
 		desc: "An exclusive selection of this season's trends.",
 		button1: 'DISCOVER',
 		button2: 'SHOP NOW',
+		background:
+			'linear-gradient(39deg, rgba(202,213,219,1) 17%, rgba(217,197,188,1) 98%, rgba(120,92,62,1) 100%)',
 	},
 	// {
 	// 	image: '/images/carousel/caro4.png',
@@ -102,6 +108,7 @@ const HeaderCarousel = () => {
 						desc={item.desc}
 						button1={item.button1}
 						button2={item.button2}
+						background={item.background}
 					/>
 				</div>
 			))}

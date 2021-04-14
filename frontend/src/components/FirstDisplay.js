@@ -7,9 +7,12 @@ const FirstDisplay = ({
 	desc,
 	button1,
 	button2,
+	background,
 }) => {
+	// const color = ;
+
 	return (
-		<div className='fullHeader'>
+		<div className='fullHeader' style={{ background: background }}>
 			<div className='fullHeader__inner'>
 				<div className='fullHeader__content'>
 					<h3 className='fullHeader__suptitle'>{heading1}</h3>
@@ -20,7 +23,7 @@ const FirstDisplay = ({
 							<i className='fas fa-search-plus'></i> {` ${button1}`}
 						</button>
 						<button type='button' to='/' className='btn__primary'>
-							<i className='fas fa-shopping-cart'></i> {` ${button1}`}
+							<i className='fas fa-shopping-cart'></i> {` ${button2}`}
 						</button>
 					</div>
 				</div>
@@ -33,9 +36,9 @@ const FirstDisplay = ({
 					<p>ZELFON COWBOY STYLE</p>
 				</div>
 				<div className='fullHeader__socialIcons'>
-					<i class='fab fa-instagram'></i>
-					<i class='fab fa-facebook-f'></i>
-					<i class='fab fa-twitter'></i>
+					<i className='fab fa-instagram'></i>
+					<i className='fab fa-facebook-f'></i>
+					<i className='fab fa-twitter'></i>
 				</div>
 			</div>
 		</div>

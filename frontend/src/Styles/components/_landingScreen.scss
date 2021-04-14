@@ -15,10 +15,7 @@
 		-ms-flex-pack: end;
 		justify-content: flex-end;
 		width: 50%;
-
-		// align-self: end;
-		// margin-top: 7rem;
-		// margin-right: 7rem;
+		padding: 0px 3rem 0px 0px;
 	}
 
 	&__left {
@@ -26,6 +23,7 @@
 		height: 100vh;
 		display: flex;
 		position: relative;
+		padding: 0px 0px 0px 3rem;
 	}
 
 	&__imgWrapper {
@@ -87,9 +85,10 @@
 
 .fullHeader__suptitle {
 	font-weight: 500;
-	font-size: 1.8rem;
+	font-size: 2.5rem;
 	line-height: 2.7rem;
 	text-transform: uppercase;
+	text-align: end;
 }
 
 .fullHeader__title {
@@ -99,6 +98,7 @@
 	letter-spacing: -3.6px;
 	font-family: ui-serif;
 	text-transform: uppercase;
+	text-align: end;
 }
 
 .fullHeader__text {
@@ -112,8 +112,28 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	justify-content: flex-end;
+
+	& button {
+		font-size: 1.6rem;
+		padding: 0.6rem 2.5rem;
+		outline: none;
+		background-color: black;
+		color: white;
+		border: none;
+		border-radius: 20px;
+
+		&:first-child {
+			border-radius: 20px 0px 0px 20px;
+		}
+		&:last-child {
+			border-radius: 0px 20px 20px 0px;
+		}
+	}
 }
 
 .fullHeader__buttons .btn__primary:first-child {
-	margin-right: 3.5rem;
+	margin-right: -0.5rem;
+	background: whitesmoke;
+	color: black;
 }
