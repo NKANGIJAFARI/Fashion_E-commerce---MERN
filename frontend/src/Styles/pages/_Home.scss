@@ -1,10 +1,11 @@
 .section {
+	padding: 4rem 3rem;
+
 	&__categories {
 		height: 100vh;
 		scroll-snap-align: start;
 		box-sizing: border-box;
 		background-color: whitesmoke;
-		padding: 50px 10px 20px 10px;
 	}
 
 	&__servicePromise {
@@ -14,12 +15,10 @@
 
 	&__hobbies {
 		width: 100%;
-		padding: 7rem 2rem;
 		background-color: rgb(231, 230, 230);
 	}
 
 	&__trending {
-		padding: 7rem 2rem;
 	}
 
 	&__girlBanner {
@@ -38,7 +37,6 @@
 	}
 
 	&__featuredProducts {
-		padding: 5rem 2rem;
 		width: 100%;
 
 		.nav {
@@ -64,7 +62,6 @@
 	}
 
 	&__mostViewed {
-		padding: 5rem 2rem;
 		background: linear-gradient(150deg, #fff 30%, #bbddec 130.1%);
 	}
 }

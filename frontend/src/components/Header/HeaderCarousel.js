@@ -8,32 +8,28 @@ const items = [
 	{
 		image: '/images/carousel/test.png',
 		heading1: 'new trend',
-		heading2: 'Zielfron',
+		heading2: "Zelfon'CB",
 		desc: "An exclusive selection of this season's trends.",
 		button1: 'DISCOVER',
-		button2: 'Buy NOW',
+		button2: 'ORDER NOW',
 		background:
-			// 'linear-gradient(39deg, rgba(202,213,219,1) 17%, rgba(217,197,188,1) 98%, rgba(120,92,62,1) 100%)',
 			'linear-gradient(39deg, rgb(209,197,182) 17%, rgb(217, 197, 188) 98%, rgb(98,8,35) 100%)',
 	},
 	{
 		image: '/images/carousel/test4.png',
 		heading1: 'new trend',
-		heading2: 'collusion',
+		heading2: "PRIDERS'21",
 		desc: "An exclusive selection of this season's trends.",
 		button1: 'DISCOVER',
 		button2: 'SHOP NOW',
 
 		background:
-			//'linear-gradient(39deg, rgba(202,213,219,1) 39%, rgba(6,120,154) 98%, rgba(120,92,62,1) 100%)',
-			//linear-gradient(39deg, rgb(202, 213, 219) 17%, rgb(163,184,197) 98%, rgb(218, 138, 1) 100%)
-			//'linear-gradient(39deg, rgb(202, 213, 219) 17%, rgb(6, 216, 177) 98%, rgb(218,138,1) 100%)',
 			'linear-gradient(39deg, rgb(202, 213, 219) 17%, rgb(163,184,197) 98%, rgb(22,51,78) 100%)',
 	},
 	{
 		image: '/images/carousel/test3.png',
 		heading1: 'new trend',
-		heading2: 'collusion',
+		heading2: "ELIATION'6",
 		desc: "An exclusive selection of this season's trends.",
 		button1: 'DISCOVER',
 		button2: 'SHOP NOW',
@@ -43,13 +39,11 @@ const items = [
 	{
 		image: '/images/carousel/test5.png',
 		heading1: 'new trend',
-		heading2: 'collusion',
+		heading2: 'BIVANESIA',
 		desc: "An exclusive selection of this season's trends.",
 		button1: 'DISCOVER',
 		button2: 'SHOP NOW',
 		background:
-			//'linear-gradient(39deg, rgba(202,213,219,1) 17%, rgba(217,197,188,1) 98%, rgba(120,92,62,1) 100%)',
-			// 'linear-gradient(39deg, rgb(230,172,187) 0%, rgb(254,218,210) 98%, rgb(120, 92, 62) 100%)',
 			'linear-gradient(39deg, rgb(225,210,210) 0%, rgb(254, 218, 210) 98%, rgb(227,168,182) 100%)',
 	},
 ];
