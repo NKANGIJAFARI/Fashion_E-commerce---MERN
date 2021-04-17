@@ -8,15 +8,30 @@ const items = [
 	{
 		image: '/images/carousel/test.png',
 		heading1: 'new trend',
-		heading2: 'collusion',
+		heading2: 'Zielfron',
 		desc: "An exclusive selection of this season's trends.",
 		button1: 'DISCOVER',
 		button2: 'Buy NOW',
 		background:
-			'linear-gradient(39deg, rgba(202,213,219,1) 17%, rgba(217,197,188,1) 98%, rgba(120,92,62,1) 100%)',
+			// 'linear-gradient(39deg, rgba(202,213,219,1) 17%, rgba(217,197,188,1) 98%, rgba(120,92,62,1) 100%)',
+			'linear-gradient(39deg, rgb(209,197,182) 17%, rgb(217, 197, 188) 98%, rgb(98,8,35) 100%)',
 	},
 	{
-		image: '/images/carousel/test.png',
+		image: '/images/carousel/test4.png',
+		heading1: 'new trend',
+		heading2: 'collusion',
+		desc: "An exclusive selection of this season's trends.",
+		button1: 'DISCOVER',
+		button2: 'SHOP NOW',
+
+		background:
+			//'linear-gradient(39deg, rgba(202,213,219,1) 39%, rgba(6,120,154) 98%, rgba(120,92,62,1) 100%)',
+			//linear-gradient(39deg, rgb(202, 213, 219) 17%, rgb(163,184,197) 98%, rgb(218, 138, 1) 100%)
+			//'linear-gradient(39deg, rgb(202, 213, 219) 17%, rgb(6, 216, 177) 98%, rgb(218,138,1) 100%)',
+			'linear-gradient(39deg, rgb(202, 213, 219) 17%, rgb(163,184,197) 98%, rgb(22,51,78) 100%)',
+	},
+	{
+		image: '/images/carousel/test3.png',
 		heading1: 'new trend',
 		heading2: 'collusion',
 		desc: "An exclusive selection of this season's trends.",
@@ -26,47 +41,17 @@ const items = [
 			'linear-gradient(39deg, rgba(202,213,219,1) 17%, rgba(217,197,188,1) 98%, rgba(120,92,62,1) 100%)',
 	},
 	{
-		image: '/images/carousel/caro3.png',
+		image: '/images/carousel/test5.png',
 		heading1: 'new trend',
 		heading2: 'collusion',
 		desc: "An exclusive selection of this season's trends.",
 		button1: 'DISCOVER',
 		button2: 'SHOP NOW',
 		background:
-			'linear-gradient(39deg, rgba(202,213,219,1) 17%, rgba(217,197,188,1) 98%, rgba(120,92,62,1) 100%)',
+			//'linear-gradient(39deg, rgba(202,213,219,1) 17%, rgba(217,197,188,1) 98%, rgba(120,92,62,1) 100%)',
+			// 'linear-gradient(39deg, rgb(230,172,187) 0%, rgb(254,218,210) 98%, rgb(120, 92, 62) 100%)',
+			'linear-gradient(39deg, rgb(225,210,210) 0%, rgb(254, 218, 210) 98%, rgb(227,168,182) 100%)',
 	},
-	// {
-	// 	image: '/images/carousel/caro4.png',
-	// 	heading1: 'new trend',
-	// 	heading2: 'collusion',
-	// 	desc: "An exclusive selection of this season's trends.",
-	// 	button1: 'DISCOVER',
-	// 	button2: 'SHOP NOW',
-	// },
-	// {
-	// 	image: '/images/carousel/caro5.png',
-	// 	heading1: 'new trend',
-	// 	heading2: 'collusion',
-	// 	desc: "An exclusive selection of this season's trends.",
-	// 	button1: 'DISCOVER',
-	// 	button2: 'SHOP NOW',
-	// },
-	// {
-	// 	image: '/images/carousel/caro6.png',
-	// 	heading1: 'new trend',
-	// 	heading2: 'collusion',
-	// 	desc: "An exclusive selection of this season's trends.",
-	// 	button1: 'DISCOVER',
-	// 	button2: 'SHOP NOW',
-	// },
-	// {
-	// 	image: '/images/carousel/caro7.png',
-	// 	heading1: 'new trend',
-	// 	heading2: 'collusion',
-	// 	desc: "An exclusive selection of this season's trends.",
-	// 	button1: 'DISCOVER',
-	// 	button2: 'SHOP NOW',
-	// },
 ];
 
 const HeaderCarousel = () => {
@@ -75,7 +60,7 @@ const HeaderCarousel = () => {
 			id='headerCarousel'
 			className='owl-theme headerCarousel'
 			autoplay
-			autoplayTimeout={100000}
+			autoplayTimeout={9000000}
 			autoplayHoverPause
 			loop
 			items={1}
