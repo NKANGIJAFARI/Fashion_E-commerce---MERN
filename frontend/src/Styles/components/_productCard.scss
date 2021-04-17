@@ -26,11 +26,11 @@
 }
 .latestProducts {
 	width: 100%;
-	display: flex;
+	display: grid;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	padding: 2rem 5rem;
 	margin-top: 2rem;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .productCard {
 	// width: 23%;

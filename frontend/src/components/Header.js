@@ -22,7 +22,13 @@ const Header = () => {
 		dispatch(logout());
 	};
 
-	useEffect(() => {});
+	useEffect(() => {
+		window.addEventListener('scroll', () => {
+			if (window.pageYOffset > 90) {
+				console.log('Here add the opaque');
+			}
+		});
+	});
 
 	const [isActive, setActive] = useState(false);
 
