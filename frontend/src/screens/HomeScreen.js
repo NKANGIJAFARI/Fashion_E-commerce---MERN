@@ -36,7 +36,7 @@ const HomeScreen = ({ match }) => {
 			{!keyword ? (
 				<>
 					<HeaderCarousel />
-					<ShopDropdown />
+					{/* <ShopDropdown />
 					<FeaturedProducts />
 					<TrendingFashions />
 					<LatestProducts />
@@ -44,7 +44,7 @@ const HomeScreen = ({ match }) => {
 					<ShoesDisplay />
 					<HobbiesFashion />
 					<MostViewed />
-					<ServicePromise />
+					<ServicePromise /> */}
 				</>
 			) : (
 				<Link to='/' className='btn btn-light'>
