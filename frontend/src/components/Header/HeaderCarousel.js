@@ -76,8 +76,7 @@ const HeaderCarousel = () => {
 				1000: {
 					items: 1,
 				},
-			}}
-			nav>
+			}}>
 			{items.map((item, index) => (
 				<div className='item headerCarousel__item' key={index}>
 					<FirstDisplay

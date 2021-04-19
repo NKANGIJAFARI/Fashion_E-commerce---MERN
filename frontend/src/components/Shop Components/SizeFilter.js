@@ -18,13 +18,13 @@ const SizeFilter = () => {
 
 	useEffect(() => {
 		const params = new URLSearchParams();
-		const paramsUrl = new URLSearchParams(location.search);
+		// const paramsUrl = new URLSearchParams(location.search);
 		//const sizesArray = params.get('sizes') ? params.get('sizes') : '';
 
-		const sizesArray = paramsUrl.toString().slice(7).split('-');
+		// const sizesArray = paramsUrl.toString().slice(7).split('-');
 
-		const smallExists =
-			sizesArray.length !== 0 ? sizesArray.find((x) => x === 's') : false;
+		// const smallExists =
+		// 	sizesArray.length !== 0 ? sizesArray.find((x) => x === 's') : false;
 
 		// if (smallExists) {
 		// 	setSmall(true);
