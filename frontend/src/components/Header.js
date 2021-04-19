@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Route, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../actions/userActions';
@@ -9,6 +9,10 @@ import ShopDropdown from './ShopDropdown';
 const Header = () => {
 	const dispatch = useDispatch();
 
+	const [isActive, setActive] = useState(false);
+
+	const navbar = useRef();
+
 	//Get the user info from the state.
 	const userLogin = useSelector((state) => state.userLogin);
 	const { userInfo } = userLogin;
@@ -17,22 +21,24 @@ const Header = () => {
 	const { cartItems } = cart;
 
 	//Handle what happpens when the user logouts
-
 	const logoutHandler = () => {
 		dispatch(logout());
 	};
 
 	useEffect(() => {
 		/* Below is  the scoll event on the window which
-		 will be used to determine the background of the navbar"*/
+		 will be used to determine the background of the navbar whenever
+		 the user scrolls, the background will be transparent until at some 
+		 point its gets a background color"*/
+
 		window.addEventListener('scroll', () => {
 			if (window.pageYOffset > 90) {
-				console.log('Here add the opaque');
+				navbar.current.classList.add('fix-nav');
+			} else if (window.pageYOffset < 90) {
+				navbar.current.classList.remove('fix-nav');
 			}
 		});
 	});
-
-	const [isActive, setActive] = useState(false);
 
 	const toggleActive = () => {
 		setActive(!isActive);
@@ -45,7 +51,7 @@ const Header = () => {
 			<div className='adverts'>
 				<span>30% off your first purchase</span>
 			</div>
-			<nav className='navbar'>
+			<nav className='navbar' ref={navbar}>
 				<div className={`navigation ${isActive ? 'active' : ''}`}>
 					<Link to='/' className='logo'>
 						{/* <img src='images/logo.png' /> */}
