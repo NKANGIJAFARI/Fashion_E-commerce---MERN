@@ -21,8 +21,8 @@ import ProductEditScreen from './screens/ProductEditScreen';
 
 // import './styles.css';
 import './Styles/main.scss';
-import TestScreen from './Test/TestScreen';
-function App() {
+
+const App = () => {
 	return (
 		<Router>
 			<main className='App__container'>
@@ -78,14 +78,12 @@ function App() {
 
 					<Route path='/shop' component={ShopScreen} exact />
 
-					<Route path='/test' component={TestScreen} exact />
-
 					<Route path='/' component={HomeScreen} exact />
 				</div>
 				<Footer />
 			</main>
 		</Router>
 	);
-}
+};
 
 export default App;

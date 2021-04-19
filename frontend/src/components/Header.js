@@ -23,6 +23,8 @@ const Header = () => {
 	};
 
 	useEffect(() => {
+		/* Below is  the scoll event on the window which
+		 will be used to determine the background of the navbar"*/
 		window.addEventListener('scroll', () => {
 			if (window.pageYOffset > 90) {
 				console.log('Here add the opaque');
@@ -35,7 +37,7 @@ const Header = () => {
 	const toggleActive = () => {
 		setActive(!isActive);
 
-		//What isActive is will change on the click
+		//What "isActive" is will change on the click
 	};
 
 	return (
