@@ -34,7 +34,7 @@ class Carousel extends React.Component {
 					level={level}
 					itemDetails={this.state.items[index]}
 					active={this.state.active}
-				/>
+				/>,
 			);
 		}
 

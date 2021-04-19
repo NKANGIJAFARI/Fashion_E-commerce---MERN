@@ -45,32 +45,4 @@ const ProductCarousel = () => {
 	);
 };
 
-// const ProductCarousel = () => {
-// 	return (
-// 		<Carousel className='carousel'>
-// 			<CarouselItem
-// 				interval={500}
-// 				imgSrc='/images/tachen-bg.jpg'
-// 				alt='first image'
-// 				h3='Second slide label'
-// 				p='Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-// 			/>
-// 			<CarouselItem
-// 				interval={500}
-// 				imgSrc='/images/tachen-bg.jpg'
-// 				alt='first image'
-// 				h3='Second slide label'
-// 				p='Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-// 			/>
-// 			<CarouselItem
-// 				interval={500}
-// 				imgSrc='/images/tachen-bg.jpg'
-// 				alt='first image'
-// 				h3='Second slide label'
-// 				p='Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-// 			/>
-// 		</Carousel>
-// 	);
-// };
-
 export default ProductCarousel;

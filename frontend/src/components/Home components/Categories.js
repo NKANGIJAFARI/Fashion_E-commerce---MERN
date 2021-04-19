@@ -17,7 +17,7 @@ import SectionHeading from './SectionHeading';
 
 const Categories = () => {
 	return (
-		<div className='section section__categories categories'>
+		<section className='section section__categories categories'>
 			<SectionHeading desc='Shop by categories' />
 			<div className='categories__inner'>
 				<CategoryItem catName="Men's" imgSrc={menStyles} itemNo='1' />
@@ -34,7 +34,7 @@ const Categories = () => {
 				<CategoryItem imgSrc={perfumes} itemNo='8' />
 				<CategoryItem imgSrc={bags} itemNo='9' />
 			</div>
-		</div>
+		</section>
 	);
 };
 
