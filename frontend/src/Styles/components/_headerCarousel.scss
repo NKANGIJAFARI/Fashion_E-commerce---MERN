@@ -110,3 +110,13 @@ all the time.*/
 		}
 	}
 }
+
+@media only screen and (max-width: 900px) {
+	#headerCarousel.headerCarousel {
+		& .owl-nav {
+			position: absolute;
+			right: 82%;
+			bottom: 11%;
+		}
+	}
+}

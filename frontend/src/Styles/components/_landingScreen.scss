@@ -143,7 +143,7 @@
 	.fullHeader {
 		&__title {
 			font-size: 9rem;
-			line-height: 9rem;
+			line-height: 7rem;
 			letter-spacing: -2.6px;
 		}
 	}
@@ -185,7 +185,98 @@
 
 		&__title {
 			font-size: 8rem;
-			line-height: 9rem;
+			line-height: 7rem;
+			letter-spacing: -2.6px;
+		}
+
+		&__text {
+			font-weight: 500;
+			font-size: 1.8rem;
+			line-height: 2.7rem;
+			text-align: end;
+			color: black;
+		}
+
+		&__buttons {
+			margin-top: 2.7rem;
+
+			& button {
+				font-size: 1.6rem;
+				padding: 0.6rem 2.5rem;
+
+				&:first-child {
+					border-radius: 20px 0px 0px 20px;
+				}
+				&:last-child {
+					border-radius: 0px 20px 20px 0px;
+				}
+			}
+
+			& .btn__primary:first-child {
+				margin-right: -0.5rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.fullHeader {
+		&__rotatingText {
+			right: -7%;
+			font-size: 2.2rem;
+		}
+
+		&__socialIcons {
+			right: 9%;
+			width: 10rem;
+		}
+
+		&__title {
+			font-size: 8rem;
+			line-height: 7rem;
+			letter-spacing: -2.6px;
+		}
+	}
+}
+
+@media only screen and (max-width: 765px) {
+	.fullHeader {
+		&__imgWrapper {
+			&::before {
+				content: '';
+				width: 50%;
+				height: 60%;
+				top: 50%;
+				left: 30%;
+			}
+
+			img {
+			}
+		}
+
+		&__rotatingText {
+			right: -18%;
+			font-size: 2.2rem;
+		}
+
+		&__socialIcons {
+			right: 0%;
+			top: 95%;
+			background: white;
+			width: 14rem;
+			padding: 10px;
+			z-index: 2;
+		}
+
+		&__suptitle {
+			font-weight: 500;
+			font-size: 2.5rem;
+			line-height: 2.7rem;
+		}
+
+		&__title {
+			font-size: 6rem;
+			line-height: 7rem;
 			letter-spacing: -2.6px;
 		}
 
