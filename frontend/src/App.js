@@ -19,7 +19,7 @@ import UserEditScreen from './screens/UserEditScreen';
 import ProductListSreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 
-// import './styles.css';
+import './index.css';
 import './Styles/main.scss';
 
 const App = () => {
