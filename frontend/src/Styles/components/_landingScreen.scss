@@ -63,7 +63,8 @@
 		right: 7rem;
 		font-size: 2rem;
 		transform: translate(0%, -50%) rotate(90deg);
-		color: black;
+		color: green;
+		z-index: 2;
 	}
 
 	&__socialIcons {
@@ -237,7 +238,7 @@
 
 		&__rotatingText {
 			right: -7%;
-			font-size: 2.2rem;
+			font-size: 3rem;
 		}
 
 		&__socialIcons {
@@ -270,8 +271,8 @@
 		}
 
 		&__rotatingText {
-			right: -18%;
-			font-size: 2.2rem;
+			right: -31%;
+			font-size: 3rem;
 		}
 
 		&__socialIcons {
@@ -327,15 +328,15 @@
 
 @media only screen and (max-width: 600px) {
 	.fullHeader {
+		position: relative;
 		&__left {
 			width: 100%;
 		}
 
 		&__inner {
-			position: absolute;
+			width: 0px;
 			left: 0;
 			top: 100px;
-			display: none;
 		}
 
 		&__imgWrapper {
@@ -356,8 +357,9 @@
 		}
 
 		&__rotatingText {
-			right: -18%;
-			font-size: 2.2rem;
+			right: -15%;
+			font-size: 2.9rem;
+			color: green;
 		}
 
 		&__socialIcons {
@@ -373,12 +375,14 @@
 			font-weight: 500;
 			font-size: 1.5rem;
 			line-height: 0rem;
+			display: none;
 		}
 
 		&__title {
 			font-size: 4rem;
 			line-height: 7rem;
 			letter-spacing: -2.6px;
+			display: none;
 		}
 
 		&__text {
@@ -387,11 +391,17 @@
 			line-height: 2.7rem;
 			text-align: end;
 			color: black;
+			display: none;
 		}
 
 		&__buttons {
-			margin-top: 2.7rem;
-			display: none;
+			position: absolute;
+			z-index: 2;
+			left: 50%;
+			top: 78%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			justify-content: center;
 
 			& button {
 				font-size: 1.6rem;
@@ -408,6 +418,46 @@
 			& .btn__primary:first-child {
 				margin-right: -0.5rem;
 			}
+		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.fullHeader {
+		&__rotatingText {
+			right: -23%;
+			font-size: 2.9rem;
+			color: green;
+		}
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.fullHeader {
+		&__rotatingText {
+			right: -24%;
+			font-size: 2.5rem;
+			color: green;
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.fullHeader {
+		&__rotatingText {
+			right: -26%;
+			font-size: 2.4rem;
+			color: green;
+		}
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.fullHeader {
+		&__rotatingText {
+			right: -30%;
+			font-size: 2.2rem;
+			color: green;
 		}
 	}
 } ;
