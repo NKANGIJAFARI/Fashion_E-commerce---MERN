@@ -8,6 +8,7 @@ const FirstDisplay = ({
 	button1,
 	button2,
 	background,
+	styleDescription,
 }) => {
 	// const color = ;
 
@@ -33,7 +34,7 @@ const FirstDisplay = ({
 					<img src={image} alt={`pic for ${heading1}`} />
 				</div>
 				<div className='fullHeader__rotatingText'>
-					<p>ZELFON COWBOY STYLE</p>
+					<p>{styleDescription}</p>
 				</div>
 				<div className='fullHeader__socialIcons'>
 					<i className='fab fa-instagram'></i>
