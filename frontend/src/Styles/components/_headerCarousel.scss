@@ -115,13 +115,13 @@ all the time.*/
 @media only screen and (max-width: 600px) {
 	#headerCarousel.headerCarousel {
 		& .owl-nav {
-			right: 22%;
-			bottom: 85%;
+			right: 96%;
+			bottom: 4%;
 		}
 
 		& .owl-dots {
 			position: absolute;
-			bottom: 69%;
+			bottom: 50%;
 			left: 4%;
 			width: min-content;
 		}
@@ -131,8 +131,8 @@ all the time.*/
 @media only screen and (max-width: 350px) {
 	#headerCarousel.headerCarousel {
 		& .owl-nav {
-			right: 26%;
-			bottom: 85%;
+			right: 96%;
+			bottom: 4%;
 		}
 	}
 }
