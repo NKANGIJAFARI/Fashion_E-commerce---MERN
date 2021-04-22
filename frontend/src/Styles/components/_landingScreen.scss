@@ -63,8 +63,8 @@
 		right: 7rem;
 		font-size: 2rem;
 		transform: translate(0%, -50%) rotate(90deg);
-		color: green;
 		z-index: 2;
+		color: black;
 	}
 
 	&__socialIcons {
@@ -359,7 +359,6 @@
 		&__rotatingText {
 			right: -15%;
 			font-size: 2.9rem;
-			color: green;
 		}
 
 		&__socialIcons {
@@ -427,7 +426,6 @@
 		&__rotatingText {
 			right: -23%;
 			font-size: 2.9rem;
-			color: green;
 		}
 	}
 }
@@ -437,7 +435,6 @@
 		&__rotatingText {
 			right: -24%;
 			font-size: 2.5rem;
-			color: green;
 		}
 	}
 }
@@ -447,7 +444,10 @@
 		&__rotatingText {
 			right: -26%;
 			font-size: 2.4rem;
-			color: green;
+		}
+
+		&__socialIcons {
+			display: none;
 		}
 	}
 }
@@ -457,7 +457,6 @@
 		&__rotatingText {
 			right: -30%;
 			font-size: 2.2rem;
-			color: green;
 		}
 	}
 } ;

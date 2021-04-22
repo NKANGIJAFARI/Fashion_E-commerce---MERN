@@ -52,3 +52,123 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 770px) {
+	.searchForm {
+		flex: 0.9 0 0;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.searchForm {
+		position: absolute;
+		left: 0;
+		top: 57px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		&__inputGroup {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			width: 90%;
+			transition: all 0.4s;
+			position: relative;
+
+			& input {
+				width: 80%;
+				border-radius: 8px;
+				padding: 1rem 2rem;
+				font-size: 1.6rem;
+				font-family: inherit;
+				border: none;
+				outline: none;
+				position: relative;
+				background-color: #e7f4fa;
+				transition: all 0.7s;
+			}
+
+			&:focus {
+				width: 100%;
+				outline: none;
+			}
+		}
+
+		& button,
+		& button:active,
+		& button:focus {
+			background-color: transparent;
+			outline: none;
+			color: black;
+			right: 10px;
+			margin-left: -4rem;
+			margin-right: 1rem;
+			border: none;
+			z-index: 1;
+			transition: all 0.5s;
+
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.searchForm {
+		position: absolute;
+		left: 0;
+		top: 57px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		&__inputGroup {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			width: 90%;
+			transition: all 0.4s;
+			position: relative;
+
+			& input {
+				width: 95%;
+				border-radius: 8px;
+				padding: 1rem 2rem;
+				font-size: 1.6rem;
+				font-family: inherit;
+				border: none;
+				outline: none;
+				position: relative;
+				background-color: #e7f4fa;
+				transition: all 0.7s;
+			}
+
+			&:focus {
+				width: 100%;
+				outline: none;
+			}
+		}
+
+		& button,
+		& button:active,
+		& button:focus {
+			background-color: transparent;
+			outline: none;
+			color: black;
+			right: 10px;
+			margin-left: -4rem;
+			margin-right: 1rem;
+			border: none;
+			z-index: 1;
+			transition: all 0.5s;
+
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
