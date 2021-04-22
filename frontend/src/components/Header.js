@@ -51,16 +51,15 @@ const Header = () => {
 	return (
 		<nav className='navbar' ref={navbar}>
 			<div className={`navigation ${isActive ? 'active' : ''}`}>
-				<Link to='/' className='logo'>
-					{/* <img src='images/logo.png' /> */}
-					<h3>ZEN-Styles</h3>
-				</Link>
-
 				<div
 					className={`toggle ${isActive ? 'active' : ''}`}
 					onClick={toggleActive}>
 					<i className='fas fa-bars'></i>
 				</div>
+				<Link to='/' className='logo'>
+					{/* <img src='images/logo.png' /> */}
+					<h3>ZEN-Styles</h3>
+				</Link>
 
 				<div className='nav-btn'>
 					<label htmlFor='nav-check'>

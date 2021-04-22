@@ -209,16 +209,16 @@
 	.toggle {
 		display: block;
 	}
-	.toggle:before {
-		content: '\f0c9';
-		font-family: fontAwesome;
-		line-height: 30px;
-		z-index: 1;
-		cursor: pointer;
-	}
-	.toggle.active:before {
-		content: '\f00d';
-	}
+	// .toggle:before {
+	// 	content: '\f0c9';
+	// 	font-family: fontAwesome;
+	// 	line-height: 30px;
+	// 	z-index: 1;
+	// 	cursor: pointer;
+	// }
+	// .toggle.active:before {
+	// 	content: '\f00d';
+	// }
 	.navigation.active .menu {
 		display: block;
 	}
