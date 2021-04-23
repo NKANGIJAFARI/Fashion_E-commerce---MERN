@@ -36,9 +36,9 @@ const HomeScreen = ({ match }) => {
 			{!keyword ? (
 				<>
 					<HeaderCarousel />
-					{/* <ShopDropdown />
+					<ShopDropdown />
 					<FeaturedProducts />
-					<TrendingFashions />
+					{/*<TrendingFashions />
 					<LatestProducts />
 					<GirlBanner />
 					<ShoesDisplay />

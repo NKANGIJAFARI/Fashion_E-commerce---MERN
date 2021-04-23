@@ -1,0 +1,116 @@
+#featuredProducts {
+	& .owl-carousel {
+		padding: 0px 1rem;
+
+		& .owl-stage-outer {
+			overflow: hidden;
+			height: 35rem;
+		}
+
+		& .owl-prev,
+		& .owl-next {
+			background: white;
+			color: inherit;
+			border: none;
+			padding: 0 !important;
+			font: inherit;
+			font-size: 150rem;
+			position: absolute;
+			top: 0;
+			outline: none;
+			opacity: 0.3;
+
+			& span {
+				font-size: 15rem;
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			&:hover & .owl-prev span,
+			& .owl-next span {
+				background: white;
+				color: red;
+				text-decoration: none;
+			}
+
+			&:hover {
+				background-color: transparent;
+				color: black;
+				opacity: 0.2;
+			}
+			&:focus {
+				background: none;
+				color: inherit;
+				border: none;
+				padding: 0 !important;
+				font: inherit;
+				outline: none;
+			}
+		}
+
+		& .owl-next {
+			right: 0;
+		}
+
+		& .owl-prev {
+			left: 0;
+		}
+	}
+}
+@media (max-width: 768px) {
+	#featuredProducts {
+		& .owl-carousel {
+			padding: 0px 1rem;
+
+			& .owl-stage-outer {
+				overflow: hidden;
+				height: 36rem;
+			}
+
+			& .owl-prev,
+			& .owl-next {
+				opacity: 0.1;
+				display: none;
+
+				& span {
+					font-size: 15rem;
+
+					&:focus {
+						outline: none;
+					}
+				}
+
+				&:hover & .owl-prev span,
+				& .owl-next span {
+					background: white;
+					color: red;
+					text-decoration: none;
+				}
+
+				&:hover {
+					background-color: transparent;
+					color: black;
+					opacity: 0.3;
+				}
+				&:focus {
+					background: none;
+					color: inherit;
+					border: none;
+					padding: 0 !important;
+					font: inherit;
+					outline: none;
+				}
+			}
+
+			& .owl-next {
+				right: 0;
+			}
+
+			& .owl-prev {
+				left: 0;
+			}
+		}
+	}
+}
