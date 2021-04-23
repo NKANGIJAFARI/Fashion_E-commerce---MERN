@@ -64,3 +64,9 @@
 		background: linear-gradient(150deg, #fff 30%, #bbddec 130.1%);
 	}
 }
+
+@media only screen and (max-width: 900px) {
+	.section {
+		padding: 5rem 1rem;
+	}
+}
