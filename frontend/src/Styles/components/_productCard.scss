@@ -205,5 +205,21 @@
 @media only screen and (max-width: 900px) {
 	.productCard {
 		height: 290px;
+		width: 130px;
+
+		&__details {
+			&--name {
+				color: #727272;
+			}
+			&--price {
+				color: #333333;
+				font-size: 1.8rem;
+				font-weight: 400;
+			}
+
+			&--ratingWrapper {
+				display: none;
+			}
+		}
 	}
 }
