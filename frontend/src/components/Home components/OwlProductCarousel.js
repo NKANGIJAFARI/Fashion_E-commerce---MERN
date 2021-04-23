@@ -10,7 +10,8 @@ const OwlProductCarousel = ({ products }) => {
 		<OwlCarousel
 			className='owl-theme'
 			autoplay
-			autoplayTimeout={5000}
+			// autoplayTimeout={5000}
+			autoplayTimeout={5000000}
 			autoplayHoverPause
 			loop
 			items={1}
