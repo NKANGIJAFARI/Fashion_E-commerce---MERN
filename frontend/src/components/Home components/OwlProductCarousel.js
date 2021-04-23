@@ -18,14 +18,14 @@ const OwlProductCarousel = ({ products }) => {
 			margin={2}
 			responsive={{
 				0: {
-					items: 1,
+					items: 2,
 				},
 
 				600: {
 					items: 3,
 				},
-				700: {
-					items: 3,
+				800: {
+					items: 4,
 				},
 
 				1000: {

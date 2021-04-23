@@ -201,3 +201,9 @@
 		display: flex;
 	}
 }
+
+@media only screen and (max-width: 900px) {
+	.productCard {
+		height: 290px;
+	}
+}

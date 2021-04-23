@@ -37,7 +37,9 @@ const FeaturedProducts = () => {
 			) : error ? (
 				<Message variant='danger'>{error}</Message>
 			) : (
-				<section className='section section__featuredProducts'>
+				<section
+					className='section section__featuredProducts'
+					id='featuredProducts'>
 					<SectionHeading desc='Featured Products' />
 					<Tabs
 						id='controlled-tab-example'
