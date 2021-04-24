@@ -20,6 +20,15 @@
 		}
 	}
 
+	& .tab-content > .active {
+		min-height: 200px;
+
+		& h2 {
+			text-align: center;
+			margin-top: 50px;
+		}
+	}
+
 	& .owl-carousel {
 		padding: 0px 1rem;
 
@@ -91,7 +100,7 @@
 
 			& .owl-stage-outer {
 				overflow: hidden;
-				height: 36rem;
+				height: 32rem;
 			}
 
 			& .owl-prev,
