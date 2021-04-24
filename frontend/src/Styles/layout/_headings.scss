@@ -21,3 +21,13 @@
 		margin: 0 10px;
 	}
 }
+
+@media only screen and (max-width: 600px) {
+	.sectionHeading {
+		&__line {
+			width: 5px;
+			height: 5px;
+			border-radius: 20px;
+		}
+	}
+}
