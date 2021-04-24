@@ -206,6 +206,20 @@
 	.productCard {
 		height: 260px;
 
+		& .add-cart {
+			display: flex;
+		}
+
+		& ul i {
+			color: var(--white);
+		}
+
+		&__options {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(-50%, 0%) scale(1);
+		}
+
 		&__details {
 			&--name {
 				color: #727272;
