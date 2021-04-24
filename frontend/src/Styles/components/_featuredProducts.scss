@@ -1,4 +1,34 @@
 #featuredProducts {
+	& .nav {
+		font-size: 1.6rem;
+		justify-content: center;
+		margin-bottom: 2rem;
+	}
+
+	& .nav-link {
+		border: 1px solid white;
+		margin: 0px 1rem;
+		// padding: 0.8rem 2rem;
+		width: 100px;
+		text-align: center;
+
+		&.active {
+			color: #55595c;
+			background-color: #fff;
+			border-color: #9999 #9999 #fff;
+			font-size: 1.8rem !important;
+		}
+	}
+
+	& .tab-content > .active {
+		min-height: 200px;
+
+		& h2 {
+			text-align: center;
+			margin-top: 50px;
+		}
+	}
+
 	& .owl-carousel {
 		padding: 0px 1rem;
 
@@ -14,7 +44,6 @@
 			border: none;
 			padding: 0 !important;
 			font: inherit;
-			font-size: 150rem;
 			position: absolute;
 			top: 0;
 			outline: none;
@@ -61,12 +90,16 @@
 }
 @media (max-width: 768px) {
 	#featuredProducts {
+		& .nav-link {
+			width: 70px;
+		}
+
 		& .owl-carousel {
 			padding: 0px 1rem;
 
 			& .owl-stage-outer {
 				overflow: hidden;
-				height: 36rem;
+				height: 32rem;
 			}
 
 			& .owl-prev,

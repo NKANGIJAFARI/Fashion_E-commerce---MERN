@@ -38,8 +38,8 @@ const HomeScreen = ({ match }) => {
 					<HeaderCarousel />
 					<ShopDropdown />
 					<FeaturedProducts />
-					{/*<TrendingFashions />
-					<LatestProducts />
+					<TrendingFashions />
+					{/*<LatestProducts />
 					<GirlBanner />
 					<ShoesDisplay />
 					<HobbiesFashion />
