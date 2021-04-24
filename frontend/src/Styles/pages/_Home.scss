@@ -38,13 +38,13 @@
 	&__featuredProducts {
 		width: 100%;
 
-		.nav {
+		/* & .nav {
 			font-size: 1.6rem;
 			justify-content: center;
 			margin-bottom: 2rem;
 		}
 
-		.nav-link {
+		& .nav-link {
 			border: 1px solid white;
 			margin: 0px 1rem;
 			// padding: 0.8rem 2rem;
@@ -57,7 +57,7 @@
 				border-color: #9999 #9999 #fff;
 				font-size: 1.8rem !important;
 			}
-		}
+		}*/
 	}
 
 	&__mostViewed {
@@ -68,5 +68,25 @@
 @media only screen and (max-width: 900px) {
 	.section {
 		padding: 5rem 1rem;
+
+		&__featuredProducts {
+			.nav {
+				font-size: 1.6rem;
+				justify-content: center;
+				margin-bottom: 2rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.section {
+		padding: 5rem 1rem;
+
+		&__featuredProducts {
+			& .nav-link {
+				width: 70px;
+			}
+		}
 	}
 }
