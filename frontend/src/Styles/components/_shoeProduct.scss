@@ -1,7 +1,15 @@
+.shoeProductCards {
+	width: 100%;
+	display: grid;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 .box-1,
 .box-2,
 .box-3 {
-	width: 230px;
 	height: 370px;
 	background-size: cover;
 	margin: 0px 50px;
