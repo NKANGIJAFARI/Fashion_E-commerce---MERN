@@ -1,0 +1,8 @@
+.latestProducts {
+	width: 100%;
+	display: grid;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}

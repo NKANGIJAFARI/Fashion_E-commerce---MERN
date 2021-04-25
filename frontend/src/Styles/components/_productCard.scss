@@ -24,14 +24,7 @@
 	margin: 1rem;
 	font-size: 0.9rem;
 }
-.latestProducts {
-	width: 100%;
-	display: grid;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	margin-top: 2rem;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-}
+
 .productCard {
 	// width: 23%;
 	// min-width: 100px;
