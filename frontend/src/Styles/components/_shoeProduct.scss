@@ -1,5 +1,6 @@
 .shoeProductCards {
 	width: 100%;
+	padding: 0px 7rem;
 	display: grid;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -102,6 +103,7 @@
 
 @media only screen and (max-width: 1150px) {
 	.shoeProductCards {
+		padding: 0px 2rem;
 		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	}
 
@@ -110,5 +112,19 @@
 	.box-3 {
 		height: 370px;
 		margin: 0px 40px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.shoeProductCards {
+		padding: 0px 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	}
+
+	.box-1,
+	.box-2,
+	.box-3 {
+		height: 370px;
+		margin: 0px 20px;
 	}
 }
