@@ -39,8 +39,8 @@ const HomeScreen = ({ match }) => {
 					<ShopDropdown />
 					<FeaturedProducts />
 					<TrendingFashions />
-					{/*<LatestProducts />
-					<GirlBanner />
+					<LatestProducts />
+					{/*<GirlBanner />
 					<ShoesDisplay />
 					<HobbiesFashion />
 					<MostViewed />

@@ -1,0 +1,31 @@
+.latestProducts {
+	width: 100%;
+	display: grid;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+@media only screen and (max-width: 1300px) {
+	.latestProducts {
+		grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+	}
+}
+@media only screen and (max-width: 1150px) {
+	.latestProducts {
+		grid-template-columns: repeat(auto-fill, minmax(181px, 1fr));
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.latestProducts {
+		grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	.latestProducts {
+		grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+	}
+} ;
