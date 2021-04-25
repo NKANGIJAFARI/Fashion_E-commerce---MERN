@@ -2,20 +2,18 @@ import React from 'react';
 
 const ShoesSideBanner = () => {
 	return (
-		<section className='section section__shoesBanner'>
-			<div className='shoeBanner'>
-				<ShoesSideBannerItem
-					imageSrc='/images/shoeBanner-man.png'
-					desc="Men's Shoes"
-					type='men'
-				/>
-				<ShoesSideBannerItem
-					imageSrc='/images/shoeBanner-woman2.png'
-					desc="Women's Shoes"
-					type='women'
-				/>
-			</div>
-		</section>
+		<div className='shoeBanner'>
+			<ShoesSideBannerItem
+				imageSrc='/images/shoeBanner-man.png'
+				desc="Men's Shoes"
+				type='men'
+			/>
+			<ShoesSideBannerItem
+				imageSrc='/images/shoeBanner-woman2.png'
+				desc="Women's Shoes"
+				type='women'
+			/>
+		</div>
 	);
 };
 
