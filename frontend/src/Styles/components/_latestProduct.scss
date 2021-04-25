@@ -12,3 +12,8 @@
 		grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
 	}
 }
+@media only screen and (max-width: 1150px) {
+	.latestProducts {
+		grid-template-columns: repeat(auto-fill, minmax(181px, 1fr));
+	}
+}
