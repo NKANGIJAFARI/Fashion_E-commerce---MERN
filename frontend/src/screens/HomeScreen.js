@@ -42,8 +42,8 @@ const HomeScreen = ({ match }) => {
 					<LatestProducts />
 					<GirlBanner />
 					<ShoesDisplay />
-					{/*<HobbiesFashion />
-					<MostViewed />
+					<HobbiesFashion />
+					{/*<MostViewed />
 					<ServicePromise /> */}
 				</>
 			) : (
