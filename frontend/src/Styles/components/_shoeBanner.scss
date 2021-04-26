@@ -1,7 +1,7 @@
 .shoeBanner {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	margin-bottom: 6.5rem;
 	grid-gap: 1.5rem;
 
@@ -16,6 +16,7 @@
 		border-radius: 2rem;
 
 		&--imgWrapper {
+			z-index: 0;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -46,6 +47,7 @@
 			display: flex;
 			flex-direction: column;
 			margin-top: 2.6rem;
+			z-index: 1;
 
 			&-men {
 				align-items: flex-end;
@@ -127,6 +129,32 @@
 					& img {
 						width: 67%;
 						height: 20rem;
+					}
+				}
+
+				&-women {
+					& img {
+						width: 66%;
+						height: 17rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 630px) {
+	.shoeBanner {
+		&__item {
+			height: 25rem;
+
+			&--imgWrapper {
+				top: 0px;
+
+				&-men {
+					& img {
+						width: 65%;
+						height: 24rem;
 					}
 				}
 
