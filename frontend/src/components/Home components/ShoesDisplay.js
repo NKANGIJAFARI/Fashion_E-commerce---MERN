@@ -33,7 +33,7 @@ const ShoesDisplay = () => {
 	}, [dispatch]);
 
 	return (
-		<section className='section section__featuredProducts'>
+		<section className='section section__shoesProducts'>
 			<ShoesSideBanner />
 			<SectionHeading desc='shoes showroom' />
 			<ShoeProductCard />

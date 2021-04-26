@@ -103,8 +103,7 @@
 
 @media only screen and (max-width: 1150px) {
 	.shoeProductCards {
-		padding: 0px 2rem;
-		// grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		padding: 0rem 2rem 6rem 2rem;
 	}
 
 	.box-1,
@@ -118,7 +117,7 @@
 @media only screen and (max-width: 900px) {
 	.shoeProductCards {
 		padding: 0px;
-		// grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		padding-bottom: 6rem;
 	}
 
 	.box-1,
@@ -136,7 +135,7 @@
 @media only screen and (max-width: 600px) {
 	.shoeProductCards {
 		padding: 0px 4rem;
-		// grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		padding-bottom: 6rem;
 	}
 
 	.box-1,
@@ -180,7 +179,7 @@
 @media only screen and (max-width: 400px) {
 	.shoeProductCards {
 		padding: 0px 6rem;
-		// grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		padding-bottom: 6rem;
 	}
 
 	.box-1,

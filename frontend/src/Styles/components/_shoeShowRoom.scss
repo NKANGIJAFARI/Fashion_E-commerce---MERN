@@ -1,27 +1,32 @@
+.section__shoesProducts {
+	& .owl-nav {
+		display: none;
+	}
+
+	& .nav {
+		justify-content: center;
+	}
+}
+
 .shoeBanner {
 	position: relative;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	margin-bottom: 6.5rem;
+	grid-gap: 1.5rem;
 
 	&__item {
-		width: 100%;
-		height: 20rem;
-		background: green;
+		height: 22rem;
 		font-size: 1.6rem;
 		color: white;
 		position: relative;
-
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
 		border-radius: 2rem;
-		//align-items: center;
-		//justify-content: center;
 
 		&--imgWrapper {
+			z-index: 0;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -52,6 +57,7 @@
 			display: flex;
 			flex-direction: column;
 			margin-top: 2.6rem;
+			z-index: 1;
 
 			&-men {
 				align-items: flex-end;
@@ -91,22 +97,12 @@
 				#2c5364
 			); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-			margin-right: 10px;
-
-			// & img {
-			// 	left: 30px;
-			// 	width: 70%;
-			// 	top: 0;
-			// }
-
 			& button {
 				margin-top: 2rem;
 			}
 		}
 
 		&--women {
-			background-color: blue;
-			margin-left: 10px;
 			right: 0;
 			align-items: flex-start;
 			background: #ff9966; /* fallback for old browsers */
@@ -126,6 +122,93 @@
 				right: 5rem;
 				width: 56%;
 				height: 18.5rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.shoeBanner {
+		&__item {
+			height: 25rem;
+
+			&--imgWrapper {
+				top: 40px;
+
+				&-men {
+					& img {
+						width: 67%;
+						height: 20rem;
+					}
+				}
+
+				&-women {
+					& img {
+						width: 66%;
+						height: 17rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 630px) {
+	.shoeBanner {
+		&__item {
+			height: 25rem;
+
+			&--imgWrapper {
+				top: 0px;
+
+				&-men {
+					& img {
+						width: 65%;
+						height: 24rem;
+					}
+				}
+
+				&-women {
+					& img {
+						width: 57%;
+						height: 22rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.shoeBanner {
+		&__item {
+			height: 25rem;
+
+			&--imgWrapper {
+				top: 30px;
+
+				&-men {
+					& img {
+						width: 73%;
+						height: 21rem;
+					}
+				}
+
+				&-women {
+					& img {
+						width: 69%;
+						height: 19rem;
+					}
+				}
+			}
+
+			&--details {
+				&-women {
+					margin-left: 1.5rem;
+				}
+				&-men {
+					margin-right: 1.5rem;
+				}
 			}
 		}
 	}
