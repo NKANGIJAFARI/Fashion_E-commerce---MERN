@@ -1,3 +1,9 @@
+.section__shoesProducts {
+	& .owl-nav {
+		display: none;
+	}
+}
+
 .shoeBanner {
 	position: relative;
 	display: grid;
