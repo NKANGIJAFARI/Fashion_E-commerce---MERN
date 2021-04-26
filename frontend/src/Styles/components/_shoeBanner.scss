@@ -175,7 +175,7 @@
 			height: 25rem;
 
 			&--imgWrapper {
-				top: 0px;
+				top: 20px;
 
 				&-men {
 					& img {
@@ -189,6 +189,15 @@
 						width: 57%;
 						height: 22rem;
 					}
+				}
+			}
+
+			&--details {
+				&-women {
+					margin-left: 1.5rem;
+				}
+				&-men {
+					margin-right: 1.5rem;
 				}
 			}
 		}
