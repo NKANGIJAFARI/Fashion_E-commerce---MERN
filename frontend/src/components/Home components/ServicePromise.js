@@ -6,7 +6,7 @@ const ServicePromise = () => {
 			<div className='servicePromise'>
 				<div className='servicePromise__item servicePromise__item-1'>
 					<img src='./images/service-delivery.png' alt='free shipping' />
-					<p className='servicePromise__item-desc'>On Orders over $100</p>
+					<p className='servicePromise__item-desc'>Orders over $100</p>
 				</div>
 				<div className='servicePromise__item servicePromise__item-2'>
 					<img src='/images/service-support.png' alt='24/7 support' />
