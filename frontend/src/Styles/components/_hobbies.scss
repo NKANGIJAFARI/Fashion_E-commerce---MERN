@@ -2,7 +2,7 @@
 	&__wrapper {
 		position: relative;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		grid-gap: 8rem;
 		padding: 0px 9rem;
 	}
@@ -62,11 +62,17 @@
 @media only screen and (max-width: 1000px) {
 	.hobbies {
 		&__wrapper {
-			position: relative;
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 			grid-gap: 4rem;
 			padding: 0px 5rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.hobbies {
+		&__wrapper {
+			grid-gap: 2rem;
+			padding: 0px 2rem;
 		}
 	}
 }
