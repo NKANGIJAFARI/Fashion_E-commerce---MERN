@@ -65,6 +65,24 @@
 			grid-gap: 4rem;
 			padding: 0px 5rem;
 		}
+
+		&__item {
+			&--btn {
+				position: absolute;
+				z-index: 100;
+				bottom: 0;
+				font-size: 1.6rem;
+				padding: 0px 2px;
+
+				&-fitness {
+					left: 0.5rem;
+				}
+
+				&-travel {
+					right: 0.5rem;
+				}
+			}
+		}
 	}
 }
 
