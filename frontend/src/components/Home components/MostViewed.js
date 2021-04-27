@@ -75,7 +75,7 @@ const ProductDetails = () => {
 					<i className='fas fa-star' />
 					<i className='fas fa-star' />
 					<i className='fas fa-star' />
-					<i className='fas fa-star' />
+					<i className='fas fa-star-half-alt' />
 					<span>(500+) reviews</span>
 				</div>
 				<p className='mostViewed__content--desc'>
