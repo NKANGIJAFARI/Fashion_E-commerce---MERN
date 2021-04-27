@@ -7,15 +7,15 @@ const MostViewed = () => {
 	const [active, setActive] = useState('1');
 
 	return (
-		<section className='section section__mostViewed feature' id='featured'>
+		<section className='section section__mostViewed mostViewed feature'>
 			<SectionHeading desc='Most viewed product' />
 
-			<div className='row'>
-				<div className='image-container'>
-					<div className='big-image'>
-						<img src={pictureSrc} alt='' />
+			<div className='mostViewed__row'>
+				<div className='mostViewed__imageContainer'>
+					<div className='mostViewed__imageContainer--big-image'>
+						<img src={pictureSrc} alt='big watch view' />
 					</div>
-					<div className='small-image'>
+					<div className='mostViewed__imageContainer--small-image'>
 						<img
 							id='1'
 							className={active === '1' ? 'image-active' : ''}
@@ -68,9 +68,9 @@ const MostViewed = () => {
 const ProductDetails = () => {
 	return (
 		<>
-			<div className='content'>
+			<div className='mostViewed__content'>
 				<h3>smart watches</h3>
-				<div className='stars'>
+				<div className='mostViewed__content--stars'>
 					<i className='fas fa-star' />
 					<i className='fas fa-star' />
 					<i className='fas fa-star' />
@@ -78,15 +78,17 @@ const ProductDetails = () => {
 					<i className='fas fa-star' />
 					<span>(500+) reviews</span>
 				</div>
-				<p>
+				<p className='mostViewed__content--desc'>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
 					at!
 				</p>
-				<strong className='price'>
-					$299 <span>$450</span>{' '}
+				<strong className='mostViewed__content--price'>
+					$299 <span>$450</span>
 				</strong>
 				<Link to='/'>
-					<button className='btn'>buy now</button>
+					<button className='mostViewed__content--btn btn'>
+						<i className='fas fa-shopping-cart'></i> Add Cart
+					</button>
 				</Link>
 			</div>
 		</>
