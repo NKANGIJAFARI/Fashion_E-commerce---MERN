@@ -44,7 +44,7 @@ const HomeScreen = ({ match }) => {
 					<ShoesDisplay />
 					<HobbiesFashion />
 					<MostViewed />
-					{/*<ServicePromise /> */}
+					<ServicePromise />
 				</>
 			) : (
 				<Link to='/' className='btn btn-light'>
