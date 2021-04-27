@@ -76,3 +76,12 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 500px) {
+	.hobbies {
+		&__wrapper {
+			grid-gap: 0rem;
+			padding: 0px 0rem;
+		}
+	}
+}
