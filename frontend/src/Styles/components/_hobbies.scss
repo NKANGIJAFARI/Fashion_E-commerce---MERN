@@ -1,12 +1,10 @@
 .hobbies {
 	&__wrapper {
-		// display: flex;
-		// flex-direction: row;
-		// flex-wrap: wrap;
-		// justify-content: center;
 		position: relative;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-gap: 8rem;
+		padding: 0px 9rem;
 	}
 
 	&__item {
