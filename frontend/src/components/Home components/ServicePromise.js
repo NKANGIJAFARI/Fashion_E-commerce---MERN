@@ -4,11 +4,11 @@ const ServicePromise = () => {
 	return (
 		<section className='section section__servicePromise '>
 			<div className='servicePromise'>
-				<div className='servicePromise__ri'>
+				<div className='servicePromise__holder servicePromise__holder--right'>
 					<div className='servicePromise__item servicePromise__item-1'>
 						<img src='./images/service-delivery.png' alt='free shipping' />
 						<p className='servicePromise__item-desc'>
-							Free shipping on Orders over $100
+							 On Orders over $100
 						</p>
 					</div>
 					<div className='servicePromise__item servicePromise__item-2'>
@@ -17,7 +17,7 @@ const ServicePromise = () => {
 					</div>
 				</div>
 
-				<div className='servicePromise__left'>
+				<div className='servicePromise__holder servicePromise__holder--left'>
 					<div className='servicePromise__item servicePromise__item-3'>
 						<img
 							src='/images/service-moneyback.png'
