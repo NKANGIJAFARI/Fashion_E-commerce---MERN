@@ -43,8 +43,8 @@ const HomeScreen = ({ match }) => {
 					<GirlBanner />
 					<ShoesDisplay />
 					<HobbiesFashion />
-					{/*<MostViewed />
-					<ServicePromise /> */}
+					<MostViewed />
+					<ServicePromise />
 				</>
 			) : (
 				<Link to='/' className='btn btn-light'>

@@ -9,15 +9,17 @@ const Footer = () => {
 				<div className='footer__content'>
 					<div className='container'>
 						<div className='footer__content-row'>
-							<div className='footer__col'>
+							<div className='footer__col footer__desc'>
 								<div className='footer__logo'>
 									<Link to='/'>
 										<picture>
 											<source srcSet='img/logo.svg' type='image/webp' />
 											<img src='img/logo.svg' alt='logo' />
 										</picture>
+										<h3>Zen-Styles</h3>
 									</Link>
 								</div>
+
 								<p className='footer__text'>
 									Wherever you are, we serve your <br /> imaginative fashion in
 									style.
@@ -25,51 +27,13 @@ const Footer = () => {
 									Let us take your online shop <br />
 									to new dimension in success!
 								</p>
-								<div className='footer__location'>
-									<picture>
-										<i className='fas fa-map-marked-alt'></i>
-									</picture>
-									<p>Dubai, UAE</p>
-								</div>
-								<p className='footer__email'>
-									<a href='mailto:kawsarahmed0210@gmail.com'>
-										nkangijafari@gmail.com
-									</a>
-								</p>
-								<p className='footer__phone'>
-									<a href='+9715236199890'>+971523619890</a>
-								</p>
-								<div className='footer__socials'>
-									<Link to='/' className='footer__socials-item'>
-										<picture>
-											{/* <source
-												srcSet='/images/social-facebook.png'
-												type='image/webp'
-											/> */}
-											<img src='/images/facebook.svg' alt='facebook' />
-										</picture>
-									</Link>
-									<Link to='/' className='footer__socials-item'>
-										<picture>
-											{/* <source srcSet='/images/facebook.svg' type='image/webp' /> */}
-											<img src='/images/social-insta.png' alt='instagram' />
-										</picture>
-									</Link>
-									<Link to='/' className='footer__socials-item'>
-										<picture>
-											{/* <source srcSet='/images/twitter.svg' type='image/webp' /> */}
-											<img src='/images/social-twitter.png' alt='twitter' />
-										</picture>
-									</Link>
-									<Link to='/' className='footer__socials-item'>
-										<picture>
-											{/* <source srcSet='/images/linkedin.svg' type='image/webp' /> */}
-											<img src='/images/social-linkedin.png' alt='linkedin' />
-										</picture>
-									</Link>
+								<div>
+									<SocialIcons />
+									<Contacts />
 								</div>
 							</div>
-							<div className='footer__col'>
+
+							<div className='footer__subscribe'>
 								<h1 className='footer__title'>RECIVE EMAIL UPDATES</h1>
 								<form action='post' className='footer__form'>
 									<input
@@ -79,6 +43,8 @@ const Footer = () => {
 									/>
 									<button className='footer__button'>JOIN</button>
 								</form>
+							</div>
+							<div className='footer__col'>
 								<div className='footer__nav'>
 									<div className='footer__nav-col'>
 										<h3 className='footer__nav-title'>shop</h3>
@@ -139,6 +105,50 @@ const Footer = () => {
 				</div>
 			</footer>
 		</Container>
+	);
+};
+
+const SocialIcons = () => {
+	return (
+		<div className='footer__socials'>
+			<Link to='/' className='footer__socials-item'>
+				<picture>
+					<img src='/images/facebook.svg' alt='facebook' />
+				</picture>
+			</Link>
+			<Link to='/' className='footer__socials-item'>
+				<picture>
+					<img src='/images/social-insta.png' alt='instagram' />
+				</picture>
+			</Link>
+			<Link to='/' className='footer__socials-item'>
+				<picture>
+					<img src='/images/social-twitter.png' alt='twitter' />
+				</picture>
+			</Link>
+			<Link to='/' className='footer__socials-item'>
+				<picture>
+					<img src='/images/social-linkedin.png' alt='linkedin' />
+				</picture>
+			</Link>
+		</div>
+	);
+};
+
+const Contacts = () => {
+	return (
+		<div className='footer__contacts'>
+			<div>
+				<i className='fas fa-map-marked-alt'></i>
+				<p>Dubai, UAE</p>
+			</div>
+			<p className=''>
+				<a href='mailto:nkangijafari@gmail.com'>nkangijafari@gmail.com</a>
+			</p>
+			<p className='footer__phone'>
+				<a href='+9715236199890'>+971523619890</a>
+			</p>
+		</div>
 	);
 };
 

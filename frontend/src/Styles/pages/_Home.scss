@@ -1,5 +1,6 @@
 .section {
 	padding: 6.5rem 3rem;
+	overflow-x: hidden;
 
 	&__categories {
 		height: 100vh;
@@ -69,6 +70,12 @@
 			& .nav-link {
 				width: 70px;
 			}
+		}
+
+		&__hobbies {
+			width: 100%;
+			background-color: rgb(231, 230, 230);
+			padding: 5rem 0rem;
 		}
 	}
 }
