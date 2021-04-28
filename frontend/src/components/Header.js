@@ -50,6 +50,9 @@ const Header = () => {
 
 	return (
 		<nav className='navbar' ref={navbar}>
+			{isActive && (
+				<div className='CoverFixedOnMenuOpen' onClick={toggleActive}></div>
+			)}
 			<div className={`navigation ${isActive ? 'active' : ''}`}>
 				<div
 					className={`toggle ${isActive ? 'active' : ''}`}
@@ -57,7 +60,6 @@ const Header = () => {
 					<i className='fas fa-bars'></i>
 				</div>
 				<Link to='/' className='logo'>
-					{/* <img src='images/logo.png' /> */}
 					<h3>ZEN-Styles</h3>
 				</Link>
 
