@@ -57,7 +57,11 @@ const Header = () => {
 				<div
 					className={`toggle ${isActive ? 'active' : ''}`}
 					onClick={toggleActive}>
-					<i className='fas fa-bars'></i>
+					{isActive ? (
+						<i className='fas fa-times'></i>
+					) : (
+						<i className='fas fa-bars'></i>
+					)}
 				</div>
 				<Link to='/' className='logo'>
 					<h3>ZEN-Styles</h3>
