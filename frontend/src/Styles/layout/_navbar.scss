@@ -171,9 +171,7 @@
 		height: 40px;
 		// display: none;
 	}
-	.fix-nav {
-		height: 80px;
-	}
+
 	.menu {
 		position: absolute;
 		top: 50px;
@@ -219,15 +217,22 @@
 	.navigation {
 		padding: 10px;
 	}
+	.fix-nav {
+		height: 94px;
+	}
 }
 @media (max-width: 400px) {
 	.navbar {
 		padding: 10px 2px;
 	}
 }
-.right-menu {
-	align-self: flex-end;
 
+@media (max-width: 320px) {
+	.dropbtn__name span {
+		display: none;
+	}
+}
+.right-menu {
 	display: flex;
 	flex-direction: row;
 
