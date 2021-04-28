@@ -93,6 +93,14 @@
 		&__content {
 			padding-left: 1rem;
 			text-align: left;
+			width: 100%;
+
+			&--desc {
+				color: black;
+				/* width: 40rem; */
+				font-size: 1.6rem;
+				padding: 2rem 0;
+			}
 		}
 	}
 }
