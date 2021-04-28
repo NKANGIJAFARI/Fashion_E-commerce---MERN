@@ -80,7 +80,7 @@ const App = () => {
 
 					<Route path='/' component={HomeScreen} exact />
 				</div>
-				<Footer />
+				{/* <Footer /> */}
 			</main>
 		</Router>
 	);
