@@ -190,5 +190,13 @@
 				width: 85%;
 			}
 		}
+
+		&__nav {
+			justify-content: space-between;
+
+			& > :not(:last-child) {
+				margin-right: 1.5rem;
+			}
+		}
 	}
 }
