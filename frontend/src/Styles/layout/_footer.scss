@@ -170,5 +170,11 @@
 		&__desc {
 			justify-content: space-between;
 		}
+
+		&__subscribe {
+			&--form {
+				width: 75%;
+			}
+		}
 	}
 }
