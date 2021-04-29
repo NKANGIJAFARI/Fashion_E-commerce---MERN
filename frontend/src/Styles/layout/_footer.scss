@@ -178,3 +178,11 @@
 		}
 	}
 }
+
+@media (max-width: 610px) {
+	.footer {
+		&__desc {
+			justify-content: space-between;
+		}
+	}
+}
