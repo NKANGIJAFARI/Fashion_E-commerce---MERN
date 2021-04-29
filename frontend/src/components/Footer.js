@@ -9,41 +9,47 @@ const Footer = () => {
 				<div className='footer__content'>
 					<div className='container'>
 						<div className='footer__content-row'>
+							<div className='footer__subscribe'>
+								<h1 className='footer__subscribe--title'>
+									RECIVE EMAIL UPDATES
+								</h1>
+								<form action='post' className='footer__subscribe--form'>
+									<input
+										type='text'
+										className='footer__subscribe--form-input'
+										placeholder='Your Email Address'
+									/>
+									<button className='footer__subscribe--form-button'>
+										JOIN
+									</button>
+								</form>
+							</div>
+
 							<div className='footer__col footer__desc'>
-								<div className='footer__logo'>
+								<div className='footer__desc--logo'>
 									<Link to='/'>
-										<picture>
+										{/* <picture>
 											<source srcSet='img/logo.svg' type='image/webp' />
 											<img src='img/logo.svg' alt='logo' />
-										</picture>
+										</picture> */}
 										<h3>Zen-Styles</h3>
 									</Link>
 								</div>
 
-								<p className='footer__text'>
+								<p className='footer__desc--text'>
 									Wherever you are, we serve your <br /> imaginative fashion in
 									style.
 									<br />
 									Let us take your online shop <br />
 									to new dimension in success!
 								</p>
-								<div>
+
+								<div className='footer__desc--contacts'>
 									<SocialIcons />
 									<Contacts />
 								</div>
 							</div>
 
-							<div className='footer__subscribe'>
-								<h1 className='footer__title'>RECIVE EMAIL UPDATES</h1>
-								<form action='post' className='footer__form'>
-									<input
-										type='text'
-										className='footer__input'
-										placeholder='Your Email Address'
-									/>
-									<button className='footer__button'>JOIN</button>
-								</form>
-							</div>
 							<div className='footer__col'>
 								<div className='footer__nav'>
 									<div className='footer__nav-col'>
@@ -140,14 +146,16 @@ const Contacts = () => {
 		<div className='footer__contacts'>
 			<div>
 				<i className='fas fa-map-marked-alt'></i>
-				<p>Dubai, UAE</p>
+				<span>Dubai, UAE</span>
 			</div>
-			<p className=''>
+			<div>
+				<i className='fas fa-map-marked-alt'></i>
 				<a href='mailto:nkangijafari@gmail.com'>nkangijafari@gmail.com</a>
-			</p>
-			<p className='footer__phone'>
+			</div>
+			<div>
+				<i className='fas fa-map-marked-alt'></i>
 				<a href='+9715236199890'>+971523619890</a>
-			</p>
+			</div>
 		</div>
 	);
 };
