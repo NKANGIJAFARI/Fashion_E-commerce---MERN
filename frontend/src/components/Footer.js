@@ -26,24 +26,25 @@ const Footer = () => {
 							</div>
 
 							<div className='footer__col footer__desc'>
-								<div className='footer__logo'>
+								<div className='footer__desc--logo'>
 									<Link to='/'>
-										<picture>
+										{/* <picture>
 											<source srcSet='img/logo.svg' type='image/webp' />
 											<img src='img/logo.svg' alt='logo' />
-										</picture>
+										</picture> */}
 										<h3>Zen-Styles</h3>
 									</Link>
 								</div>
 
-								<p className='footer__text'>
+								<p className='footer__desc--text'>
 									Wherever you are, we serve your <br /> imaginative fashion in
 									style.
 									<br />
 									Let us take your online shop <br />
 									to new dimension in success!
 								</p>
-								<div>
+
+								<div className='footer__desc--contacts'>
 									<SocialIcons />
 									<Contacts />
 								</div>
@@ -145,14 +146,16 @@ const Contacts = () => {
 		<div className='footer__contacts'>
 			<div>
 				<i className='fas fa-map-marked-alt'></i>
-				<p>Dubai, UAE</p>
+				<span>Dubai, UAE</span>
 			</div>
-			<p className=''>
+			<div>
+				<i className='fas fa-map-marked-alt'></i>
 				<a href='mailto:nkangijafari@gmail.com'>nkangijafari@gmail.com</a>
-			</p>
-			<p className='footer__phone'>
+			</div>
+			<div>
+				<i className='fas fa-map-marked-alt'></i>
 				<a href='+9715236199890'>+971523619890</a>
-			</p>
+			</div>
 		</div>
 	);
 };
