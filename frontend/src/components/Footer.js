@@ -9,6 +9,22 @@ const Footer = () => {
 				<div className='footer__content'>
 					<div className='container'>
 						<div className='footer__content-row'>
+							<div className='footer__subscribe'>
+								<h1 className='footer__subscribe--title'>
+									RECIVE EMAIL UPDATES
+								</h1>
+								<form action='post' className='footer__subscribe--form'>
+									<input
+										type='text'
+										className='footer__subscribe--form-input'
+										placeholder='Your Email Address'
+									/>
+									<button className='footer__subscribe--form-button'>
+										JOIN
+									</button>
+								</form>
+							</div>
+
 							<div className='footer__col footer__desc'>
 								<div className='footer__logo'>
 									<Link to='/'>
@@ -33,17 +49,6 @@ const Footer = () => {
 								</div>
 							</div>
 
-							<div className='footer__subscribe'>
-								<h1 className='footer__title'>RECIVE EMAIL UPDATES</h1>
-								<form action='post' className='footer__form'>
-									<input
-										type='text'
-										className='footer__input'
-										placeholder='Your Email Address'
-									/>
-									<button className='footer__button'>JOIN</button>
-								</form>
-							</div>
 							<div className='footer__col'>
 								<div className='footer__nav'>
 									<div className='footer__nav-col'>
