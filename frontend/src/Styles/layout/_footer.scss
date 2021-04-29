@@ -164,3 +164,11 @@
 		}
 	}
 }
+
+@media (max-width: 900px) {
+	.footer {
+		&__desc {
+			justify-content: space-between;
+		}
+	}
+}
