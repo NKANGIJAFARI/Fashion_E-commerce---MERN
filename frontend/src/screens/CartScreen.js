@@ -109,7 +109,7 @@ const CartScreen = (props) => {
 											</div>
 											<div>
 												<button
-													className='btn btn--cartProductDelete'
+													className='cart__items--details-btn'
 													type='button'
 													variant='light'
 													onClick={() => removeFromCartHandler(item.product)}>
