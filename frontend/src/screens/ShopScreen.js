@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useLocation } from 'react-router-dom';
 
@@ -17,6 +17,13 @@ const ShopScreen = () => {
 	//product mode and the pagenumber if product pages are changed
 	const { keyword, pageNumber } = useParams();
 	const pageNum = pageNumber || 1;
+
+	//Show or hide filter btn on small screens
+	const [showFilters, setShowFilters] = useState(false);
+
+	const toggleFilter = () => {
+		setShowFilters(!showFilters);
+	};
 
 	//Get the queryStrings to access sizes
 	function useQuery() {
@@ -41,18 +48,16 @@ const ShopScreen = () => {
 	return (
 		<section className='section section__allProducts'>
 			<SectionHeading desc='Products' />
-			<div style={{ display: 'flex' }}>
-				<div className='sidebar' style={{ flex: '0 0 20%' }}>
+			<div className='allProducts__filterBtn ' onClick={toggleFilter}>
+				<i class='fas fa-filter'></i> <span>Filter</span>
+			</div>
+			<div className='allProducts__wrapper'>
+				<div
+					className={`allProducts__sidebar ${showFilters ? 'showFilter' : ''}`}>
 					<FilterSideBar />
 				</div>
 				<div className='allProducts__content'>
-					<div
-						className='AllProducts'
-						style={{
-							display: 'flex',
-							flexWrap: 'wrap',
-							justifyContent: 'space-around',
-						}}>
+					<div className='allProducts__products'>
 						{loading ? (
 							<Loader />
 						) : error ? (

@@ -332,28 +332,3 @@
 .dropdown:hover .dropdown-content {
 	display: block;
 }
-
-// @media (max-width: 600px) {
-// 	.nav-btn {
-// 		display: inline-block;
-// 		position: absolute;
-// 		left: 0px;
-// 		top: 0px;
-// 	}
-// 	.nav-btn > label {
-// 		display: inline-block;
-// 		width: 50px;
-// 		height: 50px;
-// 		padding: 13px;
-// 	}
-// 	.nav-btn > label:hover,
-// 	#nav-check:checked ~ .nav-btn > label {
-// 		background-color: rgba(0, 0, 0, 0.3);
-// 	}
-// 	.nav-btn > label > span {
-// 		display: block;
-// 		width: 25px;
-// 		height: 10px;
-// 		border-top: 2px solid #eee;
-// 	}
-// }

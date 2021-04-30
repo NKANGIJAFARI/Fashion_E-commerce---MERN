@@ -62,7 +62,7 @@
 		position: absolute;
 		top: 50%;
 		right: 7rem;
-		font-size: 2rem;
+		font-size: 2.2rem;
 		transform: translate(0%, -50%) rotate(90deg);
 		z-index: 2;
 		color: black;
@@ -240,7 +240,7 @@
 
 		&__rotatingText {
 			right: -7%;
-			font-size: 3rem;
+			font-size: 2.5rem;
 		}
 
 		&__socialIcons {
@@ -273,8 +273,8 @@
 		}
 
 		&__rotatingText {
-			right: -31%;
-			font-size: 3rem;
+			right: -24%;
+			font-size: 2.5rem;
 		}
 
 		&__socialIcons {
@@ -360,7 +360,7 @@
 
 		&__rotatingText {
 			right: -15%;
-			font-size: 2.9rem;
+			font-size: 2.5rem;
 		}
 
 		&__socialIcons {
@@ -427,7 +427,7 @@
 	.fullHeader {
 		&__rotatingText {
 			right: -23%;
-			font-size: 2.9rem;
+			font-size: 2.7rem;
 		}
 	}
 }
