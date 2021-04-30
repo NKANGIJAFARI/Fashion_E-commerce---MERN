@@ -40,6 +40,10 @@
 	.allProducts {
 		&__sidebar {
 			display: none;
+
+			&.showFilter {
+				display: block;
+			}
 		}
 
 		&__filterBtn {

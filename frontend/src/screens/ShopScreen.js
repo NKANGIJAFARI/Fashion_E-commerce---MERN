@@ -52,7 +52,8 @@ const ShopScreen = () => {
 				<i class='fas fa-filter'></i> <span>Filter</span>
 			</div>
 			<div style={{ display: 'flex' }}>
-				<div className='allProducts__sidebar'>
+				<div
+					className={`allProducts__sidebar ${showFilters ? 'showFilter' : ''}`}>
 					<FilterSideBar />
 				</div>
 				<div className='allProducts__content'>
