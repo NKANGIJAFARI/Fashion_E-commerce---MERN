@@ -46,10 +46,10 @@ const CartScreen = (props) => {
 	};
 
 	return (
-		<>
+		<div className='cart'>
 			<SectionHeading desc='Shopping Cart' marginB='1.5rem' />
 
-			<Row style={{ padding: '2rem 2rem' }} className='cart'>
+			<Row className='cart__row'>
 				<Col md={9} sm={12} className='cart__left'>
 					{cartItems.length === 0 ? (
 						<EmptyCartDisplay />
@@ -150,7 +150,7 @@ const CartScreen = (props) => {
 					</Card>
 				</Col>
 			</Row>
-		</>
+		</div>
 	);
 };
 
