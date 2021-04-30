@@ -17,6 +17,19 @@
 		flex: 0 0 20%;
 	}
 
+	&__filterBtn {
+		position: sticky;
+		top: 65px;
+		left: 0px;
+		background-color: #e7f4fa;
+		padding: 0.5rem;
+		border-radius: 0px 3rem 3rem 0rem;
+		width: 79px;
+		z-index: 2;
+		font-size: 16px;
+		text-align: center;
+	}
+
 	&__filter {
 		position: sticky;
 		top: 20%;
