@@ -45,6 +45,8 @@
 			&-name {
 				max-width: 50%;
 				min-width: 30%;
+				text-align: left;
+				margin-left: 20px;
 			}
 
 			&-price {
@@ -53,6 +55,20 @@
 			&-form {
 				font-size: 1.6rem;
 			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.cart {
+		position: relative;
+		position: relative;
+		padding: 10rem 0px 7rem;
+
+		&__right {
+			display: flex;
+			justify-content: flex-end;
+			margin-top: 20px;
 		}
 	}
 }

@@ -59,7 +59,7 @@ const CartScreen = (props) => {
 								//product is the id
 								<ListGroup.Item key={item.product}>
 									<Row className='cart__items'>
-										<Col md={1} sm={2} className='cart__items--imgWrapper'>
+										<Col md={1} sm={1} className='cart__items--imgWrapper'>
 											<Image
 												src={item.image}
 												alt={item.name}
@@ -67,7 +67,7 @@ const CartScreen = (props) => {
 												className='cart__items--imgWrapper-img'
 											/>
 										</Col>
-										<Col md={11} sm={10} className='cart__items--details'>
+										<Col md={11} sm={11} className='cart__items--details'>
 											<div className='cart__items--details-name'>
 												<Link to={`/products/${item.product}`}>
 													<strong>{item.name}</strong>
