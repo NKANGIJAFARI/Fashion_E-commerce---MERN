@@ -1,6 +1,11 @@
 .section__allProducts {
-	padding: 6.5rem 3rem;
+	padding: 6.5rem 1.5rem;
 	overflow-x: initial !important;
+
+	& .sectionHeading {
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+	}
 }
 
 .allProducts {
@@ -9,7 +14,7 @@
 	}
 
 	&__sidebar {
-		flex: '0 0 20%';
+		flex: 0 0 20%;
 	}
 
 	&__filter {
