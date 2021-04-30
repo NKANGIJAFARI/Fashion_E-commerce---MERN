@@ -42,17 +42,11 @@ const ShopScreen = () => {
 		<section className='section section__allProducts'>
 			<SectionHeading desc='Products' />
 			<div style={{ display: 'flex' }}>
-				<div className='sidebar' style={{ flex: '0 0 20%' }}>
+				<div className='allProducts__sidebar'>
 					<FilterSideBar />
 				</div>
 				<div className='allProducts__content'>
-					<div
-						className='AllProducts'
-						style={{
-							display: 'flex',
-							flexWrap: 'wrap',
-							justifyContent: 'space-around',
-						}}>
+					<div className='allProducts__products'>
 						{loading ? (
 							<Loader />
 						) : error ? (

@@ -3,7 +3,7 @@ import AccordItem from './AccordItem';
 
 const FilterSideBar = () => {
 	return (
-		<div className='filter'>
+		<div className='allProducts__filter'>
 			<AccordItem />
 		</div>
 	);
