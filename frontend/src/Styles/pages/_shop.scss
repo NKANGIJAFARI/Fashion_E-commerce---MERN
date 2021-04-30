@@ -9,6 +9,11 @@
 }
 
 .allProducts {
+	&__wrapper {
+		display: flex;
+		position: relative;
+	}
+
 	&__content {
 		flex-grow: 1;
 	}
@@ -40,9 +45,21 @@
 	.allProducts {
 		&__sidebar {
 			display: none;
+			margin-right: -1000px;
+			top: 0px;
+			right: 0;
+			width: 70%;
 
 			&.showFilter {
 				display: block;
+				z-index: 100;
+				position: fixed;
+				top: 94px;
+				right: 0;
+				width: 70%;
+				background: white;
+				margin: 0;
+				padding: 1rem;
 			}
 		}
 

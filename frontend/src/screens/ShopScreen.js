@@ -51,7 +51,7 @@ const ShopScreen = () => {
 			<div className='allProducts__filterBtn ' onClick={toggleFilter}>
 				<i class='fas fa-filter'></i> <span>Filter</span>
 			</div>
-			<div style={{ display: 'flex' }}>
+			<div className='allProducts__wrapper'>
 				<div
 					className={`allProducts__sidebar ${showFilters ? 'showFilter' : ''}`}>
 					<FilterSideBar />
