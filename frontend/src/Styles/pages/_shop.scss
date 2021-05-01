@@ -81,5 +81,9 @@
 			text-align: center;
 			display: block;
 		}
+
+		&__products {
+			grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+		}
 	}
 }
