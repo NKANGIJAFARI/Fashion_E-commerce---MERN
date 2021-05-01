@@ -380,7 +380,7 @@ const ProductScreen = ({ match, history }) => {
 						</Col>
 					</Row>
 					<Row style={{ flexDirection: 'column' }}>
-						<SectionHeading desc='Related to this product' />
+						<SectionHeading desc='Related products' />
 						<Col md={12} className='productDetails__relatedProducts'>
 							{relatedProducts.map((product) => (
 								<div key={product._id}>

@@ -1,8 +1,17 @@
 .productDetails {
-	padding: 7rem 2rem;
+	padding: 7rem 2rem 2.5rem;
+
+	&__row {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding: 1.5rem 2rem;
+		margin-bottom: 4rem;
+	}
 
 	& select {
-		max-width: 100px;
+		max-width: 150px;
 		font-size: 1.5rem;
 	}
 
@@ -15,14 +24,6 @@
 		margin-top: 2rem;
 		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 	}
-}
-
-.productDetails__row {
-	display: flex;
-	align-items: flex-start;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	padding: 1.5rem 2rem;
 }
 
 .col-2 {
