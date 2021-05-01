@@ -127,7 +127,7 @@ const ProductScreen = ({ match, history }) => {
 	//Function to add to cart
 	const addToCartHandler = (countInStock) => {
 		const existItem = cartItems.find(
-			(item) => item.product === match.params.id
+			(item) => item.product === match.params.id,
 		);
 
 		if (existItem) {
@@ -140,7 +140,7 @@ const ProductScreen = ({ match, history }) => {
 							existItem.quantity
 						} in your cart, stock left with ${countInStock}, cant get ${qty}. Add ${
 							countInStock - existItem.quantity
-						} ? `
+						} ? `,
 					)
 				) {
 					history.push(`/cart/${match.params.id}?quantity=${countInStock}`);
@@ -148,7 +148,7 @@ const ProductScreen = ({ match, history }) => {
 			} else {
 				if (
 					window.confirm(
-						`Exists ${existItem.quantity} times in your cart, Make it ${qty} `
+						`Exists ${existItem.quantity} times in your cart, Make it ${qty} `,
 					)
 				) {
 					history.push(`/cart/${match.params.id}?quantity=${qty}`);
@@ -170,7 +170,7 @@ const ProductScreen = ({ match, history }) => {
 	//----------------------------------------------------------------------------
 
 	return (
-		<>
+		<div className='productDetails'>
 			<Link className='btn btn-light my-3' to='/'>
 				Go Back
 			</Link>
@@ -182,10 +182,10 @@ const ProductScreen = ({ match, history }) => {
 				<>
 					<Meta title={product.name} />
 					<Row className='productDetails__row'>
-						<Col md={6}>
+						<Col md={6} sm={8}>
 							<ProductDetails imgSrc={product.image} />
 						</Col>
-						<Col md={3}>
+						<Col md={3} sm={4}>
 							<ListGroup variant='flush'>
 								<ListGroup.Item>
 									<h3>{product.name}</h3>
@@ -231,7 +231,7 @@ const ProductScreen = ({ match, history }) => {
 								</ListGroup.Item>
 							</ListGroup>
 						</Col>
-						<Col md={3}>
+						<Col md={3} sm={12}>
 							<Card>
 								<ListGroup variant='flush'>
 									<ListGroup.Item>
@@ -270,13 +270,13 @@ const ProductScreen = ({ match, history }) => {
 																			{' '}
 																			{x + 1}{' '}
 																		</option>
-																	)
+																	),
 																)
 															}
 														</Form.Control>
 													</Col>
 												</Row>
-												<Row>
+												{/* <Row>
 													<Col>Sizes: </Col>
 													<Col>
 														<Form.Control
@@ -284,19 +284,18 @@ const ProductScreen = ({ match, history }) => {
 															value={quantity}
 															onChange={(e) => setQuantity(e.target.value)}>
 															{
-																//Get the number of pro
+																//Get the number of products in stock
 																[...Array(product.countInStock).keys()].map(
 																	(x) => (
 																		<option key={x + 1} value={x + 1}>
-																			{' '}
-																			{x + 1}{' '}
+																			{x + 1}
 																		</option>
-																	)
+																	),
 																)
 															}
 														</Form.Control>
 													</Col>
-												</Row>
+												</Row> */}
 											</ListGroup.Item>
 										)
 									}
@@ -398,7 +397,7 @@ const ProductScreen = ({ match, history }) => {
 					</Row>
 				</>
 			)}
-		</>
+		</div>
 	);
 };
 

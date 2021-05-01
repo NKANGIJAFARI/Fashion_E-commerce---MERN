@@ -117,11 +117,15 @@
 // 	}
 // }
 
-.container {
-	max-width: 1300px;
-	margin: auto;
-	padding-left: 25px;
-	padding-right: 25px;
+// .container {
+// 	max-width: 1300px;
+// 	margin: auto;
+// 	padding-left: 25px;
+// 	padding-right: 25px;
+// }
+
+.productDetails {
+	padding: 7rem 2rem;
 }
 
 .productDetails__row {
@@ -496,6 +500,16 @@ input:focus {
 // }
 
 @media only screen and (max-width: 600px) {
+	.productDetails {
+		padding: 11rem 1rem;
+	}
+
+	// .card{
+
+	// }
+	.small-container {
+		padding: 0;
+	}
 	.row {
 		text-align: center;
 	}
