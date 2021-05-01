@@ -318,9 +318,11 @@ const ProductScreen = ({ match, history }) => {
 					</Row>
 					<Row>
 						<Col md={8}>
-							<h2>REVIEWS</h2>
+							<h2>PRODUCT REVIEWS</h2>
 
-							{product.reviews.length === 0 && <Message>No Reviews</Message>}
+							{product.reviews.length === 0 && (
+								<Message>No Reviews yet</Message>
+							)}
 							<ListGroup variant='flush'>
 								{product.reviews.map((review) => (
 									<ListGroup.Item key={review._id}>
@@ -335,7 +337,7 @@ const ProductScreen = ({ match, history }) => {
 								))}
 
 								<ListGroup.Item>
-									<h4>Leave a Review</h4>
+									<h4 style={{ marginBottom: '20px' }}>Leave a Review</h4>
 
 									{errorOnReviewCreate && (
 										<Message variant='danger'>{errorOnReviewCreate}</Message>
@@ -343,8 +345,12 @@ const ProductScreen = ({ match, history }) => {
 									{userInfo ? (
 										<Form onSubmit={reviewSubmitHandler}>
 											<Form.Group>
-												<Form.Label>Rating</Form.Label>
+												<Form.Label>Rating </Form.Label>
 												<Form.Control
+													style={{
+														display: 'inline-block',
+														marginLeft: '10px',
+													}}
 													as='select'
 													value={rating}
 													onChange={(e) => setRating(e.target.value)}>

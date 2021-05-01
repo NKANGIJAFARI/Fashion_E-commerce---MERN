@@ -24,6 +24,11 @@
 		margin-top: 2rem;
 		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 	}
+
+	& textarea.form-control {
+		height: auto;
+		font-size: 1.5rem;
+	}
 }
 
 .col-2 {
@@ -259,7 +264,7 @@ input:focus {
 
 @media only screen and (max-width: 600px) {
 	.productDetails {
-		padding: 11rem 1rem;
+		padding: 11rem 1rem 2rem;
 		overflow-x: hidden;
 
 		&__cartCard {
