@@ -231,7 +231,7 @@ const ProductScreen = ({ match, history }) => {
 								</ListGroup.Item>
 							</ListGroup>
 						</Col>
-						<Col md={3} sm={12}>
+						<Col md={3} sm={12} className='productDetails__cartCard'>
 							<Card>
 								<ListGroup variant='flush'>
 									<ListGroup.Item>
@@ -316,7 +316,7 @@ const ProductScreen = ({ match, history }) => {
 							</Card>
 						</Col>
 					</Row>
-					<Row style={{ padding: '50px' }}>
+					<Row>
 						<Col md={8}>
 							<h2>REVIEWS</h2>
 

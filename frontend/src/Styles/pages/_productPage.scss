@@ -126,6 +126,15 @@
 
 .productDetails {
 	padding: 7rem 2rem;
+
+	& select {
+		max-width: 100px;
+		font-size: 1.5rem;
+	}
+
+	&__cartCard {
+		padding: 0px;
+	}
 }
 
 .productDetails__row {
@@ -502,6 +511,11 @@ input:focus {
 @media only screen and (max-width: 600px) {
 	.productDetails {
 		padding: 11rem 1rem;
+		overflow-x: hidden;
+
+		&__cartCard {
+			padding: 0px 15px;
+		}
 	}
 
 	// .card{
