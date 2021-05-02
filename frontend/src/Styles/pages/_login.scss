@@ -1,8 +1,27 @@
 .login {
-	padding: 7rem 0px 1rem;
+	padding: 1rem 0px 1rem;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+
+	& svg {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 0;
+	}
+
+	& form {
+		width: auto;
+		min-width: 300px;
+		max-width: 350px;
+		z-index: 1;
+	}
+
+	& .options {
+		z-index: 1;
+	}
 }

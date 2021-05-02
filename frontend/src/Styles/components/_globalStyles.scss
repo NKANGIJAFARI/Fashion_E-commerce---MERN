@@ -1,22 +1,18 @@
 input {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	border-radius: 7px;
 	border: none;
 	width: 98%;
 	display: block;
 	transition: all 0.3s;
-
 	padding: 12px 10px;
-	color: #eee;
-	background: #373233;
+	color: black;
+	background: #e7f4fa;
 	margin-bottom: 7px;
 	outline: none;
 	line-height: 24px;
-	width: 98%;
+	width: 100%;
 
-	// @include respond(tab-port) {
-	//   width: 100%;
-	// }
 	&--sm {
 		padding: 0.3rem 0.2rem 0.3rem 0.9rem;
 	}
