@@ -24,51 +24,59 @@ const ShippingScreen = ({ history }) => {
 	};
 
 	return (
-		<FormContainer>
+		<div className='shipping'>
 			<CheckOutSteps step1 step2 />
 			<h1>Shipping</h1>
-			<Form onSubmit={onsubmitHandler}>
-				<Form.Group controlId='address'>
-					<Form.Label>Enter Address</Form.Label>
-					<Form.Control
+			<form onSubmit={onsubmitHandler}>
+				<div>
+					<label htmlFor='address'>Enter Address</label>
+					<input
 						type='text'
 						placeholder='Enter Your Address'
 						value={address}
 						required
-						onChange={(e) => setAddress(e.target.value)}></Form.Control>
-				</Form.Group>
-				<Form.Group controlId='city'>
-					<Form.Label>Enter City</Form.Label>
-					<Form.Control
+						name='address'
+						id='address'
+						onChange={(e) => setAddress(e.target.value)}></input>
+				</div>
+				<div>
+					<label htmlFor='city'>Enter City</label>
+					<input
 						type='text'
 						placeholder='Enter Your City'
 						value={city}
 						required
-						onChange={(e) => setCity(e.target.value)}></Form.Control>
-				</Form.Group>
-				<Form.Group controlId='postalCode'>
-					<Form.Label>Postal Code</Form.Label>
-					<Form.Control
+						name='city'
+						id='city'
+						onChange={(e) => setCity(e.target.value)}></input>
+				</div>
+				<div>
+					<label htmlFor='postalCode'>Postal Code</label>
+					<input
 						type='text'
 						placeholder='Enter Postal Code'
 						value={postalCode}
 						required
-						onChange={(e) => setPostalCode(e.target.value)}></Form.Control>
-				</Form.Group>
-				<Form.Group controlId='country'>
-					<Form.Label>Country</Form.Label>
-					<Form.Control
+						name='postalCode'
+						id='postalCode'
+						onChange={(e) => setPostalCode(e.target.value)}></input>
+				</div>
+				<div>
+					<label htmlFor='counrty'>Country</label>
+					<input
 						type='text'
 						placeholder='Enter Your Country'
 						value={country}
 						required
-						onChange={(e) => setCountry(e.target.value)}></Form.Control>
-				</Form.Group>
+						name='country'
+						id='country'
+						onChange={(e) => setCountry(e.target.value)}></input>
+				</div>
 				<Button type='submit' variant='primary'>
 					Continue
 				</Button>
-			</Form>
-		</FormContainer>
+			</form>
+		</div>
 	);
 };
 
