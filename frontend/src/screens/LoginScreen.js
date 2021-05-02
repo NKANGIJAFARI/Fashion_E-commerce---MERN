@@ -37,43 +37,41 @@ const LoginScreen = ({ location, history }) => {
 	};
 	return (
 		//Form container is a component, and inside details are the children
-		<FormContainer>
+		<div className='login'>
 			<h1>Sign In</h1>
 
 			{error && <Message variant='danger'>{error}</Message>}
 			{loading && <Loader />}
-			<Form onSubmit={submitHandler}>
-				<Form.Group controlId='email'>
-					<Form.Label>Email Address</Form.Label>
-					<Form.Control
-						type='email'
-						placeholder='Enter Your Email'
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}></Form.Control>
-				</Form.Group>
-				<Form.Group controlId='password'>
-					<Form.Label>Password</Form.Label>
-					<Form.Control
-						type='password'
-						placeholder='Enter Your Password'
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}></Form.Control>
-				</Form.Group>
+			<form onSubmit={submitHandler}>
+				<label htmlFor='email'>Email Address</label>
+				<input
+					type='email'
+					id='email'
+					placeholder='Enter Your Email'
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}></input>
+
+				<label htmlFor='password'>Password</label>
+				<input
+					type='password'
+					placeholder='Enter Your Password'
+					value={password}
+					onChange={(e) => setPassword(e.target.value)}></input>
 
 				<Button type='submit' variant='primary'>
 					Sign In
 				</Button>
-			</Form>
+			</form>
 
-			<Row className='py-3'>
-				<Col>
+			<div className='py-3'>
+				<div>
 					New Customer?
 					<Link to={userInfo ? `/register?redirect=${redirect}` : '/register'}>
 						Register
 					</Link>
-				</Col>
-			</Row>
-		</FormContainer>
+				</div>
+			</div>
+		</div>
 	);
 };
 
