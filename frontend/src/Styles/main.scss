@@ -10,10 +10,13 @@
 @import './pages/cart';
 @import './pages/productPage';
 @import './pages/shop';
+@import './pages/loginRegisterShipping';
+
 @import './Layout/headings';
 @import './Layout/footer';
 @import './Layout/navbar';
 
+@import './components/globalStyles';
 @import './components/searchbox';
 @import './components/button';
 @import './components/carousel';

@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
 			if (existItem.quantity === countInStock) {
 				if (
 					window.confirm(
-						`Only ${countInStock} left in stock are in your cart, proceed to checkout `
+						`Only ${countInStock} left in stock are in your cart, proceed to checkout `,
 					)
 				) {
 					history.push('/cart');
@@ -39,7 +39,7 @@ const ProductCard = ({ product }) => {
 		if (existItem && existItem !== 0) {
 			if (
 				window.confirm(
-					`Exists ${existItem.quantity}times in your cart, Add anyway `
+					`Exists ${existItem.quantity}times in your cart, Add anyway `,
 				)
 			) {
 				quantity = existItem.quantity + 1;

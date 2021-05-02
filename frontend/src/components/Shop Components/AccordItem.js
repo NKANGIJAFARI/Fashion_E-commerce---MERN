@@ -4,21 +4,25 @@ import PriceFilter from './PriceFilter';
 import BrandFilter from './BrandFilter';
 import ColorFilter from './ColorFilter';
 import SizeFilter from './SizeFilter';
+import GenderFilter from './GenderFilter';
 
 const AccordItem = () => {
 	return (
 		<div>
 			<Accordion defaultActiveKey='0'>
-				<CardItem headerText='Sizes' eventKey='0'>
+				<CardItem headerText='Gender' eventKey='0'>
+					<GenderFilter />
+				</CardItem>
+				<CardItem headerText='Sizes' eventKey='1'>
 					<SizeFilter />
 				</CardItem>
-				<CardItem headerText='Brand' eventKey='1'>
+				<CardItem headerText='Brand' eventKey='2'>
 					<BrandFilter />
 				</CardItem>
-				<CardItem headerText='Color' eventKey='2'>
+				<CardItem headerText='Color' eventKey='3'>
 					<ColorFilter />
 				</CardItem>
-				<CardItem headerText='Price' eventKey='3'>
+				<CardItem headerText='Price' eventKey='4'>
 					<PriceFilter />
 				</CardItem>
 			</Accordion>

@@ -1,4 +1,9 @@
 .filter {
+	&__gender {
+		& input {
+			margin-right: 6px;
+		}
+	}
 	&__size,
 	&__color {
 		display: flex;
