@@ -20,7 +20,7 @@ const PlaceOrderScreen = ({ history }) => {
 	};
 
 	cart.itemsPrice = addDecimals(
-		cart.cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)
+		cart.cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0),
 	);
 
 	cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
@@ -30,7 +30,7 @@ const PlaceOrderScreen = ({ history }) => {
 			Number(cart.itemsPrice) +
 			Number(cart.shippingPrice) +
 			Number(cart.taxPrice)
-		).toFixed(2)
+		).toFixed(2),
 	);
 	//=====================================================================================
 
@@ -57,12 +57,12 @@ const PlaceOrderScreen = ({ history }) => {
 			createOrder({
 				orderItems: cart.cartItems,
 				shippingAddress: cart.shippingAddress,
-				paymentMethod: cart.paymentMethod,
+				paymentMethod: 'PayPal',
 				itemsPrice: cart.itemsPrice,
 				taxPrice: cart.taxPrice,
 				shippingPrice: cart.shippingPrice,
 				totalPrice: cart.totalPrice,
-			})
+			}),
 		);
 	};
 	//=====================================================================================================
