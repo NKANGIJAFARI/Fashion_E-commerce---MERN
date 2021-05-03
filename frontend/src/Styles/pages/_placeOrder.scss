@@ -23,6 +23,25 @@
 	}
 }
 
+@media only screen and (max-width: 768px) {
+	.placeOrder {
+		&__details {
+			&--imgWrapper {
+				width: 20%;
+				height: 8rem;
+			}
+
+			&--name {
+				width: 35%;
+			}
+
+			&--price {
+				width: 45%;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.placeOrder {
 		padding: 14rem 0rem 2rem;
