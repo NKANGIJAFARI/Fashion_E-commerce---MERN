@@ -13,8 +13,6 @@ const PlaceOrderScreen = ({ history }) => {
 	const cart = useSelector((state) => state.cart);
 	const { userInfo } = useSelector((state) => state.userLogin);
 
-	console.log('user', userInfo);
-
 	//Calculate Prices-------------------------------------------------------------------------------
 
 	//Add decimals
@@ -74,7 +72,7 @@ const PlaceOrderScreen = ({ history }) => {
 		<div className='placeOrder'>
 			<CheckOutSteps step1 step2 step3 step4 />
 			<Row>
-				<Col md={8}>
+				<Col md={8} className='placeOrder__details'>
 					<ListGroup variant='flush'>
 						<ListGroup.Item>
 							<h2>Shipping Details</h2>
@@ -116,23 +114,18 @@ const PlaceOrderScreen = ({ history }) => {
 								<ListGroup>
 									{cart.cartItems.map((item, index) => (
 										<ListGroup.Item key={index}>
-											<Row>
-												<Col md={1}>
-													<Image
-														src={item.image}
-														alt={item.name}
-														fluid
-														rounded
-													/>
+											<Row className='placeOrder__details'>
+												<Col md={2} className='placeOrder__details--imgWrapper'>
+													<img src={item.image} alt={item.name} />
 												</Col>
-												<Col>
+												<Col md={4} className='placeOrder__details--name'>
 													<Link to={`/products/${item.product}`}>
 														{item.name}
 													</Link>
 												</Col>
-												<Col md={4}>
+												<Col md={6} className='placeOrder__details--price'>
 													{item.quantity} x ${item.price} = $
-													{item.quantity * item.price}
+													{addDecimals(item.quantity * item.price)}
 												</Col>
 											</Row>
 										</ListGroup.Item>
