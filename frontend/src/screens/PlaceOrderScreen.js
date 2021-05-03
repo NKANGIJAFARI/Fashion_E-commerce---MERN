@@ -78,7 +78,24 @@ const PlaceOrderScreen = ({ history }) => {
 					<ListGroup variant='flush'>
 						<ListGroup.Item>
 							<h2>Shipping Details</h2>
-
+							{userInfo.name && (
+								<p>
+									<strong>Name:</strong>
+									{userInfo.name}
+								</p>
+							)}
+							{userInfo.email && (
+								<p>
+									<strong>Email:</strong>
+									{userInfo.email}
+								</p>
+							)}
+							{userInfo.phone && (
+								<p>
+									<strong>Phone No.:</strong>
+									{userInfo.phone}
+								</p>
+							)}
 							<p>
 								<strong>Address:</strong>
 								{cart.shippingAddress.address},{cart.shippingAddress.city},
