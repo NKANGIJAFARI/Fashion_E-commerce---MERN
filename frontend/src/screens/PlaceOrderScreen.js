@@ -11,6 +11,9 @@ const PlaceOrderScreen = ({ history }) => {
 
 	//Get items from the cart
 	const cart = useSelector((state) => state.cart);
+	const { userInfo } = useSelector((state) => state.userLogin);
+
+	console.log('user', userInfo);
 
 	//Calculate Prices-------------------------------------------------------------------------------
 
@@ -74,7 +77,8 @@ const PlaceOrderScreen = ({ history }) => {
 				<Col md={8}>
 					<ListGroup variant='flush'>
 						<ListGroup.Item>
-							<h2>Shipping</h2>
+							<h2>Shipping Details</h2>
+
 							<p>
 								<strong>Address:</strong>
 								{cart.shippingAddress.address},{cart.shippingAddress.city},
@@ -82,8 +86,9 @@ const PlaceOrderScreen = ({ history }) => {
 							</p>
 						</ListGroup.Item>
 						<ListGroup.Item>
-							<h2>Payment Method</h2>
-							{cart.paymentMethod}
+							{/* <h2>Payment Method</h2> */}
+							{/* {cart.paymentMethod}
+							PayPal */}
 						</ListGroup.Item>
 
 						<ListGroup.Item>
