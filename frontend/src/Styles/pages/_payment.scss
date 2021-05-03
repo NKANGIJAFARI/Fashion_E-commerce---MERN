@@ -1,0 +1,20 @@
+.payment {
+	padding: 15rem 0px 1rem;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+
+	& svg {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 0;
+	}
+
+	& .nav-item {
+		margin-right: 0rem;
+	}
+}
