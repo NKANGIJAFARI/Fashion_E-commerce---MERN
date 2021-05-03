@@ -68,7 +68,7 @@ const PlaceOrderScreen = ({ history }) => {
 	//=====================================================================================================
 
 	return (
-		<>
+		<div className='placeOrder'>
 			<CheckOutSteps step1 step2 step3 step4 />
 			<Row>
 				<Col md={8}>
@@ -166,7 +166,7 @@ const PlaceOrderScreen = ({ history }) => {
 					</Card>
 				</Col>
 			</Row>
-		</>
+		</div>
 	);
 };
 
