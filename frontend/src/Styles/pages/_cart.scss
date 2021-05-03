@@ -6,6 +6,9 @@
 
 	&__row {
 		padding: 2rem 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0px;
 	}
 
 	&__left {
