@@ -24,7 +24,7 @@ const SearchBox = ({ history, showOrHide }) => {
 		if (!keyword && showOrHideSearch) {
 			setTimeout(() => {
 				setSearchStatus(false);
-			}, 6000);
+			}, 226000);
 		}
 	}, [keyword, showOrHideSearch]);
 

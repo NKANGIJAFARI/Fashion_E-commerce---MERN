@@ -46,11 +46,76 @@ input {
 	}
 }
 
-.btn {
+.btn,
+button,
+.button {
+	// font-size: 1.5rem;
+	// padding: 6px 15px;
+	margin: 0px;
 	font-size: 1.5rem;
-	padding: 6px 15px;
+	padding: 0.6rem 2.5rem;
+	outline: none;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 20px;
 
 	&:hover {
 		color: white;
+		opacity: 0.8;
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
 	}
 }
+
+////////////////////////////////////////
+// BUTTON INLINE
+.btn-inline {
+	border: none;
+	color: var(--color-primary);
+	font-size: inherit;
+	display: inline-block;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.2s;
+	padding: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	& span {
+		margin-left: 3px;
+		padding: 0px 0px;
+		font-size: 2.7rem;
+		transition: margin-left 0.2s;
+		color: var(--color-black);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&:hover {
+		color: var(--color-black);
+		animation: pulsate 1s infinite;
+
+		span {
+			margin-left: 8px;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+// .btn__primary {
+// 	font-size: 1.6rem;
+// 	padding: 0.6rem 2.4rem;
+// 	border-radius: 1rem;
+// 	outline: none;
+// 	background-color: #444;
+// 	color: white;
+// }
