@@ -135,6 +135,9 @@ const ProfileScreen = ({ history }) => {
 						<Button type='submit' variant='primary'>
 							Update
 						</Button>
+						<Button type='submit' variant='primary' onClick={handleEditClick}>
+							Cancel
+						</Button>
 					</form>
 				)}
 			</Col>
