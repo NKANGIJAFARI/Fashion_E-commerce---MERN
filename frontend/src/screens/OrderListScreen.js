@@ -26,7 +26,7 @@ const OrderListScreen = ({ history }) => {
 	}, [dispatch, history, userInfo]);
 
 	return (
-		<>
+		<div className='orderList'>
 			{loading ? (
 				<Loader />
 			) : error ? (
@@ -87,7 +87,7 @@ const OrderListScreen = ({ history }) => {
 					</tbody>
 				</Table>
 			)}
-		</>
+		</div>
 	);
 };
 

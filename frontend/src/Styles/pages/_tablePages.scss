@@ -1,0 +1,12 @@
+.productList,
+.userList,
+.orderList {
+	padding: 8rem 2rem 2rem;
+	min-height: 100vh;
+
+	& .table thead th {
+		vertical-align: bottom;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+		font-size: 1.5rem;
+	}
+}
