@@ -84,13 +84,13 @@ const ProductCard = ({ product }) => {
 
 				<li>
 					{product && product.countInStock !== 0 && (
-						<button
+						<div
 							className='productCard__options--link'
 							onClick={() => {
 								addToCartHandler(product._id, product.countInStock);
 							}}>
 							<i className='fas fa-cart-plus'></i>
-						</button>
+						</div>
 					)}
 				</li>
 

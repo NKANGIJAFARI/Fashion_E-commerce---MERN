@@ -25,7 +25,7 @@
 	height: fit-content;
 	font-size: 1.6rem;
 	margin: 0px;
-	padding: 12px 10px;
+	padding: 15px 10px 10px;
 	display: block;
 	line-height: 0;
 	background-color: transparent;
@@ -233,21 +233,17 @@
 	.navigation {
 		padding: 10px;
 	}
-	.fix-nav {
-		height: 94px;
-	}
 }
 @media (max-width: 400px) {
 	.navbar {
 		padding: 10px 2px;
 	}
-}
 
-@media (max-width: 320px) {
 	.dropbtn__name span {
 		display: none;
 	}
 }
+
 .right-menu {
 	display: flex;
 	flex-direction: row;

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Message from '../components/Message';
 import CheckOutSteps from '../components/CheckOutSteps';
 import { createOrder } from '../actions/orderActions';
+import { resetCart } from '../actions/cartActions';
 
 const PlaceOrderScreen = ({ history }) => {
 	const dispatch = useDispatch();
@@ -35,16 +36,17 @@ const PlaceOrderScreen = ({ history }) => {
 	);
 	//=====================================================================================
 
-	/* Whenever the order is successful, PlaceOrderHandler will dispatch the order
-	info and the order reducer will give success a true as the value, and then that 
-	value will be passed on to the orderCreate state which we shall get  by the 
-	useSelector below, and then use UseEffect to check for changes of success so to
-	redirect user to order infromation*/
+	/* Whenever the order is successfully created, the order reducer will 
+	give success true as the value, and then that value will be passed on
+	to the orderCreate state which we shall get  by the useSelector below,
+	and then use UseEffect to check for changes of success, if true,redirect
+	user to order infromation on order screen*/
 	const orderCreate = useSelector((state) => state.orderCreate);
 	const { order, success, error } = orderCreate;
 
 	useEffect(() => {
 		if (success) {
+			dispatch(resetCart());
 			history.push(`/order/${order._id}`);
 		}
 		// eslint-disable-next-line
@@ -54,6 +56,11 @@ const PlaceOrderScreen = ({ history }) => {
 
 	//Functionality to manage orders -----------------------------------------------
 	const placeOrderHandler = () => {
+		if (!cart.shippingAddress) {
+			history.push('/shipping');
+			return;
+		}
+
 		dispatch(
 			createOrder({
 				orderItems: cart.cartItems,

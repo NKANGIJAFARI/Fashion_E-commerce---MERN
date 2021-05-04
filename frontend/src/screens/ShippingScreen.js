@@ -17,7 +17,7 @@ const ShippingScreen = ({ history }) => {
 	const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
 	const [country, setCountry] = useState(shippingAddress.country);
 
-	const onsubmitHandler = (e) => {
+	const submitHandler = (e) => {
 		e.preventDefault();
 		dispatch(saveShippingAddress({ address, city, postalCode, country }));
 		history.push('/placeorder');
@@ -29,11 +29,11 @@ const ShippingScreen = ({ history }) => {
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>
 				<path
 					fill='#F1607D'
-					fill-opacity='1'
+					fillOpacity='1'
 					d='M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,240C840,256,960,256,1080,245.3C1200,235,1320,213,1380,202.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'></path>
 			</svg>
 			<h1>Shipping</h1>
-			<form onSubmit={onsubmitHandler}>
+			<form onSubmit={submitHandler}>
 				<div>
 					<label htmlFor='address'>Enter Address</label>
 					<input

@@ -49,7 +49,7 @@ const ShopScreen = () => {
 		<section className='section section__allProducts'>
 			<SectionHeading desc='Products' />
 			<div className='allProducts__filterBtn ' onClick={toggleFilter}>
-				<i class='fas fa-filter'></i> <span>Filter</span>
+				<i className='fas fa-filter'></i> <span>Filter</span>
 			</div>
 			<div className='allProducts__wrapper'>
 				<div
