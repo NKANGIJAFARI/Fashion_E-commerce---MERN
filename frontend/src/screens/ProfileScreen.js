@@ -13,6 +13,7 @@ const ProfileScreen = ({ history }) => {
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
 	const [message, setMessage] = useState(null);
+	const [profileEditing, setEditing] = useState(false);
 
 	const dispatch = useDispatch();
 
@@ -66,6 +67,12 @@ const ProfileScreen = ({ history }) => {
 			dispatch(updateUserProfile({ id: userInfo._id, name, email, password }));
 		}
 	};
+
+	//This handles the edit button to change to form
+	const handleEditClick = () => {
+		setEditing(!profileEditing);
+	};
+
 	return (
 		//Form container is a component, and inside details are the children
 		<Row className='profile'>
@@ -76,48 +83,60 @@ const ProfileScreen = ({ history }) => {
 				{success && <Message variant='success'>{'Profile Updated'}</Message>}
 				{loading && <Loader />}
 
-				<form onSubmit={submitHandler}>
+				{userInfo && !profileEditing && (
 					<div>
-						<label htmlFor='name'>Enter Name</label>
-						<input
-							id='name'
-							type='text'
-							placeholder='Enter Your Name'
-							value={name}
-							onChange={(e) => setName(e.target.value)}></input>
+						<p>{name}</p>
+						<p>{email}</p>
+						<Button type='submit' variant='primary' onClick={handleEditClick}>
+							Edit Profile
+						</Button>
 					</div>
-					<div>
-						<label htmlFor='email'>Email Address</label>
-						<input
-							id='email'
-							type='email'
-							placeholder='Enter Your Email'
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}></input>
-					</div>
-					<div>
-						<label htmlFor='password'>Password</label>
-						<input
-							id='password'
-							type='password'
-							placeholder='Enter Your Password'
-							value={password}
-							onChange={(e) => setPassword(e.target.value)}></input>
-					</div>
-					<div>
-						<label htmlFor='confirmPassword'>Confirm Password</label>
-						<input
-							id='confirmPassword'
-							type='password'
-							placeholder='Confirm Your Password'
-							value={confirmPassword}
-							onChange={(e) => setConfirmPassword(e.target.value)}></input>
-					</div>
+				)}
 
-					<Button type='submit' variant='primary'>
-						Update
-					</Button>
-				</form>
+				{userInfo && profileEditing && (
+					<form onSubmit={submitHandler}>
+						<div>
+							<label htmlFor='name'>Enter Name</label>
+							<input
+								id='name'
+								type='text'
+								placeholder='Enter Your Name'
+								value={name}
+								onChange={(e) => setName(e.target.value)}></input>
+						</div>
+						<div>
+							<label htmlFor='email'>Email Address</label>
+							<input
+								id='email'
+								type='email'
+								placeholder='Enter Your Email'
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}></input>
+						</div>
+						<div>
+							<label htmlFor='password'>Password</label>
+							<input
+								id='password'
+								type='password'
+								placeholder='Enter Your Password'
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}></input>
+						</div>
+						<div>
+							<label htmlFor='confirmPassword'>Confirm Password</label>
+							<input
+								id='confirmPassword'
+								type='password'
+								placeholder='Confirm Your Password'
+								value={confirmPassword}
+								onChange={(e) => setConfirmPassword(e.target.value)}></input>
+						</div>
+
+						<Button type='submit' variant='primary'>
+							Update
+						</Button>
+					</form>
+				)}
 			</Col>
 			<Col md={9}>
 				<h3>My Orders</h3>
