@@ -110,14 +110,13 @@ const OrderScreen = ({ match, history }) => {
 	};
 
 	return (
-		<>
+		<div className='order'>
 			{loading ? (
 				<Loader />
 			) : error ? (
 				<Message variant='danger'>{error}</Message>
 			) : (
 				<>
-					{' '}
 					<h2>Order ID: {order._id}</h2>
 					<Row>
 						<Col md={8}>
@@ -258,7 +257,7 @@ const OrderScreen = ({ match, history }) => {
 					</Row>
 				</>
 			)}
-		</>
+		</div>
 	);
 };
 
