@@ -58,14 +58,19 @@
 @media only screen and (max-width: 770px) {
 	.searchForm {
 		flex: 0.9 0 0;
+
+		&__inputGroup {
+			&--input {
+				position: absolute;
+				left: 0;
+				top: 57px;
+			}
+		}
 	}
 }
 
 @media only screen and (max-width: 600px) {
 	.searchForm {
-		position: absolute;
-		left: 0;
-		top: 57px;
 		width: 100%;
 		display: flex;
 		justify-content: center;
@@ -120,9 +125,6 @@
 
 @media only screen and (max-width: 400px) {
 	.searchForm {
-		position: absolute;
-		left: 0;
-		top: 57px;
 		width: 100%;
 		display: flex;
 		justify-content: center;

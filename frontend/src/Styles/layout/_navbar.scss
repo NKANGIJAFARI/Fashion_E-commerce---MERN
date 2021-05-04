@@ -241,13 +241,12 @@
 	.navbar {
 		padding: 10px 2px;
 	}
-}
 
-@media (max-width: 320px) {
 	.dropbtn__name span {
 		display: none;
 	}
 }
+
 .right-menu {
 	display: flex;
 	flex-direction: row;
