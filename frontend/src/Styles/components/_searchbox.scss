@@ -1,6 +1,5 @@
 .searchForm {
 	flex: 0.7 0 0;
-
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -17,8 +16,8 @@
 
 		& input {
 			width: 80%;
-			border-radius: 20px;
-			padding: 0.7rem 2rem;
+			border-radius: 10px;
+			padding: 0.4rem 2rem;
 			font-size: 1.6rem;
 			font-family: inherit;
 			border: none;
@@ -26,10 +25,13 @@
 			position: relative;
 			background-color: #e7f4fa;
 			transition: all 0.7s;
+			margin-bottom: 0;
+			margin: 0px;
 
 			&:focus {
 				width: 100%;
 				outline: none;
+				background-color: #e7f4fa !important;
 			}
 		}
 
