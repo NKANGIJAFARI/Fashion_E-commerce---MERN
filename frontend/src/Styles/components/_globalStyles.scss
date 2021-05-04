@@ -47,6 +47,10 @@ input {
 }
 
 .btn {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	padding: 6px 15px;
+
+	&:hover {
+		color: white;
+	}
 }

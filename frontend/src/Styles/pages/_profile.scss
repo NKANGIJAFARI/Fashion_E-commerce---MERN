@@ -4,4 +4,8 @@
 	display: flex;
 	justify-content: flex-start;
 	// flex-direction: column;
+
+	& form {
+		text-align: left;
+	}
 }
