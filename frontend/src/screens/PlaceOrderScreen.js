@@ -46,6 +46,7 @@ const PlaceOrderScreen = ({ history }) => {
 
 	useEffect(() => {
 		if (success) {
+			dispatch(resetCart());
 			history.push(`/order/${order._id}`);
 		}
 		// eslint-disable-next-line
@@ -55,6 +56,11 @@ const PlaceOrderScreen = ({ history }) => {
 
 	//Functionality to manage orders -----------------------------------------------
 	const placeOrderHandler = () => {
+		if (!cart.shippingAddress) {
+			history.push('/shipping');
+			return;
+		}
+
 		dispatch(
 			createOrder({
 				orderItems: cart.cartItems,
@@ -66,8 +72,6 @@ const PlaceOrderScreen = ({ history }) => {
 				totalPrice: cart.totalPrice,
 			}),
 		);
-
-		dispatch(resetCart());
 	};
 	//=====================================================================================================
 

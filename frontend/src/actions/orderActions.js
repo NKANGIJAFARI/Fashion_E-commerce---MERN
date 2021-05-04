@@ -4,6 +4,7 @@ import {
 	ORDER_CREATE_REQUEST,
 	ORDER_CREATE_SUCCESS,
 	ORDER_CREATE_FAIL,
+	ORDER_CREATE_RESET,
 	ORDER_DETAILS_REQUEST,
 	ORDER_DETAILS_SUCCESS,
 	ORDER_DETAILS_FAIL,
@@ -78,7 +79,14 @@ export const getOrderDetails = (orderId) => async (dispatch, getState) => {
         the token from that user info */
 		const {
 			userLogin: { userInfo },
+			cart,
 		} = getState();
+
+		console.log(localStorage.getItem('shippingAddress'));
+
+		dispatch({
+			type: ORDER_CREATE_RESET,
+		});
 
 		//Then the config, specify the type of content to send
 		//from the body and the token because its a protected route at the backend
@@ -114,7 +122,7 @@ export const getOrderDetails = (orderId) => async (dispatch, getState) => {
 
 export const payOrder = (orderId, paymentResult) => async (
 	dispatch,
-	getState
+	getState,
 ) => {
 	try {
 		dispatch({
@@ -140,7 +148,7 @@ export const payOrder = (orderId, paymentResult) => async (
 		const { data } = await axios.put(
 			`/api/order/${orderId}/pay`,
 			paymentResult,
-			config
+			config,
 		);
 
 		//If the post request is successful, data will be filled with the response
@@ -188,7 +196,7 @@ export const deliverOrder = (orderId) => async (dispatch, getState) => {
 		const { data } = await axios.put(
 			`/api/order/${orderId}/deliver`,
 			{},
-			config
+			config,
 		);
 
 		//If the post request is successful, data will be filled with the response
