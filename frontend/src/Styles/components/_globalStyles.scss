@@ -45,3 +45,12 @@ input {
 		color: black;
 	}
 }
+
+.btn {
+	font-size: 1.5rem;
+	padding: 6px 15px;
+
+	&:hover {
+		color: white;
+	}
+}

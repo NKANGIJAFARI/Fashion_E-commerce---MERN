@@ -1,12 +1,22 @@
-.placeOrder {
+.placeOrder,
+.order {
 	padding: 10rem 0rem 2rem;
 	min-height: 100vh;
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
 
+	&__heading {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
 	&__details {
 		margin-bottom: 40px;
+
+		&--name {
+			text-align: center;
+		}
 
 		&--imgWrapper {
 			width: 100%;
@@ -24,7 +34,8 @@
 }
 
 @media only screen and (max-width: 768px) {
-	.placeOrder {
+	.placeOrder,
+	.order {
 		&__details {
 			&--imgWrapper {
 				width: 20%;
@@ -43,7 +54,8 @@
 }
 
 @media only screen and (max-width: 600px) {
-	.placeOrder {
+	.placeOrder,
+	.order {
 		padding: 14rem 0rem 2rem;
 		min-height: 100vh;
 	}
