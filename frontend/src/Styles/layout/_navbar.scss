@@ -25,7 +25,7 @@
 	height: fit-content;
 	font-size: 1.6rem;
 	margin: 0px;
-	padding: 12px 10px;
+	padding: 8px 10px;
 	display: block;
 	line-height: 0;
 	background-color: transparent;
@@ -232,9 +232,6 @@
 @media (max-width: 600px) {
 	.navigation {
 		padding: 10px;
-	}
-	.fix-nav {
-		height: 94px;
 	}
 }
 @media (max-width: 400px) {

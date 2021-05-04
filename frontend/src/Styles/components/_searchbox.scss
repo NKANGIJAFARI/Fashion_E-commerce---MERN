@@ -5,6 +5,10 @@
 	align-items: center;
 	overflow: hidden;
 
+	& form {
+		width: 100%;
+	}
+
 	&__inputGroup {
 		display: flex;
 		align-items: center;
@@ -74,6 +78,16 @@
 		width: 100%;
 		display: flex;
 		justify-content: center;
+
+		&.inputShown {
+			position: absolute;
+			top: 50px;
+			width: 100%;
+
+			& form {
+				width: 90%;
+			}
+		}
 
 		&__inputGroup {
 			display: flex;
