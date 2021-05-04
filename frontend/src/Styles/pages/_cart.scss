@@ -77,6 +77,10 @@
 		position: relative;
 		padding: 10rem 0px 7rem;
 
+		&__row {
+			padding: 0px;
+		}
+
 		&__right {
 			display: flex;
 			justify-content: flex-end;
@@ -89,7 +93,7 @@
 	.cart {
 		position: relative;
 		position: relative;
-		padding: 14rem 0px 7rem;
+		padding: 10rem 0px 7rem;
 
 		&__items {
 			&--imgWrapper {

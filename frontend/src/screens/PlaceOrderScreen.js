@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Message from '../components/Message';
 import CheckOutSteps from '../components/CheckOutSteps';
 import { createOrder } from '../actions/orderActions';
+import { CART_REMOVE_ITEM, CART_RESET } from '../constants/cartConstants';
 
 const PlaceOrderScreen = ({ history }) => {
 	const dispatch = useDispatch();
@@ -45,6 +46,7 @@ const PlaceOrderScreen = ({ history }) => {
 
 	useEffect(() => {
 		if (success) {
+			resetCart();
 			history.push(`/order/${order._id}`);
 		}
 		// eslint-disable-next-line

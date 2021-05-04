@@ -41,6 +41,12 @@ export const removeFromCart = (productId) => async (dispatch, getState) => {
 	localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
 };
 
+export const resetCart = () => {
+	dispatch(CART_RESET);
+
+	localStorage.removeItem('cartItems');
+};
+
 /*-------------------------------------------------------------*/
 //Save shipping address
 
