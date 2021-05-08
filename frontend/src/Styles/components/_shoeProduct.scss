@@ -1,7 +1,16 @@
+.shoeProductCards {
+	width: 100%;
+	padding: 0px 7rem;
+	display: grid;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 .box-1,
 .box-2,
 .box-3 {
-	width: 230px;
 	height: 370px;
 	background-size: cover;
 	margin: 0px 50px;
@@ -90,4 +99,105 @@
 .cart-btn a:hover {
 	color: #1d1d1d;
 	transition: all ease 0.2s;
+}
+
+@media only screen and (max-width: 1150px) {
+	.shoeProductCards {
+		padding: 0rem 2rem 6rem 2rem;
+	}
+
+	.box-1,
+	.box-2,
+	.box-3 {
+		height: 370px;
+		margin: 0px 40px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.shoeProductCards {
+		padding: 0px;
+		padding-bottom: 6rem;
+	}
+
+	.box-1,
+	.box-2,
+	.box-3 {
+		height: 330px;
+		margin: 0px 16px;
+
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.shoeProductCards {
+		padding: 0px 4rem;
+		padding-bottom: 6rem;
+	}
+
+	.box-1,
+	.box-2,
+	.box-3 {
+		height: 320px;
+		margin: 0px 10px;
+	}
+
+	.product-img img {
+		width: 28rem;
+		transform: rotate(52deg);
+	}
+	.product-img {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		align-items: center;
+		height: 84%;
+	}
+}
+
+@media only screen and (max-width: 515px) {
+	.price {
+		right: 16%;
+		top: 51%;
+	}
+	.product-img img {
+		width: 30rem;
+		transform: rotate(52deg);
+	}
+	.product-img {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		align-items: center;
+		height: 92%;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.shoeProductCards {
+		padding: 0px 6rem;
+		padding-bottom: 6rem;
+	}
+
+	.box-1,
+	.box-2,
+	.box-3 {
+		height: 320px;
+		margin: 0px 10px;
+	}
+
+	.product-img img {
+		width: 27rem;
+		transform: rotate(52deg);
+	}
+	.product-img {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		align-items: center;
+		height: 92%;
+	}
 }

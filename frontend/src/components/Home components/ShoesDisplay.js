@@ -33,9 +33,9 @@ const ShoesDisplay = () => {
 	}, [dispatch]);
 
 	return (
-		<section className='section section__featuredProducts'>
+		<section className='section section__shoesProducts'>
 			<ShoesSideBanner />
-			<SectionHeading desc='Your shoes showroom' />
+			<SectionHeading desc='shoes showroom' />
 			<ShoeProductCard />
 			{loading ? (
 				<Loader />

@@ -1,25 +1,18 @@
 .hobbies {
 	&__wrapper {
-		width: 100%;
-		height: 40rem;
-		max-height: 50rem;
-
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
 		position: relative;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-gap: 8rem;
+		padding: 0px 9rem;
 	}
 
 	&__item {
-		width: 100%;
-		height: 100%;
 		position: relative;
 		flex: 1;
 
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		flex-direction: column;
 
 		&--image {
@@ -39,11 +32,11 @@
 			background-color: #e7f4fa;
 
 			&-fitness {
-				left: 47px;
+				left: 0px;
 			}
 
 			&-travel {
-				right: 4.7rem;
+				right: 0rem;
 			}
 		}
 	}
@@ -62,6 +55,60 @@
 		&-travel {
 			left: 0;
 			background: green;
+		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.hobbies {
+		&__wrapper {
+			grid-gap: 4rem;
+			padding: 0px 5rem;
+		}
+
+		&__item {
+			&--btn {
+				position: absolute;
+				z-index: 100;
+				bottom: 0;
+				font-size: 1.6rem;
+				padding: 0px 2px;
+
+				&-fitness {
+					left: 0.5rem;
+				}
+
+				&-travel {
+					right: 0.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.hobbies {
+		&__wrapper {
+			grid-gap: 2rem;
+			padding: 0px 2rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.hobbies {
+		&__wrapper {
+			grid-gap: 0rem;
+			padding: 0px 0rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.hobbies {
+		&__wrapper {
+			grid-gap: 2rem;
+			padding: 0px 0rem;
 		}
 	}
 }

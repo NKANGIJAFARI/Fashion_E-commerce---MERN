@@ -1,0 +1,12 @@
+.profile {
+	padding: 8rem 0rem 2rem;
+	min-height: 100vh;
+	display: flex;
+	justify-content: flex-start;
+	// flex-direction: column;
+
+	& form {
+		text-align: left;
+		margin-bottom: 40px;
+	}
+}

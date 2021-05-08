@@ -6,7 +6,7 @@ const Rating = ({ value, text, color }) => {
 		<div>
 			<span>
 				<i
-					style={{ color, fontSize: '18px' }}
+					style={{ color: '#ffa500', fontSize: '14px' }}
 					className={
 						value >= 1
 							? 'fas fa-star'
@@ -17,7 +17,7 @@ const Rating = ({ value, text, color }) => {
 			</span>
 			<span>
 				<i
-					style={{ color, fontSize: '18px' }}
+					style={{ color: '#ffa500', fontSize: '14px' }}
 					className={
 						value >= 2
 							? 'fas fa-star'
@@ -28,7 +28,7 @@ const Rating = ({ value, text, color }) => {
 			</span>
 			<span style={{}}>
 				<i
-					style={{ color, fontSize: '18px' }}
+					style={{ color: '#ffa500', fontSize: '14px' }}
 					className={
 						value >= 3
 							? 'fas fa-star'
@@ -39,7 +39,7 @@ const Rating = ({ value, text, color }) => {
 			</span>
 			<span>
 				<i
-					style={{ color, fontSize: '18px' }}
+					style={{ color: '#ffa500', fontSize: '14px' }}
 					className={
 						value >= 4
 							? 'fas fa-star'
@@ -50,7 +50,7 @@ const Rating = ({ value, text, color }) => {
 			</span>
 			<span>
 				<i
-					style={{ color, fontSize: '18px' }}
+					style={{ color: '#ffa500', fontSize: '14px' }}
 					className={
 						value >= 5
 							? 'fas fa-star'

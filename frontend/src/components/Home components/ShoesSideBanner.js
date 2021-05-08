@@ -2,20 +2,18 @@ import React from 'react';
 
 const ShoesSideBanner = () => {
 	return (
-		<section className='section section__shoesBanner'>
-			<div className='shoeBanner'>
-				<ShoesSideBannerItem
-					imageSrc='/images/shoeBanner-man.png'
-					desc="Men's Shoes"
-					type='men'
-				/>
-				<ShoesSideBannerItem
-					imageSrc='/images/shoeBanner-woman2.png'
-					desc="Women's Shoes"
-					type='women'
-				/>
-			</div>
-		</section>
+		<div className='shoeBanner'>
+			<ShoesSideBannerItem
+				imageSrc='/images/shoeBanner-man.png'
+				desc="Men's Shoes"
+				type='men'
+			/>
+			<ShoesSideBannerItem
+				imageSrc='/images/shoeBanner-woman2.png'
+				desc="Women's Shoes"
+				type='women'
+			/>
+		</div>
 	);
 };
 
@@ -30,7 +28,7 @@ const ShoesSideBannerItem = ({ imageSrc, desc, type }) => {
 				className={`shoeBanner__item--details shoeBanner__item--details-${type}`}>
 				<h2>{type.toUpperCase()} Shoes</h2>
 				<p className='shoeBanner__item--desc'>Upto 25% Off On First Purchase</p>
-				<button className='btn__primary shoeBanner__item--btn'>
+				<button className='shoeBanner__item--btn'>
 					<i className='fas fa-shopping-cart'></i> Shop now
 				</button>
 			</div>

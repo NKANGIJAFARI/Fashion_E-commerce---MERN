@@ -7,7 +7,6 @@
 
 	&__content {
 		margin-left: 8rem;
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -24,5 +23,41 @@
 	& button {
 		border-radius: 1px;
 		align-self: flex-start;
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	.girlBanner {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 35rem;
+
+		&__content {
+			margin-left: 0;
+			align-items: end;
+			justify-content: center;
+			border-radius: 20px;
+			background: #f1f9fc;
+			padding: 10px;
+			left: 0px;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+		}
+		& h2 {
+			font-size: 2rem;
+			letter-spacing: 2px;
+		}
+
+		& p {
+			font-size: 1.6rem;
+		}
+
+		& button {
+			border-radius: 1px;
+			align-self: flex-start;
+		}
 	}
 }

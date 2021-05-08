@@ -21,6 +21,7 @@ import {
 	ORDERS_DELIVER_SUCCESS,
 	ORDERS_DELIVER_FAIL,
 	ORDERS_DELIVER_RESET,
+	ORDER_CREATE_RESET,
 } from '../constants/orderConstants';
 
 //=========================================================================
@@ -43,6 +44,8 @@ export const orderCreateReducer = (state = {}, action) => {
 				loading: false,
 				error: action.payload,
 			};
+		case ORDER_CREATE_RESET:
+			return { loading: false, success: false };
 		default:
 			return state;
 	}
@@ -54,7 +57,7 @@ export const orderCreateReducer = (state = {}, action) => {
 
 export const orderDetailsReducer = (
 	state = { loading: true, orderItems: [], shippingAddress: {} },
-	action
+	action,
 ) => {
 	switch (action.type) {
 		case ORDER_DETAILS_REQUEST:

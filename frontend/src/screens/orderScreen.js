@@ -109,18 +109,22 @@ const OrderScreen = ({ match, history }) => {
 		deliverOrder(orderId);
 	};
 
+	//Add decimals and remove continous decimals on prices
+	const addDecimals = (number) => {
+		return (Math.round(number * 100) / 100).toFixed(2);
+	};
+
 	return (
-		<>
+		<div className='order'>
 			{loading ? (
 				<Loader />
 			) : error ? (
 				<Message variant='danger'>{error}</Message>
 			) : (
 				<>
-					{' '}
-					<h2>Order ID: {order._id}</h2>
+					<h2 className='order__heading'>Order ID: {order._id}</h2>
 					<Row>
-						<Col md={8}>
+						<Col md={8} className='order__details'>
 							<ListGroup variant='flush'>
 								<ListGroup.Item>
 									<h3>Shipping Details</h3>
@@ -167,22 +171,17 @@ const OrderScreen = ({ match, history }) => {
 											{order.orderItems.map((item, index) => (
 												<ListGroup.Item key={index}>
 													<Row>
-														<Col md={1}>
-															<Image
-																src={item.image}
-																alt={item.name}
-																fluid
-																rounded
-															/>
+														<Col md={1} className='order__details--imgWrapper'>
+															<img src={item.image} alt={item.name} />
 														</Col>
-														<Col>
+														<Col className='order__details--name'>
 															<Link to={`/products/${item.product}`}>
 																{item.name}
 															</Link>
 														</Col>
-														<Col md={4}>
+														<Col md={4} className='order__details--price'>
 															{item.quantity} x ${item.price} = $
-															{item.quantity * item.price}
+															{addDecimals(item.quantity * item.price)}
 														</Col>
 													</Row>
 												</ListGroup.Item>
@@ -201,13 +200,13 @@ const OrderScreen = ({ match, history }) => {
 									<ListGroup.Item>
 										<Row>
 											<Col>Items Price</Col>
-											<Col>$ {order.itemsPrice}</Col>
+											<Col>$ {addDecimals(order.itemsPrice)}</Col>
 										</Row>
 									</ListGroup.Item>
 									<ListGroup.Item>
 										<Row>
 											<Col>Tax</Col>
-											<Col>$ {order.taxPrice}</Col>
+											<Col>$ {addDecimals(order.taxPrice)}</Col>
 										</Row>
 									</ListGroup.Item>
 									<ListGroup.Item>
@@ -258,7 +257,7 @@ const OrderScreen = ({ match, history }) => {
 					</Row>
 				</>
 			)}
-		</>
+		</div>
 	);
 };
 

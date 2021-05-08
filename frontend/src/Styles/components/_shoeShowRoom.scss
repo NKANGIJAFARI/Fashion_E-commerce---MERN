@@ -1,0 +1,217 @@
+.section__shoesProducts {
+	& .owl-nav {
+		display: none;
+	}
+
+	& .nav {
+		justify-content: center;
+	}
+}
+
+.shoeBanner {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	margin-bottom: 6.5rem;
+	grid-gap: 1.5rem;
+
+	&__item {
+		height: 22rem;
+		font-size: 1.6rem;
+		color: white;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		border-radius: 2rem;
+
+		&--imgWrapper {
+			z-index: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+
+			&-men {
+				justify-content: flex-start;
+				& img {
+					width: 70%;
+					height: 22rem;
+				}
+			}
+
+			&-women {
+				justify-content: flex-end;
+
+				& img {
+					width: 70%;
+					margin-right: 20px;
+					margin-top: 15px;
+					height: 22rem;
+				}
+			}
+		}
+
+		&--details {
+			color: white;
+			display: flex;
+			flex-direction: column;
+			margin-top: 2.6rem;
+			z-index: 1;
+
+			&-men {
+				align-items: flex-end;
+				margin-right: 4rem;
+			}
+
+			&-women {
+				margin-left: 4rem;
+				align-items: flex-start;
+			}
+			& h2 {
+				font-size: 1.8rem;
+				color: inherit;
+			}
+
+			& p {
+				font-size: 1.6rem;
+			}
+
+			& button {
+				margin-top: 2rem;
+			}
+		}
+
+		&--men {
+			background: #0f2027; /* fallback for old browsers */
+			background: -webkit-linear-gradient(
+				to bottom,
+				#0f2027,
+				#203a43,
+				#2c5364
+			); /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(
+				to bottom,
+				#0f2027,
+				#203a43,
+				#2c5364
+			); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+			& button {
+				margin-top: 2rem;
+				background: white;
+				color: black;
+			}
+		}
+
+		&--women {
+			right: 0;
+			align-items: flex-start;
+			background: #ff9966; /* fallback for old browsers */
+			background: -webkit-linear-gradient(
+				to bottom,
+				#ff5e62,
+				#ff9966
+			); /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(
+				to bottom,
+				#ff5e62,
+				#ff9966
+			); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+			& img {
+				top: 22px;
+				right: 5rem;
+				width: 56%;
+				height: 18.5rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.shoeBanner {
+		&__item {
+			height: 25rem;
+
+			&--imgWrapper {
+				top: 40px;
+
+				&-men {
+					& img {
+						width: 67%;
+						height: 20rem;
+					}
+				}
+
+				&-women {
+					& img {
+						width: 66%;
+						height: 17rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 630px) {
+	.shoeBanner {
+		&__item {
+			height: 25rem;
+
+			&--imgWrapper {
+				top: 0px;
+
+				&-men {
+					& img {
+						width: 65%;
+						height: 24rem;
+					}
+				}
+
+				&-women {
+					& img {
+						width: 57%;
+						height: 22rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.shoeBanner {
+		&__item {
+			height: 25rem;
+
+			&--imgWrapper {
+				top: 30px;
+
+				&-men {
+					& img {
+						width: 73%;
+						height: 21rem;
+					}
+				}
+
+				&-women {
+					& img {
+						width: 69%;
+						height: 19rem;
+					}
+				}
+			}
+
+			&--details {
+				&-women {
+					margin-left: 1.5rem;
+				}
+				&-men {
+					margin-right: 1.5rem;
+				}
+			}
+		}
+	}
+}

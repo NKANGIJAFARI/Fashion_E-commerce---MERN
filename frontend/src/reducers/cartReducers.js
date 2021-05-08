@@ -8,7 +8,7 @@ import {
 
 export const cartReducer = (
 	state = { cartItems: [], shippingAddress: {} },
-	action
+	action,
 ) => {
 	switch (action.type) {
 		//Deleted but if errors can be a reference
@@ -42,7 +42,7 @@ export const cartReducer = (
 				return {
 					...state,
 					cartItems: state.cartItems.map((x) =>
-						x.product === existItem.product ? item : x
+						x.product === existItem.product ? item : x,
 					),
 				};
 			} else {
@@ -55,14 +55,14 @@ export const cartReducer = (
 			return {
 				...state,
 				cartItems: state.cartItems.filter(
-					(item) => item.product !== action.payload
+					(item) => item.product !== action.payload,
 				),
 			};
 
 		case CART_SAVE_SHIPPING_ADDRESS:
 			return {
 				...state,
-				shippingAdress: action.payload,
+				shippingAddress: action.payload,
 			};
 		case CART_SAVE_PAYMENT_METHOD:
 			return {
@@ -71,8 +71,8 @@ export const cartReducer = (
 			};
 		case CART_RESET:
 			return {
+				...state,
 				cartItems: [],
-				shippingAddress: {},
 			};
 		default:
 			return state;

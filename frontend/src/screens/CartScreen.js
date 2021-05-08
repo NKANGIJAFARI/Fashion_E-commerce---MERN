@@ -46,10 +46,10 @@ const CartScreen = (props) => {
 	};
 
 	return (
-		<>
+		<div className='cart'>
 			<SectionHeading desc='Shopping Cart' marginB='1.5rem' />
 
-			<Row style={{ padding: '2rem 2rem' }} className='cart'>
+			<Row className='cart__row'>
 				<Col md={9} sm={12} className='cart__left'>
 					{cartItems.length === 0 ? (
 						<EmptyCartDisplay />
@@ -59,7 +59,7 @@ const CartScreen = (props) => {
 								//product is the id
 								<ListGroup.Item key={item.product}>
 									<Row className='cart__items'>
-										<Col md={1} sm={2} className='cart__items--imgWrapper'>
+										<Col md={1} sm={1} className='cart__items--imgWrapper'>
 											<Image
 												src={item.image}
 												alt={item.name}
@@ -67,7 +67,7 @@ const CartScreen = (props) => {
 												className='cart__items--imgWrapper-img'
 											/>
 										</Col>
-										<Col md={11} sm={10} className='cart__items--details'>
+										<Col md={11} sm={11} className='cart__items--details'>
 											<div className='cart__items--details-name'>
 												<Link to={`/products/${item.product}`}>
 													<strong>{item.name}</strong>
@@ -109,7 +109,7 @@ const CartScreen = (props) => {
 											</div>
 											<div>
 												<button
-													className='btn btn--cartProductDelete'
+													className='cart__items--details-btn'
 													type='button'
 													variant='light'
 													onClick={() => removeFromCartHandler(item.product)}>
@@ -150,7 +150,7 @@ const CartScreen = (props) => {
 					</Card>
 				</Col>
 			</Row>
-		</>
+		</div>
 	);
 };
 

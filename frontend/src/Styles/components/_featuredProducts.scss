@@ -1,0 +1,149 @@
+#featuredProducts {
+	& .nav {
+		font-size: 1.6rem;
+		justify-content: center;
+		margin-bottom: 2rem;
+	}
+
+	& .nav-link {
+		border: 1px solid white;
+		margin: 0px 1rem;
+		// padding: 0.8rem 2rem;
+		width: 100px;
+		text-align: center;
+
+		&.active {
+			color: #55595c;
+			background-color: #fff;
+			border-color: #9999 #9999 #fff;
+			font-size: 1.8rem !important;
+		}
+	}
+
+	& .tab-content > .active {
+		min-height: 200px;
+
+		& h2 {
+			text-align: center;
+			margin-top: 50px;
+		}
+	}
+
+	& .owl-carousel {
+		padding: 0px 1rem;
+
+		& .owl-stage-outer {
+			overflow: hidden;
+			height: 35rem;
+		}
+
+		& .owl-prev,
+		& .owl-next {
+			background: white;
+			color: inherit;
+			border: none;
+			padding: 0 !important;
+			font: inherit;
+			position: absolute;
+			top: 0;
+			outline: none;
+			opacity: 0.3;
+
+			& span {
+				font-size: 15rem;
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			&:hover & .owl-prev span,
+			& .owl-next span {
+				background: white;
+				color: red;
+				text-decoration: none;
+			}
+
+			&:hover {
+				background-color: transparent;
+				color: black;
+				opacity: 0.2;
+			}
+			&:focus {
+				background: none;
+				color: inherit;
+				border: none;
+				padding: 0 !important;
+				font: inherit;
+				outline: none;
+			}
+		}
+
+		& .owl-next {
+			right: 0;
+		}
+
+		& .owl-prev {
+			left: 0;
+		}
+	}
+}
+@media (max-width: 768px) {
+	#featuredProducts {
+		& .nav-link {
+			width: 70px;
+		}
+
+		& .owl-carousel {
+			padding: 0px 1rem;
+
+			& .owl-stage-outer {
+				overflow: hidden;
+				height: 32rem;
+			}
+
+			& .owl-prev,
+			& .owl-next {
+				opacity: 0.1;
+				display: none;
+
+				& span {
+					font-size: 15rem;
+
+					&:focus {
+						outline: none;
+					}
+				}
+
+				&:hover & .owl-prev span,
+				& .owl-next span {
+					background: white;
+					color: red;
+					text-decoration: none;
+				}
+
+				&:hover {
+					background-color: transparent;
+					color: black;
+					opacity: 0.3;
+				}
+				&:focus {
+					background: none;
+					color: inherit;
+					border: none;
+					padding: 0 !important;
+					font: inherit;
+					outline: none;
+				}
+			}
+
+			& .owl-next {
+				right: 0;
+			}
+
+			& .owl-prev {
+				left: 0;
+			}
+		}
+	}
+}

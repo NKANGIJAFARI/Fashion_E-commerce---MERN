@@ -127,7 +127,7 @@ const ProductScreen = ({ match, history }) => {
 	//Function to add to cart
 	const addToCartHandler = (countInStock) => {
 		const existItem = cartItems.find(
-			(item) => item.product === match.params.id
+			(item) => item.product === match.params.id,
 		);
 
 		if (existItem) {
@@ -140,7 +140,7 @@ const ProductScreen = ({ match, history }) => {
 							existItem.quantity
 						} in your cart, stock left with ${countInStock}, cant get ${qty}. Add ${
 							countInStock - existItem.quantity
-						} ? `
+						} ? `,
 					)
 				) {
 					history.push(`/cart/${match.params.id}?quantity=${countInStock}`);
@@ -148,7 +148,7 @@ const ProductScreen = ({ match, history }) => {
 			} else {
 				if (
 					window.confirm(
-						`Exists ${existItem.quantity} times in your cart, Make it ${qty} `
+						`Exists ${existItem.quantity} times in your cart, Make it ${qty} `,
 					)
 				) {
 					history.push(`/cart/${match.params.id}?quantity=${qty}`);
@@ -170,8 +170,8 @@ const ProductScreen = ({ match, history }) => {
 	//----------------------------------------------------------------------------
 
 	return (
-		<>
-			<Link className='btn btn-light my-3' to='/'>
+		<div className='productDetails'>
+			<Link to='/' className='btn btn-light my-3'>
 				Go Back
 			</Link>
 			{loading ? (
@@ -182,10 +182,10 @@ const ProductScreen = ({ match, history }) => {
 				<>
 					<Meta title={product.name} />
 					<Row className='productDetails__row'>
-						<Col md={6}>
+						<Col md={6} sm={8}>
 							<ProductDetails imgSrc={product.image} />
 						</Col>
-						<Col md={3}>
+						<Col md={3} sm={4}>
 							<ListGroup variant='flush'>
 								<ListGroup.Item>
 									<h3>{product.name}</h3>
@@ -231,7 +231,7 @@ const ProductScreen = ({ match, history }) => {
 								</ListGroup.Item>
 							</ListGroup>
 						</Col>
-						<Col md={3}>
+						<Col md={3} sm={12} className='productDetails__cartCard'>
 							<Card>
 								<ListGroup variant='flush'>
 									<ListGroup.Item>
@@ -270,13 +270,13 @@ const ProductScreen = ({ match, history }) => {
 																			{' '}
 																			{x + 1}{' '}
 																		</option>
-																	)
+																	),
 																)
 															}
 														</Form.Control>
 													</Col>
 												</Row>
-												<Row>
+												{/* <Row>
 													<Col>Sizes: </Col>
 													<Col>
 														<Form.Control
@@ -284,19 +284,18 @@ const ProductScreen = ({ match, history }) => {
 															value={quantity}
 															onChange={(e) => setQuantity(e.target.value)}>
 															{
-																//Get the number of pro
+																//Get the number of products in stock
 																[...Array(product.countInStock).keys()].map(
 																	(x) => (
 																		<option key={x + 1} value={x + 1}>
-																			{' '}
-																			{x + 1}{' '}
+																			{x + 1}
 																		</option>
-																	)
+																	),
 																)
 															}
 														</Form.Control>
 													</Col>
-												</Row>
+												</Row> */}
 											</ListGroup.Item>
 										)
 									}
@@ -317,11 +316,13 @@ const ProductScreen = ({ match, history }) => {
 							</Card>
 						</Col>
 					</Row>
-					<Row style={{ padding: '50px' }}>
+					<Row>
 						<Col md={8}>
-							<h2>REVIEWS</h2>
+							<h2>PRODUCT REVIEWS</h2>
 
-							{product.reviews.length === 0 && <Message>No Reviews</Message>}
+							{product.reviews.length === 0 && (
+								<Message>No Reviews yet</Message>
+							)}
 							<ListGroup variant='flush'>
 								{product.reviews.map((review) => (
 									<ListGroup.Item key={review._id}>
@@ -336,7 +337,7 @@ const ProductScreen = ({ match, history }) => {
 								))}
 
 								<ListGroup.Item>
-									<h4>Leave a Review</h4>
+									<h4 style={{ marginBottom: '20px' }}>Leave a Review</h4>
 
 									{errorOnReviewCreate && (
 										<Message variant='danger'>{errorOnReviewCreate}</Message>
@@ -344,8 +345,12 @@ const ProductScreen = ({ match, history }) => {
 									{userInfo ? (
 										<Form onSubmit={reviewSubmitHandler}>
 											<Form.Group>
-												<Form.Label>Rating</Form.Label>
+												<Form.Label>Rating </Form.Label>
 												<Form.Control
+													style={{
+														display: 'inline-block',
+														marginLeft: '10px',
+													}}
 													as='select'
 													value={rating}
 													onChange={(e) => setRating(e.target.value)}>
@@ -381,14 +386,8 @@ const ProductScreen = ({ match, history }) => {
 						</Col>
 					</Row>
 					<Row style={{ flexDirection: 'column' }}>
-						<SectionHeading desc='Related to this product' />
-						<Col
-							md={12}
-							style={{
-								display: 'flex',
-								justifyContent: 'space-around',
-								flexWrap: 'wrap',
-							}}>
+						<SectionHeading desc='Related products' />
+						<Col md={12} className='productDetails__relatedProducts'>
 							{relatedProducts.map((product) => (
 								<div key={product._id}>
 									<ProductCard product={product} />
@@ -398,7 +397,7 @@ const ProductScreen = ({ match, history }) => {
 					</Row>
 				</>
 			)}
-		</>
+		</div>
 	);
 };
 

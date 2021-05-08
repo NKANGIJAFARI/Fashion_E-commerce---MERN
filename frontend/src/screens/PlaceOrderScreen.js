@@ -5,12 +5,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import Message from '../components/Message';
 import CheckOutSteps from '../components/CheckOutSteps';
 import { createOrder } from '../actions/orderActions';
+import { resetCart } from '../actions/cartActions';
 
 const PlaceOrderScreen = ({ history }) => {
 	const dispatch = useDispatch();
 
 	//Get items from the cart
 	const cart = useSelector((state) => state.cart);
+	const { userInfo } = useSelector((state) => state.userLogin);
 
 	//Calculate Prices-------------------------------------------------------------------------------
 
@@ -20,7 +22,7 @@ const PlaceOrderScreen = ({ history }) => {
 	};
 
 	cart.itemsPrice = addDecimals(
-		cart.cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)
+		cart.cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0),
 	);
 
 	cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
@@ -30,20 +32,21 @@ const PlaceOrderScreen = ({ history }) => {
 			Number(cart.itemsPrice) +
 			Number(cart.shippingPrice) +
 			Number(cart.taxPrice)
-		).toFixed(2)
+		).toFixed(2),
 	);
 	//=====================================================================================
 
-	/* Whenever the order is successful, PlaceOrderHandler will dispatch the order
-	info and the order reducer will give success a true as the value, and then that 
-	value will be passed on to the orderCreate state which we shall get  by the 
-	useSelector below, and then use UseEffect to check for changes of success so to
-	redirect user to order infromation*/
+	/* Whenever the order is successfully created, the order reducer will 
+	give success true as the value, and then that value will be passed on
+	to the orderCreate state which we shall get  by the useSelector below,
+	and then use UseEffect to check for changes of success, if true,redirect
+	user to order infromation on order screen*/
 	const orderCreate = useSelector((state) => state.orderCreate);
 	const { order, success, error } = orderCreate;
 
 	useEffect(() => {
 		if (success) {
+			dispatch(resetCart());
 			history.push(`/order/${order._id}`);
 		}
 		// eslint-disable-next-line
@@ -53,28 +56,51 @@ const PlaceOrderScreen = ({ history }) => {
 
 	//Functionality to manage orders -----------------------------------------------
 	const placeOrderHandler = () => {
+		if (!cart.shippingAddress) {
+			history.push('/shipping');
+			return;
+		}
+
 		dispatch(
 			createOrder({
 				orderItems: cart.cartItems,
 				shippingAddress: cart.shippingAddress,
-				paymentMethod: cart.paymentMethod,
+				paymentMethod: 'PayPal',
 				itemsPrice: cart.itemsPrice,
 				taxPrice: cart.taxPrice,
 				shippingPrice: cart.shippingPrice,
 				totalPrice: cart.totalPrice,
-			})
+			}),
 		);
 	};
 	//=====================================================================================================
 
 	return (
-		<>
+		<div className='placeOrder'>
 			<CheckOutSteps step1 step2 step3 step4 />
 			<Row>
-				<Col md={8}>
+				<Col md={8} className='placeOrder__details'>
 					<ListGroup variant='flush'>
 						<ListGroup.Item>
-							<h2>Shipping</h2>
+							<h2>Shipping Details</h2>
+							{userInfo.name && (
+								<p>
+									<strong>Name:</strong>
+									{userInfo.name}
+								</p>
+							)}
+							{userInfo.email && (
+								<p>
+									<strong>Email:</strong>
+									{userInfo.email}
+								</p>
+							)}
+							{userInfo.phone && (
+								<p>
+									<strong>Phone No.:</strong>
+									{userInfo.phone}
+								</p>
+							)}
 							<p>
 								<strong>Address:</strong>
 								{cart.shippingAddress.address},{cart.shippingAddress.city},
@@ -82,8 +108,9 @@ const PlaceOrderScreen = ({ history }) => {
 							</p>
 						</ListGroup.Item>
 						<ListGroup.Item>
-							<h2>Payment Method</h2>
-							{cart.paymentMethod}
+							{/* <h2>Payment Method</h2> */}
+							{/* {cart.paymentMethod}
+							PayPal */}
 						</ListGroup.Item>
 
 						<ListGroup.Item>
@@ -94,23 +121,18 @@ const PlaceOrderScreen = ({ history }) => {
 								<ListGroup>
 									{cart.cartItems.map((item, index) => (
 										<ListGroup.Item key={index}>
-											<Row>
-												<Col md={1}>
-													<Image
-														src={item.image}
-														alt={item.name}
-														fluid
-														rounded
-													/>
+											<Row className='placeOrder__details'>
+												<Col md={2} className='placeOrder__details--imgWrapper'>
+													<img src={item.image} alt={item.name} />
 												</Col>
-												<Col>
+												<Col md={4} className='placeOrder__details--name'>
 													<Link to={`/products/${item.product}`}>
 														{item.name}
 													</Link>
 												</Col>
-												<Col md={4}>
+												<Col md={6} className='placeOrder__details--price'>
 													{item.quantity} x ${item.price} = $
-													{item.quantity * item.price}
+													{addDecimals(item.quantity * item.price)}
 												</Col>
 											</Row>
 										</ListGroup.Item>
@@ -166,7 +188,7 @@ const PlaceOrderScreen = ({ history }) => {
 					</Card>
 				</Col>
 			</Row>
-		</>
+		</div>
 	);
 };
 

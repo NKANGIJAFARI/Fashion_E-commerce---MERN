@@ -3,12 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ShoeProductCard = () => {
 	return (
-		<div
-			style={{
-				padding: '10px 10px 8rem 10px',
-				display: 'flex',
-				justifyContent: 'center',
-			}}>
+		<div className='shoeProductCards'>
 			<ShoeCard
 				boxNum='box-1'
 				price='110'

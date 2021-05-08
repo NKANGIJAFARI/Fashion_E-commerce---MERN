@@ -17,58 +17,72 @@ const ShippingScreen = ({ history }) => {
 	const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
 	const [country, setCountry] = useState(shippingAddress.country);
 
-	const onsubmitHandler = (e) => {
+	const submitHandler = (e) => {
 		e.preventDefault();
 		dispatch(saveShippingAddress({ address, city, postalCode, country }));
-		history.push('/payment');
+		history.push('/placeorder');
 	};
 
 	return (
-		<FormContainer>
+		<div className='shipping'>
 			<CheckOutSteps step1 step2 />
+			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>
+				<path
+					fill='#F1607D'
+					fillOpacity='1'
+					d='M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,240C840,256,960,256,1080,245.3C1200,235,1320,213,1380,202.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'></path>
+			</svg>
 			<h1>Shipping</h1>
-			<Form onSubmit={onsubmitHandler}>
-				<Form.Group controlId='address'>
-					<Form.Label>Enter Address</Form.Label>
-					<Form.Control
+			<form onSubmit={submitHandler}>
+				<div>
+					<label htmlFor='address'>Enter Address</label>
+					<input
 						type='text'
 						placeholder='Enter Your Address'
 						value={address}
 						required
-						onChange={(e) => setAddress(e.target.value)}></Form.Control>
-				</Form.Group>
-				<Form.Group controlId='city'>
-					<Form.Label>Enter City</Form.Label>
-					<Form.Control
+						name='address'
+						id='address'
+						onChange={(e) => setAddress(e.target.value)}></input>
+				</div>
+				<div>
+					<label htmlFor='city'>Enter City</label>
+					<input
 						type='text'
 						placeholder='Enter Your City'
 						value={city}
 						required
-						onChange={(e) => setCity(e.target.value)}></Form.Control>
-				</Form.Group>
-				<Form.Group controlId='postalCode'>
-					<Form.Label>Postal Code</Form.Label>
-					<Form.Control
+						name='city'
+						id='city'
+						onChange={(e) => setCity(e.target.value)}></input>
+				</div>
+				<div>
+					<label htmlFor='postalCode'>Postal Code</label>
+					<input
 						type='text'
 						placeholder='Enter Postal Code'
 						value={postalCode}
 						required
-						onChange={(e) => setPostalCode(e.target.value)}></Form.Control>
-				</Form.Group>
-				<Form.Group controlId='country'>
-					<Form.Label>Country</Form.Label>
-					<Form.Control
+						name='postalCode'
+						id='postalCode'
+						onChange={(e) => setPostalCode(e.target.value)}></input>
+				</div>
+				<div>
+					<label htmlFor='counrty'>Country</label>
+					<input
 						type='text'
 						placeholder='Enter Your Country'
 						value={country}
 						required
-						onChange={(e) => setCountry(e.target.value)}></Form.Control>
-				</Form.Group>
+						name='country'
+						id='country'
+						onChange={(e) => setCountry(e.target.value)}></input>
+				</div>
 				<Button type='submit' variant='primary'>
 					Continue
 				</Button>
-			</Form>
-		</FormContainer>
+			</form>
+		</div>
 	);
 };
 

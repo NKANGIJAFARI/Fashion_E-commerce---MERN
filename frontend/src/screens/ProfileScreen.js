@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Form, Button, Row, Col, Table } from 'react-bootstrap';
+import { Button, Row, Col, Table } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
@@ -13,6 +13,7 @@ const ProfileScreen = ({ history }) => {
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
 	const [message, setMessage] = useState(null);
+	const [profileEditing, setEditing] = useState(false);
 
 	const dispatch = useDispatch();
 
@@ -66,55 +67,79 @@ const ProfileScreen = ({ history }) => {
 			dispatch(updateUserProfile({ id: userInfo._id, name, email, password }));
 		}
 	};
+
+	//This handles the edit button to change to form
+	const handleEditClick = () => {
+		setEditing(!profileEditing);
+	};
+
 	return (
 		//Form container is a component, and inside details are the children
-		<Row>
-			<Col>
+		<Row className='profile'>
+			<Col md={3}>
 				<h1>User Profile</h1>
 				{message && <Message variant='danger'>{message}</Message>}
 				{error && <Message variant='danger'>{error}</Message>}
 				{success && <Message variant='success'>{'Profile Updated'}</Message>}
 				{loading && <Loader />}
-				<Form onSubmit={submitHandler}>
-					<Form.Group controlId='name'>
-						<Form.Label>Enter Name</Form.Label>
-						<Form.Control
-							type='text'
-							placeholder='Enter Your Name'
-							value={name}
-							onChange={(e) => setName(e.target.value)}></Form.Control>
-					</Form.Group>
-					<Form.Group controlId='email'>
-						<Form.Label>Email Address</Form.Label>
-						<Form.Control
-							type='email'
-							placeholder='Enter Your Email'
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}></Form.Control>
-					</Form.Group>
-					<Form.Group controlId='password'>
-						<Form.Label>Password</Form.Label>
-						<Form.Control
-							type='password'
-							placeholder='Enter Your Password'
-							value={password}
-							onChange={(e) => setPassword(e.target.value)}></Form.Control>
-					</Form.Group>
-					<Form.Group controlId='confirmPassword'>
-						<Form.Label>Confirm Password</Form.Label>
-						<Form.Control
-							type='password'
-							placeholder='Confirm Your Password'
-							value={confirmPassword}
-							onChange={(e) =>
-								setConfirmPassword(e.target.value)
-							}></Form.Control>
-					</Form.Group>
 
-					<Button type='submit' variant='primary'>
-						Update
-					</Button>
-				</Form>
+				{userInfo && !profileEditing && (
+					<div>
+						<p>{name}</p>
+						<p>{email}</p>
+						<Button type='submit' variant='primary' onClick={handleEditClick}>
+							Edit Profile
+						</Button>
+					</div>
+				)}
+
+				{userInfo && profileEditing && (
+					<form onSubmit={submitHandler}>
+						<div>
+							<label htmlFor='name'>Enter Name</label>
+							<input
+								id='name'
+								type='text'
+								placeholder='Enter Your Name'
+								value={name}
+								onChange={(e) => setName(e.target.value)}></input>
+						</div>
+						<div>
+							<label htmlFor='email'>Email Address</label>
+							<input
+								id='email'
+								type='email'
+								placeholder='Enter Your Email'
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}></input>
+						</div>
+						<div>
+							<label htmlFor='password'>Password</label>
+							<input
+								id='password'
+								type='password'
+								placeholder='Enter Your Password'
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}></input>
+						</div>
+						<div>
+							<label htmlFor='confirmPassword'>Confirm Password</label>
+							<input
+								id='confirmPassword'
+								type='password'
+								placeholder='Confirm Your Password'
+								value={confirmPassword}
+								onChange={(e) => setConfirmPassword(e.target.value)}></input>
+						</div>
+
+						<Button type='submit' variant='primary'>
+							Update
+						</Button>
+						<Button type='submit' variant='primary' onClick={handleEditClick}>
+							Cancel
+						</Button>
+					</form>
+				)}
 			</Col>
 			<Col md={9}>
 				<h3>My Orders</h3>

@@ -9,30 +9,37 @@
 @import './pages/Home';
 @import './pages/cart';
 @import './pages/productPage';
+@import './pages/shop';
+@import './pages/loginRegisterShipping';
+@import './pages/payment';
+@import './pages/orderScreens';
+@import './pages/profile';
+@import './pages/tablePages';
 
 @import './Layout/headings';
 @import './Layout/footer';
 @import './Layout/navbar';
 
+@import './components/globalStyles';
 @import './components/searchbox';
 @import './components/button';
 @import './components/carousel';
 @import './components/categories';
 @import './components/_headerCarousel.scss';
 @import './components/landingScreen';
-@import './components/services';
+@import './components/servicesPromise';
 @import './components/hobbies';
 @import './components/gentlemanwear';
 @import './components/trendingCarousel';
 @import './components/girlBanner';
 @import './components/mostViewed';
 @import './components/productCard';
-@import './components/owlCarousel';
+@import './components/latestProduct';
+@import './components/featuredProducts';
 @import './components/shoeProduct';
 @import './components/dropDownContent';
 @import './components/filterSideBar';
 
-@import './components/shoeBanner';
-
+@import './components/shoeShowRoom';
 @import './components/allStyles';
 @import './components/categories';

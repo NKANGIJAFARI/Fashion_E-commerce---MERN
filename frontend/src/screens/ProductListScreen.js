@@ -85,7 +85,7 @@ const ProductListSreen = ({ history, match }) => {
 	//----------------------------------------------------------------------------
 
 	return (
-		<>
+		<div className='productList'>
 			<Row>
 				<Col>
 					<h2>products</h2>
@@ -149,7 +149,7 @@ const ProductListSreen = ({ history, match }) => {
 					<Paginate pages={pages} page={page} isAdmin={true} />
 				</>
 			)}
-		</>
+		</div>
 	);
 };
 
