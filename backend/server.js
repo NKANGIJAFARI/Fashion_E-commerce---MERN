@@ -24,10 +24,6 @@ if (process.env.NODE_ENV === 'development') {
 //Passer to accept parse req.body, allows passing JSON data in body
 app.use(express.json());
 
-app.get('/', (req, res) => {
-	res.send('Api is running.......');
-});
-
 app.use('/api/products', productRoutes);
 app.use('/api/users/', userRoutes);
 app.use('/api/order', orderRoutes);
@@ -41,6 +37,20 @@ app.get('/api/config/paypal', (req, res) =>
 //	Making the upload folder static
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static(path.join(__dirname, '/frontend/build')));
+
+	//Below we check any route that is not an api, and will be captured to index.html
+	//which is in the build folder
+	app.use('*', (req, res) => {
+		res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+	});
+} else {
+	app.get('/', (req, res) => {
+		res.send('Api is running....');
+	});
+}
 
 //Errorhandling middleware
 app.use(errorHandler);
