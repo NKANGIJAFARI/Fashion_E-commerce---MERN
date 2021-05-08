@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1e29e1b7.chunk.css",
+    "main.js": "/static/js/main.d7f7f2b3.chunk.js",
+    "main.js.map": "/static/js/main.d7f7f2b3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c60b7f5c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c60b7f5c.js.map",
+    "static/css/2.b14f6b41.chunk.css": "/static/css/2.b14f6b41.chunk.css",
+    "static/js/2.6d95915e.chunk.js": "/static/js/2.6d95915e.chunk.js",
+    "static/js/2.6d95915e.chunk.js.map": "/static/js/2.6d95915e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.b14f6b41.chunk.css.map": "/static/css/2.b14f6b41.chunk.css.map",
+    "static/css/main.1e29e1b7.chunk.css.map": "/static/css/main.1e29e1b7.chunk.css.map",
+    "static/js/2.6d95915e.chunk.js.LICENSE.txt": "/static/js/2.6d95915e.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/static/media/tachen-bg.0d2966d1.jpg",
+    "static/media/loginCover.684714f8.svg": "/static/media/loginCover.684714f8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c60b7f5c.js",
+    "static/css/2.b14f6b41.chunk.css",
+    "static/js/2.6d95915e.chunk.js",
+    "static/css/main.1e29e1b7.chunk.css",
+    "static/js/main.d7f7f2b3.chunk.js"
+  ]
+}
