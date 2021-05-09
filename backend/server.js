@@ -42,7 +42,7 @@ if (process.env.NODE_ENV === 'production') {
 
 	//Below we check any route that is not an api, and will be captured to index.html
 	//which is in the build folder
-	app.use('*', (req, res) => {
+	app.get('*', (req, res) => {
 		res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
 	});
 } else {
