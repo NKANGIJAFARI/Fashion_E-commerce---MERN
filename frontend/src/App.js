@@ -16,7 +16,7 @@ import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import ProductListSreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
-import './index.css';
+import './App.css';
 import './Styles/main.scss';
 
 const App = () => {
