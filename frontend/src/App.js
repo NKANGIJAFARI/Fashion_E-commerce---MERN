@@ -18,7 +18,6 @@ import ProductListSreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 import './index.css';
 import './Styles/main.scss';
-import OrderScreen from './screens/OrderScreen';
 
 const App = () => {
 	return (
@@ -51,7 +50,8 @@ const App = () => {
 					<Route path='/shipping' component={ShippingScreen} />
 					<Route path='/payment' component={PaymentScreen} />
 					<Route path='/placeorder' component={PlaceOrderScreen} />
-					<Route path='/order/:id' component={OrderScreen} />
+					{/* <Route path='/order/:id' component={OrderScreen} /> */}
+
 					{/* <Route path='/shop/sort/:size' component={ShopScreen} exact />
 					<Route
 						path='/shop/sort/:size/page/:pageNumber'
