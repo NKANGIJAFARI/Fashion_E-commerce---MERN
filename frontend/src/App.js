@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
-
 import HomeScreen from './screens/HomeScreen';
 import ShopScreen from './screens/ShopScreen';
 import ProductScreen from './screens/ProductScreen';
@@ -18,7 +17,6 @@ import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import ProductListSreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
-
 import './index.css';
 import './Styles/main.scss';
 

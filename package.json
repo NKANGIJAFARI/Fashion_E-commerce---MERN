@@ -4,6 +4,10 @@
 	"type": "module",
 	"description": "Fashion shopping web application",
 	"main": "server.js",
+	"engines": {
+		"node": "14.15.3",
+		"npm": "6.14.7"
+	},
 	"scripts": {
 		"start": "node backend/server",
 		"server": "nodemon backend/server",
