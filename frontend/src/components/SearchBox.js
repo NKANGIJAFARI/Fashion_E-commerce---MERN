@@ -3,7 +3,6 @@ import '../Styles/main.scss';
 const SearchBox = ({ history }) => {
 	const [keyword, setKeyword] = useState();
 	const [showSearch, setShowSearch] = useState(false);
-	const [onFocus, setFocused] = useState(false);
 
 	const submitHandler = (e) => {
 		e.preventDefault();
@@ -29,11 +28,6 @@ const SearchBox = ({ history }) => {
 		}
 	}, [keyword, showSearch]);
 
-	const handleFocus = () => {
-		console.log('Its in focus');
-		setFocused(true);
-	};
-
 	return (
 		<div className={`searchForm ${showSearch ? 'inputShown' : ''}`}>
 			{!showSearch ? (
@@ -44,8 +38,6 @@ const SearchBox = ({ history }) => {
 						<input
 							autocomplete='off'
 							type='text'
-							name='q'
-							onFocus={handleFocus}
 							onChange={(e) => setKeyword(e.target.value.trim())}
 							className='mr-sm-2 ml-sm-5 searchForm__input'
 							placeholder='search Products ...'></input>

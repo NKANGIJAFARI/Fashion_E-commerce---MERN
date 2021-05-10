@@ -42,14 +42,13 @@ import {
 export const listProducts = (
 	keyword = '',
 	pageNumber = '',
-	sizes = ''
+	sizes = '',
 ) => async (dispatch) => {
-	console.log(keyword);
 	try {
 		dispatch({ type: PRODUCT_LIST_REQUEST });
 
 		const res = await axios.get(
-			`/api/products?keyword=${keyword}&pageNumber=${pageNumber}&sizes=${sizes}`
+			`/api/products?keyword=${keyword}&pageNumber=${pageNumber}&sizes=${sizes}`,
 		);
 
 		dispatch({
@@ -305,7 +304,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
 		const { data } = await axios.put(
 			`/api/products/${product._id}`,
 			product,
-			config
+			config,
 		);
 
 		//If the post request is successful, data will be filled with the response
@@ -330,7 +329,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
 //Create a product review functionality
 export const createProductReview = (productId, reviewDetails) => async (
 	dispatch,
-	getState
+	getState,
 ) => {
 	try {
 		dispatch({
@@ -356,7 +355,7 @@ export const createProductReview = (productId, reviewDetails) => async (
 		const { data } = await axios.post(
 			`/api/products/${productId}/reviews`,
 			reviewDetails,
-			config
+			config,
 		);
 
 		//If the post request is successful, data will be filled with the response

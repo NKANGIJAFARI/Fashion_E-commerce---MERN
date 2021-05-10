@@ -6,8 +6,6 @@ import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { Login } from '../actions/userActions';
 
-import loginCover from '../Images/loginCover.svg';
-
 const LoginScreen = ({ location, history }) => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');

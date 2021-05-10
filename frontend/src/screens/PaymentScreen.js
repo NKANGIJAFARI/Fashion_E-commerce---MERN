@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Form, Button, Col } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import FormContainer from '../components/FormContainer';
 import { savePaymentMethod } from '../actions/cartActions';
 
 import CheckOutSteps from '../components/CheckOutSteps';
