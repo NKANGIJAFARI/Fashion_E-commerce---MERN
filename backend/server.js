@@ -16,9 +16,9 @@ const app = express();
 dotenv.config();
 connectDB();
 
-if (process.env.NODE_ENV === 'development') {
-	app.use(morgan('dev'));
-}
+// if (process.env.NODE_ENV === 'development') {
+// 	app.use(morgan('dev'));
+// }
 
 //Passer to accept parse req.body, allows passing JSON data in body
 app.use(express.json());
@@ -46,6 +46,8 @@ if (process.env.NODE_ENV === 'production') {
 		res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
 	});
 } else {
+	app.use(morgan('dev'));
+
 	app.get('/', (req, res) => {
 		res.send('Api is running....');
 	});
