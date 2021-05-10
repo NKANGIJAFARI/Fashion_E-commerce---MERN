@@ -71,18 +71,12 @@ const ProductEditScreen = ({ match, history }) => {
 
 			const { data } = await axios.post('/api/upload', formData, config);
 
-			// if (data) {
-			// 	console.log(data);
-			// } else {
-			// 	console.log('Got an error');
-			// }
 			setImage(data);
 
 			setUploading(false);
 			setFileSelected(true);
 		} catch (error) {
 			//check for errors and stop spiiner when on error
-			console.log('This is the error', error.message);
 		}
 	};
 	//------------------------------------------------------------------------------------
@@ -100,7 +94,7 @@ const ProductEditScreen = ({ match, history }) => {
 				category,
 				description,
 				countInStock,
-			})
+			}),
 		);
 	};
 	return (

@@ -11,7 +11,6 @@ const Paginate = ({ pages, page, isAdmin = false, keyword = '' }) => {
 
 	let query = useQuery();
 	const sizes = query.get('sizes') ? query.get('sizes') : '';
-	//console.log(sizes, 'sizessss');
 
 	return (
 		pages > 1 && (

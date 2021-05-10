@@ -42,7 +42,6 @@ const ShopScreen = () => {
 
 	useEffect(() => {
 		dispatch(listProducts(keyword, pageNum, sizes));
-		console.log(sizes, 'sizes');
 	}, [dispatch, keyword, pageNum, sizes]);
 
 	return (

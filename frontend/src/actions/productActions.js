@@ -75,7 +75,6 @@ export const listTopRatedProducts = () => async (dispatch) => {
 
 		const { data } = await axios.get(`/api/products/top`);
 
-		console.log('data', data);
 		dispatch({
 			type: PRODUCT_TOP_SUCCESS,
 			payload: data,
@@ -279,8 +278,6 @@ export const createProduct = () => async (dispatch, getState) => {
 //Update a new product functionality
 export const updateProduct = (product) => async (dispatch, getState) => {
 	try {
-		console.log(product);
-
 		dispatch({
 			type: PRODUCT_UPDATE_REQUEST,
 		});

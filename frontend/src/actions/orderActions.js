@@ -82,8 +82,6 @@ export const getOrderDetails = (orderId) => async (dispatch, getState) => {
 			cart,
 		} = getState();
 
-		console.log(localStorage.getItem('shippingAddress'));
-
 		dispatch({
 			type: ORDER_CREATE_RESET,
 		});
