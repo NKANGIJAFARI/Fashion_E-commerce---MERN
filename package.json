@@ -15,7 +15,6 @@
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
 		"data:import": "node backend/seeder",
 		"data:destroy": "node backend/seeder -d",
-		"postinstall": "grunt sass:production",
 		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
 	},
 	"author": "Nkangi Jafari",
@@ -32,8 +31,7 @@
 		"multer": "^1.4.2",
 		"react-owl-carousel": "^2.3.3",
 		"react-toastify": "^7.0.3",
-		"react-transition-group": "^1.2.1",
-		"postinstall": "grunt sass:production"
+		"react-transition-group": "^1.2.1"
 	},
 	"devDependencies": {
 		"concurrently": "^5.3.0",
