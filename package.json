@@ -1,7 +1,6 @@
 {
 	"name": "fashion-ecommerce",
 	"version": "1.0.0",
-	"type": "module",
 	"description": "Fashion shopping web application",
 	"main": "server.js",
 	"engines": {
@@ -15,7 +14,7 @@
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
 		"data:import": "node backend/seeder",
 		"data:destroy": "node backend/seeder -d",
-		"postinstall": "./node_modules/grunt-cli/bin/grunt",
+		"postinstall": "grunt sass:production",
 		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
 	},
 	"author": "Nkangi Jafari",

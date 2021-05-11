@@ -1,33 +1,32 @@
-import sass from 'node-sass';
+// import sass from 'node-sass';
 
-require('load-grunt-tasks')(grunt);
-
-grunt.initConfig({
-	sass: {
-		development: {
-			options: {},
-			files: {
-				'/frontend/src/styles/main.css': '/frontend/src/styles/main.scss',
+module.exports = function (grunt) {
+	grunt.initConfig({
+		sass: {
+			development: {
+				options: {},
+				files: {
+					'/frontend/src/styles/main.css': '/frontend/src/styles/main.scss',
+				},
+			},
+			production: {
+				options: {},
+				files: {
+					'/frontend/src/styles/main.css': '/frontend/src/styles/main.scss',
+				},
 			},
 		},
-		production: {
-			options: {},
-			files: {
-				'/frontend/src/styles/main.css': '/frontend/src/styles/main.scss',
-			},
+		watch: {
+			files: ['<%= sass.files %>'],
+			tasks: ['sass'],
 		},
-	},
-	watch: {
-		files: ['<%= sass.files %>'],
-		tasks: ['sass'],
-	},
-});
+	});
 
-grunt.loadNpmTasks('grunt-contrib-sass');
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.registerTask('default', ['sass']);
-grunt.registerTask('heroku:production', 'sass');
-
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.registerTask('default', ['sass']);
+	grunt.registerTask('heroku:production', 'sass');
+};
 // grunt.initConfig({
 // 	sass: {
 // 		// Task
