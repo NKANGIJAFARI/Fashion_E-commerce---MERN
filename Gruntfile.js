@@ -1,6 +1,6 @@
 // import sass from 'node-sass';
 
-module.exports = function (grunt) {
+export default function (grunt) {
 	grunt.initConfig({
 		sass: {
 			dist: {
@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.registerTask('default', ['sass']);
 	grunt.registerTask('heroku:production', 'sass');
-};
+}
 // grunt.initConfig({
 // 	sass: {
 // 		// Task
