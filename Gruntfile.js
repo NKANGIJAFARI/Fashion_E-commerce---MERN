@@ -6,8 +6,10 @@ module.exports = function (grunt) {
 			dist: {
 				options: { style: 'expanded' },
 				files: {
-					'main.css': 'main.scss',
+					'./frontend/src/Styles/gruntedStyles/main.css':
+						'./frontend/src/Styles/main.scss',
 				},
+
 				watch: {
 					files: ['<%= sass.files %>'],
 					tasks: ['sass'],
