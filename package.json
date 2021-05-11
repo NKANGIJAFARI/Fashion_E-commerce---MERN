@@ -1,6 +1,7 @@
 {
 	"name": "fashion-ecommerce",
 	"version": "1.0.0",
+	"type": "module",
 	"description": "Fashion shopping web application",
 	"main": "server.js",
 	"engines": {
