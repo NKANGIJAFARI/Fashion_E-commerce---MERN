@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 			production: {
 				options: {},
 				files: {
-					'src/Styles/main.css': 'src/Styles/main.scss',
+					'/src/Styles/main.css': '/src/Styles/main.scss',
 				},
 			},
 		},
