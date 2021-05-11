@@ -1,4 +1,4 @@
-source "http//rubygems.org"
+source "http://rubygems.org"
 gem "sass"
 
-ruby "~2.3.3"
+ruby "~2.2.17"
