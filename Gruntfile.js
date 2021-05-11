@@ -1,4 +1,4 @@
-const sass = require('node-sass');
+import sass from 'node-sass';
 
 require('load-grunt-tasks')(grunt);
 
