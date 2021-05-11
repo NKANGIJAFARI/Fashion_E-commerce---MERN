@@ -1,25 +1,27 @@
-export default (grunt) => {
-	grunt.initConfig({
-		sass: {
-			development: {
-				options: {},
-				files: {
-					'/frontend/src/styles/main.css': '/frontend/src/styles/main.scss',
-				},
-			},
-			production: {
-				options: {},
-				files: {
-					'/frontend/src/styles/main.css': '/frontend/src/styles/main.scss',
-				},
+const sass = require('node-sass');
+
+require('load-grunt-tasks')(grunt);
+
+grunt.initConfig({
+	sass: {
+		development: {
+			options: {},
+			files: {
+				'/frontend/src/styles/main.css': '/frontend/src/styles/main.scss',
 			},
 		},
-		watch: {
-			files: ['<%= sass.files %>'],
-			tasks: ['sass'],
+		production: {
+			options: {},
+			files: {
+				'/frontend/src/styles/main.css': '/frontend/src/styles/main.scss',
+			},
 		},
-	});
-};
+	},
+	watch: {
+		files: ['<%= sass.files %>'],
+		tasks: ['sass'],
+	},
+});
 
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
