@@ -6,13 +6,13 @@ module.exports = function (grunt) {
 			development: {
 				options: {},
 				files: {
-					'/frontend/src/styles/main.css': '/frontend/src/styles/main.scss',
+					'/frontend/styles/main.css': '/frontend/styles/main.scss',
 				},
 			},
 			production: {
 				options: {},
 				files: {
-					'/frontend/src/styles/main.css': '/frontend/src/styles/main.scss',
+					'./frontend/styles/main.css': './frontend/styles/main.scss',
 				},
 			},
 		},

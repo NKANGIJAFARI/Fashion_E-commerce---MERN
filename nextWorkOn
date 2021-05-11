@@ -9,4 +9,4 @@ bEFORE PRODUCT DETAILS SHOW, ADD A LOADER
 
 Add a function that whenever an order is done, decrease the products in stock
 
-"postinstall": "grunt sass:production",
+"postinstall": "grunt sass:production",	"type": "module",
