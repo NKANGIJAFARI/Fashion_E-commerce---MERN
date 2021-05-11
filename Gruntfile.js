@@ -4,22 +4,14 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		sass: {
 			dist: {
-				development: {
-					options: {},
-					files: {
-						'/src/Styles/main.css': '/src/Styles/main.scss',
-					},
+				options: { style: 'expanded' },
+				files: {
+					'main.css': 'main.scss',
 				},
-				production: {
-					options: {},
-					files: {
-						'/src/Styles/main.css': '/src/Styles/main.scss',
-					},
+				watch: {
+					files: ['<%= sass.files %>'],
+					tasks: ['sass'],
 				},
-			},
-			watch: {
-				files: ['<%= sass.files %>'],
-				tasks: ['sass'],
 			},
 		},
 	});
