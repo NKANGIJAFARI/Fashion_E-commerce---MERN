@@ -112,7 +112,7 @@ const SocialIcons = () => {
 		<div className='footer__socials'>
 			<Link to='/' className='footer__socials-item'>
 				<picture>
-					<img src='/images/facebook.svg' alt='facebook' />
+					<img src='/images/social-facebook.png' alt='facebook' />
 				</picture>
 			</Link>
 			<Link to='/' className='footer__socials-item'>
