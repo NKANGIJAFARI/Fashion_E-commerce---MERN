@@ -13,7 +13,7 @@ const HobbiesFashion = () => {
 						desc='Travel Apparels'
 					/>
 					<HobbiesItem
-						imgSrc='/images/hobbies-try.png'
+						imgSrc='/images/hobbies-fitness2.png'
 						desc='Fitness Apparels'
 					/>
 				</div>
