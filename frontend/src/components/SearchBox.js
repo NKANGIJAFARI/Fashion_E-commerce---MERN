@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles/main.scss';
 const SearchBox = ({ history }) => {
-	const [keyword, setKeyword] = useState();
 	const [showSearch, setShowSearch] = useState(false);
+	const [keyword, setKeyword] = useState('');
 	const [inputFocus, setFocus] = useState(false);
 
 	//Whenever the search bar is submitted with a keyword, this func will run
@@ -24,14 +24,28 @@ const SearchBox = ({ history }) => {
 		so if the user doesnt start typing in anything to the input, we shall close the 
 		search input and only display the search icon*/
 
-		if (focus) {
+		if (showSearch && !inputFocus && keyword === '') {
 			setTimeout(() => {
-				setShowSearch(false);
-			}, 6000);
+				if (inputFocus || keyword !== '') {
+					console.log('inp2', inputFocus, 'key2', keyword);
+					console.log('sTOPED DUE TO INPUT');
+					return;
+				} else if (!inputFocus && keyword === '') {
+					console.log('inpels', inputFocus, 'keyels', keyword);
+					setShowSearch(false);
+				}
+			}, 7000);
 		}
 
-		console.log('Show Search', showSearch);
-	}, [keyword, showSearch]);
+		console.log(
+			'showMessage',
+			showSearch,
+			'input',
+			inputFocus,
+			'keyword',
+			keyword,
+		);
+	}, [keyword, inputFocus, showSearch]);
 
 	const manageFocus = (e) => {
 		console.log(e, e.type);
@@ -58,7 +72,8 @@ const SearchBox = ({ history }) => {
 							onBlur={(e) => {
 								manageFocus(e);
 							}}
-							//onChange={(e) => setKeyword(e.target.value.trim())}
+							value={keyword}
+							onChange={(e) => changeKeyword(e.target.value)}
 							className='mr-sm-2 ml-sm-5 searchForm__input'
 							placeholder='search Products ...'></input>
 						<button type='submit' className='p-2 searchForm__button'>
