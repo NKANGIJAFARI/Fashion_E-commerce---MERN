@@ -23,18 +23,22 @@ const SearchBox = ({ history }) => {
 		/*Whenever the search input is shown,  it will cover some elements on the page,
 		so if the user doesnt start typing in anything to the input, we shall close the 
 		search input and only display the search icon*/
-
-		if (showSearch && !inputFocus && keyword === '') {
-			setTimeout(() => {
-				if (inputFocus || keyword !== '') {
-					console.log('inp2', inputFocus, 'key2', keyword);
-					console.log('sTOPED DUE TO INPUT');
-					return;
-				} else if (!inputFocus && keyword === '') {
-					console.log('inpels', inputFocus, 'keyels', keyword);
-					setShowSearch(false);
+		if (showSearch) {
+			const inputTimeout = setTimeout(() => {
+				if (showSearch && !inputFocus && keyword === '') {
+					if (inputFocus || keyword !== '') {
+						console.log('inp2', inputFocus, 'key2', keyword);
+						console.log('sTOPED DUE TO INPUT');
+						setShowSearch(true);
+						return;
+					} else if (!inputFocus && keyword === '') {
+						console.log('inpels', inputFocus, 'keyels', keyword);
+						setShowSearch(false);
+					}
 				}
-			}, 7000);
+			}, 6000);
+
+			return () => clearTimeout(inputTimeout);
 		}
 
 		console.log(
@@ -46,6 +50,10 @@ const SearchBox = ({ history }) => {
 			keyword,
 		);
 	}, [keyword, inputFocus, showSearch]);
+
+	const changeKeyword = (inputValue) => {
+		setKeyword(inputValue.trim().toLowerCase());
+	};
 
 	const manageFocus = (e) => {
 		console.log(e, e.type);
