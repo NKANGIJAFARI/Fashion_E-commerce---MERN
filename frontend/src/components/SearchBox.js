@@ -27,8 +27,6 @@ const SearchBox = ({ history }) => {
 			const inputTimeout = setTimeout(() => {
 				if (showSearch && !inputFocus && keyword === '') {
 					if (inputFocus || keyword !== '') {
-						console.log('inp2', inputFocus, 'key2', keyword);
-						console.log('sTOPED DUE TO INPUT');
 						setShowSearch(true);
 						return;
 					} else if (!inputFocus && keyword === '') {
@@ -40,15 +38,6 @@ const SearchBox = ({ history }) => {
 
 			return () => clearTimeout(inputTimeout);
 		}
-
-		console.log(
-			'showMessage',
-			showSearch,
-			'input',
-			inputFocus,
-			'keyword',
-			keyword,
-		);
 	}, [keyword, inputFocus, showSearch]);
 
 	const changeKeyword = (inputValue) => {
@@ -56,7 +45,6 @@ const SearchBox = ({ history }) => {
 	};
 
 	const manageFocus = (e) => {
-		console.log(e, e.type);
 		if (e.type === 'focus') {
 			setFocus(true);
 		} else if (e.type === 'blur') {
