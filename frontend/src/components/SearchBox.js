@@ -3,6 +3,7 @@ import '../Styles/main.scss';
 const SearchBox = ({ history }) => {
 	const [keyword, setKeyword] = useState();
 	const [showSearch, setShowSearch] = useState(false);
+	const [inputFocus, setFocus] = useState(false);
 
 	//Whenever the search bar is submitted with a keyword, this func will run
 	const submitHandler = (e) => {
