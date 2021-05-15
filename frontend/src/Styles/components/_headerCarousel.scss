@@ -107,7 +107,7 @@ all the time.*/
 		& .owl-nav {
 			position: absolute;
 			right: 65%;
-			bottom: 11%;
+			bottom: 10%;
 		}
 	}
 }
@@ -115,8 +115,9 @@ all the time.*/
 @media only screen and (max-width: 600px) {
 	#headerCarousel.headerCarousel {
 		& .owl-nav {
-			right: 90%;
-			bottom: 4%;
+			right: 89%;
+			bottom: 48%;
+			font-size: 1.8rem;
 		}
 
 		& .owl-dots {
@@ -131,8 +132,6 @@ all the time.*/
 @media only screen and (max-width: 350px) {
 	#headerCarousel.headerCarousel {
 		& .owl-nav {
-			right: 96%;
-			bottom: 4%;
 		}
 	}
 }
