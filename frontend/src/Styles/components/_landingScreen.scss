@@ -60,11 +60,13 @@
 	&__rotatingText {
 		position: absolute;
 		top: 50%;
-		right: 7rem;
+		right: -18%;
+		text-align: center;
 		font-size: 2.2rem;
 		transform: translate(0%, -50%) rotate(90deg);
 		z-index: 2;
 		color: black;
+		width: 100%;
 		text-transform: uppercase;
 	}
 
@@ -166,11 +168,11 @@
 			}
 		}
 
-		&__rotatingText {
-			top: 50%;
-			right: 3%;
-			font-size: 2.2rem;
-		}
+		// &__rotatingText {
+		// 	top: 50%;
+		// 	right: 3%;
+		// 	font-size: 2.2rem;
+		// }
 
 		&__socialIcons {
 			top: 85%;
@@ -237,10 +239,10 @@
 			}
 		}
 
-		&__rotatingText {
-			right: -7%;
-			font-size: 2.5rem;
-		}
+		// &__rotatingText {
+		// 	right: -7%;
+		// 	font-size: 2.5rem;
+		// }
 
 		&__socialIcons {
 			right: 9%;
@@ -271,10 +273,10 @@
 			}
 		}
 
-		&__rotatingText {
-			right: -24%;
-			font-size: 2.5rem;
-		}
+		// &__rotatingText {
+		// 	right: -24%;
+		// 	font-size: 2.5rem;
+		// }
 
 		&__socialIcons {
 			right: 0%;
@@ -357,10 +359,10 @@
 			}
 		}
 
-		&__rotatingText {
-			right: -15%;
-			font-size: 2.5rem;
-		}
+		// &__rotatingText {
+		// 	right: -15%;
+		// 	font-size: 2.5rem;
+		// }
 
 		&__socialIcons {
 			right: 0%;
@@ -424,28 +426,28 @@
 
 @media only screen and (max-width: 500px) {
 	.fullHeader {
-		&__rotatingText {
-			right: -23%;
-			font-size: 2.7rem;
-		}
+		// &__rotatingText {
+		// 	right: -23%;
+		// 	font-size: 2.7rem;
+		// }
 	}
 }
 
 @media only screen and (max-width: 450px) {
 	.fullHeader {
-		&__rotatingText {
-			right: -24%;
-			font-size: 2.5rem;
-		}
+		// &__rotatingText {
+		// 	right: -24%;
+		// 	font-size: 2.5rem;
+		// }
 	}
 }
 
 @media only screen and (max-width: 400px) {
 	.fullHeader {
-		&__rotatingText {
-			right: -26%;
-			font-size: 2.4rem;
-		}
+		// &__rotatingText {
+		// 	right: -26%;
+		// 	font-size: 2.4rem;
+		// }
 
 		&__socialIcons {
 			display: none;
@@ -455,9 +457,9 @@
 
 @media only screen and (max-width: 350px) {
 	.fullHeader {
-		&__rotatingText {
-			right: -30%;
-			font-size: 2.2rem;
-		}
+		// &__rotatingText {
+		// 	right: -30%;
+		// 	font-size: 2.2rem;
+		// }
 	}
 } ;
