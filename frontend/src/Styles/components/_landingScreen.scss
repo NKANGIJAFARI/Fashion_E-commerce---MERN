@@ -67,6 +67,8 @@
 		z-index: 2;
 		color: black;
 		width: 100%;
+		font-weight: 500;
+		letter-spacing: 1.5px;
 		text-transform: uppercase;
 	}
 
@@ -168,11 +170,8 @@
 			}
 		}
 
-		// &__rotatingText {
-		// 	top: 50%;
-		// 	right: 3%;
-		// 	font-size: 2.2rem;
-		// }
+		&__rotatingText {
+		}
 
 		&__socialIcons {
 			top: 85%;
@@ -239,10 +238,11 @@
 			}
 		}
 
-		// &__rotatingText {
-		// 	right: -7%;
-		// 	font-size: 2.5rem;
-		// }
+		&__rotatingText {
+			font-size: 2.4rem;
+			letter-spacing: 2px;
+			right: -35%;
+		}
 
 		&__socialIcons {
 			right: 9%;
@@ -273,16 +273,15 @@
 			}
 		}
 
-		// &__rotatingText {
-		// 	right: -24%;
-		// 	font-size: 2.5rem;
-		// }
+		&__rotatingText {
+			right: -40%;
+			font-size: 2.5rem;
+		}
 
 		&__socialIcons {
 			right: 0%;
 			top: 95%;
-			background: white;
-			width: 14rem;
+			width: 12rem;
 			padding: 10px;
 			z-index: 2;
 		}
@@ -367,8 +366,6 @@
 		&__socialIcons {
 			right: 0%;
 			top: 95%;
-			background: white;
-			width: 14rem;
 			padding: 10px;
 			z-index: 2;
 		}
