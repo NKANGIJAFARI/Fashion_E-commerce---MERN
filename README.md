@@ -1,8 +1,10 @@
+![screencapture-zenstyles-herokuapp-2022-10-10-13_58_37-min](https://user-images.githubusercontent.com/58780463/194841753-b38de18f-acd9-46b7-a04d-0f2962ed1221.png)
+
 ![screencapture-zenstyles-herokuapp-shop-2022-10-10-14_05_05](https://user-images.githubusercontent.com/58780463/194842758-56c365b4-95ed-4fcb-92c2-63638363b29b.png)
 Live Demo at: https://zenstyles.herokuapp.com/
 max-width: 1350px
 
-![screencapture-zenstyles-herokuapp-2022-10-10-13_58_37-min](https://user-images.githubusercontent.com/58780463/194841753-b38de18f-acd9-46b7-a04d-0f2962ed1221.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
